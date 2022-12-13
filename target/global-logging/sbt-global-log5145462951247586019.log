@@ -1,0 +1,82 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.7.2 (Microsoft Java 11.0.17)
+[debug]       Load.loadUnit: plugins took 168.9464ms
+[debug]       Load.loadUnit: defsScala took 0.5276ms
+[debug] [Loading] Scanning directory C:\Users\André ISCTE\.sbt\1.0\plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\André ISCTE\.sbt\1.0\plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 46.0643 ms
+[debug]           Load.resolveProject(global-plugins) took 107.259ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: C:\Users\André ISCTE\.sbt\1.0\plugins, plugins: List(<none>))) took 249.1403ms
+[debug] [Loading] Done in C:\Users\André ISCTE\.sbt\1.0\plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 310.6248ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.7705ms
+[debug]     Load.loadUnit(file:/C:/Users/André%20ISCTE/.sbt/1.0/plugins/, ...) took 499.8425ms
+[debug]   Load.apply: load took 849.3405ms
+[debug]   Load.apply: resolveProjects took 11.9308ms
+[debug]   Load.apply: finalTransforms took 116.4412ms
+[debug]   Load.apply: config.delegates took 14.1605ms
+[debug]   Load.apply: Def.make(settings)... took 624.9042ms
+[debug]   Load.apply: structureIndex took 143.6536ms
+[debug]   Load.apply: mkStreams took 2.2441ms
+[info] loading global plugins from C:\Users\André ISCTE\.sbt\1.0\plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 3745.9028ms
+[debug]           Load.loadUnit: plugins took 45.904ms
+[debug]           Load.loadUnit: defsScala took 0.0128ms
+[debug] [Loading] Scanning directory C:\Users\André ISCTE\Documents\canteen_management\project
+[debug]             Load.loadUnit: mkEval took 11.4049ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\André ISCTE\Documents\canteen_management\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 3.3812 ms
+[info] loading settings for project canteen_management-build from plugins.sbt ...
+[debug]               Load.resolveProject(canteen_management-build) took 4.7461ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id canteen_management-build, base: C:\Users\André ISCTE\Documents\canteen_management\project, plugins: List(<none>))) took 9.1645ms
+[debug] [Loading] Done in C:\Users\André ISCTE\Documents\canteen_management\project, returning: (canteen_management-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 226.9038ms
+[debug]           Load.loadUnit: cleanEvalClasses took 7.4699ms
+[debug]         Load.loadUnit(file:/C:/Users/André%20ISCTE/Documents/canteen_management/project/, ...) took 282.2427ms
+[debug]       Load.apply: load took 285.238ms
+[debug]       Load.apply: resolveProjects took 0.254ms
+[debug]       Load.apply: finalTransforms took 20.323ms
+[debug]       Load.apply: config.delegates took 0.4863ms
+[debug]       Load.apply: Def.make(settings)... took 101.043ms
+[debug]       Load.apply: structureIndex took 42.8567ms
+[debug]       Load.apply: mkStreams took 0.003ms
+[info] loading project definition from C:\Users\André ISCTE\Documents\canteen_management\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
