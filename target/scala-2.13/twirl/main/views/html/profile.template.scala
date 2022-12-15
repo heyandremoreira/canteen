@@ -31,7 +31,7 @@ object profile extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Ht
 
 Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 <html lang="en">
-    <navbar>
+    <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,14 +40,15 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
         <link rel="stylesheet" href=""""),_display_(/*11.39*/routes/*11.45*/.Assets.at("stylesheets/profile.css")),format.raw/*11.82*/(""""/>
-    </navbar>
+        <link rel="stylesheet" href=""""),_display_(/*12.39*/routes/*12.45*/.Assets.at("stylesheets/styles.css")),format.raw/*12.81*/(""""/>
+    </head>
 
     <header class="header-menu">
         <nav class="navbar navbar-expand-lg bg-black">
-            """),format.raw/*16.81*/("""
-        """),format.raw/*17.9*/("""<div class="container-fluid">
+            """),format.raw/*17.81*/("""
+        """),format.raw/*18.9*/("""<div class="container-fluid">
             <a style="padding-left: 80px" class="navbar-brand" href="/">
-                <img src=""""),_display_(/*19.28*/routes/*19.34*/.Assets.at("images/logo.png")),format.raw/*19.63*/("""" class="img-fluid" alt="logo" width="200px">
+                <img src=""""),_display_(/*20.28*/routes/*20.34*/.Assets.at("images/logo.png")),format.raw/*20.63*/("""" class="img-fluid" alt="logo" width="200px">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span style="color: white" class="navbar-toggler-icon"></span>
@@ -66,8 +67,8 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#profile">Profile</a>
                     </li>
-                    <a style="padding-left:20px" class="navbar-brand">
-                        <img src=""""),_display_(/*39.36*/routes/*39.42*/.Assets.at("images/white_settings.png")),format.raw/*39.81*/("""" class="img-fluid" alt="logo" width="30px">
+                    <a style="padding-left: 20px" class="navbar-brand">
+                        <img src=""""),_display_(/*40.36*/routes/*40.42*/.Assets.at("images/white_settings.png")),format.raw/*40.81*/("""" class="img-fluid" alt="logo" width="30px">
                     </a>
                 </ul>
             </div>
@@ -77,11 +78,53 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
 
     <body style="background-color: black">
-        <div class="container w-100">
-            <div class="row d-flex align-items-center rectangle">
-
+        <div class="container">
+            <div class="row align-items-center rectangle">
+                <div class="d-flex justify-content-center">
+                    <img src=""""),_display_(/*53.32*/routes/*53.38*/.Assets.at("images/user.png")),format.raw/*53.67*/("""" class="rounded-circle img-fluid" alt="user" width="150px">
+                </div>
+                <form action="/upload.php">
+                    <input type="file" id="myFile" name="filename">
+                    <input type="submit">
+                </form>
             </div>
         </div>
+        <form method="post" action="profileProcess">
+            <div class="main-card">
+                <div class="right-container">
+                    <div class="text-white card-container">
+                        <div class="form-control-sm text-white textfield pb-3">
+                            <input type="text" name="username" placeholder="Username">
+                        </div>
+                        <div class="form-control-sm text-white textfield pb-3">
+                            <input type="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-control-sm text-white textfield pb-3">
+                            <input type="text" name="phonenumber" placeholder="Phone Number">
+                        </div>
+                        <div class="form-control-sm text-white textfield pb-5">
+                            <input type="password" name="password" placeholder="Password">
+                        </div>
+                        <div class="col-12 text-center form-control-sm">
+                            """),format.raw/*79.76*/("""
+                            """),format.raw/*80.29*/("""<button class="btn btn-form">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div style="font-size: 12px" class="text-white d-flex justify-content-center">
+                        """),format.raw/*92.50*/("""
+                    """),format.raw/*93.21*/("""<p>Copyright 2023. cantini. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>"""))
       }
@@ -100,9 +143,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
               /*
                   -- GENERATED --
                   SOURCE: app/views/profile.scala.html
-                  HASH: 8314bbcb4cf1a465b3453a3fbd5844919c972e29
-                  MATRIX: 991->0|1659->643|1674->649|1732->686|1884->878|1921->888|2080->1020|2095->1026|2145->1055|3426->2309|3441->2315|3501->2354
-                  LINES: 32->1|42->11|42->11|42->11|47->16|48->17|50->19|50->19|50->19|70->39|70->39|70->39
+                  HASH: 1ca8be1fa276efc2416f50c67225e69568e92b19
+                  MATRIX: 991->0|1657->641|1672->647|1730->684|1800->727|1815->733|1872->769|2022->959|2059->969|2218->1101|2233->1107|2283->1136|3565->2391|3580->2397|3640->2436|4062->2831|4077->2837|4127->2866|5570->4430|5628->4460|6068->4897|6118->4919
+                  LINES: 32->1|42->11|42->11|42->11|43->12|43->12|43->12|48->17|49->18|51->20|51->20|51->20|71->40|71->40|71->40|84->53|84->53|84->53|109->79|110->80|122->92|123->93
                   -- GENERATED --
               */
           

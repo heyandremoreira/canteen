@@ -40,7 +40,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
         <link rel="stylesheet" href=""""),_display_(/*11.39*/routes/*11.45*/.Assets.at("stylesheets/landing.css")),format.raw/*11.82*/(""""/>
-        <link rel="stylesheet" href=""""),_display_(/*12.39*/routes/*12.45*/.Assets.at("stylesheets/login_signup.css")),format.raw/*12.87*/(""""/>
+        <link rel="stylesheet" href=""""),_display_(/*12.39*/routes/*12.45*/.Assets.at("stylesheets/styles.css")),format.raw/*12.81*/(""""/>
     </navbar>
 
     <header class="header-menu">
@@ -79,12 +79,12 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
     <body style="background: black">
         <form method="post" action="loginProcess">
-            <div class="main-login">
-                <div class=" text-white left-login">
+            <div class="main-container">
+                <div class=" text-white left-container">
                     <img src=""""),_display_(/*53.32*/routes/*53.38*/.Assets.at("images/login.png")),format.raw/*53.68*/("""" class="img-fluid" alt="login" width="500px">
                 </div>
-                <div class="right-login">
-                    <div class="text-white card-login">
+                <div class="right-container">
+                    <div class="text-white card-container">
                         <h2 class="pb-3">Login</h2>
                         <div class="form-control-sm text-white textfield pb-3">
                             <input type="text" name="username" placeholder="Username">
@@ -93,7 +93,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                             <input type="password" name="password" placeholder="Password">
                         </div>
                         <div class="form-control-sm textfield pb-3">
-                            <button class="btn-login">Login</button>
+                            <button class="btn-form">Login</button>
                         </div>
 
                         <a style="font-size: 12px" class="text-center text-muted" href="#">Forgot your password?</a>
@@ -143,8 +143,8 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
               /*
                   -- GENERATED --
                   SOURCE: app/views/login.scala.html
-                  HASH: 79578d5e30609d8bab2e56b5c9dde3aeb50bca4b
-                  MATRIX: 989->0|1655->641|1670->647|1728->684|1798->727|1813->733|1876->775|2028->967|2065->977|2224->1109|2239->1115|2289->1144|3612->2440|3627->2446|3687->2485|4093->2864|4108->2870|4159->2900|6147->4885|6193->4903
+                  HASH: bb68dc3a357ee065965464d4c392866b83b1534e
+                  MATRIX: 989->0|1655->641|1670->647|1728->684|1798->727|1813->733|1870->769|2022->961|2059->971|2218->1103|2233->1109|2283->1138|3606->2434|3621->2440|3681->2479|4095->2866|4110->2872|4161->2902|6156->4894|6202->4912
                   LINES: 32->1|42->11|42->11|42->11|43->12|43->12|43->12|48->17|49->18|51->20|51->20|51->20|71->40|71->40|71->40|84->53|84->53|84->53|123->92|124->93
                   -- GENERATED --
               */

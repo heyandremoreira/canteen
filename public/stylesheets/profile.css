@@ -2,4 +2,13 @@
     background:#B87651;
     margin: 0;
     height: 20vh;
+    position: relative;
+    padding-top: 70px;
 }
+
+.btn.btn-brown {
+    color: #FFFEFE;
+    background-color: #B87651;
+    border-color: #B87651;
+}
+

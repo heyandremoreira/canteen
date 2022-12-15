@@ -9,7 +9,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@@1.10.2/font/bootstrap-icons.css">
         <link rel="stylesheet" href="@routes.Assets.at("stylesheets/landing.css")"/>
-        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/login_signup.css")"/>
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/styles.css")"/>
     </navbar>
 
     <header class="header-menu">
@@ -48,12 +48,12 @@
 
     <body style="background: black">
         <form method="post" action="signupProcess">
-            <div class="main-login">
-                <div class=" text-white left-login">
+            <div class="row principal-container">
+                <div class="col-7 d-none d-md-block text-center">
                     <img src="@routes.Assets.at("images/signup.png")" class="img-fluid" alt="login" width="500px">
                 </div>
-                <div class="right-login">
-                    <div class="text-white card-login">
+                <div class="col-sm-12 col-md-5 justify-content-center">
+                    <div class="text-white card-container justify-content-start">
                         <h2 class="pb-3">SignUp</h2>
                         <div class="form-control-sm text-white textfield pb-3">
                             <input type="text" name="username" placeholder="Username">
@@ -65,7 +65,7 @@
                             <input type="password" name="password" placeholder="Password">
                         </div>
                         <div class="form-control-sm textfield pb-4">
-                            <button class="btn-login">Register</button>
+                            <button class="btn-form">Register</button>
                         </div>
 
                         <p style="font-size: 12px" class="text-center text-muted pb-4">By signing up, you agree to our

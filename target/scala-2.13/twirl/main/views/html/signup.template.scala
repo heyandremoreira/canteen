@@ -40,7 +40,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
         <link rel="stylesheet" href=""""),_display_(/*11.39*/routes/*11.45*/.Assets.at("stylesheets/landing.css")),format.raw/*11.82*/(""""/>
-        <link rel="stylesheet" href=""""),_display_(/*12.39*/routes/*12.45*/.Assets.at("stylesheets/login_signup.css")),format.raw/*12.87*/(""""/>
+        <link rel="stylesheet" href=""""),_display_(/*12.39*/routes/*12.45*/.Assets.at("stylesheets/styles.css")),format.raw/*12.81*/(""""/>
     </navbar>
 
     <header class="header-menu">
@@ -79,12 +79,12 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
     <body style="background: black">
         <form method="post" action="signupProcess">
-            <div class="main-login">
-                <div class=" text-white left-login">
+            <div class="row principal-container">
+                <div class="col-7 d-none d-md-block text-center">
                     <img src=""""),_display_(/*53.32*/routes/*53.38*/.Assets.at("images/signup.png")),format.raw/*53.69*/("""" class="img-fluid" alt="login" width="500px">
                 </div>
-                <div class="right-login">
-                    <div class="text-white card-login">
+                <div class="col-sm-12 col-md-5 justify-content-center">
+                    <div class="text-white card-container justify-content-start">
                         <h2 class="pb-3">SignUp</h2>
                         <div class="form-control-sm text-white textfield pb-3">
                             <input type="text" name="username" placeholder="Username">
@@ -96,7 +96,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                             <input type="password" name="password" placeholder="Password">
                         </div>
                         <div class="form-control-sm textfield pb-4">
-                            <button class="btn-login">Register</button>
+                            <button class="btn-form">Register</button>
                         </div>
 
                         <p style="font-size: 12px" class="text-center text-muted pb-4">By signing up, you agree to our
@@ -151,8 +151,8 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
               /*
                   -- GENERATED --
                   SOURCE: app/views/signup.scala.html
-                  HASH: c2a7d0fc0ca62225a572bd786b28a70fa238ffd4
-                  MATRIX: 990->0|1657->642|1672->648|1730->685|1800->728|1815->734|1878->776|2030->968|2067->978|2226->1110|2241->1116|2291->1145|3615->2442|3630->2448|3690->2487|4097->2867|4112->2873|4164->2904|6747->5483|6794->5501
+                  HASH: 2062cbcaaa65b698d9fb61d530966930e50e8870
+                  MATRIX: 990->0|1657->642|1672->648|1730->685|1800->728|1815->734|1872->770|2024->962|2061->972|2220->1104|2235->1110|2285->1139|3609->2436|3624->2442|3684->2481|4117->2887|4132->2893|4184->2924|6822->5558|6869->5576
                   LINES: 32->1|42->11|42->11|42->11|43->12|43->12|43->12|48->17|49->18|51->20|51->20|51->20|71->40|71->40|71->40|84->53|84->53|84->53|131->100|132->101
                   -- GENERATED --
               */

@@ -31,7 +31,7 @@ object landing extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Ht
 
 Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 <html lang="en">
-    <navbar>
+    <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,7 +40,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
         <link rel="stylesheet" href=""""),_display_(/*11.39*/routes/*11.45*/.Assets.at("stylesheets/landing.css")),format.raw/*11.82*/(""""/>
-    </navbar>
+    </head>
 
     <body style="background: black">
         <header class="header-menu">
@@ -90,8 +90,8 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                             <br> Explore our canteens and check out their menus.
                         </p>
                         <div style="padding-left: 40px">
-                            <button class="btn btn-sm btn-brown rounded-pill ms-lg-4 px-4" href="#login">Login</button>
-                            <button class="btn btn-sm btn-brown rounded-pill ms-lg-4 px-4" href="#signup">SignUp</button>
+                            <button class="btn btn-sm btn-small ms-lg-4 px-4" href="#login">Login</button>
+                            <button class="btn btn-sm btn-small ms-lg-4 px-4" href="#signup">SignUp</button>
                         </div>
                     </div>
                     <div class="landing-img col-xl-8 d-flex justify-content-end">
@@ -135,8 +135,8 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
               /*
                   -- GENERATED --
                   SOURCE: app/views/landing.scala.html
-                  HASH: ad5ac48a52976bee5d126a5441b5ab8819a6d55b
-                  MATRIX: 991->0|1649->633|1664->639|1722->676|1924->918|1966->932|2133->1072|2148->1078|2198->1107|3602->2484|3617->2490|3677->2529|3923->2784|3965->2841|4002->2851|5073->3895|5088->3901|5141->3933|5416->4679|5462->4697|5633->4865|5683->4887
+                  HASH: 3c763cb8e2010556aa690751cf5788205aacc87b
+                  MATRIX: 991->0|1647->631|1662->637|1720->674|1920->914|1962->928|2129->1068|2144->1074|2194->1103|3598->2480|3613->2486|3673->2525|3919->2780|3961->2837|3998->2847|5043->3865|5058->3871|5111->3903|5386->4649|5432->4667|5603->4835|5653->4857
                   LINES: 32->1|42->11|42->11|42->11|48->17|49->18|51->20|51->20|51->20|71->40|71->40|71->40|81->50|82->51|83->52|98->67|98->67|98->67|108->84|109->85|111->87|112->88
                   -- GENERATED --
               */
