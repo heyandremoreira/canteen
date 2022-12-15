@@ -44,7 +44,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
     <body style="background: black">
         <header class="header-menu">
-            <nav class="navbar navbar-expand-lg bg-black">
+            <nav class="navbar navbar-dark navbar-expand-lg bg-black">
                 """),format.raw/*17.85*/("""
             """),format.raw/*18.13*/("""<div class="container-fluid">
                 <a style="padding-left: 80px" class="navbar-brand" href="/">
@@ -56,20 +56,45 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                 <div style="padding-right: 80px" class="collapse navbar-collapse align-items-center justify-content-center" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-white px-3" aria-current="page" href="#home">Home</a>
+                            <a class="nav-link px-3" aria-current="page" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white px-3" href="#tickets">Tickets</a>
+                            <a class="nav-link px-3" href="#tickets">Tickets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white px-3" href="#wallet">Wallet</a>
+                            <a class="nav-link px-3" href="#wallet">Wallet</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#profile">Profile</a>
+                            <a class="nav-link" href="#profile">Profile</a>
                         </li>
-                        <a style="padding-left: 20px" class="navbar-brand">
-                            <img src=""""),_display_(/*40.40*/routes/*40.46*/.Assets.at("images/white_settings.png")),format.raw/*40.85*/("""" class="img-fluid" alt="logo" width="30px">
-                        </a>
+
+                            <!-- Button trigger modal -->
+                        <button style="padding-left: 20px" type="button" class="btn"
+                        data-toggle="modal" data-target="#exampleModal">
+                            <img src=""""),_display_(/*43.40*/routes/*43.46*/.Assets.at("images/white_settings.png")),format.raw/*43.85*/("""" class="img-fluid" alt="logo" width="30px">
+                        </button>
+
+                            <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </ul>
                 </div>
             </div>
@@ -78,9 +103,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
 
         <main>
-            """),format.raw/*50.50*/("""
-            """),format.raw/*51.56*/("""
-        """),format.raw/*52.9*/("""<section class="home d-flex align-items-center h-100" id="home">
+            """),format.raw/*75.50*/("""
+            """),format.raw/*76.56*/("""
+        """),format.raw/*77.9*/("""<section class="home d-flex align-items-center h-100" id="home">
             <div class="container">
                 <div class="row d-flex align-items-center">
                     <div class="col-xl-4">
@@ -95,7 +120,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                         </div>
                     </div>
                     <div class="landing-img col-xl-8 d-flex justify-content-end">
-                        <img src=""""),_display_(/*67.36*/routes/*67.42*/.Assets.at("images/landing.png")),format.raw/*67.74*/("""" class="img-fluid" alt="landing">
+                        <img src=""""),_display_(/*92.36*/routes/*92.42*/.Assets.at("images/landing.png")),format.raw/*92.74*/("""" class="img-fluid" alt="landing">
                     </div>
                 </div>
             </div>
@@ -105,11 +130,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
         <footer class="footer" id="footer">
             <div class="container">
-                """),format.raw/*84.25*/("""
-                """),format.raw/*85.17*/("""<div class="row">
+                """),format.raw/*109.25*/("""
+                """),format.raw/*110.17*/("""<div class="row">
                     <div style="font-size: 12px" class="text-white d-flex justify-content-center">
-                        """),format.raw/*87.50*/("""
-                    """),format.raw/*88.21*/("""<p>Copyright 2023. cantini. All rights reserved.</p>
+                        """),format.raw/*112.50*/("""
+                    """),format.raw/*113.21*/("""<p>Copyright 2023. cantini. All rights reserved.</p>
                     </div>
                 </div>
             </div>
@@ -135,9 +160,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
               /*
                   -- GENERATED --
                   SOURCE: app/views/landing.scala.html
-                  HASH: 3c763cb8e2010556aa690751cf5788205aacc87b
-                  MATRIX: 991->0|1647->631|1662->637|1720->674|1920->914|1962->928|2129->1068|2144->1074|2194->1103|3598->2480|3613->2486|3673->2525|3919->2780|3961->2837|3998->2847|5043->3865|5058->3871|5111->3903|5386->4649|5432->4667|5603->4835|5653->4857
-                  LINES: 32->1|42->11|42->11|42->11|48->17|49->18|51->20|51->20|51->20|71->40|71->40|71->40|81->50|82->51|83->52|98->67|98->67|98->67|108->84|109->85|111->87|112->88
+                  HASH: f2e0cd2957f1e2b8d60dd303ec65255dd10ad856
+                  MATRIX: 991->0|1647->631|1662->637|1720->674|1932->926|1974->940|2141->1080|2156->1086|2206->1115|3710->2592|3725->2598|3785->2637|5404->4265|5446->4322|5483->4332|6528->5350|6543->5356|6596->5388|6872->6134|6919->6152|7091->6320|7142->6342
+                  LINES: 32->1|42->11|42->11|42->11|48->17|49->18|51->20|51->20|51->20|74->43|74->43|74->43|106->75|107->76|108->77|123->92|123->92|123->92|133->109|134->110|136->112|137->113
                   -- GENERATED --
               */
           

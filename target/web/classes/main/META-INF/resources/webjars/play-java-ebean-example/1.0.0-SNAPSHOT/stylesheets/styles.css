@@ -34,7 +34,7 @@ h1, .h1, h2, .h2, h3, .h3, h5, .h5 {
     align-items: center;
     flex-direction: column;
     padding: 30px 20px;
-    margin: 40px 0px 40px 0px;
+    margin: 30px 0px 30px 0px;
     background: #131313;
     border-radius: 20px;
 }
@@ -115,6 +115,10 @@ h1, .h1, h2, .h2, h3, .h3, h5, .h5 {
     outline: none;
     color: #FFFEFE;
     background: #c79375;
+}
+
+.spacing{
+    justify-content: space-between;
 }
 
 
