@@ -39,15 +39,16 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-        <link rel="stylesheet" href=""""),_display_(/*11.39*/routes/*11.45*/.Assets.at("stylesheets/styles.css")),format.raw/*11.81*/(""""/>
+        <link rel="stylesheet" href=""""),_display_(/*11.39*/routes/*11.45*/.Assets.at("stylesheets/landing.css")),format.raw/*11.82*/(""""/>
+        <link rel="stylesheet" href=""""),_display_(/*12.39*/routes/*12.45*/.Assets.at("stylesheets/styles.css")),format.raw/*12.81*/(""""/>
     </navbar>
 
     <header class="header-menu">
         <nav class="navbar navbar-dark navbar-expand-lg bg-black">
-            """),format.raw/*16.81*/("""
-        """),format.raw/*17.9*/("""<div class="container-fluid">
+            """),format.raw/*17.81*/("""
+        """),format.raw/*18.9*/("""<div class="container-fluid">
             <a style="padding-left: 80px" class="navbar-brand" href="/">
-                <img src=""""),_display_(/*19.28*/routes/*19.34*/.Assets.at("images/logo.png")),format.raw/*19.63*/("""" class="img-fluid" alt="logo" width="200px">
+                <img src=""""),_display_(/*20.28*/routes/*20.34*/.Assets.at("images/logo.png")),format.raw/*20.63*/("""" class="img-fluid" alt="logo" width="200px">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span style="color: white" class="navbar-toggler-icon"></span>
@@ -70,7 +71,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                         <!-- Button trigger modal -->
                     <button style="padding-left: 20px" type="button" class="btn"
                     data-toggle="modal" data-target="#exampleModal">
-                        <img src=""""),_display_(/*42.36*/routes/*42.42*/.Assets.at("images/white_settings.png")),format.raw/*42.81*/("""" class="img-fluid" alt="logo" width="30px">
+                        <img src=""""),_display_(/*43.36*/routes/*43.42*/.Assets.at("images/white_settings.png")),format.raw/*43.81*/("""" class="img-fluid" alt="logo" width="30px">
                     </button>
 
                         <!-- Modal -->
@@ -105,7 +106,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <form method="post" action="signupProcess">
             <div class="row principal-container">
                 <div class="col-7 d-none d-md-block text-center">
-                    <img src=""""),_display_(/*77.32*/routes/*77.38*/.Assets.at("images/signup.png")),format.raw/*77.69*/("""" class="img-fluid" alt="login" width="500px">
+                    <img src=""""),_display_(/*78.32*/routes/*78.38*/.Assets.at("images/signup.png")),format.raw/*78.69*/("""" class="img-fluid" alt="login" width="500px">
                 </div>
                 <div class="col-sm-12 col-md-4 justify-content-center">
                     <div class="card-container text-white justify-content-start">
@@ -144,8 +145,8 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <div class="container">
             <div class="row">
                 <div style="font-size: 12px" class="text-white d-flex justify-content-center">
-                    """),format.raw/*116.46*/("""
-                """),format.raw/*117.17*/("""<p>Copyright 2023. cantini. All rights reserved.</p>
+                    """),format.raw/*117.46*/("""
+                """),format.raw/*118.17*/("""<p>Copyright 2023. cantini. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -167,9 +168,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
               /*
                   -- GENERATED --
                   SOURCE: app/views/signup.scala.html
-                  HASH: 3607436600c024db7a653c3b3e208e9bcc69e1c0
-                  MATRIX: 990->0|1657->642|1672->648|1729->684|1893->888|1930->898|2089->1030|2104->1036|2154->1065|3570->2454|3585->2460|3645->2499|5375->4202|5390->4208|5442->4239|7595->6388|7642->6406
-                  LINES: 32->1|42->11|42->11|42->11|47->16|48->17|50->19|50->19|50->19|73->42|73->42|73->42|108->77|108->77|108->77|147->116|148->117
+                  HASH: 9cbbbf97bec363d9096428bfd41cffc81f0fbfd8
+                  MATRIX: 990->0|1657->642|1672->648|1730->685|1800->728|1815->734|1872->770|2036->974|2073->984|2232->1116|2247->1122|2297->1151|3713->2540|3728->2546|3788->2585|5518->4288|5533->4294|5585->4325|7738->6474|7785->6492
+                  LINES: 32->1|42->11|42->11|42->11|43->12|43->12|43->12|48->17|49->18|51->20|51->20|51->20|74->43|74->43|74->43|109->78|109->78|109->78|148->117|149->118
                   -- GENERATED --
               */
           

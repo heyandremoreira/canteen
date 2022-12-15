@@ -54,10 +54,12 @@ Seq[Any](format.raw/*1.1*/("""<header class="header-menu">
                     <a class="nav-link" href="#profile">Profile</a>
                 </li>
 
-                    <!-- Button trigger modal -->
+                """),format.raw/*40.24*/("""
+
+                    """),format.raw/*42.21*/("""<!-- Button trigger modal -->
                 <button style="padding-left: 20px" type="button" class="btn"
                 data-toggle="modal" data-target="#exampleModal">
-                    <img src=""""),_display_(/*29.32*/routes/*29.38*/.Assets.at("images/white_settings.png")),format.raw/*29.77*/("""" class="img-fluid" alt="logo" width="30px">
+                    <img src=""""),_display_(/*45.32*/routes/*45.38*/.Assets.at("images/white_settings.png")),format.raw/*45.77*/("""" class="img-fluid" alt="logo" width="30px">
                 </button>
 
                     <!-- Modal -->
@@ -102,9 +104,9 @@ Seq[Any](format.raw/*1.1*/("""<header class="header-menu">
               /*
                   -- GENERATED --
                   SOURCE: app/views/template/navbar.scala.html
-                  HASH: a9183cdeba2789a8759824be6d5d456eb6f7a5d2
-                  MATRIX: 999->0|1128->170|1160->176|1310->300|1324->306|1373->335|2701->1636|2716->1642|2776->1681
-                  LINES: 32->1|34->3|35->4|37->6|37->6|37->6|60->29|60->29|60->29
+                  HASH: b2e307a4699919298f4868434bcb910cf53d62f0
+                  MATRIX: 999->0|1128->170|1160->176|1310->300|1324->306|1373->335|2492->2034|2544->2058|2777->2264|2792->2270|2852->2309
+                  LINES: 32->1|34->3|35->4|37->6|37->6|37->6|57->40|59->42|62->45|62->45|62->45
                   -- GENERATED --
               */
           

@@ -30,7 +30,7 @@ object footer extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Htm
 
 
 Seq[Any](format.raw/*1.1*/("""<footer class="footer" id="footer">
-    <div class="container pb-2">
+    <div class="container">
         <div class="row">
             <div class="text-white col-xl-4 d-flex mx-auto justify-content-center">
                 <a style="text-decoration: none;
@@ -63,8 +63,8 @@ Seq[Any](format.raw/*1.1*/("""<footer class="footer" id="footer">
               /*
                   -- GENERATED --
                   SOURCE: app/views/template/footer.scala.html
-                  HASH: 45628172326aecc5ce2f99df8d3361e62dcd2880
-                  MATRIX: 999->0|1682->680|1724->694
+                  HASH: 04ac88c17351bbce2e62e5218b3272bd1c499b7b
+                  MATRIX: 999->0|1677->675|1719->689
                   LINES: 32->1|44->13|45->14
                   -- GENERATED --
               */
