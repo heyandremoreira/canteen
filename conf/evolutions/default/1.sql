@@ -19,8 +19,7 @@ create table item (
 
 create table user (
   id                            bigint auto_increment not null,
-  first_name                    varchar(255),
-  last_name                     varchar(255),
+  name                          varchar(255),
   email                         varchar(255),
   constraint uq_user_email unique (email),
   constraint pk_user primary key (id)

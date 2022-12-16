@@ -84,6 +84,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                                 <a class="dropdown-item" href="#help">Help</a>
                                 <a class="dropdown-item" href="#terms">Terms of Use</a>
                                 <a class="dropdown-item" href="#privacy">Privacy Policy</a>
+                                <p></p>
                                 <a class="btn btn-logout" href="#logout">Log out</a>
                             </div>
                         </div>
@@ -92,11 +93,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                             const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))
                         </script>
 
-                        """),format.raw/*84.36*/("""
+                        """),format.raw/*85.36*/("""
 
-                        """),format.raw/*105.33*/("""
+                        """),format.raw/*106.33*/("""
 
-                    """),format.raw/*107.21*/("""</ul>
+                    """),format.raw/*108.21*/("""</ul>
                 </div>
             </div>
             </nav>
@@ -104,9 +105,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
 
         <main>
-            """),format.raw/*115.50*/("""
-            """),format.raw/*116.56*/("""
-        """),format.raw/*117.9*/("""<section class="home d-flex align-items-center h-100" id="home">
+            """),format.raw/*116.50*/("""
+            """),format.raw/*117.56*/("""
+        """),format.raw/*118.9*/("""<section class="home d-flex align-items-center h-100" id="home">
             <div class="container">
                 <div class="row d-flex align-items-center">
                     <div class="col-xl-4">
@@ -118,11 +119,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                         <div style="padding-left: 40px">
                             <button class="btn btn-sm btn-small ms-lg-4 px-4" href="#login">Login</button>
                             <button class="btn btn-sm btn-small ms-lg-4 px-4" href="#signup">Sign Up</button>
-"""),format.raw/*129.112*/("""
-                        """),format.raw/*130.25*/("""</div>
+"""),format.raw/*130.112*/("""
+                        """),format.raw/*131.25*/("""</div>
                     </div>
                     <div class="landing-img col-xl-8 d-flex justify-content-end">
-                        <img src=""""),_display_(/*133.36*/routes/*133.42*/.Assets.at("images/landing.png")),format.raw/*133.74*/("""" class="img-fluid" alt="landing">
+                        <img src=""""),_display_(/*134.36*/routes/*134.42*/.Assets.at("images/landing.png")),format.raw/*134.74*/("""" class="img-fluid" alt="landing">
                     </div>
                 </div>
             </div>
@@ -132,11 +133,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
         <footer class="footer" id="footer">
             <div class="container">
-                """),format.raw/*150.25*/("""
-            """),format.raw/*151.13*/("""<div class="row">
+                """),format.raw/*151.25*/("""
+            """),format.raw/*152.13*/("""<div class="row">
                 <div style="font-size: 12px" class="text-white d-flex justify-content-center">
-                    """),format.raw/*153.46*/("""
-                """),format.raw/*154.17*/("""<p>Copyright 2023. cantini. All rights reserved.</p>
+                    """),format.raw/*154.46*/("""
+                """),format.raw/*155.17*/("""<p>Copyright 2023. cantini. All rights reserved.</p>
                 </div>
             </div>
             </div>
@@ -163,9 +164,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
               /*
                   -- GENERATED --
                   SOURCE: app/views/landing.scala.html
-                  HASH: 9bc5bb99e0a01bf69f2993b536bc245d9f64700c
-                  MATRIX: 991->0|1647->631|1662->637|1720->674|1790->717|1805->723|1862->759|2076->1013|2118->1027|2285->1167|2300->1173|2350->1202|3621->3361|3679->3391|3970->3655|3985->3661|4045->3700|5225->5186|5282->6373|5335->6397|5486->6556|5529->6613|5567->6623|6438->7575|6493->7601|6675->7755|6691->7761|6745->7793|7021->8491|7064->8505|7228->8665|7275->8683
-                  LINES: 32->1|42->11|42->11|42->11|43->12|43->12|43->12|50->19|51->20|53->22|53->22|53->22|73->59|76->62|79->65|79->65|79->65|95->84|97->105|99->107|107->115|108->116|109->117|121->129|122->130|125->133|125->133|125->133|135->150|136->151|138->153|139->154
+                  HASH: 534a95d5f78c2e648ccc2c0684b0b2eb2dea2b63
+                  MATRIX: 991->0|1647->631|1662->637|1720->674|1790->717|1805->723|1862->759|2076->1013|2118->1027|2285->1167|2300->1173|2350->1202|3621->3361|3679->3391|3970->3655|3985->3661|4045->3700|5266->5227|5323->6414|5376->6438|5527->6597|5570->6654|5608->6664|6479->7616|6534->7642|6716->7796|6732->7802|6786->7834|7062->8532|7105->8546|7269->8706|7316->8724
+                  LINES: 32->1|42->11|42->11|42->11|43->12|43->12|43->12|50->19|51->20|53->22|53->22|53->22|73->59|76->62|79->65|79->65|79->65|96->85|98->106|100->108|108->116|109->117|110->118|122->130|123->131|126->134|126->134|126->134|136->151|137->152|139->154|140->155
                   -- GENERATED --
               */
           

@@ -13,8 +13,7 @@ import javax.persistence.Table;
 public class User extends Model {
     @Id
     private Long id;
-    private String firstName;
-    private String lastName;
+    private String name;
 
     @Column(unique = true)
     private String email;
@@ -37,20 +36,12 @@ public class User extends Model {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String firstName) {
+        this.name = name;
     }
 
     public String getEmail() {
