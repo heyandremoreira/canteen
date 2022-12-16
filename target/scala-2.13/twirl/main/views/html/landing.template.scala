@@ -40,15 +40,17 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
         <link rel="stylesheet" href=""""),_display_(/*11.39*/routes/*11.45*/.Assets.at("stylesheets/landing.css")),format.raw/*11.82*/(""""/>
+        <link rel="stylesheet" href=""""),_display_(/*12.39*/routes/*12.45*/.Assets.at("stylesheets/styles.css")),format.raw/*12.81*/(""""/>
+
     </head>
 
     <body style="background: black">
         <header class="header-menu">
             <nav class="navbar navbar-dark navbar-expand-lg bg-black">
-                """),format.raw/*17.85*/("""
-            """),format.raw/*18.13*/("""<div class="container-fluid">
+                """),format.raw/*19.85*/("""
+            """),format.raw/*20.13*/("""<div class="container-fluid">
                 <a style="padding-left: 80px" class="navbar-brand" href="/">
-                    <img src=""""),_display_(/*20.32*/routes/*20.38*/.Assets.at("images/logo.png")),format.raw/*20.67*/("""" class="img-fluid" alt="logo" width="200px">
+                    <img src=""""),_display_(/*22.32*/routes/*22.38*/.Assets.at("images/logo.png")),format.raw/*22.67*/("""" class="img-fluid" alt="logo" width="200px">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span style="color: white" class="navbar-toggler-icon"></span>
@@ -68,34 +70,33 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                             <a class="nav-link" href="#profile">Profile</a>
                         </li>
 
-                            <!-- Button trigger modal -->
-                        <button style="padding-left: 20px" type="button" class="btn"
-                        data-toggle="modal" data-target="#exampleModal">
-                            <img src=""""),_display_(/*43.40*/routes/*43.46*/.Assets.at("images/white_settings.png")),format.raw/*43.85*/("""" class="img-fluid" alt="logo" width="30px">
-                        </button>
+                        """),format.raw/*59.32*/("""
 
-                            <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-        ...
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
+
+                        """),format.raw/*62.25*/("""<div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenu2"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src=""""),_display_(/*65.44*/routes/*65.50*/.Assets.at("images/white_settings.png")),format.raw/*65.89*/("""" class="img-fluid" alt="settings" width="30px">
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg-end text-center p-2 bg-dark" aria-labelledby="dropdownMenu2">
+                                <a class="dropdown-item" href="#lang">Language</a>
+                                <a class="dropdown-item" href="#colormode">Dark Mode</a>
+                                <a class="dropdown-item" href="#help">Help</a>
+                                <a class="dropdown-item" href="#terms">Terms of Use</a>
+                                <a class="dropdown-item" href="#privacy">Privacy Policy</a>
+                                <a class="btn btn-logout" href="#logout">Log out</a>
                             </div>
                         </div>
+                        <script>
+                            const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
+                            const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))
+                        </script>
 
-                    </ul>
+                        """),format.raw/*84.36*/("""
+
+                        """),format.raw/*105.33*/("""
+
+                    """),format.raw/*107.21*/("""</ul>
                 </div>
             </div>
             </nav>
@@ -103,9 +104,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
 
         <main>
-            """),format.raw/*75.50*/("""
-            """),format.raw/*76.56*/("""
-        """),format.raw/*77.9*/("""<section class="home d-flex align-items-center h-100" id="home">
+            """),format.raw/*115.50*/("""
+            """),format.raw/*116.56*/("""
+        """),format.raw/*117.9*/("""<section class="home d-flex align-items-center h-100" id="home">
             <div class="container">
                 <div class="row d-flex align-items-center">
                     <div class="col-xl-4">
@@ -116,11 +117,12 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                         </p>
                         <div style="padding-left: 40px">
                             <button class="btn btn-sm btn-small ms-lg-4 px-4" href="#login">Login</button>
-                            <button class="btn btn-sm btn-small ms-lg-4 px-4" href="#signup">SignUp</button>
-                        </div>
+                            <button class="btn btn-sm btn-small ms-lg-4 px-4" href="#signup">Sign Up</button>
+"""),format.raw/*129.112*/("""
+                        """),format.raw/*130.25*/("""</div>
                     </div>
                     <div class="landing-img col-xl-8 d-flex justify-content-end">
-                        <img src=""""),_display_(/*92.36*/routes/*92.42*/.Assets.at("images/landing.png")),format.raw/*92.74*/("""" class="img-fluid" alt="landing">
+                        <img src=""""),_display_(/*133.36*/routes/*133.42*/.Assets.at("images/landing.png")),format.raw/*133.74*/("""" class="img-fluid" alt="landing">
                     </div>
                 </div>
             </div>
@@ -130,18 +132,19 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
         <footer class="footer" id="footer">
             <div class="container">
-                """),format.raw/*109.25*/("""
-                """),format.raw/*110.17*/("""<div class="row">
-                    <div style="font-size: 12px" class="text-white d-flex justify-content-center">
-                        """),format.raw/*112.50*/("""
-                    """),format.raw/*113.21*/("""<p>Copyright 2023. cantini. All rights reserved.</p>
-                    </div>
+                """),format.raw/*150.25*/("""
+            """),format.raw/*151.13*/("""<div class="row">
+                <div style="font-size: 12px" class="text-white d-flex justify-content-center">
+                    """),format.raw/*153.46*/("""
+                """),format.raw/*154.17*/("""<p>Copyright 2023. cantini. All rights reserved.</p>
                 </div>
+            </div>
             </div>
         </footer>
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     </body>
 </html>"""))
       }
@@ -160,9 +163,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
               /*
                   -- GENERATED --
                   SOURCE: app/views/landing.scala.html
-                  HASH: f2e0cd2957f1e2b8d60dd303ec65255dd10ad856
-                  MATRIX: 991->0|1647->631|1662->637|1720->674|1932->926|1974->940|2141->1080|2156->1086|2206->1115|3710->2592|3725->2598|3785->2637|5404->4265|5446->4322|5483->4332|6528->5350|6543->5356|6596->5388|6872->6134|6919->6152|7091->6320|7142->6342
-                  LINES: 32->1|42->11|42->11|42->11|48->17|49->18|51->20|51->20|51->20|74->43|74->43|74->43|106->75|107->76|108->77|123->92|123->92|123->92|133->109|134->110|136->112|137->113
+                  HASH: 9bc5bb99e0a01bf69f2993b536bc245d9f64700c
+                  MATRIX: 991->0|1647->631|1662->637|1720->674|1790->717|1805->723|1862->759|2076->1013|2118->1027|2285->1167|2300->1173|2350->1202|3621->3361|3679->3391|3970->3655|3985->3661|4045->3700|5225->5186|5282->6373|5335->6397|5486->6556|5529->6613|5567->6623|6438->7575|6493->7601|6675->7755|6691->7761|6745->7793|7021->8491|7064->8505|7228->8665|7275->8683
+                  LINES: 32->1|42->11|42->11|42->11|43->12|43->12|43->12|50->19|51->20|53->22|53->22|53->22|73->59|76->62|79->65|79->65|79->65|95->84|97->105|99->107|107->115|108->116|109->117|121->129|122->130|125->133|125->133|125->133|135->150|136->151|138->153|139->154
                   -- GENERATED --
               */
           

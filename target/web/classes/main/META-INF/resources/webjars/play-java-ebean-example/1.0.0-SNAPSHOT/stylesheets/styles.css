@@ -117,6 +117,25 @@ h1, .h1, h2, .h2, h3, .h3, h5, .h5 {
     background: #c79375;
 }
 
+btn-logout{
+    color:#fff;background-color:#455a64;border-color:#455a64
+}
+.btn-logout:hover{
+    color:#fff;background-color:#455a64;border-color:#455a64
+}
+/*.btn-logout.focus,.btn-logout:focus{
+    box-shadow:0 0 0 .2rem rgba(58,176,195,.5)
+}
+.btn-logout.disabled,.btn-logout:disabled{
+    color:#fff;background-color:#455a64;border-color:#455a64
+}
+.btn-logout:not(:disabled):not(.disabled).active,.btn-logout:not(:disabled):not(.disabled):active,.show>.btn-logout.dropdown-toggle{
+    color:#fff;background-color:#455a64;border-color:#455a64
+}
+.btn-logout:not(:disabled):not(.disabled).active:focus,.btn-logout:not(:disabled):not(.disabled):active:focus,.show>.btn-logout.dropdown-toggle:focus{
+    box-shadow:0 0 0 .2rem rgba(69, 90, 100)
+}*/
+
 
 @media only screen and (min-width: 768px) {
     .card-container{

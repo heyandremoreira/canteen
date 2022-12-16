@@ -53,36 +53,23 @@ Seq[Any](format.raw/*1.1*/("""<header class="header-menu">
                 <li class="nav-item">
                     <a class="nav-link" href="#profile">Profile</a>
                 </li>
-
-                """),format.raw/*40.24*/("""
-
-                    """),format.raw/*42.21*/("""<!-- Button trigger modal -->
-                <button style="padding-left: 20px" type="button" class="btn"
-                data-toggle="modal" data-target="#exampleModal">
-                    <img src=""""),_display_(/*45.32*/routes/*45.38*/.Assets.at("images/white_settings.png")),format.raw/*45.77*/("""" class="img-fluid" alt="logo" width="30px">
-                </button>
-
-                    <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-        ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenu2"
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src=""""),_display_(/*28.36*/routes/*28.42*/.Assets.at("images/white_settings.png")),format.raw/*28.81*/("""" class="img-fluid" alt="settings" width="30px">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg-end bg-dark" aria-labelledby="dropdownMenu2">
+                        <a class="dropdown-item" href="#">Language</a>
+                        <a class="dropdown-item" href="#">Dark Mode</a>
+                        <a class="dropdown-item" href="#">Help</a>
+                        <a class="dropdown-item" href="#">Terms of Use</a>
+                        <a class="dropdown-item" href="#">Privacy Policy</a>
                     </div>
                 </div>
-
+                <script>
+                            const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
+                            const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))
+                </script>
             </ul>
         </div>
     </div>
@@ -104,9 +91,9 @@ Seq[Any](format.raw/*1.1*/("""<header class="header-menu">
               /*
                   -- GENERATED --
                   SOURCE: app/views/template/navbar.scala.html
-                  HASH: b2e307a4699919298f4868434bcb910cf53d62f0
-                  MATRIX: 999->0|1128->170|1160->176|1310->300|1324->306|1373->335|2492->2034|2544->2058|2777->2264|2792->2270|2852->2309
-                  LINES: 32->1|34->3|35->4|37->6|37->6|37->6|57->40|59->42|62->45|62->45|62->45
+                  HASH: 294b91c23387ec8c9b3bfe3b9bc654f9a63c7976
+                  MATRIX: 999->0|1128->170|1160->176|1310->300|1324->306|1373->335|2729->1664|2744->1670|2804->1709
+                  LINES: 32->1|34->3|35->4|37->6|37->6|37->6|59->28|59->28|59->28
                   -- GENERATED --
               */
           

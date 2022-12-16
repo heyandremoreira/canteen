@@ -22,50 +22,23 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#profile">Profile</a>
                 </li>
-
-                @*    <!-- Manager -->
-                <li class="nav-item">
-                <a class="nav-link" href="#profile">Manage Tickets</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#profile">Manage Menus</a>
-                </li>
-
-                <!-- Administrator -->
-                <li class="nav-item">
-                <a class="nav-link" href="#profile">Users List</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#profile">Authentication Approvement</a>
-                </li>*@
-
-                    <!-- Button trigger modal -->
-                <button style="padding-left: 20px" type="button" class="btn"
-                data-toggle="modal" data-target="#exampleModal">
-                    <img src="@routes.Assets.at("images/white_settings.png")" class="img-fluid" alt="logo" width="30px">
-                </button>
-
-                    <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-        ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenu2"
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="@routes.Assets.at("images/white_settings.png")" class="img-fluid" alt="settings" width="30px">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg-end bg-dark" aria-labelledby="dropdownMenu2">
+                        <a class="dropdown-item" href="#">Language</a>
+                        <a class="dropdown-item" href="#">Dark Mode</a>
+                        <a class="dropdown-item" href="#">Help</a>
+                        <a class="dropdown-item" href="#">Terms of Use</a>
+                        <a class="dropdown-item" href="#">Privacy Policy</a>
                     </div>
                 </div>
-
+                <script>
+                            const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
+                            const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))
+                </script>
             </ul>
         </div>
     </div>

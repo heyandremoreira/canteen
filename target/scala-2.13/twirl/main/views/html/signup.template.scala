@@ -31,7 +31,7 @@ object signup extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Htm
 
 Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 <html lang="en">
-    <navbar>
+    <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,7 +41,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
         <link rel="stylesheet" href=""""),_display_(/*11.39*/routes/*11.45*/.Assets.at("stylesheets/landing.css")),format.raw/*11.82*/(""""/>
         <link rel="stylesheet" href=""""),_display_(/*12.39*/routes/*12.45*/.Assets.at("stylesheets/styles.css")),format.raw/*12.81*/(""""/>
-    </navbar>
+    </head>
 
     <header class="header-menu">
         <nav class="navbar navbar-dark navbar-expand-lg bg-black">
@@ -67,34 +67,23 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                     <li class="nav-item">
                         <a class="nav-link" href="#profile">Profile</a>
                     </li>
-
-                        <!-- Button trigger modal -->
-                    <button style="padding-left: 20px" type="button" class="btn"
-                    data-toggle="modal" data-target="#exampleModal">
-                        <img src=""""),_display_(/*43.36*/routes/*43.42*/.Assets.at("images/white_settings.png")),format.raw/*43.81*/("""" class="img-fluid" alt="logo" width="30px">
-                    </button>
-
-                        <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-        ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </div>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenu2"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src=""""),_display_(/*42.40*/routes/*42.46*/.Assets.at("images/white_settings.png")),format.raw/*42.85*/("""" class="img-fluid" alt="settings" width="30px">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg-end bg-dark" aria-labelledby="dropdownMenu2">
+                            <a class="dropdown-item" href="#">Language</a>
+                            <a class="dropdown-item" href="#">Dark Mode</a>
+                            <a class="dropdown-item" href="#">Help</a>
+                            <a class="dropdown-item" href="#">Terms of Use</a>
+                            <a class="dropdown-item" href="#">Privacy Policy</a>
                         </div>
                     </div>
-
+                    <script>
+                            const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
+                            const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))
+                    </script>
                 </ul>
             </div>
         </div>
@@ -106,18 +95,18 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <form method="post" action="signupProcess">
             <div class="row principal-container">
                 <div class="col-7 d-none d-md-block text-center">
-                    <img src=""""),_display_(/*78.32*/routes/*78.38*/.Assets.at("images/signup.png")),format.raw/*78.69*/("""" class="img-fluid" alt="login" width="500px">
+                    <img src=""""),_display_(/*67.32*/routes/*67.38*/.Assets.at("images/signup.png")),format.raw/*67.69*/("""" class="img-fluid" alt="login" width="500px">
                 </div>
                 <div class="col-sm-12 col-md-4 justify-content-center">
                     <div class="card-container text-white justify-content-start">
                         <h2 class="pb-3">Sign up</h2>
-                        <div class="form-control-sm text-white textfield pb-3">
+                        <div class="form-control-sm textfield pb-3">
                             <input type="text" name="username" placeholder="Username">
                         </div>
-                        <div class="form-control-sm text-white textfield pb-3">
+                        <div class="form-control-sm textfield pb-3">
                             <input type="email" name="email" placeholder="E-mail">
                         </div>
-                        <div class="form-control-sm text-white textfield pb-5">
+                        <div class="form-control-sm textfield pb-5">
                             <input type="password" name="password" placeholder="Password">
                         </div>
                         <div class="form-control-sm textfield pb-4">
@@ -145,8 +134,8 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <div class="container">
             <div class="row">
                 <div style="font-size: 12px" class="text-white d-flex justify-content-center">
-                    """),format.raw/*117.46*/("""
-                """),format.raw/*118.17*/("""<p>Copyright 2023. cantini. All rights reserved.</p>
+                    """),format.raw/*106.46*/("""
+                """),format.raw/*107.17*/("""<p>Copyright 2023. cantini. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -168,9 +157,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
               /*
                   -- GENERATED --
                   SOURCE: app/views/signup.scala.html
-                  HASH: 9cbbbf97bec363d9096428bfd41cffc81f0fbfd8
-                  MATRIX: 990->0|1657->642|1672->648|1730->685|1800->728|1815->734|1872->770|2036->974|2073->984|2232->1116|2247->1122|2297->1151|3713->2540|3728->2546|3788->2585|5518->4288|5533->4294|5585->4325|7738->6474|7785->6492
-                  LINES: 32->1|42->11|42->11|42->11|43->12|43->12|43->12|48->17|49->18|51->20|51->20|51->20|74->43|74->43|74->43|109->78|109->78|109->78|148->117|149->118
+                  HASH: 786825e10c545e843437ac25dc623298e6bf6a37
+                  MATRIX: 990->0|1655->640|1670->646|1728->683|1798->726|1813->732|1870->768|2032->970|2069->980|2228->1112|2243->1118|2293->1147|3737->2564|3752->2570|3812->2609|5124->3894|5139->3900|5191->3931|7311->6047|7358->6065
+                  LINES: 32->1|42->11|42->11|42->11|43->12|43->12|43->12|48->17|49->18|51->20|51->20|51->20|73->42|73->42|73->42|98->67|98->67|98->67|137->106|138->107
                   -- GENERATED --
               */
           

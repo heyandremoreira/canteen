@@ -67,34 +67,23 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                     <li class="nav-item">
                         <a class="nav-link" href="#profile">Profile</a>
                     </li>
-
-                        <!-- Button trigger modal -->
-                    <button style="padding-left: 20px" type="button" class="btn"
-                    data-toggle="modal" data-target="#exampleModal">
-                        <img src=""""),_display_(/*43.36*/routes/*43.42*/.Assets.at("images/white_settings.png")),format.raw/*43.81*/("""" class="img-fluid" alt="logo" width="30px">
-                    </button>
-
-                        <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-        ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </div>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenu2"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src=""""),_display_(/*42.40*/routes/*42.46*/.Assets.at("images/white_settings.png")),format.raw/*42.85*/("""" class="img-fluid" alt="settings" width="30px">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg-end bg-dark" aria-labelledby="dropdownMenu2">
+                            <a class="dropdown-item" href="#">Language</a>
+                            <a class="dropdown-item" href="#">Dark Mode</a>
+                            <a class="dropdown-item" href="#">Help</a>
+                            <a class="dropdown-item" href="#">Terms of Use</a>
+                            <a class="dropdown-item" href="#">Privacy Policy</a>
                         </div>
                     </div>
-
+                    <script>
+                            const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
+                            const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))
+                    </script>
                 </ul>
             </div>
         </div>
@@ -106,15 +95,15 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <form method="post" action="signupProcess">
             <div class="row principal-container">
                 <div class="col-7 d-none d-md-block text-center">
-                    <img src=""""),_display_(/*78.32*/routes/*78.38*/.Assets.at("images/login2.png")),format.raw/*78.69*/("""" class="img-fluid" alt="login" width="500px">
+                    <img src=""""),_display_(/*67.32*/routes/*67.38*/.Assets.at("images/login2.png")),format.raw/*67.69*/("""" class="img-fluid" alt="login" width="500px">
                 </div>
                 <div class="col-sm-12 col-md-4 justify-content-center">
                     <div class="card-container text-white justify-content-start">
                         <h2 class="pb-3">Login</h2>
-                        <div class="form-control-sm text-white textfield pb-3">
+                        <div class="form-control-sm textfield pb-3">
                             <input type="text" name="username" placeholder="Username">
                         </div>
-                        <div class="form-control-sm text-white textfield pb-5">
+                        <div class="form-control-sm textfield pb-5">
                             <input type="password" name="password" placeholder="Password">
                         </div>
                         <div class="form-control-sm textfield pb-3">
@@ -136,8 +125,8 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <div class="container">
             <div class="row">
                 <div style="font-size: 12px" class="text-white d-flex justify-content-center">
-                    """),format.raw/*108.46*/("""
-                """),format.raw/*109.17*/("""<p>Copyright 2023. cantini. All rights reserved.</p>
+                    """),format.raw/*97.46*/("""
+                """),format.raw/*98.17*/("""<p>Copyright 2023. cantini. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -159,9 +148,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
               /*
                   -- GENERATED --
                   SOURCE: app/views/login.scala.html
-                  HASH: 896e9d22b02e68c1e4bcb3d06d7688e6d9b433df
-                  MATRIX: 989->0|1653->639|1668->645|1726->682|1796->725|1811->731|1868->767|2030->969|2067->979|2226->1111|2241->1117|2291->1146|3707->2535|3722->2541|3782->2580|5512->4283|5527->4289|5579->4320|7128->5865|7175->5883
-                  LINES: 32->1|42->11|42->11|42->11|43->12|43->12|43->12|48->17|49->18|51->20|51->20|51->20|74->43|74->43|74->43|109->78|109->78|109->78|139->108|140->109
+                  HASH: 0783130673f69007a854c0b1ab33c51e53a38d82
+                  MATRIX: 989->0|1653->639|1668->645|1726->682|1796->725|1811->731|1868->767|2030->969|2067->979|2226->1111|2241->1117|2291->1146|3735->2563|3750->2569|3810->2608|5122->3893|5137->3899|5189->3930|6715->5453|6761->5471
+                  LINES: 32->1|42->11|42->11|42->11|43->12|43->12|43->12|48->17|49->18|51->20|51->20|51->20|73->42|73->42|73->42|98->67|98->67|98->67|128->97|129->98
                   -- GENERATED --
               */
           
