@@ -48,27 +48,6 @@ h1, .h1, h2, .h2, h3, .h3, h5, .h5 {
     padding-right: 1.5em;
 }
 
-.btn.btn-small {
-    width: 30%;
-    padding: 16px 0px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-    color: #FFFEFE;
-    background: #B87651;
-}
-.btn.btn-small:hover {
-    width: 30%;
-    padding: 16px 0px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-    color: #FFFEFE;
-    background: #c79375;
-}
-
-
-
 @media only screen and (max-width: 950px){
     .landing-img{
         display: none;

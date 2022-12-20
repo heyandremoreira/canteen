@@ -4,7 +4,6 @@ import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Http;
 import play.mvc.Result;
-import views.html.landing;
 
 import javax.inject.Inject;
 

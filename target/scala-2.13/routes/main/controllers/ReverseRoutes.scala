@@ -17,19 +17,19 @@ package controllers {
     }
 
   
-    // @LINE:19
+    // @LINE:20
     def wallet(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "wallet")
     }
   
-    // @LINE:15
+    // @LINE:16
     def recoverpassword(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "recoverpassword")
     }
   
-    // @LINE:17
+    // @LINE:18
     def tickets(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "tickets")
@@ -41,19 +41,19 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "canteen")
     }
   
-    // @LINE:16
+    // @LINE:17
     def signup(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "signup")
     }
   
-    // @LINE:13
+    // @LINE:14
     def managetickets(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "managetickets")
     }
   
-    // @LINE:14
+    // @LINE:15
     def profile(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "profile")
@@ -65,7 +65,7 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "home")
     }
   
-    // @LINE:12
+    // @LINE:13
     def managemenus(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "managemenus")
@@ -89,7 +89,7 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "authapproval")
     }
   
-    // @LINE:18
+    // @LINE:19
     def userslist(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "userslist")
@@ -103,14 +103,14 @@ package controllers {
   
   }
 
-  // @LINE:22
+  // @LINE:26
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:22
+    // @LINE:26
     def at(file:String): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[String]].unbind("file", file))

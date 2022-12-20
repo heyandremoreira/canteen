@@ -17,9 +17,17 @@ create table item (
   constraint pk_item primary key (id)
 );
 
+create table role (
+  id                            bigint auto_increment not null,
+  username                      varchar(255),
+  constraint pk_role primary key (id)
+);
+
 create table user (
   id                            bigint auto_increment not null,
-  name                          varchar(255),
+  username                      varchar(255),
+  password                      varchar(255),
+  token                         varchar(255),
   email                         varchar(255),
   constraint uq_user_email unique (email),
   constraint pk_user primary key (id)
@@ -31,6 +39,8 @@ create table user (
 drop table if exists category;
 
 drop table if exists item;
+
+drop table if exists role;
 
 drop table if exists user;
 

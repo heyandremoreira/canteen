@@ -9,6 +9,7 @@ GET     /authapproval               controllers.HomeController.authapproval(requ
 GET     /canteen                    controllers.HomeController.canteen(request: Request)
 GET     /home                       controllers.HomeController.home(request: Request)
 GET     /login                      controllers.HomeController.login(request: Request)
+#POST    /login                      controllers.Application.authenticate()
 GET     /managemenus                controllers.HomeController.managemenus(request: Request)
 GET     /managetickets              controllers.HomeController.managetickets(request: Request)
 GET     /profile                    controllers.HomeController.profile(request: Request)
@@ -18,5 +19,13 @@ GET     /tickets                    controllers.HomeController.tickets(request: 
 GET     /userslist                  controllers.HomeController.userslist(request: Request)
 GET     /wallet                     controllers.HomeController.wallet(request: Request)
 
+#GET     /login                      controllers.Application.login()
+#GET     /logout                     controllers.Application.logout()
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+#GET     /assets/javascripts/routes          controllers.Application.javascriptRoutes()
+
+## Import Secure routes
+#*      /                module:secure

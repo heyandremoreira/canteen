@@ -18,7 +18,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:19
+    // @LINE:20
     def wallet: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.wallet",
       """
@@ -28,7 +28,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:15
+    // @LINE:16
     def recoverpassword: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.recoverpassword",
       """
@@ -38,7 +38,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:17
+    // @LINE:18
     def tickets: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.tickets",
       """
@@ -58,7 +58,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:16
+    // @LINE:17
     def signup: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.signup",
       """
@@ -68,7 +68,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:13
+    // @LINE:14
     def managetickets: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.managetickets",
       """
@@ -78,7 +78,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:14
+    // @LINE:15
     def profile: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.profile",
       """
@@ -98,7 +98,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:12
+    // @LINE:13
     def managemenus: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.managemenus",
       """
@@ -138,7 +138,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:18
+    // @LINE:19
     def userslist: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.userslist",
       """
@@ -160,7 +160,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:22
+  // @LINE:26
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -168,7 +168,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:22
+    // @LINE:26
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """

@@ -1,0 +1,40 @@
+@template(Array("stylesheets/landing.css", "stylesheets/home.css")){
+        @* @javascriptRouter *@
+    <main class="container-menu">
+        <section class="container mb-5 pb-5" id="managemenus">
+            <div class="row w-100 d-flex mx-auto justify-content-center pt-2">
+                <div class="col-xl-12 cards pb-4">
+                    <div style="background-color: #131313" class="card">
+                        <img src="@routes.Assets.at("images/i1.jpg")" class="img-fluid" alt="managephoto">
+                        <div class="card-body">
+                            <h5 class="card-title">Northy</h5>
+                            <p style="font-size: 12px" class="card-text text-white">University Of Worldy, Building 1 - Floor 2</p>
+                            <button href="#" class="btn btn-brown d-flex ms-auto">Go</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main class="container-menu">
+        <section class="container mb-5 pb-5" id="managemenus">
+            <div class="row w-100 d-flex mx-auto justify-content-end pt-2">
+                <div class="col-xl-5 cards pb-4">
+                    <div style="background-color: #131313" class="card">
+                        <div class="text-white card-body">
+                            <h4>Create Menu</h4>
+                            <div class="input-group pb-3">
+                                <textarea class="form-control" placeholder="Insert the title of the menu" aria-label="With textarea"></textarea>
+                            </div>
+                            <div class="input-group pb-3">
+                                <textarea class="form-control" placeholder="Insert the description of the menu" aria-label="With textarea"></textarea>
+                            </div>
+                            <button href="#" class="btn btn-small ms-lg-4 px-4">Go</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+}

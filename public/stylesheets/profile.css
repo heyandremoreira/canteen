@@ -6,9 +6,10 @@
     padding-top: 70px;
 }
 
-.btn.btn-brown {
-    color: #FFFEFE;
-    background-color: #B87651;
-    border-color: #B87651;
+.upload-icon{
+    position: absolute;
+    width: 60px;
+    left: 55%;
+    transform: translateX(-50%);
+    cursor: pointer;
 }
-

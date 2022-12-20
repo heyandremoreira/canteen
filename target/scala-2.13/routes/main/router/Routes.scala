@@ -15,7 +15,7 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
   HomeController_0: controllers.HomeController,
-  // @LINE:22
+  // @LINE:26
   Assets_1: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -24,7 +24,7 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
     HomeController_0: controllers.HomeController,
-    // @LINE:22
+    // @LINE:26
     Assets_1: controllers.Assets
   ) = this(errorHandler, HomeController_0, Assets_1, "/")
 
@@ -181,7 +181,7 @@ class Routes(
     )
   )
 
-  // @LINE:12
+  // @LINE:13
   private[this] lazy val controllers_HomeController_managemenus6_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("managemenus")))
   )
@@ -196,12 +196,12 @@ class Routes(
       Seq(classOf[play.mvc.Http.Request]),
       "GET",
       this.prefix + """managemenus""",
-      """""",
+      """POST    /login                      controllers.Application.authenticate()""",
       Seq()
     )
   )
 
-  // @LINE:13
+  // @LINE:14
   private[this] lazy val controllers_HomeController_managetickets7_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("managetickets")))
   )
@@ -221,7 +221,7 @@ class Routes(
     )
   )
 
-  // @LINE:14
+  // @LINE:15
   private[this] lazy val controllers_HomeController_profile8_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("profile")))
   )
@@ -241,7 +241,7 @@ class Routes(
     )
   )
 
-  // @LINE:15
+  // @LINE:16
   private[this] lazy val controllers_HomeController_recoverpassword9_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recoverpassword")))
   )
@@ -261,7 +261,7 @@ class Routes(
     )
   )
 
-  // @LINE:16
+  // @LINE:17
   private[this] lazy val controllers_HomeController_signup10_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("signup")))
   )
@@ -281,7 +281,7 @@ class Routes(
     )
   )
 
-  // @LINE:17
+  // @LINE:18
   private[this] lazy val controllers_HomeController_tickets11_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tickets")))
   )
@@ -301,7 +301,7 @@ class Routes(
     )
   )
 
-  // @LINE:18
+  // @LINE:19
   private[this] lazy val controllers_HomeController_userslist12_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("userslist")))
   )
@@ -321,7 +321,7 @@ class Routes(
     )
   )
 
-  // @LINE:19
+  // @LINE:20
   private[this] lazy val controllers_HomeController_wallet13_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("wallet")))
   )
@@ -341,7 +341,7 @@ class Routes(
     )
   )
 
-  // @LINE:22
+  // @LINE:26
   private[this] lazy val controllers_Assets_at14_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
@@ -404,63 +404,63 @@ class Routes(
           req => HomeController_0.login(req))
       }
   
-    // @LINE:12
+    // @LINE:13
     case controllers_HomeController_managemenus6_route(params@_) =>
       call { 
         controllers_HomeController_managemenus6_invoker.call(
           req => HomeController_0.managemenus(req))
       }
   
-    // @LINE:13
+    // @LINE:14
     case controllers_HomeController_managetickets7_route(params@_) =>
       call { 
         controllers_HomeController_managetickets7_invoker.call(
           req => HomeController_0.managetickets(req))
       }
   
-    // @LINE:14
+    // @LINE:15
     case controllers_HomeController_profile8_route(params@_) =>
       call { 
         controllers_HomeController_profile8_invoker.call(
           req => HomeController_0.profile(req))
       }
   
-    // @LINE:15
+    // @LINE:16
     case controllers_HomeController_recoverpassword9_route(params@_) =>
       call { 
         controllers_HomeController_recoverpassword9_invoker.call(
           req => HomeController_0.recoverpassword(req))
       }
   
-    // @LINE:16
+    // @LINE:17
     case controllers_HomeController_signup10_route(params@_) =>
       call { 
         controllers_HomeController_signup10_invoker.call(
           req => HomeController_0.signup(req))
       }
   
-    // @LINE:17
+    // @LINE:18
     case controllers_HomeController_tickets11_route(params@_) =>
       call { 
         controllers_HomeController_tickets11_invoker.call(
           req => HomeController_0.tickets(req))
       }
   
-    // @LINE:18
+    // @LINE:19
     case controllers_HomeController_userslist12_route(params@_) =>
       call { 
         controllers_HomeController_userslist12_invoker.call(
           req => HomeController_0.userslist(req))
       }
   
-    // @LINE:19
+    // @LINE:20
     case controllers_HomeController_wallet13_route(params@_) =>
       call { 
         controllers_HomeController_wallet13_invoker.call(
           req => HomeController_0.wallet(req))
       }
   
-    // @LINE:22
+    // @LINE:26
     case controllers_Assets_at14_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         controllers_Assets_at14_invoker.call(Assets_1.at(path, file))
