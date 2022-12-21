@@ -44,7 +44,7 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
                             <div class="card-body">
                                 <h5 class="card-title">Northy</h5>
                                 <p style="font-size: 12px" class="card-text text-white">Vegan canteen with greeny environment.</p>
-                                <button href="#" class="btn btn-brown d-flex ms-auto">Go</button>
+                                <a href="/northycanteen" class="btn btn-brown d-flex ms-auto">Go</a>
                             </div>
                         </div>
                     </div>
@@ -55,7 +55,7 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
                                 <h5 class="card-title">Westy</h5>
                                 <p style="font-size: 12px" class="card-text text-white">Grilly canteen with fresh meat.</p>
                                 <div style="padding: 10px" class="d-flex flex-column justify-content-end flex-grow-1">
-                                    <button href="#" class="btn btn-brown d-flex ms-auto">Go</button>
+                                    <a href="/westycanteen" class="btn btn-brown d-flex ms-auto">Go</a>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +66,7 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
                             <div class="card-body">
                                 <h5 class="card-title">Easty</h5>
                                 <p style="font-size: 12px" class="card-text text-white">Asiatic canteen.</p>
-                                <button href="#" class="btn btn-brown d-flex ms-auto">Go</button>
+                                <a href="/eastycanteen" class="btn btn-brown d-flex ms-auto">Go</a>
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
                             <div class="card-body">
                                 <h5 class="card-title">Southy</h5>
                                 <p style="font-size: 12px" class="card-text text-white">Mediterranic canteen. Taste a giant amount of flavours</p>
-                                <button href="#" class="btn btn-brown d-flex ms-auto">Go</button>
+                                <a href="/southycanteen" class="btn btn-brown d-flex ms-auto">Go</a>
                             </div>
                         </div>
                     </div>
@@ -100,8 +100,8 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
               /*
                   -- GENERATED --
                   SOURCE: app/views/home.scala.html
-                  HASH: b7340f2785be1e5d9e9d03de7eb41bd55d3ecd5f
-                  MATRIX: 988->1|1062->67|1100->68|1138->80|1779->694|1794->700|1842->727|2527->1385|2542->1391|2594->1422|3434->2235|3449->2241|3501->2272|4162->2906|4177->2912|4225->2939
+                  HASH: c54542627bd1d7791061d9182d6d6cd5c5438939
+                  MATRIX: 988->1|1062->67|1100->68|1138->80|1779->694|1794->700|1842->727|2530->1388|2545->1394|2597->1425|3439->2240|3454->2246|3506->2277|4169->2913|4184->2919|4232->2946
                   LINES: 32->1|32->1|32->1|34->3|43->12|43->12|43->12|53->22|53->22|53->22|65->34|65->34|65->34|75->44|75->44|75->44
                   -- GENERATED --
               */

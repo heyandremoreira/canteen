@@ -27,8 +27,20 @@ public class HomeController extends Controller {
         return ok(views.html.Administrator.authapproval.render());
     }
 
-    public Result canteen(Http.Request request) {
-        return ok(views.html.Student.canteen.render());
+    public Result northycanteen(Http.Request request) {
+        return ok(views.html.Canteens.northycanteen.render());
+    }
+
+    public Result westycanteen(Http.Request request) {
+        return ok(views.html.Canteens.westycanteen.render());
+    }
+
+    public Result eastycanteen(Http.Request request) {
+        return ok(views.html.Canteens.eastycanteen.render());
+    }
+
+    public Result southycanteen(Http.Request request) {
+        return ok(views.html.Canteens.southycanteen.render());
     }
 
     public Result home(Http.Request request) {
