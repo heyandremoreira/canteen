@@ -128,6 +128,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:24
+    def calendar: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.calendar",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "calendar"})
+        }
+      """
+    )
+  
     // @LINE:16
     def managemenus: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.managemenus",
@@ -190,7 +200,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:29
+  // @LINE:30
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -198,7 +208,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:29
+    // @LINE:30
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """

@@ -8,7 +8,7 @@ GET     /administrator              controllers.HomeController.administrator(req
 GET     /authapproval               controllers.HomeController.authapproval(request: Request)
 GET     /northycanteen              controllers.HomeController.northycanteen(request: Request)
 GET     /westycanteen               controllers.HomeController.westycanteen(request: Request)
-GET     /eastycanteen              controllers.HomeController.eastycanteen(request: Request)
+GET     /eastycanteen               controllers.HomeController.eastycanteen(request: Request)
 GET     /southycanteen              controllers.HomeController.southycanteen(request: Request)
 GET     /home                       controllers.HomeController.home(request: Request)
 GET     /login                      controllers.HomeController.login(request: Request)
@@ -21,6 +21,7 @@ GET     /signup                     controllers.HomeController.signup(request: R
 GET     /tickets                    controllers.HomeController.tickets(request: Request)
 GET     /userslist                  controllers.HomeController.userslist(request: Request)
 GET     /wallet                     controllers.HomeController.wallet(request: Request)
+GET     /calendar                   controllers.HomeController.calendar(request: Request)
 
 #GET     /login                      controllers.Application.login()
 #GET     /logout                     controllers.Application.logout()

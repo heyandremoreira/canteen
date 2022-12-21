@@ -29,7 +29,35 @@ object westycanteen extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.a
       {
 
 
-Seq[Any](_display_(/*1.2*/template(Array("stylesheets/canteen.css"))/*1.44*/{_display_(Seq[Any](format.raw/*1.45*/("""
+Seq[Any](_display_(/*1.2*/template(Array("stylesheets/canteen.css"))/*1.44*/ {_display_(Seq[Any](format.raw/*1.46*/("""
+
+    """),format.raw/*3.5*/("""<div class="row w-75 d-flex mx-auto justify-content-center pt-2">
+        <div class="col-xl-12 cards pb-4">
+            <div style="background-color: #131313" class="card">
+                <img src=""""),_display_(/*6.28*/routes/*6.34*/.Assets.at("images/canteenno2.png")),format.raw/*6.69*/("""" class="card-img-top" alt="northy">
+                <div class="card-body">
+                    <h5 class="card-title">Westy</h5>
+                    <p style="font-size: 12px" class="card-text text-white">University Of Worldy, Building 5 - Floor 1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row w-75 d-flex mx-auto justify-content-end py-5">
+        <div class="col-xl-4 cards pb-4">
+            <div style="background-color: #131313" class="card">
+                <div class="card-body">
+                    <h5 class="card-title pb-2">Create menu</h5>
+                    <div class="form-outline pb-3">
+                        <textarea class="form-control" placeholder="Insert the menu of the day" id="textAreaExample" rows="4"></textarea>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-small" href="#">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 """)))}))
       }
@@ -48,9 +76,9 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/canteen.css"))/*1.44*/{_di
               /*
                   -- GENERATED --
                   SOURCE: app/views/Canteens/westycanteen.scala.html
-                  HASH: 09705ea94562ae610e4bbdc690aa581a7a86c5ea
-                  MATRIX: 1005->1|1055->43|1093->44
-                  LINES: 32->1|32->1|32->1
+                  HASH: 72de31aa72c77c288a5a599ae894b1f68043a91c
+                  MATRIX: 1005->1|1055->43|1094->45|1128->53|1358->257|1372->263|1427->298
+                  LINES: 32->1|32->1|32->1|34->3|37->6|37->6|37->6
                   -- GENERATED --
               */
           

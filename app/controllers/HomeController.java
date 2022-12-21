@@ -83,4 +83,8 @@ public class HomeController extends Controller {
         return ok(views.html.Student.wallet.render());
     }
 
+    public Result calendar(Http.Request request) {
+        return ok(views.html.calendar.render());
+    }
+
 }

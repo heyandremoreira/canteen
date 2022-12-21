@@ -1,4 +1,7 @@
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\views\home.scala.html:1:2: not found: value base
-[error] @base(Array("stylesheets/landing.css", "stylesheets/home.css")){
-[error]  ^
+[error] C:\Users\André ISCTE\Documents\canteen_management\app\views\calendar.scala.html:4:4: type mismatch;
+[error]  found   : play.twirl.api.HtmlFormat.Appendable
+[error]     (which expands to)  play.twirl.api.Html
+[error]  required: Array[String]
+[error]     <table class="table">
+[error]    ^
 [error] one error found

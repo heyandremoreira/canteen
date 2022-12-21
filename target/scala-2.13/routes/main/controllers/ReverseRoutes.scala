@@ -83,6 +83,12 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "home")
     }
   
+    // @LINE:24
+    def calendar(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "calendar")
+    }
+  
     // @LINE:16
     def managemenus(): Call = {
       
@@ -121,14 +127,14 @@ package controllers {
   
   }
 
-  // @LINE:29
+  // @LINE:30
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:29
+    // @LINE:30
     def at(file:String): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[String]].unbind("file", file))

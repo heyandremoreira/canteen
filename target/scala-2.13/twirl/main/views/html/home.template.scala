@@ -44,39 +44,47 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
                             <div class="card-body">
                                 <h5 class="card-title">Northy</h5>
                                 <p style="font-size: 12px" class="card-text text-white">Vegan canteen with greeny environment.</p>
-                                <a href="/northycanteen" class="btn btn-brown d-flex ms-auto">Go</a>
+                                <a href="/northycanteen" class="btn btn-brown d-flex ms-auto">
+                                    <img src=""""),_display_(/*17.48*/routes/*17.54*/.Assets.at("images/next2.png")),format.raw/*17.84*/("""" class="card-img-top" alt="arrow">
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-3 cards pb-4">
                         <div style="background-color: #131313" class="card">
-                            <img src=""""),_display_(/*22.40*/routes/*22.46*/.Assets.at("images/cwesty.png")),format.raw/*22.77*/("""" class="card-img-top" alt="westy">
+                            <img src=""""),_display_(/*24.40*/routes/*24.46*/.Assets.at("images/cwesty.png")),format.raw/*24.77*/("""" class="card-img-top" alt="westy">
                             <div class="card-body">
                                 <h5 class="card-title">Westy</h5>
-                                <p style="font-size: 12px" class="card-text text-white">Grilly canteen with fresh meat.</p>
-                                <div style="padding: 10px" class="d-flex flex-column justify-content-end flex-grow-1">
-                                    <a href="/westycanteen" class="btn btn-brown d-flex ms-auto">Go</a>
-                                </div>
-                            </div>
+                                <p style="font-size: 12px" class="card-text text-white">Grilly canteen with fresh and juicy meat.</p>
+                                """),format.raw/*28.123*/("""
+                                    """),format.raw/*29.37*/("""<a href="/westycanteen" class="btn btn-brown d-flex ms-auto">
+                                        <img src=""""),_display_(/*30.52*/routes/*30.58*/.Assets.at("images/next2.png")),format.raw/*30.88*/("""" class="card-img-top" alt="arrow">
+                                    </a>
+                                """),format.raw/*32.43*/("""
+                            """),format.raw/*33.29*/("""</div>
                         </div>
                     </div>
                     <div class="col-xl-3 cards pb-4">
                         <div style="background-color: #131313" class="card">
-                            <img src=""""),_display_(/*34.40*/routes/*34.46*/.Assets.at("images/ceasty.jpg")),format.raw/*34.77*/("""" class="card-img-top" alt="easty">
+                            <img src=""""),_display_(/*38.40*/routes/*38.46*/.Assets.at("images/ceasty.jpg")),format.raw/*38.77*/("""" class="card-img-top" alt="easty">
                             <div class="card-body">
                                 <h5 class="card-title">Easty</h5>
-                                <p style="font-size: 12px" class="card-text text-white">Asiatic canteen.</p>
-                                <a href="/eastycanteen" class="btn btn-brown d-flex ms-auto">Go</a>
+                                <p style="font-size: 12px" class="card-text text-white">Explore some of the best Asiatic cooking.</p>
+                                <a href="/eastycanteen" class="btn btn-brown d-flex ms-auto">
+                                    <img src=""""),_display_(/*43.48*/routes/*43.54*/.Assets.at("images/next2.png")),format.raw/*43.84*/("""" class="card-img-top" alt="arrow">
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-3 cards pb-4">
                         <div style="background-color: #131313" class="card">
-                            <img src=""""),_display_(/*44.40*/routes/*44.46*/.Assets.at("images/t1.jpg")),format.raw/*44.73*/("""" class="card-img-top" alt="southy">
+                            <img src=""""),_display_(/*50.40*/routes/*50.46*/.Assets.at("images/t1.jpg")),format.raw/*50.73*/("""" class="card-img-top" alt="southy">
                             <div class="card-body">
                                 <h5 class="card-title">Southy</h5>
                                 <p style="font-size: 12px" class="card-text text-white">Mediterranic canteen. Taste a giant amount of flavours</p>
-                                <a href="/southycanteen" class="btn btn-brown d-flex ms-auto">Go</a>
+                                <a href="/southycanteen" class="btn btn-brown d-flex ms-auto">
+                                    <img src=""""),_display_(/*55.48*/routes/*55.54*/.Assets.at("images/next2.png")),format.raw/*55.84*/("""" class="card-img-top" alt="arrow">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -100,9 +108,9 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
               /*
                   -- GENERATED --
                   SOURCE: app/views/home.scala.html
-                  HASH: c54542627bd1d7791061d9182d6d6cd5c5438939
-                  MATRIX: 988->1|1062->67|1100->68|1138->80|1779->694|1794->700|1842->727|2530->1388|2545->1394|2597->1425|3439->2240|3454->2246|3506->2277|4169->2913|4184->2919|4232->2946
-                  LINES: 32->1|32->1|32->1|34->3|43->12|43->12|43->12|53->22|53->22|53->22|65->34|65->34|65->34|75->44|75->44|75->44
+                  HASH: fb575ebf3ccf854471d4f9364928085761189dd6
+                  MATRIX: 988->1|1062->67|1100->68|1138->80|1779->694|1794->700|1842->727|2303->1161|2318->1167|2369->1197|2739->1540|2754->1546|2806->1577|3159->1991|3225->2029|3366->2143|3381->2149|3432->2179|3571->2300|3629->2330|3896->2570|3911->2576|3963->2607|4424->3041|4439->3047|4490->3077|4860->3420|4875->3426|4923->3453|5400->3903|5415->3909|5466->3939
+                  LINES: 32->1|32->1|32->1|34->3|43->12|43->12|43->12|48->17|48->17|48->17|55->24|55->24|55->24|59->28|60->29|61->30|61->30|61->30|63->32|64->33|69->38|69->38|69->38|74->43|74->43|74->43|81->50|81->50|81->50|86->55|86->55|86->55
                   -- GENERATED --
               */
           
