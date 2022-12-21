@@ -20,15 +20,15 @@ public class HomeController extends Controller {
     }
 
     public Result administrator(Http.Request request) {
-        return ok(views.html.administrator.render());
+        return ok(views.html.Administrator.administrator.render());
     }
 
     public Result authapproval(Http.Request request) {
-        return ok(views.html.authapproval.render());
+        return ok(views.html.Administrator.authapproval.render());
     }
 
     public Result canteen(Http.Request request) {
-        return ok(views.html.canteen.render());
+        return ok(views.html.Student.canteen.render());
     }
 
     public Result home(Http.Request request) {
@@ -40,11 +40,11 @@ public class HomeController extends Controller {
     }
 
     public Result managemenus(Http.Request request) {
-        return ok(views.html.managemenus.render());
+        return ok(views.html.Manager.managemenus.render());
     }
 
     public Result managetickets(Http.Request request) {
-        return ok(views.html.managetickets.render());
+        return ok(views.html.Manager.managetickets.render());
     }
 
     public Result profile(Http.Request request) {
@@ -60,15 +60,15 @@ public class HomeController extends Controller {
     }
 
     public Result tickets(Http.Request request) {
-        return ok(views.html.tickets.render());
+        return ok(views.html.Student.tickets.render());
     }
 
     public Result userslist(Http.Request request) {
-        return ok(views.html.userslist.render());
+        return ok(views.html.Administrator.userslist.render());
     }
 
     public Result wallet(Http.Request request) {
-        return ok(views.html.wallet.render());
+        return ok(views.html.Student.wallet.render());
     }
 
 }

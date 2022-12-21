@@ -29,73 +29,12 @@ object signup extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Htm
       {
 
 
-Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Cantini | SignUp</title>
+Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css"))/*1.44*/{_display_(Seq[Any](format.raw/*1.45*/("""
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-        <link rel="stylesheet" href=""""),_display_(/*11.39*/routes/*11.45*/.Assets.at("stylesheets/landing.css")),format.raw/*11.82*/(""""/>
-        <link rel="stylesheet" href=""""),_display_(/*12.39*/routes/*12.45*/.Assets.at("stylesheets/styles.css")),format.raw/*12.81*/(""""/>
-    </head>
-
-    <header class="header-menu">
-        <nav class="navbar navbar-dark navbar-expand-lg bg-black">
-            """),format.raw/*17.81*/("""
-        """),format.raw/*18.9*/("""<div class="container-fluid">
-            <a style="padding-left: 80px" class="navbar-brand" href="/">
-                <img src=""""),_display_(/*20.28*/routes/*20.34*/.Assets.at("images/logo.png")),format.raw/*20.63*/("""" class="img-fluid" alt="logo" width="200px">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span style="color: white" class="navbar-toggler-icon"></span>
-            </button>
-            <div style="padding-right: 80px" class="collapse navbar-collapse align-items-center justify-content-center" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link px-3" aria-current="page" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-3" href="#tickets">Tickets</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-3" href="#wallet">Wallet</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#profile">Profile</a>
-                    </li>
-                    <div class="dropdown">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenu2"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src=""""),_display_(/*42.40*/routes/*42.46*/.Assets.at("images/white_settings.png")),format.raw/*42.85*/("""" class="img-fluid" alt="settings" width="30px">
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-lg-end bg-dark" aria-labelledby="dropdownMenu2">
-                            <a class="dropdown-item" href="#">Language</a>
-                            <a class="dropdown-item" href="#">Dark Mode</a>
-                            <a class="dropdown-item" href="#">Help</a>
-                            <a class="dropdown-item" href="#">Terms of Use</a>
-                            <a class="dropdown-item" href="#">Privacy Policy</a>
-                        </div>
-                    </div>
-                    <script>
-                            const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
-                            const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))
-                    </script>
-                </ul>
-            </div>
-        </div>
-        </nav>
-    </header>
-
-
-    <body style="background: black">
-        <form method="post" action="signupProcess">
+        """),format.raw/*3.9*/("""<form method="post" action="signupProcess">
             <div class="row principal-container">
                 <div class="col-7 d-none d-md-block text-center">
-                    <img src=""""),_display_(/*67.32*/routes/*67.38*/.Assets.at("images/signup.png")),format.raw/*67.69*/("""" class="img-fluid" alt="login" width="500px">
+                    <img src=""""),_display_(/*6.32*/routes/*6.38*/.Assets.at("images/signup.png")),format.raw/*6.69*/("""" class="img-fluid" alt="login" width="500px">
                 </div>
                 <div class="col-sm-12 col-md-4 justify-content-center">
                     <div class="card-container text-white justify-content-start">
@@ -127,20 +66,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                 </div>
             </div>
         </form>
-    </body>
-
-
-    <footer class="footer" id="footer">
-        <div class="container">
-            <div class="row">
-                <div style="font-size: 12px" class="text-white d-flex justify-content-center">
-                    """),format.raw/*106.46*/("""
-                """),format.raw/*107.17*/("""<p>Copyright 2023. cantini. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-</html>"""))
+""")))}))
       }
     }
   }
@@ -157,9 +83,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
               /*
                   -- GENERATED --
                   SOURCE: app/views/signup.scala.html
-                  HASH: 786825e10c545e843437ac25dc623298e6bf6a37
-                  MATRIX: 990->0|1655->640|1670->646|1728->683|1798->726|1813->732|1870->768|2032->970|2069->980|2228->1112|2243->1118|2293->1147|3737->2564|3752->2570|3812->2609|5124->3894|5139->3900|5191->3931|7311->6047|7358->6065
-                  LINES: 32->1|42->11|42->11|42->11|43->12|43->12|43->12|48->17|49->18|51->20|51->20|51->20|73->42|73->42|73->42|98->67|98->67|98->67|137->106|138->107
+                  HASH: de9e81b25457c9272e94457d58da7a749c848965
+                  MATRIX: 990->1|1040->43|1078->44|1116->56|1336->250|1350->256|1401->287
+                  LINES: 32->1|32->1|32->1|34->3|37->6|37->6|37->6
                   -- GENERATED --
               */
           

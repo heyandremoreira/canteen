@@ -13,7 +13,7 @@ public class Application {
         public String password;
     }
 
-    public static Result login() {
+    public static Result login(String username, String password) {
         return ok(login.render(form(Login.class))
         );
     }

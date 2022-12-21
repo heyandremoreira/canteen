@@ -75,14 +75,15 @@ Seq[Any](format.raw/*1.41*/("""
                                 <a class="nav-link" href="/profile">Profile</a>
                             </li>
 
-                            """),format.raw/*64.36*/("""
-                            """),format.raw/*68.36*/("""
+                            """),format.raw/*66.31*/("""
+
+                            """),format.raw/*71.36*/("""
 
 
-                            """),format.raw/*71.29*/("""<div class="dropdown">
+                            """),format.raw/*74.29*/("""<div class="dropdown">
                                 <button class="btn dropdown-toggle" type="button" id="dropdownMenu2"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src=""""),_display_(/*74.48*/routes/*74.54*/.Assets.at("images/white_settings.png")),format.raw/*74.93*/("""" class="img-fluid" alt="settings" width="30px">
+                                    <img src=""""),_display_(/*77.48*/routes/*77.54*/.Assets.at("images/white_settings.png")),format.raw/*77.93*/("""" class="img-fluid" alt="settings" width="30px">
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-lg-end text-center p-2 bg-dark" aria-labelledby="dropdownMenu2">
                                     <a class="dropdown-item" href="#lang">Language</a>
@@ -100,13 +101,13 @@ Seq[Any](format.raw/*1.41*/("""
             </nav>
         </header>
 
-        """),_display_(/*92.10*/content),format.raw/*92.17*/("""
+        """),_display_(/*95.10*/content),format.raw/*95.17*/("""
 
-    """),format.raw/*94.5*/("""<footer class="footer" id="footer">
+    """),format.raw/*97.5*/("""<footer class="footer" id="footer">
         <div class="container">
             <div class="row">
                 <div style="font-size: 12px" class="text-white d-flex justify-content-center">
-                    <p>Copyright """),_display_(/*98.35*/year),format.raw/*98.39*/(""". cantini. All rights reserved.</p>
+                    <p>Copyright """),_display_(/*101.35*/year),format.raw/*101.39*/(""". cantini. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -133,9 +134,9 @@ Seq[Any](format.raw/*1.41*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/template.scala.html
-                  HASH: 76326e59ec30dc268168ac2a99b82a291db79ed5
-                  MATRIX: 922->1|1034->43|1090->40|1118->72|1157->103|1203->112|1233->116|1860->718|1893->735|1932->736|1974->750|2031->780|2046->786|2080->799|2124->812|2161->822|2218->852|2233->858|2290->894|2508->1152|2554->1170|2729->1318|2744->1324|2794->1353|4141->3628|4199->3962|4261->3996|4564->4272|4579->4278|4639->4317|5697->5348|5725->5355|5760->5363|6018->5594|6043->5598
-                  LINES: 27->1|30->2|33->1|34->3|34->3|34->3|36->5|46->15|46->15|46->15|47->16|47->16|47->16|47->16|48->17|49->18|49->18|49->18|49->18|55->24|56->25|58->27|58->27|58->27|78->64|79->68|82->71|85->74|85->74|85->74|103->92|103->92|105->94|109->98|109->98
+                  HASH: e41ce1f6b15657a48c1abfa40bb8274c0b8a1ee8
+                  MATRIX: 922->1|1034->43|1090->40|1118->72|1157->103|1203->112|1233->116|1860->718|1893->735|1932->736|1974->750|2031->780|2046->786|2080->799|2124->812|2161->822|2218->852|2233->858|2290->894|2508->1152|2554->1170|2729->1318|2744->1324|2794->1353|4141->3684|4201->4020|4263->4054|4566->4330|4581->4336|4641->4375|5699->5406|5727->5413|5762->5421|6021->5652|6047->5656
+                  LINES: 27->1|30->2|33->1|34->3|34->3|34->3|36->5|46->15|46->15|46->15|47->16|47->16|47->16|47->16|48->17|49->18|49->18|49->18|49->18|55->24|56->25|58->27|58->27|58->27|78->66|80->71|83->74|86->77|86->77|86->77|104->95|104->95|106->97|110->101|110->101
                   -- GENERATED --
               */
           

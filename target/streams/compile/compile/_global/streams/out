@@ -1,45 +1,4 @@
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\controllers\Application.java:17:1: cannot find symbol
-[error]   symbol:   method form(java.lang.Class<controllers.Application.Login>)
-[error]   location: class controllers.Application
-[error] form
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\controllers\Application.java:22:1: cannot find symbol
-[error]   symbol:   method session()
-[error]   location: class controllers.Application
-[error] session
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\controllers\Application.java:23:1: cannot find symbol
-[error]   symbol:   method flash(java.lang.String,java.lang.String)
-[error]   location: class controllers.Application
-[error] flash
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\controllers\Application.java:25:1: cannot find symbol
-[error]   symbol:   variable Application
-[error]   location: class controllers.routes
-[error] routes.Application
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\controllers\Application.java:30:1: cannot find symbol
-[error]   symbol:   method form(java.lang.Class<controllers.Application.Login>)
-[error]   location: class controllers.Application
-[error] form
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\controllers\Application.java:32:1: method render in class views.html.login cannot be applied to given types;
-[error]   required: no arguments
-[error]   found: play.api.data.Form<controllers.Application.Login>
-[error]   reason: actual and formal argument lists differ in length
-[error] login.render
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\controllers\Application.java:34:1: cannot find symbol
-[error]   symbol:   method session()
-[error]   location: class controllers.Application
-[error] session
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\controllers\Application.java:35:1: cannot find symbol
-[error]   symbol:   method session(java.lang.String,java.lang.String)
-[error]   location: class controllers.Application
-[error] session
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\controllers\Application.java:37:1: cannot find symbol
-[error]   symbol:   variable Application
-[error]   location: class controllers.routes
-[error] routes.Application
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\controllers\Application.java:43:1: cannot find symbol
-[error]   symbol:   variable email
-[error]   location: class controllers.Application
-[error] email
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\controllers\Application.java:43:1: cannot find symbol
-[error]   symbol:   variable password
-[error]   location: class controllers.Application
-[error] password
+[error] C:\Users\André ISCTE\Documents\canteen_management\app\views\home.scala.html:1:2: not found: value base
+[error] @base(Array("stylesheets/landing.css", "stylesheets/home.css")){
+[error]  ^
+[error] one error found

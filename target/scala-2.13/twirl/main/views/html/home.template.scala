@@ -29,7 +29,7 @@ object home extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlF
       {
 
 
-Seq[Any](_display_(/*1.2*/base(Array("stylesheets/landing.css", "stylesheets/home.css"))/*1.64*/{_display_(Seq[Any](format.raw/*1.65*/("""
+Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets/home.css"))/*1.68*/{_display_(Seq[Any](format.raw/*1.69*/("""
 
         """),format.raw/*3.9*/("""<main class="container-menu">
             <section class="canteens mb-5 pb-5" id="canteens">
@@ -54,7 +54,7 @@ Seq[Any](_display_(/*1.2*/base(Array("stylesheets/landing.css", "stylesheets/hom
                             <div class="card-body">
                                 <h5 class="card-title">Westy</h5>
                                 <p style="font-size: 12px" class="card-text text-white">Grilly canteen with fresh meat.</p>
-                                <div class="d-flex flex-column justify-content-end flex-grow-1">
+                                <div style="padding: 10px" class="d-flex flex-column justify-content-end flex-grow-1">
                                     <button href="#" class="btn btn-brown d-flex ms-auto">Go</button>
                                 </div>
                             </div>
@@ -100,8 +100,8 @@ Seq[Any](_display_(/*1.2*/base(Array("stylesheets/landing.css", "stylesheets/hom
               /*
                   -- GENERATED --
                   SOURCE: app/views/home.scala.html
-                  HASH: 9ef02fba11fa222b1214c2d4c983c5723852758c
-                  MATRIX: 988->1|1058->63|1096->64|1134->76|1775->690|1790->696|1838->723|2523->1381|2538->1387|2590->1418|3408->2209|3423->2215|3475->2246|4136->2880|4151->2886|4199->2913
+                  HASH: b7340f2785be1e5d9e9d03de7eb41bd55d3ecd5f
+                  MATRIX: 988->1|1062->67|1100->68|1138->80|1779->694|1794->700|1842->727|2527->1385|2542->1391|2594->1422|3434->2235|3449->2241|3501->2272|4162->2906|4177->2912|4225->2939
                   LINES: 32->1|32->1|32->1|34->3|43->12|43->12|43->12|53->22|53->22|53->22|65->34|65->34|65->34|75->44|75->44|75->44
                   -- GENERATED --
               */
