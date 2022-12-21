@@ -83,6 +83,14 @@ public class HomeController extends Controller {
         return ok(views.html.Student.wallet.render());
     }
 
+    public Result termsofuse(Http.Request request) {
+        return ok(views.html.Settings.termsofuse.render());
+    }
+
+    public Result privacypolicy(Http.Request request) {
+        return ok(views.html.Settings.privacypolicy.render());
+    }
+
     public Result calendar(Http.Request request) {
         return ok(views.html.calendar.render());
     }

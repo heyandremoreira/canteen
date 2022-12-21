@@ -108,6 +108,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:24
+    def termsofuse: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.termsofuse",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "termsofuse"})
+        }
+      """
+    )
+  
     // @LINE:10
     def westycanteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.westycanteen",
@@ -128,7 +138,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:24
+    // @LINE:26
     def calendar: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.calendar",
       """
@@ -188,6 +198,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:25
+    def privacypolicy: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.privacypolicy",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "privacypolicy"})
+        }
+      """
+    )
+  
     // @LINE:14
     def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.login",
@@ -200,7 +220,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:30
+  // @LINE:32
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -208,7 +228,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:30
+    // @LINE:32
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """

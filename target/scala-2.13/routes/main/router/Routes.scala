@@ -15,7 +15,7 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
   HomeController_0: controllers.HomeController,
-  // @LINE:30
+  // @LINE:32
   Assets_1: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -24,7 +24,7 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
     HomeController_0: controllers.HomeController,
-    // @LINE:30
+    // @LINE:32
     Assets_1: controllers.Assets
   ) = this(errorHandler, HomeController_0, Assets_1, "/")
 
@@ -56,6 +56,8 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """tickets""", """controllers.HomeController.tickets(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """userslist""", """controllers.HomeController.userslist(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """wallet""", """controllers.HomeController.wallet(request:Request)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """termsofuse""", """controllers.HomeController.termsofuse(request:Request)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """privacypolicy""", """controllers.HomeController.privacypolicy(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """calendar""", """controllers.HomeController.calendar(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public", file:String)"""),
     Nil
@@ -406,10 +408,50 @@ class Routes(
   )
 
   // @LINE:24
-  private[this] lazy val controllers_HomeController_calendar17_route = Route("GET",
+  private[this] lazy val controllers_HomeController_termsofuse17_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("termsofuse")))
+  )
+  private[this] lazy val controllers_HomeController_termsofuse17_invoker = createInvoker(
+    
+    (req:play.mvc.Http.Request) =>
+      HomeController_0.termsofuse(fakeValue[play.mvc.Http.Request]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "termsofuse",
+      Seq(classOf[play.mvc.Http.Request]),
+      "GET",
+      this.prefix + """termsofuse""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:25
+  private[this] lazy val controllers_HomeController_privacypolicy18_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("privacypolicy")))
+  )
+  private[this] lazy val controllers_HomeController_privacypolicy18_invoker = createInvoker(
+    
+    (req:play.mvc.Http.Request) =>
+      HomeController_0.privacypolicy(fakeValue[play.mvc.Http.Request]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "privacypolicy",
+      Seq(classOf[play.mvc.Http.Request]),
+      "GET",
+      this.prefix + """privacypolicy""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:26
+  private[this] lazy val controllers_HomeController_calendar19_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("calendar")))
   )
-  private[this] lazy val controllers_HomeController_calendar17_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_calendar19_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       HomeController_0.calendar(fakeValue[play.mvc.Http.Request]),
@@ -425,11 +467,11 @@ class Routes(
     )
   )
 
-  // @LINE:30
-  private[this] lazy val controllers_Assets_at18_route = Route("GET",
+  // @LINE:32
+  private[this] lazy val controllers_Assets_at20_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_at18_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_at20_invoker = createInvoker(
     Assets_1.at(fakeValue[String], fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -566,16 +608,30 @@ class Routes(
       }
   
     // @LINE:24
-    case controllers_HomeController_calendar17_route(params@_) =>
+    case controllers_HomeController_termsofuse17_route(params@_) =>
       call { 
-        controllers_HomeController_calendar17_invoker.call(
+        controllers_HomeController_termsofuse17_invoker.call(
+          req => HomeController_0.termsofuse(req))
+      }
+  
+    // @LINE:25
+    case controllers_HomeController_privacypolicy18_route(params@_) =>
+      call { 
+        controllers_HomeController_privacypolicy18_invoker.call(
+          req => HomeController_0.privacypolicy(req))
+      }
+  
+    // @LINE:26
+    case controllers_HomeController_calendar19_route(params@_) =>
+      call { 
+        controllers_HomeController_calendar19_invoker.call(
           req => HomeController_0.calendar(req))
       }
   
-    // @LINE:30
-    case controllers_Assets_at18_route(params@_) =>
+    // @LINE:32
+    case controllers_Assets_at20_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at18_invoker.call(Assets_1.at(path, file))
+        controllers_Assets_at20_invoker.call(Assets_1.at(path, file))
       }
   }
 }

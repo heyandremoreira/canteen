@@ -21,6 +21,8 @@ GET     /signup                     controllers.HomeController.signup(request: R
 GET     /tickets                    controllers.HomeController.tickets(request: Request)
 GET     /userslist                  controllers.HomeController.userslist(request: Request)
 GET     /wallet                     controllers.HomeController.wallet(request: Request)
+GET     /termsofuse                 controllers.HomeController.termsofuse(request: Request)
+GET     /privacypolicy              controllers.HomeController.privacypolicy(request: Request)
 GET     /calendar                   controllers.HomeController.calendar(request: Request)
 
 #GET     /login                      controllers.Application.login()
