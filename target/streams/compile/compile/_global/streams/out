@@ -1,7 +1,7 @@
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\views\calendar.scala.html:4:4: type mismatch;
-[error]  found   : play.twirl.api.HtmlFormat.Appendable
-[error]     (which expands to)  play.twirl.api.Html
-[error]  required: Array[String]
-[error]     <table class="table">
-[error]    ^
-[error] one error found
+[error] C:\Users\André ISCTE\Documents\canteen_management\app\views\Administrator\userslist.scala.html:17:66: value removeItem is not a member of controllers.ReverseHomeController
+[error]                 <form action="@controllers.routes.HomeController.removeItem(item.getId())" method="post">
+[error]                                                                  ^
+[error] C:\Users\André ISCTE\Documents\canteen_management\app\views\Administrator\userslist.scala.html:17:77: not found: value item
+[error]                 <form action="@controllers.routes.HomeController.removeItem(item.getId())" method="post">
+[error]                                                                             ^
+[error] two errors found

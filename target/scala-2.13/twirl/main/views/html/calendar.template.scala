@@ -33,12 +33,42 @@ Seq[Any](format.raw/*1.1*/("""<html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href=""""),_display_(/*5.39*/routes/*5.45*/.Assets.at("stylesheets/calendar.css")),format.raw/*5.83*/(""""/>
-        <script src=""""),_display_(/*6.23*/routes/*6.29*/.Assets.at("main.js")),format.raw/*6.50*/("""" defer></script>
+        <title>Calendar</title>
+        <link rel="stylesheet" href=""""),_display_(/*6.39*/routes/*6.45*/.Assets.at("stylesheets/calendar.css")),format.raw/*6.83*/(""""/>
+        <script src=""""),_display_(/*7.23*/routes/*7.29*/.Assets.at("main.js")),format.raw/*7.50*/("""" defer></script>
     </head>
 
-    <body>
 
+    <body class="bg-colors">
+        <div class="calendar">
+            <div class="calendar-header">
+                <span class="month-picker" id="month-picker">April</span>
+                <div class="year-picker">
+                    <span class="year-change" id="prev-year">
+                        <pre><</pre>
+                    </span>
+                    <span id="year">2022</span>
+                    <span class="year-change" id="next-year">
+                        <pre>></pre>
+                    </span>
+                </div>
+            </div>
+            <div class="calendar-body">
+                <div class="calendar-week-day">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="calendar-days"></div>
+            </div>
+
+            <div class="month-list"></div>
+
+        </div>
     </body>
 </html>"""))
       }
@@ -57,9 +87,9 @@ Seq[Any](format.raw/*1.1*/("""<html>
               /*
                   -- GENERATED --
                   SOURCE: app/views/calendar.scala.html
-                  HASH: ff06d44ddeff10fe3217b9baee04f25a2c1afefa
-                  MATRIX: 992->0|1204->186|1218->192|1276->230|1329->257|1343->263|1384->284
-                  LINES: 32->1|36->5|36->5|36->5|37->6|37->6|37->6
+                  HASH: 666301615dabdefbf9dc97771b6ca5381b0684e9
+                  MATRIX: 992->0|1237->219|1251->225|1309->263|1362->290|1376->296|1417->317
+                  LINES: 32->1|37->6|37->6|37->6|38->7|38->7|38->7
                   -- GENERATED --
               */
           

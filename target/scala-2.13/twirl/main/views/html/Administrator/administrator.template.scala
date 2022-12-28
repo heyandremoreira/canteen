@@ -31,6 +31,33 @@ object administrator extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.
 
 Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.css"))/*1.60*/{_display_(Seq[Any](format.raw/*1.61*/("""
 
+    """),format.raw/*3.5*/("""<main>
+        """),format.raw/*4.46*/("""
+        """),format.raw/*5.52*/("""
+        """),format.raw/*6.9*/("""<section class="home d-flex align-items-center h-100" id="home">
+            <div class="container">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-7 justify-content-end">
+                        <img src=""""),_display_(/*10.36*/routes/*10.42*/.Assets.at("images/adm.png")),format.raw/*10.70*/("""" class="img-fluid" alt="landing" width="500px">
+                    </div>
+                    <div class="col-md-5 d-flex justify-content-start">
+                        <div class="card-container text-white">
+                            <div class="form-control-sm text-white textfield pb-3">
+                                <input type="text" name="canteensname" placeholder="Canteen's name">
+                            </div>
+                            <div class="form-control-sm text-white textfield pb-3">
+                                <input type="text" name="adress" placeholder="Adress">
+                            </div>
+                            <div class="col-12 text-center form-control-sm">
+                                <button class="btn btn-form">Create</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
 """)))}))
       }
     }
@@ -48,9 +75,9 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
               /*
                   -- GENERATED --
                   SOURCE: app/views/Administrator/administrator.scala.html
-                  HASH: d159b41bb5912fc5bdf70e4e649d8f051884c7c3
-                  MATRIX: 1011->1|1077->59|1115->60
-                  LINES: 32->1|32->1|32->1
+                  HASH: 7047e7fc6d62ef00f2d8cf68e707a7117a287720
+                  MATRIX: 1011->1|1077->59|1115->60|1149->68|1192->121|1229->174|1265->184|1555->447|1570->453|1619->481
+                  LINES: 32->1|32->1|32->1|34->3|35->4|36->5|37->6|41->10|41->10|41->10
                   -- GENERATED --
               */
           

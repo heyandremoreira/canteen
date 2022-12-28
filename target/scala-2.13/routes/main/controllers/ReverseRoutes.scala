@@ -17,13 +17,13 @@ package controllers {
     }
 
   
-    // @LINE:23
+    // @LINE:25
     def wallet(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "wallet")
     }
   
-    // @LINE:19
+    // @LINE:21
     def recoverpassword(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "recoverpassword")
@@ -41,13 +41,13 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "southycanteen")
     }
   
-    // @LINE:21
+    // @LINE:23
     def tickets(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "tickets")
     }
   
-    // @LINE:20
+    // @LINE:22
     def signup(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "signup")
@@ -65,13 +65,13 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "managetickets")
     }
   
-    // @LINE:18
+    // @LINE:20
     def profile(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "profile")
     }
   
-    // @LINE:24
+    // @LINE:26
     def termsofuse(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "termsofuse")
@@ -89,7 +89,7 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "home")
     }
   
-    // @LINE:26
+    // @LINE:28
     def calendar(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "calendar")
@@ -119,13 +119,25 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "authapproval")
     }
   
-    // @LINE:22
+    // @LINE:24
     def userslist(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "userslist")
     }
   
-    // @LINE:25
+    // @LINE:19
+    def createcanteen(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "createcanteen")
+    }
+  
+    // @LINE:18
+    def manager(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "manager")
+    }
+  
+    // @LINE:27
     def privacypolicy(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "privacypolicy")
@@ -139,14 +151,14 @@ package controllers {
   
   }
 
-  // @LINE:32
+  // @LINE:34
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:32
+    // @LINE:34
     def at(file:String): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[String]].unbind("file", file))

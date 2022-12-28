@@ -1,8 +1,5 @@
 package controllers;
 
-import models.User;
-import play.mvc.With;
-
 /*@With(Secure.class)*/
 /*public class Security extends Secure.Security {
 

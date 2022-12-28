@@ -29,8 +29,64 @@ object authapproval extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.a
       {
 
 
-Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.css"))/*1.60*/{_display_(Seq[Any](format.raw/*1.61*/("""
-
+Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css"))/*1.44*/ {_display_(Seq[Any](format.raw/*1.46*/("""
+    """),format.raw/*2.5*/("""<table class="table table-responsive table-hover darkbg">
+        <thead class="text-center">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Username</th>
+                <th scope="col">Role</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody class="align-middle text-center">
+            <tr>
+                <th scope="row">1</th>
+                <td>Gonçalo Queiroz</td>
+                <td>Manager</td>
+                <td>
+                    <a class="btn btn-approve" type="submit" href="#">Approve</a>
+                    <a class="btn btn-remove" type="submit" href="#">Deny</a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Gonçalo Queiroz</td>
+                <td>Manager</td>
+                <td>
+                    <a class="btn btn-approve" type="submit" href="#">Approve</a>
+                    <a class="btn btn-remove" type="submit" href="#">Deny</a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Gonçalo Queiroz</td>
+                <td>Manager</td>
+                <td>
+                    <a class="btn btn-approve" type="submit" href="#">Approve</a>
+                    <a class="btn btn-remove" type="submit" href="#">Deny</a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Gonçalo Queiroz</td>
+                <td>Manager</td>
+                <td>
+                    <a class="btn btn-approve" type="submit" href="#">Approve</a>
+                    <a class="btn btn-remove" type="submit" href="#">Deny</a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Gonçalo Queiroz</td>
+                <td>Manager</td>
+                <td>
+                    <a class="btn btn-approve" type="submit" href="#">Approve</a>
+                    <a class="btn btn-remove" type="submit" href="#">Deny</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 """)))}))
       }
     }
@@ -48,9 +104,9 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
               /*
                   -- GENERATED --
                   SOURCE: app/views/Administrator/authapproval.scala.html
-                  HASH: d159b41bb5912fc5bdf70e4e649d8f051884c7c3
-                  MATRIX: 1010->1|1076->59|1114->60
-                  LINES: 32->1|32->1|32->1
+                  HASH: 934c6e9535b82477e7fb2b7aa92a52096b0a9fa5
+                  MATRIX: 1010->1|1060->43|1099->45|1131->51
+                  LINES: 32->1|32->1|32->1|33->2
                   -- GENERATED --
               */
           

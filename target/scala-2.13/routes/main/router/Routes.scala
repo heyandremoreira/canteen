@@ -15,7 +15,7 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
   HomeController_0: controllers.HomeController,
-  // @LINE:32
+  // @LINE:34
   Assets_1: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -24,7 +24,7 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
     HomeController_0: controllers.HomeController,
-    // @LINE:32
+    // @LINE:34
     Assets_1: controllers.Assets
   ) = this(errorHandler, HomeController_0, Assets_1, "/")
 
@@ -50,6 +50,8 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.HomeController.login(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """managemenus""", """controllers.HomeController.managemenus(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """managetickets""", """controllers.HomeController.managetickets(request:Request)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """manager""", """controllers.HomeController.manager(request:Request)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """createcanteen""", """controllers.HomeController.createcanteen(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """profile""", """controllers.HomeController.profile(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recoverpassword""", """controllers.HomeController.recoverpassword(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """signup""", """controllers.HomeController.signup(request:Request)"""),
@@ -288,10 +290,50 @@ class Routes(
   )
 
   // @LINE:18
-  private[this] lazy val controllers_HomeController_profile11_route = Route("GET",
+  private[this] lazy val controllers_HomeController_manager11_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("manager")))
+  )
+  private[this] lazy val controllers_HomeController_manager11_invoker = createInvoker(
+    
+    (req:play.mvc.Http.Request) =>
+      HomeController_0.manager(fakeValue[play.mvc.Http.Request]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "manager",
+      Seq(classOf[play.mvc.Http.Request]),
+      "GET",
+      this.prefix + """manager""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:19
+  private[this] lazy val controllers_HomeController_createcanteen12_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("createcanteen")))
+  )
+  private[this] lazy val controllers_HomeController_createcanteen12_invoker = createInvoker(
+    
+    (req:play.mvc.Http.Request) =>
+      HomeController_0.createcanteen(fakeValue[play.mvc.Http.Request]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "createcanteen",
+      Seq(classOf[play.mvc.Http.Request]),
+      "GET",
+      this.prefix + """createcanteen""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:20
+  private[this] lazy val controllers_HomeController_profile13_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("profile")))
   )
-  private[this] lazy val controllers_HomeController_profile11_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_profile13_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       HomeController_0.profile(fakeValue[play.mvc.Http.Request]),
@@ -307,11 +349,11 @@ class Routes(
     )
   )
 
-  // @LINE:19
-  private[this] lazy val controllers_HomeController_recoverpassword12_route = Route("GET",
+  // @LINE:21
+  private[this] lazy val controllers_HomeController_recoverpassword14_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recoverpassword")))
   )
-  private[this] lazy val controllers_HomeController_recoverpassword12_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_recoverpassword14_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       HomeController_0.recoverpassword(fakeValue[play.mvc.Http.Request]),
@@ -327,11 +369,11 @@ class Routes(
     )
   )
 
-  // @LINE:20
-  private[this] lazy val controllers_HomeController_signup13_route = Route("GET",
+  // @LINE:22
+  private[this] lazy val controllers_HomeController_signup15_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("signup")))
   )
-  private[this] lazy val controllers_HomeController_signup13_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_signup15_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       HomeController_0.signup(fakeValue[play.mvc.Http.Request]),
@@ -347,11 +389,11 @@ class Routes(
     )
   )
 
-  // @LINE:21
-  private[this] lazy val controllers_HomeController_tickets14_route = Route("GET",
+  // @LINE:23
+  private[this] lazy val controllers_HomeController_tickets16_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tickets")))
   )
-  private[this] lazy val controllers_HomeController_tickets14_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_tickets16_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       HomeController_0.tickets(fakeValue[play.mvc.Http.Request]),
@@ -367,11 +409,11 @@ class Routes(
     )
   )
 
-  // @LINE:22
-  private[this] lazy val controllers_HomeController_userslist15_route = Route("GET",
+  // @LINE:24
+  private[this] lazy val controllers_HomeController_userslist17_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("userslist")))
   )
-  private[this] lazy val controllers_HomeController_userslist15_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_userslist17_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       HomeController_0.userslist(fakeValue[play.mvc.Http.Request]),
@@ -387,11 +429,11 @@ class Routes(
     )
   )
 
-  // @LINE:23
-  private[this] lazy val controllers_HomeController_wallet16_route = Route("GET",
+  // @LINE:25
+  private[this] lazy val controllers_HomeController_wallet18_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("wallet")))
   )
-  private[this] lazy val controllers_HomeController_wallet16_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_wallet18_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       HomeController_0.wallet(fakeValue[play.mvc.Http.Request]),
@@ -407,11 +449,11 @@ class Routes(
     )
   )
 
-  // @LINE:24
-  private[this] lazy val controllers_HomeController_termsofuse17_route = Route("GET",
+  // @LINE:26
+  private[this] lazy val controllers_HomeController_termsofuse19_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("termsofuse")))
   )
-  private[this] lazy val controllers_HomeController_termsofuse17_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_termsofuse19_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       HomeController_0.termsofuse(fakeValue[play.mvc.Http.Request]),
@@ -427,11 +469,11 @@ class Routes(
     )
   )
 
-  // @LINE:25
-  private[this] lazy val controllers_HomeController_privacypolicy18_route = Route("GET",
+  // @LINE:27
+  private[this] lazy val controllers_HomeController_privacypolicy20_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("privacypolicy")))
   )
-  private[this] lazy val controllers_HomeController_privacypolicy18_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_privacypolicy20_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       HomeController_0.privacypolicy(fakeValue[play.mvc.Http.Request]),
@@ -447,11 +489,11 @@ class Routes(
     )
   )
 
-  // @LINE:26
-  private[this] lazy val controllers_HomeController_calendar19_route = Route("GET",
+  // @LINE:28
+  private[this] lazy val controllers_HomeController_calendar21_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("calendar")))
   )
-  private[this] lazy val controllers_HomeController_calendar19_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_calendar21_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       HomeController_0.calendar(fakeValue[play.mvc.Http.Request]),
@@ -467,11 +509,11 @@ class Routes(
     )
   )
 
-  // @LINE:32
-  private[this] lazy val controllers_Assets_at20_route = Route("GET",
+  // @LINE:34
+  private[this] lazy val controllers_Assets_at22_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_at20_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_at22_invoker = createInvoker(
     Assets_1.at(fakeValue[String], fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -566,72 +608,86 @@ class Routes(
       }
   
     // @LINE:18
-    case controllers_HomeController_profile11_route(params@_) =>
+    case controllers_HomeController_manager11_route(params@_) =>
       call { 
-        controllers_HomeController_profile11_invoker.call(
-          req => HomeController_0.profile(req))
+        controllers_HomeController_manager11_invoker.call(
+          req => HomeController_0.manager(req))
       }
   
     // @LINE:19
-    case controllers_HomeController_recoverpassword12_route(params@_) =>
+    case controllers_HomeController_createcanteen12_route(params@_) =>
       call { 
-        controllers_HomeController_recoverpassword12_invoker.call(
-          req => HomeController_0.recoverpassword(req))
+        controllers_HomeController_createcanteen12_invoker.call(
+          req => HomeController_0.createcanteen(req))
       }
   
     // @LINE:20
-    case controllers_HomeController_signup13_route(params@_) =>
+    case controllers_HomeController_profile13_route(params@_) =>
       call { 
-        controllers_HomeController_signup13_invoker.call(
-          req => HomeController_0.signup(req))
+        controllers_HomeController_profile13_invoker.call(
+          req => HomeController_0.profile(req))
       }
   
     // @LINE:21
-    case controllers_HomeController_tickets14_route(params@_) =>
+    case controllers_HomeController_recoverpassword14_route(params@_) =>
       call { 
-        controllers_HomeController_tickets14_invoker.call(
-          req => HomeController_0.tickets(req))
+        controllers_HomeController_recoverpassword14_invoker.call(
+          req => HomeController_0.recoverpassword(req))
       }
   
     // @LINE:22
-    case controllers_HomeController_userslist15_route(params@_) =>
+    case controllers_HomeController_signup15_route(params@_) =>
       call { 
-        controllers_HomeController_userslist15_invoker.call(
-          req => HomeController_0.userslist(req))
+        controllers_HomeController_signup15_invoker.call(
+          req => HomeController_0.signup(req))
       }
   
     // @LINE:23
-    case controllers_HomeController_wallet16_route(params@_) =>
+    case controllers_HomeController_tickets16_route(params@_) =>
       call { 
-        controllers_HomeController_wallet16_invoker.call(
-          req => HomeController_0.wallet(req))
+        controllers_HomeController_tickets16_invoker.call(
+          req => HomeController_0.tickets(req))
       }
   
     // @LINE:24
-    case controllers_HomeController_termsofuse17_route(params@_) =>
+    case controllers_HomeController_userslist17_route(params@_) =>
       call { 
-        controllers_HomeController_termsofuse17_invoker.call(
-          req => HomeController_0.termsofuse(req))
+        controllers_HomeController_userslist17_invoker.call(
+          req => HomeController_0.userslist(req))
       }
   
     // @LINE:25
-    case controllers_HomeController_privacypolicy18_route(params@_) =>
+    case controllers_HomeController_wallet18_route(params@_) =>
       call { 
-        controllers_HomeController_privacypolicy18_invoker.call(
-          req => HomeController_0.privacypolicy(req))
+        controllers_HomeController_wallet18_invoker.call(
+          req => HomeController_0.wallet(req))
       }
   
     // @LINE:26
-    case controllers_HomeController_calendar19_route(params@_) =>
+    case controllers_HomeController_termsofuse19_route(params@_) =>
       call { 
-        controllers_HomeController_calendar19_invoker.call(
+        controllers_HomeController_termsofuse19_invoker.call(
+          req => HomeController_0.termsofuse(req))
+      }
+  
+    // @LINE:27
+    case controllers_HomeController_privacypolicy20_route(params@_) =>
+      call { 
+        controllers_HomeController_privacypolicy20_invoker.call(
+          req => HomeController_0.privacypolicy(req))
+      }
+  
+    // @LINE:28
+    case controllers_HomeController_calendar21_route(params@_) =>
+      call { 
+        controllers_HomeController_calendar21_invoker.call(
           req => HomeController_0.calendar(req))
       }
   
-    // @LINE:32
-    case controllers_Assets_at20_route(params@_) =>
+    // @LINE:34
+    case controllers_Assets_at22_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at20_invoker.call(Assets_1.at(path, file))
+        controllers_Assets_at22_invoker.call(Assets_1.at(path, file))
       }
   }
 }

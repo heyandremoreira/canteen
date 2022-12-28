@@ -29,8 +29,49 @@ object userslist extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.
       {
 
 
-Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.css"))/*1.60*/{_display_(Seq[Any](format.raw/*1.61*/("""
-
+Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css"))/*1.44*/{_display_(Seq[Any](format.raw/*1.45*/("""
+    """),format.raw/*2.5*/("""<table class="table table-responsive table-hover darkbg">
+        <thead class="text-center">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Username</th>
+                <th scope="col">Role</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody class="align-middle text-center">
+            <tr>
+                <th scope="row">1</th>
+                <td>Gonçalo Queiroz</td>
+                <td>Manager</td>
+                <td><a class="btn btn-remove px-4" type="submit" href="#">Remove</a></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Gonçalo Queiroz</td>
+                <td>Manager</td>
+                <td><a class="btn btn-remove" type="submit" href="#">Remove</a></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Gonçalo Queiroz</td>
+                <td>Manager</td>
+                <td><a class="btn btn-remove" type="submit" href="#">Remove</a></td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Gonçalo Queiroz</td>
+                <td>Manager</td>
+                <td><a class="btn btn-remove" type="submit" href="#">Remove</a></td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Gonçalo Queiroz</td>
+                <td>Manager</td>
+                <td><a class="btn btn-remove" type="submit" href="#">Remove</a></td>
+            </tr>
+        </tbody>
+    </table>
 """)))}))
       }
     }
@@ -48,9 +89,9 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
               /*
                   -- GENERATED --
                   SOURCE: app/views/Administrator/userslist.scala.html
-                  HASH: d159b41bb5912fc5bdf70e4e649d8f051884c7c3
-                  MATRIX: 1007->1|1073->59|1111->60
-                  LINES: 32->1|32->1|32->1
+                  HASH: 786cfb563eda33712b057d2b63feacfab79ba1f2
+                  MATRIX: 1007->1|1057->43|1095->44|1127->50
+                  LINES: 32->1|32->1|32->1|33->2
                   -- GENERATED --
               */
           

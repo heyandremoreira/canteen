@@ -29,12 +29,14 @@ object northycanteen extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.
       {
 
 
-Seq[Any](_display_(/*1.2*/template(Array("stylesheets/canteen.css"))/*1.44*/ {_display_(Seq[Any](format.raw/*1.46*/("""
+Seq[Any](_display_(/*1.2*/template(Array("stylesheets/calendar.css"))/*1.45*/ {_display_(Seq[Any](format.raw/*1.47*/("""
 
-    """),format.raw/*3.5*/("""<div class="row w-75 d-flex mx-auto justify-content-center pt-2">
+    """),format.raw/*3.5*/("""<script src=""""),_display_(/*3.19*/routes/*3.25*/.Assets.at("main.js")),format.raw/*3.46*/("""" defer></script>
+
+    <div class="row w-75 d-flex mx-auto justify-content-center pt-2">
         <div class="col-xl-12 cards pb-4">
             <div style="background-color: #131313" class="card">
-                <img src=""""),_display_(/*6.28*/routes/*6.34*/.Assets.at("images/canteenno1.jpg")),format.raw/*6.69*/("""" class="card-img-top" alt="northy">
+                <img src=""""),_display_(/*8.28*/routes/*8.34*/.Assets.at("images/canteenno1.jpg")),format.raw/*8.69*/("""" class="card-img-top" alt="northy">
                 <div class="card-body">
                     <h5 class="card-title">Northy</h5>
                     <p style="font-size: 12px" class="card-text text-white">University Of Worldy, Building 1 - Floor 2</p>
@@ -43,22 +45,57 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/canteen.css"))/*1.44*/ {_d
         </div>
     </div>
 
-    <div class="row w-75 d-flex mx-auto justify-content-end py-5">
-        <div class="col-xl-4 cards pb-4">
-            <div style="background-color: #131313" class="card">
-                <div class="card-body">
-                    <h5 class="card-title pb-2">Create menu</h5>
-                    <div class="form-outline pb-3">
-                        <textarea class="form-control" placeholder="Insert the menu of the day" id="textAreaExample" rows="4"></textarea>
+    <div class="row w-75 d-flex mx-auto justify-content-center py-5">
+        <div class="col-6">
+            <div class="calendar-colors">
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <span class="month-picker" id="month-picker">April</span>
+                        <div class="year-picker">
+                            <span class="year-change" id="prev-year">
+                                <pre><</pre>
+                            </span>
+                            <span id="year">2022</span>
+                            <span class="year-change" id="next-year">
+                                <pre>></pre>
+                            </span>
+                        </div>
                     </div>
-                    <div class="d-flex justify-content-end">
-                        <button type="submit" class="btn btn-small" href="#">Submit</button>
+                    <div class="calendar-body">
+                        <div class="calendar-week-day">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="calendar-days"></div>
+                    </div>
+                    <div class="month-list"></div>
+                </div>
+            </div>
+        </div>
+
+
+            <div class="col-xl-6 cards my-auto pb-4">
+                <div style="background-color: #131313" class="card">
+                    <div class="card-body">
+                        <h5 class="card-title pb-2">Create menu</h5>
+                        <div class="form-outline pb-3">
+                            <textarea class="form-control" placeholder="Insert the menu of the day" id="textAreaExample" rows="4"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-small" href="#">Submit</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    """),format.raw/*81.13*/("""
 
 """)))}))
       }
@@ -77,9 +114,9 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/canteen.css"))/*1.44*/ {_d
               /*
                   -- GENERATED --
                   SOURCE: app/views/Canteens/northycanteen.scala.html
-                  HASH: 43a67bed6fc5e0fa5dc35d5f368e6af60c8c4179
-                  MATRIX: 1006->1|1056->43|1095->45|1129->53|1359->257|1373->263|1428->298
-                  LINES: 32->1|32->1|32->1|34->3|37->6|37->6|37->6
+                  HASH: 6b9a3c8752e50a050dd54eeed92c488bf43b20fb
+                  MATRIX: 1006->1|1057->44|1096->46|1130->54|1170->68|1184->74|1225->95|1480->324|1494->330|1549->365|4126->3672
+                  LINES: 32->1|32->1|32->1|34->3|34->3|34->3|34->3|39->8|39->8|39->8|98->81
                   -- GENERATED --
               */
           

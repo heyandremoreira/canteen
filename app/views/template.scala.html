@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@@1.10.2/font/bootstrap-icons.css">
         @for(s <- cssurls){
             <link rel="stylesheet" href="@routes.Assets.at(s)">
+            @*<script src="@routes.Assets.at(s)"></script>*@
         }
         <link rel="stylesheet" href="@routes.Assets.at("stylesheets/landing.css")"/>
         <link rel="stylesheet" href="@routes.Assets.at("stylesheets/styles.css")"/>

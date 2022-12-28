@@ -4,6 +4,7 @@ body{
     margin:0;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    height: 100vh;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h5, .h5 {
@@ -11,6 +12,21 @@ h1, .h1, h2, .h2, h3, .h3, h5, .h5 {
     font-weight: 700;
     line-height: 1.2;
     color: white;
+}
+
+.darkbg{
+    background-color: #131313;
+    color: #FFFEFE;
+    border-color: #131313;
+}
+
+.darkbg:hover{
+    --bs-table-bg: #131313;
+    --bs-table-striped-bg: #131313;
+    --bs-table-active-bg: #B6AC92;
+    --bs-table-hover-bg: #B6AC92;
+    --bs-table-hover-color: white;
+    color: #FFFEFE;
 }
 
 .principal-container{
@@ -130,12 +146,57 @@ h1, .h1, h2, .h2, h3, .h3, h5, .h5 {
     border-color: #c79375;
 }
 
+.btn-remove{
+    width: 20%;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    color: #FFFEFE;
+    background: #ff3333;
+}
+
+.btn.btn-remove:hover {
+    width: 20%;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    color: #FFFEFE;
+    background: #ff6666;
+}
+
+.btn-approve{
+    width: 20%;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    color: #FFFEFE;
+    background: #00b33c;
+}
+
+.btn.btn-approve:hover {
+    width: 20%;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    color: #FFFEFE;
+    background: #5cd65c;
+}
+
 btn-logout{
-    color:#fff;background-color:#455a64;border-color:#455a64
+    color:#fff;
+    background-color:#455a64;
+    border-color:#455a64;
 }
 .btn-logout:hover{
-    color:#fff;background-color:#455a64;border-color:#455a64
+    color:#fff;
+    background-color:#455a64;
+    border-color:#455a64;
 }
+
 /*.btn-logout.focus,.btn-logout:focus{
     box-shadow:0 0 0 .2rem rgba(58,176,195,.5)
 }
