@@ -30,7 +30,48 @@ object tickets extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Ht
 
 
 Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.css"))/*1.60*/{_display_(Seq[Any](format.raw/*1.61*/("""
-
+    """),format.raw/*2.5*/("""<table class="table table-responsive table-hover darkbg">
+        <thead class="text-center">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Username</th>
+                <th scope="col">Canteen</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody class="align-middle text-center">
+            <tr>
+                <th scope="row">1</th>
+                <td>Gonçalo Queiroz</td>
+                <td>Southy</td>
+                <td>24/02/2023</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Gonçalo Queiroz</td>
+                <td>Southy</td>
+                <td>24/02/2023</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Gonçalo Queiroz</td>
+                <td>Southy</td>
+                <td>24/02/2023</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Gonçalo Queiroz</td>
+                <td>Southy</td>
+                <td>24/02/2023</td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Gonçalo Queiroz</td>
+                <td>Southy</td>
+                <td>24/02/2023</td>
+            </tr>
+        </tbody>
+    </table>
 """)))}))
       }
     }
@@ -48,9 +89,9 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
               /*
                   -- GENERATED --
                   SOURCE: app/views/Student/tickets.scala.html
-                  HASH: d159b41bb5912fc5bdf70e4e649d8f051884c7c3
-                  MATRIX: 999->1|1065->59|1103->60
-                  LINES: 32->1|32->1|32->1
+                  HASH: c596b6bc6d5d2bff705d9055b3a56aec5b205054
+                  MATRIX: 999->1|1065->59|1103->60|1135->66
+                  LINES: 32->1|32->1|32->1|33->2
                   -- GENERATED --
               */
           

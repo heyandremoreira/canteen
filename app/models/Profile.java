@@ -1,6 +1,13 @@
 package models;
 
-public class Profile {
+import io.ebean.Model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "profile")
+public class Profile extends Model{
     private String name;
     private String nationality;
     private String adress;

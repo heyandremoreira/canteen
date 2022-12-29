@@ -14,6 +14,10 @@ h1, .h1, h2, .h2, h3, .h3, h5, .h5 {
     color: white;
 }
 
+th{
+    line-height: 35px;
+}
+
 .darkbg{
     background-color: #131313;
     color: #FFFEFE;

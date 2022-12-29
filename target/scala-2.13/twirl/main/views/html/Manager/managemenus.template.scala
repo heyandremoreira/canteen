@@ -36,7 +36,7 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
             <div class="row w-100 d-flex mx-auto justify-content-center pt-2">
                 <div class="col-xl-12 cards pb-4">
                     <div style="background-color: #131313" class="card">
-                        <img src=""""),_display_(/*8.36*/routes/*8.42*/.Assets.at("../../../public/images/i1.jpg")),format.raw/*8.85*/("""" class="img-fluid" alt="managephoto">
+                        <img src=""""),_display_(/*8.36*/routes/*8.42*/.Assets.at("images/i1.jpg")),format.raw/*8.69*/("""" class="img-fluid" alt="managephoto">
                         <div class="card-body">
                             <h5 class="card-title">Northy</h5>
                             <p style="font-size: 12px" class="card-text text-white">University Of Worldy, Building 1 - Floor 2</p>
@@ -85,8 +85,8 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
               /*
                   -- GENERATED --
                   SOURCE: app/views/Manager/managemenus.scala.html
-                  HASH: 60539bbb2fe57252b538b97dcb065a6932faac3f
-                  MATRIX: 1003->1|1110->99|1149->100|1186->133|1218->139|1580->475|1594->481|1657->524
+                  HASH: 54ea94e0d9e1ffdf2a087c989df0017345c37dde
+                  MATRIX: 1003->1|1110->99|1149->100|1186->133|1218->139|1580->475|1594->481|1641->508
                   LINES: 32->1|32->1|32->1|33->2|34->3|39->8|39->8|39->8
                   -- GENERATED --
               */

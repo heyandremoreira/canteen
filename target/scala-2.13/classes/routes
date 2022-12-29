@@ -3,32 +3,42 @@
 # ~~~~
 
 # Default path will just redirect to the computer list
+
+#GERAL
 GET     /                           controllers.HomeController.landing(request: Request)
-GET     /administrator              controllers.HomeController.administrator(request: Request)
-GET     /authapproval               controllers.HomeController.authapproval(request: Request)
-GET     /northycanteen              controllers.HomeController.northycanteen(request: Request)
-GET     /westycanteen               controllers.HomeController.westycanteen(request: Request)
-GET     /eastycanteen               controllers.HomeController.eastycanteen(request: Request)
-GET     /southycanteen              controllers.HomeController.southycanteen(request: Request)
 GET     /home                       controllers.HomeController.home(request: Request)
 GET     /login                      controllers.HomeController.login(request: Request)
 #POST    /login                      controllers.Application.authenticate()
-GET     /managemenus                controllers.HomeController.managemenus(request: Request)
-GET     /managetickets              controllers.HomeController.managetickets(request: Request)
-GET     /manager                    controllers.HomeController.manager(request: Request)
-GET     /createcanteen              controllers.HomeController.createcanteen(request: Request)
+#GET     /login                      controllers.Application.login()
+#GET     /logout                     controllers.Application.logout()
 GET     /profile                    controllers.HomeController.profile(request: Request)
 GET     /recoverpassword            controllers.HomeController.recoverpassword(request: Request)
 GET     /signup                     controllers.HomeController.signup(request: Request)
-GET     /tickets                    controllers.HomeController.tickets(request: Request)
-GET     /userslist                  controllers.HomeController.userslist(request: Request)
-GET     /wallet                     controllers.HomeController.wallet(request: Request)
 GET     /termsofuse                 controllers.HomeController.termsofuse(request: Request)
 GET     /privacypolicy              controllers.HomeController.privacypolicy(request: Request)
 GET     /calendar                   controllers.HomeController.calendar(request: Request)
 
-#GET     /login                      controllers.Application.login()
-#GET     /logout                     controllers.Application.logout()
+# ADMINISTRATOR
+GET     /administrator              controllers.Administrator.administrator(request: Request)
+GET     /authapproval               controllers.Administrator.authapproval(request: Request)
+GET     /userslist                  controllers.Administrator.userslist(request: Request)
+POST    /addItem                    controllers.Administrator.addUser(request: Request)
+POST    /removeItem                 controllers.Administrator.removeUser(request: Request, id: Long)
+
+# MANAGER
+GET     /manager                    controllers.Manager.manager(request: Request)
+GET     /createcanteen              controllers.Manager.createcanteen(request: Request)
+GET     /managemenus                controllers.Manager.managemenus(request: Request)
+GET     /managetickets              controllers.Manager.managetickets(request: Request)
+GET     /northycanteen              controllers.Manager.northycanteen(request: Request)
+GET     /westycanteen               controllers.Manager.westycanteen(request: Request)
+GET     /eastycanteen               controllers.Manager.eastycanteen(request: Request)
+GET     /southycanteen              controllers.Manager.southycanteen(request: Request)
+
+#STUDENT
+GET     /tickets                    controllers.Student.tickets(request: Request)
+GET     /wallet                     controllers.Student.wallet(request: Request)
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

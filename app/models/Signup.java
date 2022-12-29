@@ -1,13 +1,25 @@
 package models;
 
+import io.ebean.Model;
 import org.springframework.format.annotation.DateTimeFormat;
 
-public class Signup {
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "signup")
+public class Signup extends Model{
     private String username;
     private String email;
     private String password;
-
     private String confirmPassword;
+
+    public Signup(String username, String email, String password, String confirmPassword){
+        this.username=username;
+        this.email=email;
+        this.password=password;
+        this.confirmPassword=confirmPassword;
+    }
 
     public String getUsername() {
         return username;

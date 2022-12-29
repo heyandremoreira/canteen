@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -24,6 +25,10 @@ public class User extends Model {
 
     private static final Finder<Long, User> finder = new Finder<>(User.class);
 
+    public static List<User> getUserList(){
+        return finder.all();
+    }
+
     public static User getUserById(Long id){
         return finder.byId(id);
     }
@@ -39,6 +44,10 @@ public class User extends Model {
         this.role=role;
         this.token=token;
         this.email=email;
+    }
+
+    public User(){
+
     }
 
     public long getId() {

@@ -1,8 +1,18 @@
 package models;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "login")
 public class Login {
     private String username;
     private String password;
+
+    public Login(String username, String password){
+        this.username=username;
+        this.password=password;
+    }
 
     public String getEmail() {
         return username;

@@ -7,10 +7,30 @@ import play.api.routing.JavaScriptReverseRoute
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:6
+// @LINE:8
 package controllers.javascript {
 
-  // @LINE:6
+  // @LINE:44
+  class ReverseAssets(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:44
+    def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Assets.at",
+      """
+        function(file1) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("file", file1)})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:8
   class ReverseHomeController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -18,17 +38,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:25
-    def wallet: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.wallet",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "wallet"})
-        }
-      """
-    )
-  
-    // @LINE:21
+    // @LINE:15
     def recoverpassword: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.recoverpassword",
       """
@@ -38,37 +48,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:9
-    def northycanteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.northycanteen",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "northycanteen"})
-        }
-      """
-    )
-  
-    // @LINE:12
-    def southycanteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.southycanteen",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "southycanteen"})
-        }
-      """
-    )
-  
-    // @LINE:23
-    def tickets: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.tickets",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "tickets"})
-        }
-      """
-    )
-  
-    // @LINE:22
+    // @LINE:16
     def signup: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.signup",
       """
@@ -78,27 +58,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:11
-    def eastycanteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.eastycanteen",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "eastycanteen"})
-        }
-      """
-    )
-  
-    // @LINE:17
-    def managetickets: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.managetickets",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "managetickets"})
-        }
-      """
-    )
-  
-    // @LINE:20
+    // @LINE:14
     def profile: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.profile",
       """
@@ -108,7 +68,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:26
+    // @LINE:17
     def termsofuse: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.termsofuse",
       """
@@ -118,17 +78,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:10
-    def westycanteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.westycanteen",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "westycanteen"})
-        }
-      """
-    )
-  
-    // @LINE:13
+    // @LINE:9
     def home: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.home",
       """
@@ -138,7 +88,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:28
+    // @LINE:19
     def calendar: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.calendar",
       """
@@ -148,27 +98,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:16
-    def managemenus: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.managemenus",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "managemenus"})
-        }
-      """
-    )
-  
-    // @LINE:7
-    def administrator: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.administrator",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "administrator"})
-        }
-      """
-    )
-  
-    // @LINE:6
+    // @LINE:8
     def landing: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.landing",
       """
@@ -178,47 +108,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:8
-    def authapproval: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.authapproval",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "authapproval"})
-        }
-      """
-    )
-  
-    // @LINE:24
-    def userslist: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.userslist",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "userslist"})
-        }
-      """
-    )
-  
-    // @LINE:19
-    def createcanteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.createcanteen",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "createcanteen"})
-        }
-      """
-    )
-  
     // @LINE:18
-    def manager: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.manager",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "manager"})
-        }
-      """
-    )
-  
-    // @LINE:27
     def privacypolicy: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.privacypolicy",
       """
@@ -228,7 +118,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:14
+    // @LINE:10
     def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.login",
       """
@@ -240,20 +130,180 @@ package controllers.javascript {
   
   }
 
-  // @LINE:34
-  class ReverseAssets(_prefix: => String) {
+  // @LINE:22
+  class ReverseAdministrator(_prefix: => String) {
 
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:34
-    def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Assets.at",
+    // @LINE:25
+    def addUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Administrator.addUser",
       """
-        function(file1) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("file", file1)})
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addItem"})
+        }
+      """
+    )
+  
+    // @LINE:26
+    def removeUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Administrator.removeUser",
+      """
+        function(id0) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "removeItem" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[Long]].javascriptUnbind + """)("id", id0)])})
+        }
+      """
+    )
+  
+    // @LINE:22
+    def administrator: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Administrator.administrator",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "administrator"})
+        }
+      """
+    )
+  
+    // @LINE:23
+    def authapproval: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Administrator.authapproval",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "authapproval"})
+        }
+      """
+    )
+  
+    // @LINE:24
+    def userslist: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Administrator.userslist",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "userslist"})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:29
+  class ReverseManager(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:33
+    def northycanteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Manager.northycanteen",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "northycanteen"})
+        }
+      """
+    )
+  
+    // @LINE:36
+    def southycanteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Manager.southycanteen",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "southycanteen"})
+        }
+      """
+    )
+  
+    // @LINE:35
+    def eastycanteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Manager.eastycanteen",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "eastycanteen"})
+        }
+      """
+    )
+  
+    // @LINE:32
+    def managetickets: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Manager.managetickets",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "managetickets"})
+        }
+      """
+    )
+  
+    // @LINE:34
+    def westycanteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Manager.westycanteen",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "westycanteen"})
+        }
+      """
+    )
+  
+    // @LINE:31
+    def managemenus: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Manager.managemenus",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "managemenus"})
+        }
+      """
+    )
+  
+    // @LINE:30
+    def createcanteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Manager.createcanteen",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "createcanteen"})
+        }
+      """
+    )
+  
+    // @LINE:29
+    def manager: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Manager.manager",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "manager"})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:39
+  class ReverseStudent(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:39
+    def tickets: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Student.tickets",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "tickets"})
+        }
+      """
+    )
+  
+    // @LINE:40
+    def wallet: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Student.wallet",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "wallet"})
         }
       """
     )

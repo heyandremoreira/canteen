@@ -1,12 +1,13 @@
 package models;
 
+import io.ebean.Model;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Role {
-
+public class Role extends Model{
     @Id
     @GeneratedValue
     private long id;

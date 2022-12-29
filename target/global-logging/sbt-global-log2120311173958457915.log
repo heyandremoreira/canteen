@@ -988,3 +988,4 @@
 [debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
 [debug] Exporting web-assets:play-java-ebean-example
 [debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Forcing garbage collection...

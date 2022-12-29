@@ -1,6 +1,6 @@
 package controllers;
 
-import models.Item;
+import models.User;
 import play.data.DynamicForm;
 import play.data.FormFactory;
 import play.mvc.Controller;
@@ -8,6 +8,7 @@ import play.mvc.Http;
 import play.mvc.Result;
 
 import javax.inject.Inject;
+import java.util.List;
 
 public class Administrator extends Controller {
 
@@ -23,30 +24,27 @@ public class Administrator extends Controller {
     }
 
     public Result userslist(Http.Request request) {
-        return ok(views.html.Administrator.userslist.render());
+        List<User> users = User.getUserList();
+        return ok(views.html.Administrator.userslist.render(users));
     }
 
     public Result authapproval(Http.Request request) {
         return ok(views.html.Administrator.authapproval.render());
     }
 
-    public Result addItem(Http.Request request){
+    public Result addUser(Http.Request request){
         DynamicForm dynamicForm = this.formFactory.form().bindFromRequest(request);
-        Item item = new Item();
-        item.setName(dynamicForm.get("item"));
-        item.setCategory(dynamicForm.get("category"));
-        item.setAmount(dynamicForm.get("amount"));
-        item.save();
-        return redirect(routes.Administrator.index());
+        User user = new User();
+        user.setUsername(dynamicForm.get("user"));
+        user.save();
+        return redirect(routes.Administrator.userslist());
     }
 
-    public Result removeItem(Http.Request request, Long id){
-/*        DynamicForm dynamicForm = this.formFactory.form().bindFromRequest(request);
-        Long id = Long.parseLong(dynamicForm.get("itemId"));*/
-        Item item = Item.getItemById(id);
-        item.delete();
-        item.save();
-        return redirect(routes.Administrator.index());
+    public Result removeUser(Http.Request request, Long id){
+        User user = User.getUserById(id);
+        user.delete();
+        user.save();
+        return redirect(routes.Administrator.userslist());
     }
 
 }

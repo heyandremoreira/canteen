@@ -22,8 +22,8 @@ GET     /calendar                   controllers.HomeController.calendar(request:
 GET     /administrator              controllers.Administrator.administrator(request: Request)
 GET     /authapproval               controllers.Administrator.authapproval(request: Request)
 GET     /userslist                  controllers.Administrator.userslist(request: Request)
-POST    /addItem                    controllers.Administrator.addItem(request: Request)
-POST    /removeItem                 controllers.Administrator.removeItem(request: Request, id: Long)
+POST    /addItem                    controllers.Administrator.addUser(request: Request)
+POST    /removeItem                 controllers.Administrator.removeUser(request: Request, id: Long)
 
 # MANAGER
 GET     /manager                    controllers.Manager.manager(request: Request)

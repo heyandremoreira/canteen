@@ -1,6 +1,13 @@
 package models;
 
-public class ResetPassword {
+import io.ebean.Model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "reset_password")
+public class ResetPassword extends Model{
     private String token;
     private String password;
     private String confirmPassword;
