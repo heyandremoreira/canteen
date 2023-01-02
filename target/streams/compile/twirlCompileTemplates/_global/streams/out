@@ -1,3 +1,3 @@
 [error] [Error] C:\Users\André ISCTE\Documents\canteen_management\app\views\Administrator\userslist.scala.html:52
-[error] }: Expected '}' but found 'EOF'
+[error]     }: Not parsed?
 [error] (Compile / twirlCompileTemplates) Twirl compilation failed

@@ -16,10 +16,9 @@ public class Role extends Model{
         this.username = username;
     }
     public Role() {
-
     }
 
-    public String getNameLabel(){
+    public String getRole(){
         switch (username) {
             case "ROLE_ADMIN":
                 return "Administrator";
@@ -41,7 +40,7 @@ public class Role extends Model{
     public String getUsername() {
         return username;
     }
-    public void setName(String username) {
+    public void setUsername(String username) {
         this.username = username;
     }
 }

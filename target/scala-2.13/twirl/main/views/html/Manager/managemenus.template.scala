@@ -32,15 +32,14 @@ object managemenus extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.ap
 Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.css", "../../../public/stylesheets/home.css"))/*1.100*/{_display_(Seq[Any](format.raw/*1.101*/("""
         """),format.raw/*2.32*/("""
     """),format.raw/*3.5*/("""<main class="container-menu">
-        <section class="container mb-5 pb-5" id="managemenus">
+        <section class="container mb-5" id="managemenus">
             <div class="row w-100 d-flex mx-auto justify-content-center pt-2">
                 <div class="col-xl-12 cards pb-4">
-                    <div style="background-color: #131313" class="card">
+                    <div style="background-color: #131313" class="card textimg">
                         <img src=""""),_display_(/*8.36*/routes/*8.42*/.Assets.at("images/i1.jpg")),format.raw/*8.69*/("""" class="img-fluid" alt="managephoto">
-                        <div class="card-body">
-                            <h5 class="card-title">Northy</h5>
-                            <p style="font-size: 12px" class="card-text text-white">University Of Worldy, Building 1 - Floor 2</p>
-                            <button href="#" class="btn btn-brown d-flex ms-auto">Go</button>
+                        <div class="text-block">
+                            <h5>Northy</h5>
+                            <p style="font-size: 12px">University Of Worldy, Building 1 - Floor 2</p>
                         </div>
                     </div>
                 </div>
@@ -49,12 +48,12 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
     </main>
 
     <main class="container-menu">
-        <section class="container mb-5 pb-5" id="managemenus">
-            <div class="row w-100 d-flex mx-auto justify-content-end pt-2">
-                <div class="col-xl-5 cards pb-4">
+        <section class="container mb-5" id="managemenus">
+            <div class="row w-100 d-flex mx-auto justify-content-end">
+                <div class="col-xl-5 cards">
                     <div style="background-color: #131313" class="card">
                         <div class="text-white card-body">
-                            <h4>Create Menu</h4>
+                            <h4 style="margin: 10px 0px 20px 0px">Create Menu</h4>
                             <div class="input-group pb-3">
                                 <textarea class="form-control" placeholder="Insert the title of the menu" aria-label="With textarea"></textarea>
                             </div>
@@ -85,8 +84,8 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
               /*
                   -- GENERATED --
                   SOURCE: app/views/Manager/managemenus.scala.html
-                  HASH: 54ea94e0d9e1ffdf2a087c989df0017345c37dde
-                  MATRIX: 1003->1|1110->99|1149->100|1186->133|1218->139|1580->475|1594->481|1641->508
+                  HASH: 717f4a9f404f89a75f8aa827fd65ffc06bd91878
+                  MATRIX: 1003->1|1110->99|1149->100|1186->133|1218->139|1583->478|1597->484|1644->511
                   LINES: 32->1|32->1|32->1|33->2|34->3|39->8|39->8|39->8
                   -- GENERATED --
               */

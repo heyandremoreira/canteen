@@ -42,10 +42,8 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
         <tbody class="align-middle text-center">
             <tr>
                 <th scope="row">1</th>
-                <td>Gonçalo Queiroz</td>
-                <td>Southy</td>
-                <td>24/02/2023</td>
-            </tr>
+                """),format.raw/*16.41*/("""
+            """),format.raw/*17.13*/("""</tr>
             <tr>
                 <th scope="row">2</th>
                 <td>Gonçalo Queiroz</td>
@@ -89,9 +87,9 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
               /*
                   -- GENERATED --
                   SOURCE: app/views/Student/tickets.scala.html
-                  HASH: c596b6bc6d5d2bff705d9055b3a56aec5b205054
-                  MATRIX: 999->1|1065->59|1103->60|1135->66
-                  LINES: 32->1|32->1|32->1|33->2
+                  HASH: a9d4e8b6e7cebaaa78c3370fb99edfda9680f72c
+                  MATRIX: 999->1|1065->59|1103->60|1135->66|1615->641|1657->655
+                  LINES: 32->1|32->1|32->1|33->2|45->16|46->17
                   -- GENERATED --
               */
           

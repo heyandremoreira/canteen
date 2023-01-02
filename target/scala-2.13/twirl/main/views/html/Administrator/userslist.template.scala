@@ -21,15 +21,15 @@ import play.data._
 import play.core.j.PlayFormsMagicForJava._
 import scala.jdk.CollectionConverters._
 
-object userslist extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[java.util.List[User],play.twirl.api.HtmlFormat.Appendable] {
+object userslist extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[java.util.List[models.User],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(users: java.util.List[User]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(users: java.util.List[models.User]):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.31*/("""
+Seq[Any](format.raw/*1.38*/("""
 """),_display_(/*2.2*/template(Array("stylesheets/landing.css"))/*2.44*/{_display_(Seq[Any](format.raw/*2.45*/("""
     """),format.raw/*3.5*/("""<table class="table table-responsive table-hover darkbg">
     """),_display_(/*4.6*/if(!users.isEmpty)/*4.24*/ {_display_(Seq[Any](format.raw/*4.26*/("""
@@ -87,9 +87,9 @@ Seq[Any](format.raw/*1.31*/("""
     }
   }
 
-  def render(users:java.util.List[User]): play.twirl.api.HtmlFormat.Appendable = apply(users)
+  def render(users:java.util.List[models.User]): play.twirl.api.HtmlFormat.Appendable = apply(users)
 
-  def f:((java.util.List[User]) => play.twirl.api.HtmlFormat.Appendable) = (users) => apply(users)
+  def f:((java.util.List[models.User]) => play.twirl.api.HtmlFormat.Appendable) = (users) => apply(users)
 
   def ref: this.type = this
 
@@ -99,8 +99,8 @@ Seq[Any](format.raw/*1.31*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/Administrator/userslist.scala.html
-                  HASH: 5f28921f8730b96460af398c44e3d09cabca9d1e
-                  MATRIX: 939->1|1063->30|1091->33|1141->75|1179->76|1211->82|1300->146|1326->164|1365->166|1402->177|1435->195|1474->197|1515->211|2164->833|2184->844|2251->890|3667->2275|3704->2282|3737->2288
+                  HASH: 4b475b714e8204a40b65bdb9b1c8a2e97c29a6ef
+                  MATRIX: 946->1|1077->37|1105->40|1155->82|1193->83|1225->89|1314->153|1340->171|1379->173|1416->184|1449->202|1488->204|1529->218|2178->840|2198->851|2265->897|3681->2282|3718->2289|3751->2295
                   LINES: 27->1|32->1|33->2|33->2|33->2|34->3|35->4|35->4|35->4|36->5|36->5|36->5|37->6|51->20|51->20|51->20|82->51|83->52|84->53
                   -- GENERATED --
               */

@@ -29,7 +29,28 @@ object manager extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Ht
       {
 
 
-Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.css"))/*1.60*/{_display_(Seq[Any](format.raw/*1.61*/("""
+Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css"))/*1.44*/{_display_(Seq[Any](format.raw/*1.45*/("""
+
+    """),format.raw/*3.5*/("""<main>
+        <div class="row principal-container">
+            <div class="col-md-7 d-flex justify-content-center">
+                <img src=""""),_display_(/*6.28*/routes/*6.34*/.Assets.at("images/manager.png")),format.raw/*6.66*/("""" class="img-fluid" alt="landing" width="600px">
+            </div>
+            <div class="col-md-4 justify-content-center">
+                <div class="text-white justify-content-start">
+                    <div class="col-12 text-center form-control-sm pb-3">
+                        <button class="btn btn-form">Create Canteen</button>
+                    </div>
+                    <div class="col-12 text-center form-control-sm pb-3">
+                        <button class="btn btn-form">Manage Menus</button>
+                    </div>
+                    <div class="col-12 text-center form-control-sm">
+                        <button class="btn btn-form">Manage Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
 """)))}))
       }
@@ -48,9 +69,9 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
               /*
                   -- GENERATED --
                   SOURCE: app/views/Manager/manager.scala.html
-                  HASH: d159b41bb5912fc5bdf70e4e649d8f051884c7c3
-                  MATRIX: 999->1|1065->59|1103->60
-                  LINES: 32->1|32->1|32->1
+                  HASH: 1f72ccee6cd9d5bcfcc0bab1bddf2512b1323ed9
+                  MATRIX: 999->1|1049->43|1087->44|1121->52|1295->200|1309->206|1361->238
+                  LINES: 32->1|32->1|32->1|34->3|37->6|37->6|37->6
                   -- GENERATED --
               */
           

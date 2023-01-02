@@ -4,6 +4,8 @@
 # --- !Ups
 
 create table canteen (
+  id                            varchar(255),
+  name                          varchar(255),
   description                   varchar(255),
   title                         varchar(255),
   date                          datetime(6),
