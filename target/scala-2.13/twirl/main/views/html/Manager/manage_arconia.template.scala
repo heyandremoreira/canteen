@@ -94,7 +94,8 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
                             <div class="input-group pb-3">
                                 <textarea class="form-control" placeholder="Insert the description of the menu" aria-label="With textarea"></textarea>
                             </div>
-                            <button href="#" class="btn btn-small">Go</button>
+                            <button href="#" class="btn btn-small">Create</button>
+                            <button href="#" class="btn btn-remove">Delete</button>
                         </div>
                     </div>
                 </div>
@@ -118,7 +119,7 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
               /*
                   -- GENERATED --
                   SOURCE: app/views/Manager/manage_arconia.scala.html
-                  HASH: eede4322fe792a97681fbd6a8f83e3a0227b4d67
+                  HASH: 288944dceea3e512673e7033fec2297ced62ac01
                   MATRIX: 1006->1|1141->127|1180->128|1212->134|1252->148|1266->154|1307->175|1680->522|1694->528|1744->558
                   LINES: 32->1|32->1|32->1|33->2|33->2|33->2|33->2|40->9|40->9|40->9
                   -- GENERATED --

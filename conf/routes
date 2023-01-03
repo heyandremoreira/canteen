@@ -35,6 +35,7 @@ GET     /manage_thelastdrop         controllers.Manager.manage_thelastdrop(reque
 GET     /manage_arconia             controllers.Manager.manage_arconia(request: Request)
 GET     /manage_theleakycauldron    controllers.Manager.manage_theleakycauldron(request: Request)
 GET     /manage_waverly             controllers.Manager.manage_waverlysubstation(request: Request)
+GET     /managemenus                controllers.Manager.managemenus(request: Request)
 GET     /managetickets              controllers.Manager.managetickets(request: Request)
 
 # CANTEENS

@@ -37,14 +37,14 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
                     <h2 class="text-white text-left pt-5 pb-3">Hungry? <br> Get some food!</h2>
                     <p style="color: #B87651" class="text-left">Check out our canteens near you:</p>
                 </div>
-                <div class="row w-75 d-flex mx-auto justify-content-center pt-2">
+                <div class="row w-75 d-flex mx-auto mt-2">
                     <div class="col-xl-3 cards pb-4">
                         <div style="background-color: #131313" class="card">
-                            <img src=""""),_display_(/*12.40*/routes/*12.46*/.Assets.at("images/t6.jpg")),format.raw/*12.73*/("""" class="card-img-top" alt="northy">
+                            <img src=""""),_display_(/*12.40*/routes/*12.46*/.Assets.at("images/h.arc.jpg")),format.raw/*12.76*/("""" class="card-img-top" alt="arc">
                             <div class="card-body">
-                                <h5 class="card-title">Northy</h5>
+                                <h5 class="card-title">Arconia</h5>
                                 <p style="font-size: 12px" class="card-text text-white">Vegan canteen with greeny environment.</p>
-                                <a href="/thelastdrop" class="btn btn-brown d-flex ms-auto">
+                                <a href="/arconia" class="btn btn-brown d-flex ms-auto">
                                     <img src=""""),_display_(/*17.48*/routes/*17.54*/.Assets.at("images/next2.png")),format.raw/*17.84*/("""" class="card-img-top" alt="arrow">
                                 </a>
                             </div>
@@ -52,12 +52,12 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
                     </div>
                     <div class="col-xl-3 cards pb-4">
                         <div style="background-color: #131313" class="card">
-                            <img src=""""),_display_(/*24.40*/routes/*24.46*/.Assets.at("images/cwesty.png")),format.raw/*24.77*/("""" class="card-img-top" alt="westy">
+                            <img src=""""),_display_(/*24.40*/routes/*24.46*/.Assets.at("images/h.tld.jpg")),format.raw/*24.76*/("""" class="card-img-top" alt="tld">
                             <div class="card-body">
-                                <h5 class="card-title">Westy</h5>
+                                <h5 class="card-title">The Last Drop</h5>
                                 <p style="font-size: 12px" class="card-text text-white">Grilly canteen with fresh and juicy meat.</p>
                                 """),format.raw/*28.123*/("""
-                                    """),format.raw/*29.37*/("""<a href="/theleakycauldron" class="btn btn-brown d-flex ms-auto">
+                                    """),format.raw/*29.37*/("""<a href="/thelastdrop" class="btn btn-brown d-flex ms-auto">
                                         <img src=""""),_display_(/*30.52*/routes/*30.58*/.Assets.at("images/next2.png")),format.raw/*30.88*/("""" class="card-img-top" alt="arrow">
                                     </a>
                                 """),format.raw/*32.43*/("""
@@ -66,9 +66,9 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
                     </div>
                     <div class="col-xl-3 cards pb-4">
                         <div style="background-color: #131313" class="card">
-                            <img src=""""),_display_(/*38.40*/routes/*38.46*/.Assets.at("images/ceasty.jpg")),format.raw/*38.77*/("""" class="card-img-top" alt="easty">
+                            <img src=""""),_display_(/*38.40*/routes/*38.46*/.Assets.at("images/h.tlc.jpg")),format.raw/*38.76*/("""" class="card-img-top" alt="tlc">
                             <div class="card-body">
-                                <h5 class="card-title">Easty</h5>
+                                <h5 class="card-title">The Leaky Cauldron</h5>
                                 <p style="font-size: 12px" class="card-text text-white">Explore some of the best Asiatic cooking.</p>
                                 <a href="/arconia" class="btn btn-brown d-flex ms-auto">
                                     <img src=""""),_display_(/*43.48*/routes/*43.54*/.Assets.at("images/next2.png")),format.raw/*43.84*/("""" class="card-img-top" alt="arrow">
@@ -78,9 +78,9 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
                     </div>
                     <div class="col-xl-3 cards pb-4">
                         <div style="background-color: #131313" class="card">
-                            <img src=""""),_display_(/*50.40*/routes/*50.46*/.Assets.at("images/t1.jpg")),format.raw/*50.73*/("""" class="card-img-top" alt="southy">
+                            <img src=""""),_display_(/*50.40*/routes/*50.46*/.Assets.at("images/h.wss.jpg")),format.raw/*50.76*/("""" class="card-img-top" alt="wss">
                             <div class="card-body">
-                                <h5 class="card-title">Southy</h5>
+                                <h5 class="card-title">Waverly <br> Sub Station</h5>
                                 <p style="font-size: 12px" class="card-text text-white">Mediterranic canteen. Taste a giant amount of flavours</p>
                                 <a href="/waverlysubstation" class="btn btn-brown d-flex ms-auto">
                                     <img src=""""),_display_(/*55.48*/routes/*55.54*/.Assets.at("images/next2.png")),format.raw/*55.84*/("""" class="card-img-top" alt="arrow">
@@ -108,8 +108,8 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
               /*
                   -- GENERATED --
                   SOURCE: app/views/home.scala.html
-                  HASH: ee9610145c702fc4072dddd1c58341b97466116b
-                  MATRIX: 988->1|1062->67|1100->68|1138->80|1779->694|1794->700|1842->727|2301->1159|2316->1165|2367->1195|2737->1538|2752->1544|2804->1575|3157->1989|3223->2027|3368->2145|3383->2151|3434->2181|3573->2302|3631->2332|3898->2572|3913->2578|3965->2609|4421->3038|4436->3044|4487->3074|4857->3417|4872->3423|4920->3450|5401->3904|5416->3910|5467->3940
+                  HASH: 30407fc42909043ef921a6954c29d50689fd6fd3
+                  MATRIX: 988->1|1062->67|1100->68|1138->80|1756->671|1771->677|1822->707|2275->1133|2290->1139|2341->1169|2711->1512|2726->1518|2777->1548|3136->1968|3202->2006|3342->2119|3357->2125|3408->2155|3547->2276|3605->2306|3872->2546|3887->2552|3938->2582|4405->3022|4420->3028|4471->3058|4841->3401|4856->3407|4907->3437|5403->3906|5418->3912|5469->3942
                   LINES: 32->1|32->1|32->1|34->3|43->12|43->12|43->12|48->17|48->17|48->17|55->24|55->24|55->24|59->28|60->29|61->30|61->30|61->30|63->32|64->33|69->38|69->38|69->38|74->43|74->43|74->43|81->50|81->50|81->50|86->55|86->55|86->55
                   -- GENERATED --
               */

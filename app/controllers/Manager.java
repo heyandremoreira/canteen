@@ -40,6 +40,10 @@ public class Manager extends Controller {
         return ok(views.html.Manager.manage_waverlysubstation.render());
     }
 
+    public Result managemenus(Http.Request request) {
+        return ok(views.html.Manager.managemenus.render());
+    }
+
     public Result managetickets(Http.Request request) {
         List<Canteen> canteens = Canteen.getCanteenList();
         return ok(views.html.Manager.managetickets.render(canteens));

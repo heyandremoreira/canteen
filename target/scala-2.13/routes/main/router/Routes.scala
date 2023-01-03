@@ -19,11 +19,11 @@ class Routes(
   Administrator_1: controllers.Administrator,
   // @LINE:32
   Manager_2: controllers.Manager,
-  // @LINE:41
+  // @LINE:42
   CanteenController_0: controllers.CanteenController,
-  // @LINE:47
+  // @LINE:48
   Student_3: controllers.Student,
-  // @LINE:52
+  // @LINE:53
   Assets_4: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -36,11 +36,11 @@ class Routes(
     Administrator_1: controllers.Administrator,
     // @LINE:32
     Manager_2: controllers.Manager,
-    // @LINE:41
+    // @LINE:42
     CanteenController_0: controllers.CanteenController,
-    // @LINE:47
+    // @LINE:48
     Student_3: controllers.Student,
-    // @LINE:52
+    // @LINE:53
     Assets_4: controllers.Assets
   ) = this(errorHandler, HomeController_5, Administrator_1, Manager_2, CanteenController_0, Student_3, Assets_4, "/")
 
@@ -75,6 +75,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """manage_arconia""", """controllers.Manager.manage_arconia(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """manage_theleakycauldron""", """controllers.Manager.manage_theleakycauldron(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """manage_waverly""", """controllers.Manager.manage_waverlysubstation(request:Request)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """managemenus""", """controllers.Manager.managemenus(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """managetickets""", """controllers.Manager.managetickets(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """theleakycauldron""", """controllers.CanteenController.theleakycauldron(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """thelastdrop""", """controllers.CanteenController.thelastdrop(request:Request)"""),
@@ -493,10 +494,30 @@ GET     /logout                     controllers.Application.logout()""",
   )
 
   // @LINE:38
-  private[this] lazy val controllers_Manager_managetickets20_route = Route("GET",
+  private[this] lazy val controllers_Manager_managemenus20_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("managemenus")))
+  )
+  private[this] lazy val controllers_Manager_managemenus20_invoker = createInvoker(
+    
+    (req:play.mvc.Http.Request) =>
+      Manager_2.managemenus(fakeValue[play.mvc.Http.Request]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Manager",
+      "managemenus",
+      Seq(classOf[play.mvc.Http.Request]),
+      "GET",
+      this.prefix + """managemenus""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:39
+  private[this] lazy val controllers_Manager_managetickets21_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("managetickets")))
   )
-  private[this] lazy val controllers_Manager_managetickets20_invoker = createInvoker(
+  private[this] lazy val controllers_Manager_managetickets21_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       Manager_2.managetickets(fakeValue[play.mvc.Http.Request]),
@@ -512,11 +533,11 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:41
-  private[this] lazy val controllers_CanteenController_theleakycauldron21_route = Route("GET",
+  // @LINE:42
+  private[this] lazy val controllers_CanteenController_theleakycauldron22_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("theleakycauldron")))
   )
-  private[this] lazy val controllers_CanteenController_theleakycauldron21_invoker = createInvoker(
+  private[this] lazy val controllers_CanteenController_theleakycauldron22_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       CanteenController_0.theleakycauldron(fakeValue[play.mvc.Http.Request]),
@@ -532,11 +553,11 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:42
-  private[this] lazy val controllers_CanteenController_thelastdrop22_route = Route("GET",
+  // @LINE:43
+  private[this] lazy val controllers_CanteenController_thelastdrop23_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("thelastdrop")))
   )
-  private[this] lazy val controllers_CanteenController_thelastdrop22_invoker = createInvoker(
+  private[this] lazy val controllers_CanteenController_thelastdrop23_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       CanteenController_0.thelastdrop(fakeValue[play.mvc.Http.Request]),
@@ -552,11 +573,11 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:43
-  private[this] lazy val controllers_CanteenController_arconia23_route = Route("GET",
+  // @LINE:44
+  private[this] lazy val controllers_CanteenController_arconia24_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("arconia")))
   )
-  private[this] lazy val controllers_CanteenController_arconia23_invoker = createInvoker(
+  private[this] lazy val controllers_CanteenController_arconia24_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       CanteenController_0.arconia(fakeValue[play.mvc.Http.Request]),
@@ -572,11 +593,11 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:44
-  private[this] lazy val controllers_CanteenController_waverlysubstation24_route = Route("GET",
+  // @LINE:45
+  private[this] lazy val controllers_CanteenController_waverlysubstation25_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("waverlysubstation")))
   )
-  private[this] lazy val controllers_CanteenController_waverlysubstation24_invoker = createInvoker(
+  private[this] lazy val controllers_CanteenController_waverlysubstation25_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       CanteenController_0.waverlysubstation(fakeValue[play.mvc.Http.Request]),
@@ -592,11 +613,11 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:47
-  private[this] lazy val controllers_Student_tickets25_route = Route("GET",
+  // @LINE:48
+  private[this] lazy val controllers_Student_tickets26_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tickets")))
   )
-  private[this] lazy val controllers_Student_tickets25_invoker = createInvoker(
+  private[this] lazy val controllers_Student_tickets26_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       Student_3.tickets(fakeValue[play.mvc.Http.Request]),
@@ -612,11 +633,11 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:48
-  private[this] lazy val controllers_Student_wallet26_route = Route("GET",
+  // @LINE:49
+  private[this] lazy val controllers_Student_wallet27_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("wallet")))
   )
-  private[this] lazy val controllers_Student_wallet26_invoker = createInvoker(
+  private[this] lazy val controllers_Student_wallet27_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       Student_3.wallet(fakeValue[play.mvc.Http.Request]),
@@ -632,11 +653,11 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:52
-  private[this] lazy val controllers_Assets_at27_route = Route("GET",
+  // @LINE:53
+  private[this] lazy val controllers_Assets_at28_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_at27_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_at28_invoker = createInvoker(
     Assets_4.at(fakeValue[String], fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -794,58 +815,65 @@ GET     /logout                     controllers.Application.logout()""",
       }
   
     // @LINE:38
-    case controllers_Manager_managetickets20_route(params@_) =>
+    case controllers_Manager_managemenus20_route(params@_) =>
       call { 
-        controllers_Manager_managetickets20_invoker.call(
+        controllers_Manager_managemenus20_invoker.call(
+          req => Manager_2.managemenus(req))
+      }
+  
+    // @LINE:39
+    case controllers_Manager_managetickets21_route(params@_) =>
+      call { 
+        controllers_Manager_managetickets21_invoker.call(
           req => Manager_2.managetickets(req))
       }
   
-    // @LINE:41
-    case controllers_CanteenController_theleakycauldron21_route(params@_) =>
+    // @LINE:42
+    case controllers_CanteenController_theleakycauldron22_route(params@_) =>
       call { 
-        controllers_CanteenController_theleakycauldron21_invoker.call(
+        controllers_CanteenController_theleakycauldron22_invoker.call(
           req => CanteenController_0.theleakycauldron(req))
       }
   
-    // @LINE:42
-    case controllers_CanteenController_thelastdrop22_route(params@_) =>
+    // @LINE:43
+    case controllers_CanteenController_thelastdrop23_route(params@_) =>
       call { 
-        controllers_CanteenController_thelastdrop22_invoker.call(
+        controllers_CanteenController_thelastdrop23_invoker.call(
           req => CanteenController_0.thelastdrop(req))
       }
   
-    // @LINE:43
-    case controllers_CanteenController_arconia23_route(params@_) =>
+    // @LINE:44
+    case controllers_CanteenController_arconia24_route(params@_) =>
       call { 
-        controllers_CanteenController_arconia23_invoker.call(
+        controllers_CanteenController_arconia24_invoker.call(
           req => CanteenController_0.arconia(req))
       }
   
-    // @LINE:44
-    case controllers_CanteenController_waverlysubstation24_route(params@_) =>
+    // @LINE:45
+    case controllers_CanteenController_waverlysubstation25_route(params@_) =>
       call { 
-        controllers_CanteenController_waverlysubstation24_invoker.call(
+        controllers_CanteenController_waverlysubstation25_invoker.call(
           req => CanteenController_0.waverlysubstation(req))
       }
   
-    // @LINE:47
-    case controllers_Student_tickets25_route(params@_) =>
+    // @LINE:48
+    case controllers_Student_tickets26_route(params@_) =>
       call { 
-        controllers_Student_tickets25_invoker.call(
+        controllers_Student_tickets26_invoker.call(
           req => Student_3.tickets(req))
       }
   
-    // @LINE:48
-    case controllers_Student_wallet26_route(params@_) =>
+    // @LINE:49
+    case controllers_Student_wallet27_route(params@_) =>
       call { 
-        controllers_Student_wallet26_invoker.call(
+        controllers_Student_wallet27_invoker.call(
           req => Student_3.wallet(req))
       }
   
-    // @LINE:52
-    case controllers_Assets_at27_route(params@_) =>
+    // @LINE:53
+    case controllers_Assets_at28_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at27_invoker.call(Assets_4.at(path, file))
+        controllers_Assets_at28_invoker.call(Assets_4.at(path, file))
       }
   }
 }

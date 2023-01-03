@@ -49,57 +49,72 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/calendar.css"))/*1.45*/ {_
         </section>
     </main>
 
-    <div class="row w-75 d-flex mx-auto justify-content-center py-5">
-        <div class="col-6">
-            <div class="calendar-colors">
-                <div class="calendar">
-                    <div class="calendar-header">
-                        <span class="month-picker" id="month-picker">April</span>
-                        <div class="year-picker">
-                            <span class="year-change" id="prev-year">
-                                <pre><</pre>
-                            </span>
-                            <span id="year">2022</span>
-                            <span class="year-change" id="next-year">
-                                <pre>></pre>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="calendar-body">
-                        <div class="calendar-week-day">
-                            <div>Sun</div>
-                            <div>Mon</div>
-                            <div>Tue</div>
-                            <div>Wed</div>
-                            <div>Thu</div>
-                            <div>Fri</div>
-                            <div>Sat</div>
-                        </div>
-                        <div class="calendar-days"></div>
-                    </div>
-                    <div class="month-list"></div>
-                </div>
-            </div>
-        </div>
+    <main class="container-menu">
+        <section class="container mb-5" id="managemenus">
+            <div class="row w-100 d-flex mx-auto justify-content-center">
 
-
-            <div class="col-xl-6 cards my-auto pb-4">
-                <div style="background-color: #131313" class="card">
-                    <div class="card-body">
-                        <h5 class="card-title pb-2">Create menu</h5>
-                        <div class="form-outline pb-3">
-                            <textarea class="form-control" placeholder="Insert the menu of the day" id="textAreaExample" rows="4"></textarea>
-                        </div>
-                        <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn btn-small" href="#">Submit</button>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div class="calendar-colors">
+                        <div class="calendar">
+                            <div class="calendar-header">
+                                <span class="month-picker" id="month-picker">April</span>
+                                <div class="year-picker">
+                                    <span class="year-change" id="prev-year">
+                                        <pre><</pre>
+                                    </span>
+                                    <span id="year">2022</span>
+                                    <span class="year-change" id="next-year">
+                                        <pre>></pre>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="calendar-body">
+                                <div class="calendar-week-day">
+                                    <div>Sun</div>
+                                    <div>Mon</div>
+                                    <div>Tue</div>
+                                    <div>Wed</div>
+                                    <div>Thu</div>
+                                    <div>Fri</div>
+                                    <div>Sat</div>
+                                </div>
+                                <div class="calendar-days"></div>
+                            </div>
+                            <div class="month-list"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    """),format.raw/*85.13*/("""
+                <div class="col-md-5 my-auto cards">
+                    <div class="row">
+                        <div style="background-color: white" class="card">
+                            <div class="card-body">
+                                <div class="row d-flex align-items-center">
+                                    <div class="col-md-3 ms-4">
+                                        <h1 class="txtred">23 FEV</h1>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h4 class="txtblack" style="margin: 10px 0px 20px 0px">Carbonara</h4>
+                                        <p>Spaghetti with cow meat, bacon and whipping cream</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-start flex-column mt-5 ps-0">
+                            <p class="text-white text-center m-0">Price</p>
+                            <h4 class="text-white text-center">€4.20</h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end mt-5 p-0">
+                            <button href="#" class="btn btn-form">Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
 
 """)))}))
       }
@@ -118,9 +133,9 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/calendar.css"))/*1.45*/ {_
               /*
                   -- GENERATED --
                   SOURCE: app/views/Canteens/thelastdrop.scala.html
-                  HASH: bf1158e5b93bffcc9a73ac7dfee13f7720eaf521
-                  MATRIX: 1004->1|1055->44|1094->46|1128->54|1168->68|1182->74|1223->95|1597->442|1612->448|1663->478|4265->3810
-                  LINES: 32->1|32->1|32->1|34->3|34->3|34->3|34->3|41->10|41->10|41->10|102->85
+                  HASH: 179db35545ba61043178cb6142e5b9c141a0fbf5
+                  MATRIX: 1004->1|1055->44|1094->46|1128->54|1168->68|1182->74|1223->95|1597->442|1612->448|1663->478
+                  LINES: 32->1|32->1|32->1|34->3|34->3|34->3|34->3|41->10|41->10|41->10
                   -- GENERATED --
               */
           
