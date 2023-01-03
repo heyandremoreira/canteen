@@ -1,0 +1,73 @@
+@template(Array("../../../public/stylesheets/landing.css", "../../../public/stylesheets/home.css", "stylesheets/calendar.css")){
+    <script src="@routes.Assets.at("main.js")" defer></script>
+
+    <main class="container-menu">
+        <section class="container mb-5">
+            <div class="row w-100 d-flex mx-auto justify-content-center pt-2">
+                <div class="col-xl-12 cards pb-4">
+                    <div style="background-color: #131313" class="card textimg">
+                        <img src="@routes.Assets.at("images/b.tld.jpg")" class="img-fluid" alt="tld">
+                        <div class="text-block">
+                            <h5>The Last Drop</h5>
+                            <p style="font-size: 12px">The Lame, Zaun, Piltover</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main class="container-menu">
+        <section class="container mb-5" id="managemenus">
+            <div class="row w-100 d-flex mx-auto justify-content-center">
+
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div class="calendar-colors">
+                        <div class="calendar">
+                            <div class="calendar-header">
+                                <span class="month-picker" id="month-picker">April</span>
+                                <div class="year-picker">
+                                    <span class="year-change" id="prev-year">
+                                        <pre><</pre>
+                                    </span>
+                                    <span id="year">2022</span>
+                                    <span class="year-change" id="next-year">
+                                        <pre>></pre>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="calendar-body">
+                                <div class="calendar-week-day">
+                                    <div>Sun</div>
+                                    <div>Mon</div>
+                                    <div>Tue</div>
+                                    <div>Wed</div>
+                                    <div>Thu</div>
+                                    <div>Fri</div>
+                                    <div>Sat</div>
+                                </div>
+                                <div class="calendar-days"></div>
+                            </div>
+                            <div class="month-list"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5 cards">
+                    <div style="background-color: #131313" class="card">
+                        <div class="text-white card-body">
+                            <h4 style="margin: 10px 0px 20px 0px">Create Menu</h4>
+                            <div class="input-group pb-3">
+                                <textarea class="form-control" placeholder="Insert the title of the menu" aria-label="With textarea"></textarea>
+                            </div>
+                            <div class="input-group pb-3">
+                                <textarea class="form-control" placeholder="Insert the description of the menu" aria-label="With textarea"></textarea>
+                            </div>
+                            <button href="#" class="btn btn-small">Go</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+}

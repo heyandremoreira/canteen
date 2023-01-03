@@ -11,7 +11,7 @@ create table canteen (
   date                          datetime(6),
   image                         varchar(255),
   value                         double not null,
-  adress                        varchar(255)
+  address                       varchar(255)
 );
 
 create table category (

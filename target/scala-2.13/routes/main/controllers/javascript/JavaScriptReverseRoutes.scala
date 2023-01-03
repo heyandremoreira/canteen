@@ -10,7 +10,7 @@ import _root_.play.libs.F
 // @LINE:8
 package controllers.javascript {
 
-  // @LINE:44
+  // @LINE:52
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -18,12 +18,62 @@ package controllers.javascript {
     }
 
   
-    // @LINE:44
+    // @LINE:52
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
         function(file1) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("file", file1)})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:41
+  class ReverseCanteenController(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:41
+    def theleakycauldron: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.CanteenController.theleakycauldron",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "theleakycauldron"})
+        }
+      """
+    )
+  
+    // @LINE:42
+    def thelastdrop: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.CanteenController.thelastdrop",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "thelastdrop"})
+        }
+      """
+    )
+  
+    // @LINE:43
+    def arconia: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.CanteenController.arconia",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "arconia"})
+        }
+      """
+    )
+  
+    // @LINE:44
+    def waverlysubstation: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.CanteenController.waverlysubstation",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "waverlysubstation"})
         }
       """
     )
@@ -68,7 +118,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:17
+    // @LINE:19
     def termsofuse: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.termsofuse",
       """
@@ -88,7 +138,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:19
+    // @LINE:22
     def calendar: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.calendar",
       """
@@ -108,7 +158,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:18
+    // @LINE:20
     def privacypolicy: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.privacypolicy",
       """
@@ -130,7 +180,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:22
+  // @LINE:25
   class ReverseAdministrator(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -138,7 +188,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:25
+    // @LINE:28
     def addUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Administrator.addUser",
       """
@@ -148,7 +198,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:26
+    // @LINE:29
     def removeUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Administrator.removeUser",
       """
@@ -158,7 +208,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:22
+    // @LINE:25
     def administrator: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Administrator.administrator",
       """
@@ -168,7 +218,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:23
+    // @LINE:26
     def authapproval: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Administrator.authapproval",
       """
@@ -178,7 +228,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:24
+    // @LINE:27
     def userslist: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Administrator.userslist",
       """
@@ -190,7 +240,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:29
+  // @LINE:32
   class ReverseManager(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -198,37 +248,17 @@ package controllers.javascript {
     }
 
   
-    // @LINE:33
-    def northycanteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Manager.northycanteen",
+    // @LINE:37
+    def manage_waverlysubstation: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Manager.manage_waverlysubstation",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "northycanteen"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "manage_waverly"})
         }
       """
     )
   
-    // @LINE:36
-    def southycanteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Manager.southycanteen",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "southycanteen"})
-        }
-      """
-    )
-  
-    // @LINE:35
-    def eastycanteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Manager.eastycanteen",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "eastycanteen"})
-        }
-      """
-    )
-  
-    // @LINE:32
+    // @LINE:38
     def managetickets: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.managetickets",
       """
@@ -239,26 +269,36 @@ package controllers.javascript {
     )
   
     // @LINE:34
-    def westycanteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Manager.westycanteen",
+    def manage_thelastdrop: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Manager.manage_thelastdrop",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "westycanteen"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "manage_thelastdrop"})
         }
       """
     )
   
-    // @LINE:31
-    def managemenus: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Manager.managemenus",
+    // @LINE:36
+    def manage_theleakycauldron: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Manager.manage_theleakycauldron",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "managemenus"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "manage_theleakycauldron"})
         }
       """
     )
   
-    // @LINE:30
+    // @LINE:35
+    def manage_arconia: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Manager.manage_arconia",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "manage_arconia"})
+        }
+      """
+    )
+  
+    // @LINE:33
     def createcanteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.createcanteen",
       """
@@ -268,7 +308,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:29
+    // @LINE:32
     def manager: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manager",
       """
@@ -280,7 +320,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:39
+  // @LINE:47
   class ReverseStudent(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -288,7 +328,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:39
+    // @LINE:47
     def tickets: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Student.tickets",
       """
@@ -298,7 +338,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:40
+    // @LINE:48
     def wallet: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Student.wallet",
       """

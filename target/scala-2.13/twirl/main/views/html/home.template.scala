@@ -44,7 +44,7 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
                             <div class="card-body">
                                 <h5 class="card-title">Northy</h5>
                                 <p style="font-size: 12px" class="card-text text-white">Vegan canteen with greeny environment.</p>
-                                <a href="/northycanteen" class="btn btn-brown d-flex ms-auto">
+                                <a href="/thelastdrop" class="btn btn-brown d-flex ms-auto">
                                     <img src=""""),_display_(/*17.48*/routes/*17.54*/.Assets.at("images/next2.png")),format.raw/*17.84*/("""" class="card-img-top" alt="arrow">
                                 </a>
                             </div>
@@ -57,7 +57,7 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
                                 <h5 class="card-title">Westy</h5>
                                 <p style="font-size: 12px" class="card-text text-white">Grilly canteen with fresh and juicy meat.</p>
                                 """),format.raw/*28.123*/("""
-                                    """),format.raw/*29.37*/("""<a href="/westycanteen" class="btn btn-brown d-flex ms-auto">
+                                    """),format.raw/*29.37*/("""<a href="/theleakycauldron" class="btn btn-brown d-flex ms-auto">
                                         <img src=""""),_display_(/*30.52*/routes/*30.58*/.Assets.at("images/next2.png")),format.raw/*30.88*/("""" class="card-img-top" alt="arrow">
                                     </a>
                                 """),format.raw/*32.43*/("""
@@ -70,7 +70,7 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
                             <div class="card-body">
                                 <h5 class="card-title">Easty</h5>
                                 <p style="font-size: 12px" class="card-text text-white">Explore some of the best Asiatic cooking.</p>
-                                <a href="/eastycanteen" class="btn btn-brown d-flex ms-auto">
+                                <a href="/arconia" class="btn btn-brown d-flex ms-auto">
                                     <img src=""""),_display_(/*43.48*/routes/*43.54*/.Assets.at("images/next2.png")),format.raw/*43.84*/("""" class="card-img-top" alt="arrow">
                                 </a>
                             </div>
@@ -82,7 +82,7 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
                             <div class="card-body">
                                 <h5 class="card-title">Southy</h5>
                                 <p style="font-size: 12px" class="card-text text-white">Mediterranic canteen. Taste a giant amount of flavours</p>
-                                <a href="/southycanteen" class="btn btn-brown d-flex ms-auto">
+                                <a href="/waverlysubstation" class="btn btn-brown d-flex ms-auto">
                                     <img src=""""),_display_(/*55.48*/routes/*55.54*/.Assets.at("images/next2.png")),format.raw/*55.84*/("""" class="card-img-top" alt="arrow">
                                 </a>
                             </div>
@@ -108,8 +108,8 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
               /*
                   -- GENERATED --
                   SOURCE: app/views/home.scala.html
-                  HASH: fb575ebf3ccf854471d4f9364928085761189dd6
-                  MATRIX: 988->1|1062->67|1100->68|1138->80|1779->694|1794->700|1842->727|2303->1161|2318->1167|2369->1197|2739->1540|2754->1546|2806->1577|3159->1991|3225->2029|3366->2143|3381->2149|3432->2179|3571->2300|3629->2330|3896->2570|3911->2576|3963->2607|4424->3041|4439->3047|4490->3077|4860->3420|4875->3426|4923->3453|5400->3903|5415->3909|5466->3939
+                  HASH: ee9610145c702fc4072dddd1c58341b97466116b
+                  MATRIX: 988->1|1062->67|1100->68|1138->80|1779->694|1794->700|1842->727|2301->1159|2316->1165|2367->1195|2737->1538|2752->1544|2804->1575|3157->1989|3223->2027|3368->2145|3383->2151|3434->2181|3573->2302|3631->2332|3898->2572|3913->2578|3965->2609|4421->3038|4436->3044|4487->3074|4857->3417|4872->3423|4920->3450|5401->3904|5416->3910|5467->3940
                   LINES: 32->1|32->1|32->1|34->3|43->12|43->12|43->12|48->17|48->17|48->17|55->24|55->24|55->24|59->28|60->29|61->30|61->30|61->30|63->32|64->33|69->38|69->38|69->38|74->43|74->43|74->43|81->50|81->50|81->50|86->55|86->55|86->55
                   -- GENERATED --
               */

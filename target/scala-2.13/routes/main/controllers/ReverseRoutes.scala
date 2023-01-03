@@ -10,17 +10,50 @@ import _root_.play.libs.F
 // @LINE:8
 package controllers {
 
-  // @LINE:44
+  // @LINE:52
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:44
+    // @LINE:52
     def at(file:String): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[String]].unbind("file", file))
+    }
+  
+  }
+
+  // @LINE:41
+  class ReverseCanteenController(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:41
+    def theleakycauldron(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "theleakycauldron")
+    }
+  
+    // @LINE:42
+    def thelastdrop(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "thelastdrop")
+    }
+  
+    // @LINE:43
+    def arconia(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "arconia")
+    }
+  
+    // @LINE:44
+    def waverlysubstation(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "waverlysubstation")
     }
   
   }
@@ -50,7 +83,7 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "profile")
     }
   
-    // @LINE:17
+    // @LINE:19
     def termsofuse(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "termsofuse")
@@ -62,7 +95,7 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "home")
     }
   
-    // @LINE:19
+    // @LINE:22
     def calendar(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "calendar")
@@ -74,7 +107,7 @@ package controllers {
       Call("GET", _prefix)
     }
   
-    // @LINE:18
+    // @LINE:20
     def privacypolicy(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "privacypolicy")
@@ -88,38 +121,38 @@ package controllers {
   
   }
 
-  // @LINE:22
+  // @LINE:25
   class ReverseAdministrator(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:25
+    // @LINE:28
     def addUser(): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "addItem")
     }
   
-    // @LINE:26
+    // @LINE:29
     def removeUser(id:Long): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "removeItem" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("id", id)))))
     }
   
-    // @LINE:22
+    // @LINE:25
     def administrator(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "administrator")
     }
   
-    // @LINE:23
+    // @LINE:26
     def authapproval(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "authapproval")
     }
   
-    // @LINE:24
+    // @LINE:27
     def userslist(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "userslist")
@@ -127,56 +160,50 @@ package controllers {
   
   }
 
-  // @LINE:29
+  // @LINE:32
   class ReverseManager(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:33
-    def northycanteen(): Call = {
+    // @LINE:37
+    def manage_waverlysubstation(): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "northycanteen")
+      Call("GET", _prefix + { _defaultPrefix } + "manage_waverly")
     }
   
-    // @LINE:36
-    def southycanteen(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "southycanteen")
-    }
-  
-    // @LINE:35
-    def eastycanteen(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "eastycanteen")
-    }
-  
-    // @LINE:32
+    // @LINE:38
     def managetickets(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "managetickets")
     }
   
     // @LINE:34
-    def westycanteen(): Call = {
+    def manage_thelastdrop(): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "westycanteen")
+      Call("GET", _prefix + { _defaultPrefix } + "manage_thelastdrop")
     }
   
-    // @LINE:31
-    def managemenus(): Call = {
+    // @LINE:36
+    def manage_theleakycauldron(): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "managemenus")
+      Call("GET", _prefix + { _defaultPrefix } + "manage_theleakycauldron")
     }
   
-    // @LINE:30
+    // @LINE:35
+    def manage_arconia(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "manage_arconia")
+    }
+  
+    // @LINE:33
     def createcanteen(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "createcanteen")
     }
   
-    // @LINE:29
+    // @LINE:32
     def manager(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "manager")
@@ -184,20 +211,20 @@ package controllers {
   
   }
 
-  // @LINE:39
+  // @LINE:47
   class ReverseStudent(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:39
+    // @LINE:47
     def tickets(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "tickets")
     }
   
-    // @LINE:40
+    // @LINE:48
     def wallet(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "wallet")

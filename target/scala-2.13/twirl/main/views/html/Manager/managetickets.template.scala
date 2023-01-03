@@ -85,6 +85,12 @@ Seq[Any](format.raw/*1.37*/("""
     <div class="row d-flex justify-content-center" style="margin: 100px 0px 50px 0px">
         <div class="col-md-10">
             <div class="card shadow-0 border darkdarkbg">
+                <select name="canteen">
+                    <option value="" disabled selected>Choose the category</option>
+                    """),_display_(/*62.22*/for(canteen <- canteens) yield /*62.46*/{_display_(Seq[Any](format.raw/*62.47*/("""
+                        """),format.raw/*63.25*/("""<option value=""""),_display_(/*63.41*/canteen/*63.48*/.getName),format.raw/*63.56*/("""">"""),_display_(/*63.59*/canteen/*63.66*/.getName),format.raw/*63.74*/("""</option>
+                    """)))}),format.raw/*64.22*/("""
+                """),format.raw/*65.17*/("""</select>
                 <div class="card-body p-4">
                     <h3 class="form-label mb-5 d-flex justify-content-center">Feedback</h3>
                     <div class="form-outline d-flex mb-4">
@@ -158,9 +164,9 @@ Seq[Any](format.raw/*1.37*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/Manager/managetickets.scala.html
-                  HASH: f209d748daa90112cb6621fca216b93c7cd44ed1
-                  MATRIX: 940->1|1070->36|1098->39|1172->105|1211->107|1243->113|2085->1160|2135->1182
-                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|50->22|51->23
+                  HASH: f02c1670e4e0b77821ed2a442374ae0021019859
+                  MATRIX: 940->1|1070->36|1098->39|1172->105|1211->107|1243->113|2085->1160|2135->1182|3898->2918|3938->2942|3977->2943|4031->2969|4074->2985|4090->2992|4119->3000|4149->3003|4165->3010|4194->3018|4257->3050|4303->3068
+                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|50->22|51->23|90->62|90->62|90->62|91->63|91->63|91->63|91->63|91->63|91->63|91->63|92->64|93->65
                   -- GENERATED --
               */
           

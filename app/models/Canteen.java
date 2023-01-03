@@ -19,14 +19,15 @@ public class Canteen extends Model {
     private Date date;
     private String image;
     private double value;
-    private String adress;
+    private String address;
 
     private static final Finder<String, Canteen> finder = new Finder<>(Canteen.class);
+
     public static List<Canteen> getCanteenList(){
         return finder.all();
     }
 
-    public Canteen(String id, String name, String description, String title, Date date, String image, double value, String adress){
+    public Canteen(String id, String name, String description, String title, Date date, String image, double value, String address){
         this.id=id;
         this.name=name;
         this.description=description;
@@ -34,7 +35,7 @@ public class Canteen extends Model {
         this.date=date;
         this.image=image;
         this.value=value;
-        this.adress=adress;
+        this.address = address;
     }
 
     public String getName() {
