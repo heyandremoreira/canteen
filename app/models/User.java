@@ -3,10 +3,7 @@ package models;
 import io.ebean.Finder;
 import io.ebean.Model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -14,10 +11,11 @@ import java.util.List;
 public class User extends Model {
     @Id
     private Long id;
+    @Column(unique = true)
     private String username;
     private String password;
-
-    private Role role;
+    @ManyToMany
+    private List<Role> roles;
     private String token;
 
     @Column(unique = true)
@@ -41,13 +39,12 @@ public class User extends Model {
         this.id=id;
         this.username=username;
         this.password=password;
-        this.role=role;
+        this.roles=roles;
         this.token=token;
         this.email=email;
     }
 
     public User(){
-
     }
 
     public long getId() {
@@ -74,12 +71,12 @@ public class User extends Model {
         this.password = password;
     }
 
-    public Role getRole() {
-        return role;
+    public List<Role> getRoles() {
+        return roles;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
     }
 
     public String getToken() {

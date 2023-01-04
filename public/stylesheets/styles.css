@@ -201,7 +201,7 @@ th{
 }
 
 .btn-remove{
-    width: 30%;
+    width: 20%;
     padding: 10px 0px;
     border: none;
     border-radius: 20px;
@@ -211,7 +211,7 @@ th{
 }
 
 .btn.btn-remove:hover {
-    width: 30%;
+    width: 20%;
     padding: 10px 0px;
     border: none;
     border-radius: 20px;

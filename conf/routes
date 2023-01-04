@@ -9,7 +9,6 @@ GET     /                           controllers.HomeController.landing(request: 
 GET     /home                       controllers.HomeController.home(request: Request)
 GET     /login                      controllers.HomeController.login(request: Request)
 #POST    /login                      controllers.Application.authenticate()
-#GET     /login                      controllers.Application.login()
 #GET     /logout                     controllers.Application.logout()
 GET     /profile                    controllers.HomeController.profile(request: Request)
 GET     /recoverpassword            controllers.HomeController.recoverpassword(request: Request)

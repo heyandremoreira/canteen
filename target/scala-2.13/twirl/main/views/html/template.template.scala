@@ -56,7 +56,7 @@ Seq[Any](format.raw/*1.41*/("""
             <nav class="navbar navbar-dark navbar-expand-lg bg-black">
                 """),format.raw/*26.85*/("""
                 """),format.raw/*27.17*/("""<div class="container-fluid">
-                    <a style="padding-left: 80px" class="navbar-brand" href="/">
+                    <a style="margin-left: 80px" class="navbar-brand" href="/">
                         <img src=""""),_display_(/*29.36*/routes/*29.42*/.Assets.at("images/logo.png")),format.raw/*29.71*/("""" class="img-fluid" alt="logo" width="200px">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,7 +68,7 @@ Seq[Any](format.raw/*1.41*/("""
                                 <a class="nav-link px-3" aria-current="page" href="/home">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link px-3" href="#tickets">Tickets</a>
+                                <a class="nav-link px-3" href="/tickets">Tickets</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link px-3" href="#wallet">Wallet</a>
@@ -136,8 +136,8 @@ Seq[Any](format.raw/*1.41*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/template.scala.html
-                  HASH: 308706d4f318c6929645ca293dec80a9e091be73
-                  MATRIX: 922->1|1034->43|1090->40|1118->72|1157->103|1203->112|1233->116|1860->718|1893->735|1932->736|1974->750|2031->780|2046->786|2080->799|2124->863|2166->874|2203->884|2260->914|2275->920|2333->957|2403->1000|2418->1006|2475->1042|2693->1300|2739->1318|2914->1466|2929->1472|2979->1501|4329->3835|4389->4171|4451->4205|4754->4481|4769->4487|4829->4526|5898->5568|5926->5575|5961->5583|6220->5814|6246->5818
+                  HASH: 062f164ce0aa68faf655e9e87333d02aee35a8ae
+                  MATRIX: 922->1|1034->43|1090->40|1118->72|1157->103|1203->112|1233->116|1860->718|1893->735|1932->736|1974->750|2031->780|2046->786|2080->799|2124->863|2166->874|2203->884|2260->914|2275->920|2333->957|2403->1000|2418->1006|2475->1042|2693->1300|2739->1318|2913->1465|2928->1471|2978->1500|4328->3834|4388->4170|4450->4204|4753->4480|4768->4486|4828->4525|5897->5567|5925->5574|5960->5582|6219->5813|6245->5817
                   LINES: 27->1|30->2|33->1|34->3|34->3|34->3|36->5|46->15|46->15|46->15|47->16|47->16|47->16|47->16|48->17|49->18|50->19|50->19|50->19|50->19|51->20|51->20|51->20|57->26|58->27|60->29|60->29|60->29|80->68|82->73|85->76|88->79|88->79|88->79|106->97|106->97|108->99|112->103|112->103
                   -- GENERATED --
               */

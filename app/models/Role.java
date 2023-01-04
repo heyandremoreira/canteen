@@ -12,13 +12,14 @@ public class Role extends Model{
     @GeneratedValue
     private long id;
     private String username;
+
     public Role(String username) {
         this.username = username;
     }
     public Role() {
     }
 
-    public String getRole(){
+    /*public String getRole(){
         switch (username) {
             case "ROLE_ADMIN":
                 return "Administrator";
@@ -29,7 +30,7 @@ public class Role extends Model{
             default:
                 return "User";
         }
-    }
+    }*/
 
     public long getId() {
         return id;

@@ -1,5 +1,6 @@
 package controllers;
 
+import models.Role;
 import models.User;
 import play.data.DynamicForm;
 import play.data.FormFactory;
@@ -29,7 +30,8 @@ public class Administrator extends Controller {
     }
 
     public Result authapproval(Http.Request request) {
-        return ok(views.html.Administrator.authapproval.render());
+        List<User> users = User.getUserList();
+        return ok(views.html.Administrator.authapproval.render(users));
     }
 
     public Result addUser(Http.Request request){

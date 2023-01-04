@@ -1,3 +1,4 @@
+@(users: java.util.List[models.User])
 @template(Array("stylesheets/landing.css")) {
     <table class="table table-responsive table-hover darkbg">
         <thead class="text-center">
@@ -9,51 +10,34 @@
             </tr>
         </thead>
         <tbody class="align-middle text-center">
-            <tr>
-                <th scope="row">1</th>
-                <td>Gonçalo Queiroz</td>
-                <td>Manager</td>
-                <td>
-                    <a class="btn btn-approve" type="submit" href="#">Approve</a>
-                    <a class="btn btn-remove" type="submit" href="#">Deny</a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Gonçalo Queiroz</td>
-                <td>Manager</td>
-                <td>
-                    <a class="btn btn-approve" type="submit" href="#">Approve</a>
-                    <a class="btn btn-remove" type="submit" href="#">Deny</a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Gonçalo Queiroz</td>
-                <td>Manager</td>
-                <td>
-                    <a class="btn btn-approve" type="submit" href="#">Approve</a>
-                    <a class="btn btn-remove" type="submit" href="#">Deny</a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">4</th>
-                <td>Gonçalo Queiroz</td>
-                <td>Manager</td>
-                <td>
-                    <a class="btn btn-approve" type="submit" href="#">Approve</a>
-                    <a class="btn btn-remove" type="submit" href="#">Deny</a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">5</th>
-                <td>Gonçalo Queiroz</td>
-                <td>Manager</td>
-                <td>
-                    <a class="btn btn-approve" type="submit" href="#">Approve</a>
-                    <a class="btn btn-remove" type="submit" href="#">Deny</a>
-                </td>
-            </tr>
+        @if(!users.isEmpty) {
+            @for(user <- users) {
+                <tr>
+                    <th>@user.getId</th>
+                    <td>@user.getUsername</td>
+                    <td>
+                    @if(!user.getRoles.isEmpty) {
+                        @for(roles <- user.getRoles) {
+                        }
+                    }
+                    </td>
+                    <td>
+                        <a type="submit" class="btn btn-approve">Approve</a>
+                        <form action="@controllers.routes.Administrator.addUser()" method="post">
+                            <div class="d-flex justify-content-center flex-grow-1 mt-3">
+                                <button name="userId" type="submit" class="btn btn-sm btn-dark">Approve</button>
+                            </div>
+                        </form>
+                        <a type="submit" class="btn btn-remove px-4">Remove</a>
+                        <form action="@controllers.routes.Administrator.removeUser(user.getId())" method="post">
+                            <div class="d-flex justify-content-center flex-grow-1 mt-3">
+                                <button name="userId" type="submit" class="btn btn-sm btn-dark">Deny</button>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
         </tbody>
     </table>
 }

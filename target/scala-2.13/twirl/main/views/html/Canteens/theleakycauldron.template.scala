@@ -52,7 +52,6 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/calendar.css"))/*1.45*/ {_
     <main class="container-menu">
         <section class="container mb-5" id="managemenus">
             <div class="row w-100 d-flex mx-auto justify-content-center">
-
                 <div class="col-md-6 d-flex justify-content-center">
                     <div class="calendar-colors">
                         <div class="calendar">
@@ -91,7 +90,7 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/calendar.css"))/*1.45*/ {_
                             <div class="card-body">
                                 <div class="row d-flex align-items-center">
                                     <div class="col-md-3 ms-4">
-                                        <h1 class="txtred">23 FEV</h1>
+                                        <h1 class="txtred m-0">23 FEV</h1>
                                     </div>
                                     <div class="col-md-8">
                                         <h4 class="txtblack" style="margin: 10px 0px 20px 0px">Carbonara</h4>
@@ -132,7 +131,7 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/calendar.css"))/*1.45*/ {_
               /*
                   -- GENERATED --
                   SOURCE: app/views/Canteens/theleakycauldron.scala.html
-                  HASH: ab20c65f2e3e651db04dd6213a566a55040c0986
+                  HASH: 488bc2abdaf97afd4ec6f88199b5781fa5210ebd
                   MATRIX: 1009->1|1060->44|1099->46|1133->54|1173->68|1187->74|1228->95|1602->442|1617->448|1667->477
                   LINES: 32->1|32->1|32->1|34->3|34->3|34->3|34->3|41->10|41->10|41->10
                   -- GENERATED --

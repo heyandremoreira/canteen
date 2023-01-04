@@ -30,58 +30,41 @@ object userslist extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.
 
 
 Seq[Any](format.raw/*1.38*/("""
-"""),_display_(/*2.2*/template(Array("stylesheets/landing.css"))/*2.44*/{_display_(Seq[Any](format.raw/*2.45*/("""
+"""),_display_(/*2.2*/template(Array("stylesheets/landing.css"))/*2.44*/ {_display_(Seq[Any](format.raw/*2.46*/("""
     """),format.raw/*3.5*/("""<table class="table table-responsive table-hover darkbg">
-    """),_display_(/*4.6*/if(!users.isEmpty)/*4.24*/ {_display_(Seq[Any](format.raw/*4.26*/("""
-        """),_display_(/*5.10*/for(user <- users) yield /*5.28*/ {_display_(Seq[Any](format.raw/*5.30*/("""
-            """),format.raw/*6.13*/("""<thead class="text-center">
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Username</th>
-                    <th scope="col">Role</th>
-                    <th scope="col">Status</th>
+        <thead class="text-center">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Username</th>
+                <th scope="col">Role</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody class="align-middle text-center">
+        """),_display_(/*13.10*/if(!users.isEmpty)/*13.28*/ {_display_(Seq[Any](format.raw/*13.30*/("""
+            """),_display_(/*14.14*/for(user <- users) yield /*14.32*/ {_display_(Seq[Any](format.raw/*14.34*/("""
+                """),format.raw/*15.17*/("""<tr>
+                    <th>"""),_display_(/*16.26*/user/*16.30*/.getId),format.raw/*16.36*/("""</th>
+                    <td>"""),_display_(/*17.26*/user/*17.30*/.getUsername),format.raw/*17.42*/("""</td>
+                    <td>
+                    """),_display_(/*19.22*/if(!user.getRoles.isEmpty)/*19.48*/ {_display_(Seq[Any](format.raw/*19.50*/("""
+                        """),_display_(/*20.26*/for(roles <- user.getRoles) yield /*20.53*/ {_display_(Seq[Any](format.raw/*20.55*/("""
+                        """)))}),format.raw/*21.26*/("""
+                    """)))}),format.raw/*22.22*/("""
+                    """),format.raw/*23.21*/("""</td>
+                    <td>
+                        <a type="submit" class="btn btn-remove px-4">Remove</a>
+                        <form action=""""),_display_(/*26.40*/controllers/*26.51*/.routes.Administrator.removeUser(user.getId())),format.raw/*26.97*/("""" method="post">
+                            <div class="d-flex justify-content-center flex-grow-1 mt-3">
+                                <button name="userId" type="submit" class="btn btn-sm btn-dark">Deny</button>
+                            </div>
+                        </form>
+                    </td>
                 </tr>
-            </thead>
-            <tbody class="align-middle text-center">
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Gonçalo Queiroz</td>
-                    <td>Manager</td>
-                    <td><a class="btn btn-remove px-4" type="submit" href="#">Remove</a></td>
-                    <form action=""""),_display_(/*20.36*/controllers/*20.47*/.routes.Administrator.removeUser(user.getId())),format.raw/*20.93*/("""" method="post">
-                        <div class="d-flex justify-content-center flex-grow-1 mt-3">
-                            <button name="userId" type="submit" class="btn btn-sm btn-dark">Remove Item</button>
-                        </div>
-                    </form>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Gonçalo Queiroz</td>
-                    <td>Manager</td>
-                    <td><a class="btn btn-remove" type="submit" href="#">Remove</a></td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Gonçalo Queiroz</td>
-                    <td>Manager</td>
-                    <td><a class="btn btn-remove" type="submit" href="#">Remove</a></td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Gonçalo Queiroz</td>
-                    <td>Manager</td>
-                    <td><a class="btn btn-remove" type="submit" href="#">Remove</a></td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>Gonçalo Queiroz</td>
-                    <td>Manager</td>
-                    <td><a class="btn btn-remove" type="submit" href="#">Remove</a></td>
-                </tr>
-            </tbody>
-        """)))}),format.raw/*51.10*/("""
-    """)))}),format.raw/*52.6*/("""
-    """),format.raw/*53.5*/("""</table>
+            """)))}),format.raw/*33.14*/("""
+        """)))}),format.raw/*34.10*/("""
+        """),format.raw/*35.9*/("""</tbody>
+    </table>
 """)))}))
       }
     }
@@ -99,9 +82,9 @@ Seq[Any](format.raw/*1.38*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/Administrator/userslist.scala.html
-                  HASH: 4b475b714e8204a40b65bdb9b1c8a2e97c29a6ef
-                  MATRIX: 946->1|1077->37|1105->40|1155->82|1193->83|1225->89|1314->153|1340->171|1379->173|1416->184|1449->202|1488->204|1529->218|2178->840|2198->851|2265->897|3681->2282|3718->2289|3751->2295
-                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|35->4|35->4|35->4|36->5|36->5|36->5|37->6|51->20|51->20|51->20|82->51|83->52|84->53
+                  HASH: 1269150efb4d269f1df5c4585b6af5386a570b3f
+                  MATRIX: 946->1|1077->37|1105->40|1155->82|1194->84|1226->90|1639->476|1666->494|1706->496|1748->511|1782->529|1822->531|1868->549|1926->580|1939->584|1966->590|2025->622|2038->626|2071->638|2152->692|2187->718|2227->720|2281->747|2324->774|2364->776|2422->803|2476->826|2526->848|2706->1001|2726->1012|2793->1058|3175->1409|3217->1420|3254->1430
+                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|44->13|44->13|44->13|45->14|45->14|45->14|46->15|47->16|47->16|47->16|48->17|48->17|48->17|50->19|50->19|50->19|51->20|51->20|51->20|52->21|53->22|54->23|57->26|57->26|57->26|64->33|65->34|66->35
                   -- GENERATED --
               */
           

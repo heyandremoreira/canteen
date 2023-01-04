@@ -15,15 +15,15 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:8
   HomeController_5: controllers.HomeController,
-  // @LINE:25
+  // @LINE:24
   Administrator_1: controllers.Administrator,
-  // @LINE:32
+  // @LINE:31
   Manager_2: controllers.Manager,
-  // @LINE:42
+  // @LINE:41
   CanteenController_0: controllers.CanteenController,
-  // @LINE:48
+  // @LINE:47
   Student_3: controllers.Student,
-  // @LINE:53
+  // @LINE:52
   Assets_4: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -32,15 +32,15 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:8
     HomeController_5: controllers.HomeController,
-    // @LINE:25
+    // @LINE:24
     Administrator_1: controllers.Administrator,
-    // @LINE:32
+    // @LINE:31
     Manager_2: controllers.Manager,
-    // @LINE:42
+    // @LINE:41
     CanteenController_0: controllers.CanteenController,
-    // @LINE:48
+    // @LINE:47
     Student_3: controllers.Student,
-    // @LINE:53
+    // @LINE:52
     Assets_4: controllers.Assets
   ) = this(errorHandler, HomeController_5, Administrator_1, Manager_2, CanteenController_0, Student_3, Assets_4, "/")
 
@@ -151,7 +151,7 @@ class Routes(
     )
   )
 
-  // @LINE:14
+  // @LINE:13
   private[this] lazy val controllers_HomeController_profile3_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("profile")))
   )
@@ -167,13 +167,12 @@ class Routes(
       "GET",
       this.prefix + """profile""",
       """POST    /login                      controllers.Application.authenticate()
-GET     /login                      controllers.Application.login()
 GET     /logout                     controllers.Application.logout()""",
       Seq()
     )
   )
 
-  // @LINE:15
+  // @LINE:14
   private[this] lazy val controllers_HomeController_recoverpassword4_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recoverpassword")))
   )
@@ -193,7 +192,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:16
+  // @LINE:15
   private[this] lazy val controllers_HomeController_signup5_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("signup")))
   )
@@ -213,7 +212,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:19
+  // @LINE:18
   private[this] lazy val controllers_HomeController_termsofuse6_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("termsofuse")))
   )
@@ -233,7 +232,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:20
+  // @LINE:19
   private[this] lazy val controllers_HomeController_privacypolicy7_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("privacypolicy")))
   )
@@ -253,7 +252,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:22
+  // @LINE:21
   private[this] lazy val controllers_HomeController_calendar8_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("calendar")))
   )
@@ -273,7 +272,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:25
+  // @LINE:24
   private[this] lazy val controllers_Administrator_administrator9_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("administrator")))
   )
@@ -293,7 +292,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:26
+  // @LINE:25
   private[this] lazy val controllers_Administrator_authapproval10_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("authapproval")))
   )
@@ -313,7 +312,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:27
+  // @LINE:26
   private[this] lazy val controllers_Administrator_userslist11_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("userslist")))
   )
@@ -333,7 +332,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:28
+  // @LINE:27
   private[this] lazy val controllers_Administrator_addUser12_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addItem")))
   )
@@ -353,7 +352,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:29
+  // @LINE:28
   private[this] lazy val controllers_Administrator_removeUser13_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("removeItem")))
   )
@@ -373,7 +372,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:32
+  // @LINE:31
   private[this] lazy val controllers_Manager_manager14_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("manager")))
   )
@@ -393,7 +392,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:33
+  // @LINE:32
   private[this] lazy val controllers_Manager_createcanteen15_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("createcanteen")))
   )
@@ -413,7 +412,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:34
+  // @LINE:33
   private[this] lazy val controllers_Manager_manage_thelastdrop16_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("manage_thelastdrop")))
   )
@@ -433,7 +432,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:35
+  // @LINE:34
   private[this] lazy val controllers_Manager_manage_arconia17_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("manage_arconia")))
   )
@@ -453,7 +452,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:36
+  // @LINE:35
   private[this] lazy val controllers_Manager_manage_theleakycauldron18_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("manage_theleakycauldron")))
   )
@@ -473,7 +472,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:37
+  // @LINE:36
   private[this] lazy val controllers_Manager_manage_waverlysubstation19_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("manage_waverly")))
   )
@@ -493,7 +492,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:38
+  // @LINE:37
   private[this] lazy val controllers_Manager_managemenus20_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("managemenus")))
   )
@@ -513,7 +512,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:39
+  // @LINE:38
   private[this] lazy val controllers_Manager_managetickets21_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("managetickets")))
   )
@@ -533,7 +532,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:42
+  // @LINE:41
   private[this] lazy val controllers_CanteenController_theleakycauldron22_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("theleakycauldron")))
   )
@@ -553,7 +552,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:43
+  // @LINE:42
   private[this] lazy val controllers_CanteenController_thelastdrop23_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("thelastdrop")))
   )
@@ -573,7 +572,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:44
+  // @LINE:43
   private[this] lazy val controllers_CanteenController_arconia24_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("arconia")))
   )
@@ -593,7 +592,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:45
+  // @LINE:44
   private[this] lazy val controllers_CanteenController_waverlysubstation25_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("waverlysubstation")))
   )
@@ -613,7 +612,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:48
+  // @LINE:47
   private[this] lazy val controllers_Student_tickets26_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tickets")))
   )
@@ -633,7 +632,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:49
+  // @LINE:48
   private[this] lazy val controllers_Student_wallet27_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("wallet")))
   )
@@ -653,7 +652,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:53
+  // @LINE:52
   private[this] lazy val controllers_Assets_at28_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
@@ -695,182 +694,182 @@ GET     /logout                     controllers.Application.logout()""",
           req => HomeController_5.login(req))
       }
   
-    // @LINE:14
+    // @LINE:13
     case controllers_HomeController_profile3_route(params@_) =>
       call { 
         controllers_HomeController_profile3_invoker.call(
           req => HomeController_5.profile(req))
       }
   
-    // @LINE:15
+    // @LINE:14
     case controllers_HomeController_recoverpassword4_route(params@_) =>
       call { 
         controllers_HomeController_recoverpassword4_invoker.call(
           req => HomeController_5.recoverpassword(req))
       }
   
-    // @LINE:16
+    // @LINE:15
     case controllers_HomeController_signup5_route(params@_) =>
       call { 
         controllers_HomeController_signup5_invoker.call(
           req => HomeController_5.signup(req))
       }
   
-    // @LINE:19
+    // @LINE:18
     case controllers_HomeController_termsofuse6_route(params@_) =>
       call { 
         controllers_HomeController_termsofuse6_invoker.call(
           req => HomeController_5.termsofuse(req))
       }
   
-    // @LINE:20
+    // @LINE:19
     case controllers_HomeController_privacypolicy7_route(params@_) =>
       call { 
         controllers_HomeController_privacypolicy7_invoker.call(
           req => HomeController_5.privacypolicy(req))
       }
   
-    // @LINE:22
+    // @LINE:21
     case controllers_HomeController_calendar8_route(params@_) =>
       call { 
         controllers_HomeController_calendar8_invoker.call(
           req => HomeController_5.calendar(req))
       }
   
-    // @LINE:25
+    // @LINE:24
     case controllers_Administrator_administrator9_route(params@_) =>
       call { 
         controllers_Administrator_administrator9_invoker.call(
           req => Administrator_1.administrator(req))
       }
   
-    // @LINE:26
+    // @LINE:25
     case controllers_Administrator_authapproval10_route(params@_) =>
       call { 
         controllers_Administrator_authapproval10_invoker.call(
           req => Administrator_1.authapproval(req))
       }
   
-    // @LINE:27
+    // @LINE:26
     case controllers_Administrator_userslist11_route(params@_) =>
       call { 
         controllers_Administrator_userslist11_invoker.call(
           req => Administrator_1.userslist(req))
       }
   
-    // @LINE:28
+    // @LINE:27
     case controllers_Administrator_addUser12_route(params@_) =>
       call { 
         controllers_Administrator_addUser12_invoker.call(
           req => Administrator_1.addUser(req))
       }
   
-    // @LINE:29
+    // @LINE:28
     case controllers_Administrator_removeUser13_route(params@_) =>
       call(params.fromQuery[Long]("id", None)) { (id) =>
         controllers_Administrator_removeUser13_invoker.call(
           req => Administrator_1.removeUser(req, id))
       }
   
-    // @LINE:32
+    // @LINE:31
     case controllers_Manager_manager14_route(params@_) =>
       call { 
         controllers_Manager_manager14_invoker.call(
           req => Manager_2.manager(req))
       }
   
-    // @LINE:33
+    // @LINE:32
     case controllers_Manager_createcanteen15_route(params@_) =>
       call { 
         controllers_Manager_createcanteen15_invoker.call(
           req => Manager_2.createcanteen(req))
       }
   
-    // @LINE:34
+    // @LINE:33
     case controllers_Manager_manage_thelastdrop16_route(params@_) =>
       call { 
         controllers_Manager_manage_thelastdrop16_invoker.call(
           req => Manager_2.manage_thelastdrop(req))
       }
   
-    // @LINE:35
+    // @LINE:34
     case controllers_Manager_manage_arconia17_route(params@_) =>
       call { 
         controllers_Manager_manage_arconia17_invoker.call(
           req => Manager_2.manage_arconia(req))
       }
   
-    // @LINE:36
+    // @LINE:35
     case controllers_Manager_manage_theleakycauldron18_route(params@_) =>
       call { 
         controllers_Manager_manage_theleakycauldron18_invoker.call(
           req => Manager_2.manage_theleakycauldron(req))
       }
   
-    // @LINE:37
+    // @LINE:36
     case controllers_Manager_manage_waverlysubstation19_route(params@_) =>
       call { 
         controllers_Manager_manage_waverlysubstation19_invoker.call(
           req => Manager_2.manage_waverlysubstation(req))
       }
   
-    // @LINE:38
+    // @LINE:37
     case controllers_Manager_managemenus20_route(params@_) =>
       call { 
         controllers_Manager_managemenus20_invoker.call(
           req => Manager_2.managemenus(req))
       }
   
-    // @LINE:39
+    // @LINE:38
     case controllers_Manager_managetickets21_route(params@_) =>
       call { 
         controllers_Manager_managetickets21_invoker.call(
           req => Manager_2.managetickets(req))
       }
   
-    // @LINE:42
+    // @LINE:41
     case controllers_CanteenController_theleakycauldron22_route(params@_) =>
       call { 
         controllers_CanteenController_theleakycauldron22_invoker.call(
           req => CanteenController_0.theleakycauldron(req))
       }
   
-    // @LINE:43
+    // @LINE:42
     case controllers_CanteenController_thelastdrop23_route(params@_) =>
       call { 
         controllers_CanteenController_thelastdrop23_invoker.call(
           req => CanteenController_0.thelastdrop(req))
       }
   
-    // @LINE:44
+    // @LINE:43
     case controllers_CanteenController_arconia24_route(params@_) =>
       call { 
         controllers_CanteenController_arconia24_invoker.call(
           req => CanteenController_0.arconia(req))
       }
   
-    // @LINE:45
+    // @LINE:44
     case controllers_CanteenController_waverlysubstation25_route(params@_) =>
       call { 
         controllers_CanteenController_waverlysubstation25_invoker.call(
           req => CanteenController_0.waverlysubstation(req))
       }
   
-    // @LINE:48
+    // @LINE:47
     case controllers_Student_tickets26_route(params@_) =>
       call { 
         controllers_Student_tickets26_invoker.call(
           req => Student_3.tickets(req))
       }
   
-    // @LINE:49
+    // @LINE:48
     case controllers_Student_wallet27_route(params@_) =>
       call { 
         controllers_Student_wallet27_invoker.call(
           req => Student_3.wallet(req))
       }
   
-    // @LINE:53
+    // @LINE:52
     case controllers_Assets_at28_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         controllers_Assets_at28_invoker.call(Assets_4.at(path, file))

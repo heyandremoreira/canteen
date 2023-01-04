@@ -1,440 +1,105 @@
-2023-01-03 14:41:20,158 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-4 - Database [default] initialized
-2023-01-03 14:41:20,197 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
-2023-01-03 14:41:20,810 [WARN] from io.avaje.config.InitialLoader in play-dev-mode-akka.actor.default-dispatcher-4 - Loading properties from ebean.properties is deprecated. Please migrate to use application.yaml or application.properties instead.
-2023-01-03 14:41:22,451 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-4 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2023-01-04 16:18:11,995 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-16 - Database [default] initialized
+2023-01-04 16:18:12,011 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-16 - Creating Pool for datasource 'default'
+2023-01-04 16:18:12,142 [WARN] from io.avaje.config.InitialLoader in play-dev-mode-akka.actor.default-dispatcher-16 - Loading properties from ebean.properties is deprecated. Please migrate to use application.yaml or application.properties instead.
+2023-01-04 16:18:13,380 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-16 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2023-01-03 14:41:22,502 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-4 - Application started (Dev) (no global state)
-2023-01-03 14:43:05,221 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-2 - Shutting down connection pool.
-2023-01-03 14:43:05,542 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-11 - Database [default] initialized
-2023-01-03 14:43:05,542 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-11 - Creating Pool for datasource 'default'
-2023-01-03 14:43:05,710 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-11 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2023-01-04 16:18:13,428 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-16 - Application started (Dev) (no global state)
+2023-01-04 16:18:13,452 [ERROR] from play.api.http.DefaultHttpErrorHandler in play-dev-mode-akka.actor.default-dispatcher-16 - 
+
+! @8075ne4c4 - Internal server error, for (GET) [/authapproval] ->
+ 
+play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
+	at play.api.db.evolutions.EvolutionsWebCommands.$anonfun$handleWebCommand$5(ApplicationEvolutions.scala:519)
+	at play.api.db.evolutions.EvolutionsWebCommands.$anonfun$handleWebCommand$5$adapted(ApplicationEvolutions.scala:517)
+	at play.api.db.evolutions.ApplicationEvolutions$.$anonfun$runEvolutions$1(ApplicationEvolutions.scala:210)
+	at play.api.db.evolutions.ApplicationEvolutions$.withLock(ApplicationEvolutions.scala:231)
+	at play.api.db.evolutions.ApplicationEvolutions$.runEvolutions(ApplicationEvolutions.scala:201)
+	at play.api.db.evolutions.EvolutionsWebCommands.$anonfun$handleWebCommand$4(ApplicationEvolutions.scala:517)
+	at play.api.db.evolutions.EvolutionsWebCommands.$anonfun$handleWebCommand$4$adapted(ApplicationEvolutions.scala:512)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at play.api.db.evolutions.EvolutionsWebCommands.handleWebCommand(ApplicationEvolutions.scala:512)
+	at play.core.DefaultWebCommands.$anonfun$handleWebCommand$1(WebCommands.scala:42)
+	at scala.collection.immutable.Stream.flatMap(Stream.scala:200)
+	at play.core.DefaultWebCommands.handleWebCommand(WebCommands.scala:42)
+	at play.api.http.DefaultHttpRequestHandler.$anonfun$handlerForRequest$4(HttpRequestHandler.scala:223)
+	at scala.Option.flatMap(Option.scala:283)
+	at play.api.http.DefaultHttpRequestHandler.handlerForRequest(HttpRequestHandler.scala:222)
+	at play.core.server.Server$.getHandlerFor(Server.scala:129)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:323)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:225)
+	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1309)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:542)
+	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:496)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:390)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:650)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:521)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:625)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:800)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:818)
+	at akka.actor.Actor.aroundReceive(Actor.scala:537)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:535)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:716)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:579)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:547)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:231)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:243)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+2023-01-04 16:18:17,286 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-2 - Shutting down connection pool.
+2023-01-04 16:18:17,606 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-13 - Database [default] initialized
+2023-01-04 16:18:17,606 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-13 - Creating Pool for datasource 'default'
+2023-01-04 16:18:17,769 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-13 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2023-01-03 14:43:05,720 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-11 - Application started (Dev) (no global state)
-2023-01-03 14:45:11,878 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-2 - Shutting down connection pool.
-2023-01-03 14:45:12,118 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-4 - Database [default] initialized
-2023-01-03 14:45:12,118 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
-2023-01-03 14:45:12,265 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-4 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2023-01-04 16:18:17,784 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-13 - Application started (Dev) (no global state)
+2023-01-04 16:18:20,158 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-3 - Shutting down connection pool.
+2023-01-04 16:18:20,422 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-13 - Database [default] initialized
+2023-01-04 16:18:20,422 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-13 - Creating Pool for datasource 'default'
+2023-01-04 16:18:20,593 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-13 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2023-01-03 14:45:12,277 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-4 - Application started (Dev) (no global state)
-2023-01-03 14:47:34,890 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-2 - Shutting down connection pool.
-2023-01-03 14:47:35,162 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-9 - Database [default] initialized
-2023-01-03 14:47:35,162 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-9 - Creating Pool for datasource 'default'
-2023-01-03 14:47:35,300 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2023-01-04 16:18:20,603 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-13 - Application started (Dev) (no global state)
+2023-01-04 16:18:22,593 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-2 - Shutting down connection pool.
+2023-01-04 16:18:22,809 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-22 - Database [default] initialized
+2023-01-04 16:18:22,809 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-22 - Creating Pool for datasource 'default'
+2023-01-04 16:18:22,965 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-22 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2023-01-03 14:47:35,308 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev) (no global state)
-2023-01-03 14:47:52,301 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-2 - Shutting down connection pool.
-2023-01-03 14:47:52,538 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-9 - Database [default] initialized
-2023-01-03 14:47:52,538 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-9 - Creating Pool for datasource 'default'
-2023-01-03 14:47:52,689 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2023-01-04 16:18:22,974 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-22 - Application started (Dev) (no global state)
+2023-01-04 16:27:49,137 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-4 - Shutting down connection pool.
+2023-01-04 16:27:49,343 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-12 - Database [default] initialized
+2023-01-04 16:27:49,343 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-12 - Creating Pool for datasource 'default'
+2023-01-04 16:27:49,484 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-12 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2023-01-03 14:47:52,698 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev) (no global state)
-2023-01-03 14:48:51,551 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-3 - Shutting down connection pool.
-2023-01-03 14:48:51,780 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-13 - Database [default] initialized
-2023-01-03 14:48:51,780 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-13 - Creating Pool for datasource 'default'
-2023-01-03 14:48:51,923 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-13 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2023-01-04 16:27:49,493 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-12 - Application started (Dev) (no global state)
+2023-01-04 17:19:13,401 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-2 - Shutting down connection pool.
+2023-01-04 17:19:13,647 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-52 - Database [default] initialized
+2023-01-04 17:19:13,647 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-52 - Creating Pool for datasource 'default'
+2023-01-04 17:19:13,795 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-52 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2023-01-03 14:48:51,931 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-13 - Application started (Dev) (no global state)
-2023-01-03 14:51:50,605 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-4 - Shutting down connection pool.
-2023-01-03 14:51:50,815 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-13 - Database [default] initialized
-2023-01-03 14:51:50,815 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-13 - Creating Pool for datasource 'default'
-2023-01-03 14:51:50,947 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-13 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 14:51:50,954 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-13 - Application started (Dev) (no global state)
-2023-01-03 14:52:19,088 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-5 - Shutting down connection pool.
-2023-01-03 14:52:19,333 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-8 - Database [default] initialized
-2023-01-03 14:52:19,333 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-8 - Creating Pool for datasource 'default'
-2023-01-03 14:52:19,465 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-8 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 14:52:19,472 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev) (no global state)
-2023-01-03 14:53:05,172 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-4 - Shutting down connection pool.
-2023-01-03 14:53:05,397 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-4 - Database [default] initialized
-2023-01-03 14:53:05,397 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
-2023-01-03 14:53:05,526 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-4 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 14:53:05,531 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-4 - Application started (Dev) (no global state)
-2023-01-03 14:53:15,415 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-5 - Shutting down connection pool.
-2023-01-03 14:53:15,629 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-12 - Database [default] initialized
-2023-01-03 14:53:15,629 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-12 - Creating Pool for datasource 'default'
-2023-01-03 14:53:15,757 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-12 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 14:53:15,762 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-12 - Application started (Dev) (no global state)
-2023-01-03 14:53:34,899 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-2 - Shutting down connection pool.
-2023-01-03 14:53:35,171 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-8 - Database [default] initialized
-2023-01-03 14:53:35,172 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-8 - Creating Pool for datasource 'default'
-2023-01-03 14:53:35,319 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-8 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 14:53:35,329 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev) (no global state)
-2023-01-03 14:54:32,239 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-3 - Shutting down connection pool.
-2023-01-03 14:54:32,444 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-13 - Database [default] initialized
-2023-01-03 14:54:32,444 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-13 - Creating Pool for datasource 'default'
-2023-01-03 14:54:32,561 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-13 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 14:54:32,565 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-13 - Application started (Dev) (no global state)
-2023-01-03 14:56:50,807 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-3 - Shutting down connection pool.
-2023-01-03 14:56:51,005 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-8 - Database [default] initialized
-2023-01-03 14:56:51,005 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-8 - Creating Pool for datasource 'default'
-2023-01-03 14:56:51,113 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-8 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 14:56:51,117 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev) (no global state)
-2023-01-03 14:59:28,721 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-2 - Shutting down connection pool.
-2023-01-03 14:59:28,947 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-12 - Database [default] initialized
-2023-01-03 14:59:28,947 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-12 - Creating Pool for datasource 'default'
-2023-01-03 14:59:29,067 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-12 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 14:59:29,072 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-12 - Application started (Dev) (no global state)
-2023-01-03 15:10:31,827 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-3 - Shutting down connection pool.
-2023-01-03 15:10:32,021 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-83 - Database [default] initialized
-2023-01-03 15:10:32,021 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-83 - Creating Pool for datasource 'default'
-2023-01-03 15:10:32,142 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-83 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:10:32,149 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-83 - Application started (Dev) (no global state)
-2023-01-03 15:11:28,195 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-2 - Shutting down connection pool.
-2023-01-03 15:11:28,467 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-83 - Database [default] initialized
-2023-01-03 15:11:28,467 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-83 - Creating Pool for datasource 'default'
-2023-01-03 15:11:28,581 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-83 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:11:28,585 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-83 - Application started (Dev) (no global state)
-2023-01-03 15:14:05,721 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-5 - Shutting down connection pool.
-2023-01-03 15:14:05,917 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-84 - Database [default] initialized
-2023-01-03 15:14:05,917 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-84 - Creating Pool for datasource 'default'
-2023-01-03 15:14:06,019 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-84 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:14:06,024 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-84 - Application started (Dev) (no global state)
-2023-01-03 15:15:12,477 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-4 - Shutting down connection pool.
-2023-01-03 15:15:12,674 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-86 - Database [default] initialized
-2023-01-03 15:15:12,674 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-86 - Creating Pool for datasource 'default'
-2023-01-03 15:15:12,772 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-86 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:15:12,775 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-86 - Application started (Dev) (no global state)
-2023-01-03 15:31:54,950 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-3 - Shutting down connection pool.
-2023-01-03 15:31:55,174 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-156 - Database [default] initialized
-2023-01-03 15:31:55,174 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-156 - Creating Pool for datasource 'default'
-2023-01-03 15:31:55,292 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-156 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:31:55,297 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-156 - Application started (Dev) (no global state)
-2023-01-03 15:37:57,740 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-4 - Shutting down connection pool.
-2023-01-03 15:37:57,981 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-157 - Database [default] initialized
-2023-01-03 15:37:57,981 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-157 - Creating Pool for datasource 'default'
-2023-01-03 15:37:58,101 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-157 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:37:58,106 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-157 - Application started (Dev) (no global state)
-2023-01-03 15:38:22,139 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-5 - Shutting down connection pool.
-2023-01-03 15:38:22,322 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-157 - Database [default] initialized
-2023-01-03 15:38:22,322 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-157 - Creating Pool for datasource 'default'
-2023-01-03 15:38:22,442 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-157 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:38:22,445 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-157 - Application started (Dev) (no global state)
-2023-01-03 15:40:48,144 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-3 - Shutting down connection pool.
-2023-01-03 15:40:48,359 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-169 - Database [default] initialized
-2023-01-03 15:40:48,359 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-169 - Creating Pool for datasource 'default'
-2023-01-03 15:40:48,460 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-169 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:40:48,463 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-169 - Application started (Dev) (no global state)
-2023-01-03 15:44:15,813 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-2 - Shutting down connection pool.
-2023-01-03 15:44:16,025 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-160 - Database [default] initialized
-2023-01-03 15:44:16,025 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-160 - Creating Pool for datasource 'default'
-2023-01-03 15:44:16,136 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-160 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:44:16,141 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-160 - Application started (Dev) (no global state)
-2023-01-03 15:44:32,179 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-4 - Shutting down connection pool.
-2023-01-03 15:44:32,380 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-177 - Database [default] initialized
-2023-01-03 15:44:32,380 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-177 - Creating Pool for datasource 'default'
-2023-01-03 15:44:32,484 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-177 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:44:32,488 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-177 - Application started (Dev) (no global state)
-2023-01-03 15:44:43,734 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-4 - Shutting down connection pool.
-2023-01-03 15:44:43,934 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-182 - Database [default] initialized
-2023-01-03 15:44:43,935 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-182 - Creating Pool for datasource 'default'
-2023-01-03 15:44:44,047 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-182 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:44:44,051 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-182 - Application started (Dev) (no global state)
-2023-01-03 15:45:46,174 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-5 - Shutting down connection pool.
-2023-01-03 15:45:46,378 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-168 - Database [default] initialized
-2023-01-03 15:45:46,378 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-168 - Creating Pool for datasource 'default'
-2023-01-03 15:45:46,480 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-168 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:45:46,483 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-168 - Application started (Dev) (no global state)
-2023-01-03 15:46:01,198 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-5 - Shutting down connection pool.
-2023-01-03 15:46:01,401 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-169 - Database [default] initialized
-2023-01-03 15:46:01,401 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-169 - Creating Pool for datasource 'default'
-2023-01-03 15:46:01,494 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-169 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:46:01,497 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-169 - Application started (Dev) (no global state)
-2023-01-03 15:46:12,748 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-3 - Shutting down connection pool.
-2023-01-03 15:46:12,939 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-160 - Database [default] initialized
-2023-01-03 15:46:12,939 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-160 - Creating Pool for datasource 'default'
-2023-01-03 15:46:13,032 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-160 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:46:13,037 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-160 - Application started (Dev) (no global state)
-2023-01-03 15:47:04,545 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-4 - Shutting down connection pool.
-2023-01-03 15:47:04,793 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-169 - Database [default] initialized
-2023-01-03 15:47:04,793 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-169 - Creating Pool for datasource 'default'
-2023-01-03 15:47:04,890 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-169 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:47:04,893 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-169 - Application started (Dev) (no global state)
-2023-01-03 15:47:37,992 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-5 - Shutting down connection pool.
-2023-01-03 15:47:38,176 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-183 - Database [default] initialized
-2023-01-03 15:47:38,177 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-183 - Creating Pool for datasource 'default'
-2023-01-03 15:47:38,274 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-183 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:47:38,279 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-183 - Application started (Dev) (no global state)
-2023-01-03 15:47:46,049 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-5 - Shutting down connection pool.
-2023-01-03 15:47:46,235 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-164 - Database [default] initialized
-2023-01-03 15:47:46,235 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-164 - Creating Pool for datasource 'default'
-2023-01-03 15:47:46,340 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-164 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:47:46,344 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-164 - Application started (Dev) (no global state)
-2023-01-03 15:47:58,192 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-4 - Shutting down connection pool.
-2023-01-03 15:47:58,392 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-167 - Database [default] initialized
-2023-01-03 15:47:58,393 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-167 - Creating Pool for datasource 'default'
-2023-01-03 15:47:58,495 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-167 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:47:58,499 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-167 - Application started (Dev) (no global state)
-2023-01-03 15:48:06,031 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-2 - Shutting down connection pool.
-2023-01-03 15:48:06,228 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-167 - Database [default] initialized
-2023-01-03 15:48:06,228 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-167 - Creating Pool for datasource 'default'
-2023-01-03 15:48:06,341 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-167 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:48:06,345 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-167 - Application started (Dev) (no global state)
-2023-01-03 15:49:27,463 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-2 - Shutting down connection pool.
-2023-01-03 15:49:27,674 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-160 - Database [default] initialized
-2023-01-03 15:49:27,675 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-160 - Creating Pool for datasource 'default'
-2023-01-03 15:49:27,783 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-160 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 15:49:27,786 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-160 - Application started (Dev) (no global state)
-2023-01-03 16:14:25,920 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-4 - Shutting down connection pool.
-2023-01-03 16:14:26,144 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-200 - Database [default] initialized
-2023-01-03 16:14:26,144 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-200 - Creating Pool for datasource 'default'
-2023-01-03 16:14:26,255 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-200 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 16:14:26,260 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-200 - Application started (Dev) (no global state)
-2023-01-03 16:14:47,770 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-3 - Shutting down connection pool.
-2023-01-03 16:14:47,974 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-201 - Database [default] initialized
-2023-01-03 16:14:47,974 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-201 - Creating Pool for datasource 'default'
-2023-01-03 16:14:48,082 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-201 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 16:14:48,086 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-201 - Application started (Dev) (no global state)
-2023-01-03 16:15:11,025 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-5 - Shutting down connection pool.
-2023-01-03 16:15:11,223 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-203 - Database [default] initialized
-2023-01-03 16:15:11,223 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-203 - Creating Pool for datasource 'default'
-2023-01-03 16:15:11,338 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-203 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 16:15:11,342 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-203 - Application started (Dev) (no global state)
-2023-01-03 16:15:29,013 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-2 - Shutting down connection pool.
-2023-01-03 16:15:29,196 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-189 - Database [default] initialized
-2023-01-03 16:15:29,196 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-189 - Creating Pool for datasource 'default'
-2023-01-03 16:15:29,314 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-189 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 16:15:29,319 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-189 - Application started (Dev) (no global state)
-2023-01-03 16:15:47,691 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-6 - Shutting down connection pool.
-2023-01-03 16:15:47,882 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-201 - Database [default] initialized
-2023-01-03 16:15:47,882 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-201 - Creating Pool for datasource 'default'
-2023-01-03 16:15:47,990 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-201 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 16:15:47,993 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-201 - Application started (Dev) (no global state)
-2023-01-03 16:19:18,399 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-5 - Shutting down connection pool.
-2023-01-03 16:19:18,600 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-189 - Database [default] initialized
-2023-01-03 16:19:18,600 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-189 - Creating Pool for datasource 'default'
-2023-01-03 16:19:18,703 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-189 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 16:19:18,706 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-189 - Application started (Dev) (no global state)
-2023-01-03 16:19:32,706 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-5 - Shutting down connection pool.
-2023-01-03 16:19:32,900 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-200 - Database [default] initialized
-2023-01-03 16:19:32,901 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-200 - Creating Pool for datasource 'default'
-2023-01-03 16:19:32,996 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-200 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 16:19:33,000 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-200 - Application started (Dev) (no global state)
-2023-01-03 16:21:21,428 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-2 - Shutting down connection pool.
-2023-01-03 16:21:21,625 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-202 - Database [default] initialized
-2023-01-03 16:21:21,626 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-202 - Creating Pool for datasource 'default'
-2023-01-03 16:21:21,721 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-202 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 16:21:21,724 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-202 - Application started (Dev) (no global state)
-2023-01-03 17:05:06,473 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-4 - Shutting down connection pool.
-2023-01-03 17:05:06,712 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-216 - Database [default] initialized
-2023-01-03 17:05:06,712 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-216 - Creating Pool for datasource 'default'
-2023-01-03 17:05:06,814 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-216 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 17:05:06,818 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-216 - Application started (Dev) (no global state)
-2023-01-03 17:05:22,203 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-4 - Shutting down connection pool.
-2023-01-03 17:05:22,458 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-225 - Database [default] initialized
-2023-01-03 17:05:22,458 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-225 - Creating Pool for datasource 'default'
-2023-01-03 17:05:22,647 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-225 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2023-01-03 17:05:22,651 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-225 - Application started (Dev) (no global state)
+2023-01-04 17:19:13,802 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-52 - Application started (Dev) (no global state)
