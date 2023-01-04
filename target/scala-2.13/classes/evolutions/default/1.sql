@@ -80,8 +80,15 @@ create table user (
   password                      varchar(255),
   token                         varchar(255),
   email                         varchar(255),
+  constraint uq_user_username unique (username),
   constraint uq_user_email unique (email),
   constraint pk_user primary key (id)
+);
+
+create table user_role (
+  user_id                       bigint not null,
+  role_id                       bigint not null,
+  constraint pk_user_role primary key (user_id,role_id)
 );
 
 create table wallet (
@@ -89,8 +96,20 @@ create table wallet (
   description                   varchar(255)
 );
 
+create index ix_user_role_user on user_role (user_id);
+alter table user_role add constraint fk_user_role_user foreign key (user_id) references user (id) on delete restrict on update restrict;
+
+create index ix_user_role_role on user_role (role_id);
+alter table user_role add constraint fk_user_role_role foreign key (role_id) references role (id) on delete restrict on update restrict;
+
 
 # --- !Downs
+
+alter table user_role drop foreign key fk_user_role_user;
+drop index ix_user_role_user on user_role;
+
+alter table user_role drop foreign key fk_user_role_role;
+drop index ix_user_role_role on user_role;
 
 drop table if exists canteen;
 
@@ -115,6 +134,8 @@ drop table if exists signup;
 drop table if exists ticket;
 
 drop table if exists user;
+
+drop table if exists user_role;
 
 drop table if exists wallet;
 
