@@ -24,7 +24,7 @@ public class HomeController extends Controller {
     }
 
     public Result login(Http.Request request) {
-        return ok(views.html.login.render());
+        return ok(views.html.login.render(request));
     }
 
     public Result profile(Http.Request request) {
@@ -36,7 +36,7 @@ public class HomeController extends Controller {
     }
 
     public Result signup(Http.Request request) {
-        return ok(views.html.signup.render());
+        return ok(views.html.signup.render(request));
     }
 
     public Result termsofuse(Http.Request request) {
@@ -45,6 +45,10 @@ public class HomeController extends Controller {
 
     public Result privacypolicy(Http.Request request) {
         return ok(views.html.Settings.privacypolicy.render());
+    }
+
+    public Result help(Http.Request request) {
+        return ok(views.html.Settings.help.render());
     }
 
     public Result calendar(Http.Request request) {

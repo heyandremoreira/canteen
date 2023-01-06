@@ -17,7 +17,6 @@ public class User extends Model {
     @ManyToMany
     private List<Role> roles;
     private String token;
-
     @Column(unique = true)
     private String email;
 

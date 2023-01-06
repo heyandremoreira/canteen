@@ -21,15 +21,15 @@ import play.data._
 import play.core.j.PlayFormsMagicForJava._
 import scala.jdk.CollectionConverters._
 
-object authapproval extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[java.util.List[models.User],play.twirl.api.HtmlFormat.Appendable] {
+object authapproval extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[java.util.List[models.User],play.mvc.Http.Request,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(users: java.util.List[models.User]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(users: java.util.List[models.User], r: play.mvc.Http.Request):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.38*/("""
+Seq[Any](format.raw/*1.64*/("""
 """),_display_(/*2.2*/template(Array("stylesheets/landing.css"))/*2.44*/ {_display_(Seq[Any](format.raw/*2.46*/("""
     """),format.raw/*3.5*/("""<table class="table table-responsive table-hover darkbg">
         <thead class="text-center">
@@ -53,16 +53,16 @@ Seq[Any](format.raw/*1.38*/("""
                     """)))}),format.raw/*22.22*/("""
                     """),format.raw/*23.21*/("""</td>
                     <td>
-                        <a type="submit" class="btn btn-approve">Approve</a>
-                        <form action=""""),_display_(/*26.40*/controllers/*26.51*/.routes.Administrator.addUser()),format.raw/*26.82*/("""" method="post">
-                            <div class="d-flex justify-content-center flex-grow-1 mt-3">
-                                <button name="userId" type="submit" class="btn btn-sm btn-dark">Approve</button>
+                        <form action=""""),_display_(/*25.40*/controllers/*25.51*/.routes.Administrator.addUser()),format.raw/*25.82*/("""" method="post">
+                            """),_display_(/*26.30*/helper/*26.36*/.CSRF.formField(r.asScala)),format.raw/*26.62*/("""
+                            """),format.raw/*27.29*/("""<div class="d-flex justify-content-center">
+                                <button name="appbtn" type="submit" class="btn btn-approve">Approve</button>
                             </div>
                         </form>
-                        <a type="submit" class="btn btn-remove px-4">Remove</a>
-                        <form action=""""),_display_(/*32.40*/controllers/*32.51*/.routes.Administrator.removeUser(user.getId())),format.raw/*32.97*/("""" method="post">
-                            <div class="d-flex justify-content-center flex-grow-1 mt-3">
-                                <button name="userId" type="submit" class="btn btn-sm btn-dark">Deny</button>
+                        <form action=""""),_display_(/*31.40*/controllers/*31.51*/.routes.Administrator.denyUser(user.getId())),format.raw/*31.95*/("""" method="post">
+                            """),_display_(/*32.30*/helper/*32.36*/.CSRF.formField(r.asScala)),format.raw/*32.62*/("""
+                            """),format.raw/*33.29*/("""<div class="d-flex justify-content-center">
+                                <button name="rembtn" type="submit" class="btn btn-remove">Deny</button>
                             </div>
                         </form>
                     </td>
@@ -76,9 +76,9 @@ Seq[Any](format.raw/*1.38*/("""
     }
   }
 
-  def render(users:java.util.List[models.User]): play.twirl.api.HtmlFormat.Appendable = apply(users)
+  def render(users:java.util.List[models.User],r:play.mvc.Http.Request): play.twirl.api.HtmlFormat.Appendable = apply(users,r)
 
-  def f:((java.util.List[models.User]) => play.twirl.api.HtmlFormat.Appendable) = (users) => apply(users)
+  def f:((java.util.List[models.User],play.mvc.Http.Request) => play.twirl.api.HtmlFormat.Appendable) = (users,r) => apply(users,r)
 
   def ref: this.type = this
 
@@ -88,9 +88,9 @@ Seq[Any](format.raw/*1.38*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/Administrator/authapproval.scala.html
-                  HASH: b4b996cd38c19465ee3fb7a4653f1160eb7c4c17
-                  MATRIX: 949->1|1080->37|1108->40|1158->82|1197->84|1229->90|1642->476|1669->494|1709->496|1751->511|1785->529|1825->531|1871->549|1929->580|1942->584|1969->590|2028->622|2041->626|2074->638|2155->692|2190->718|2230->720|2284->747|2327->774|2367->776|2425->803|2479->826|2529->848|2706->998|2726->1009|2778->1040|3216->1451|3236->1462|3303->1508|3685->1859|3727->1870|3764->1880
-                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|44->13|44->13|44->13|45->14|45->14|45->14|46->15|47->16|47->16|47->16|48->17|48->17|48->17|50->19|50->19|50->19|51->20|51->20|51->20|52->21|53->22|54->23|57->26|57->26|57->26|63->32|63->32|63->32|70->39|71->40|72->41
+                  HASH: 0aaaf62c81550aa19d44a4257ee7492981c94892
+                  MATRIX: 971->1|1128->63|1156->66|1206->108|1245->110|1277->116|1690->502|1717->520|1757->522|1799->537|1833->555|1873->557|1919->575|1977->606|1990->610|2017->616|2076->648|2089->652|2122->664|2203->718|2238->744|2278->746|2332->773|2375->800|2415->802|2473->829|2527->852|2577->874|2676->946|2696->957|2748->988|2822->1035|2837->1041|2884->1067|2942->1097|3232->1360|3252->1371|3317->1415|3391->1462|3406->1468|3453->1494|3511->1524|3825->1807|3867->1818|3904->1828
+                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|44->13|44->13|44->13|45->14|45->14|45->14|46->15|47->16|47->16|47->16|48->17|48->17|48->17|50->19|50->19|50->19|51->20|51->20|51->20|52->21|53->22|54->23|56->25|56->25|56->25|57->26|57->26|57->26|58->27|62->31|62->31|62->31|63->32|63->32|63->32|64->33|70->39|71->40|72->41
                   -- GENERATED --
               */
           

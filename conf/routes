@@ -8,15 +8,18 @@
 GET     /                           controllers.HomeController.landing(request: Request)
 GET     /home                       controllers.HomeController.home(request: Request)
 GET     /login                      controllers.HomeController.login(request: Request)
-#POST    /login                      controllers.Application.authenticate()
+GET     /loginProcess               controllers.HomeController.login(request: Request)
+#POST    /login                      controllers.Application.authenticate(username, password)
 #GET     /logout                     controllers.Application.logout()
 GET     /profile                    controllers.HomeController.profile(request: Request)
 GET     /recoverpassword            controllers.HomeController.recoverpassword(request: Request)
 GET     /signup                     controllers.HomeController.signup(request: Request)
+POST    /signupProcess              controllers.HomeController.signup(request: Request)
 
 # SETTINGS
 GET     /termsofuse                 controllers.HomeController.termsofuse(request: Request)
 GET     /privacypolicy              controllers.HomeController.privacypolicy(request: Request)
+GET     /help                       controllers.HomeController.help(request: Request)
 
 GET     /calendar                   controllers.HomeController.calendar(request: Request)
 
@@ -24,18 +27,20 @@ GET     /calendar                   controllers.HomeController.calendar(request:
 GET     /administrator              controllers.Administrator.administrator(request: Request)
 GET     /authapproval               controllers.Administrator.authapproval(request: Request)
 GET     /userslist                  controllers.Administrator.userslist(request: Request)
-POST    /addItem                    controllers.Administrator.addUser(request: Request)
-POST    /removeItem                 controllers.Administrator.removeUser(request: Request, id: Long)
+POST    /addUser                    controllers.Administrator.addUser(request: Request)
+POST    /removeUser                 controllers.Administrator.removeUser(request: Request, id: Long)
+POST    /denyUser                   controllers.Administrator.denyUser(request: Request, id: Long)
 
 # MANAGER
 GET     /manager                    controllers.Manager.manager(request: Request)
 GET     /createcanteen              controllers.Manager.createcanteen(request: Request)
+GET     /managemenus                controllers.Manager.managemenus(request: Request)
+GET     /managetickets              controllers.Manager.managetickets(request: Request)
+GET     /managecanteens             controllers.Manager.managetickets(request: Request)
 GET     /manage_thelastdrop         controllers.Manager.manage_thelastdrop(request: Request)
 GET     /manage_arconia             controllers.Manager.manage_arconia(request: Request)
 GET     /manage_theleakycauldron    controllers.Manager.manage_theleakycauldron(request: Request)
 GET     /manage_waverly             controllers.Manager.manage_waverlysubstation(request: Request)
-GET     /managemenus                controllers.Manager.managemenus(request: Request)
-GET     /managetickets              controllers.Manager.managetickets(request: Request)
 
 # CANTEENS
 GET     /theleakycauldron           controllers.CanteenController.theleakycauldron(request: Request)

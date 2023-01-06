@@ -201,7 +201,7 @@ th{
 }
 
 .btn-remove{
-    width: 20%;
+    width: 30%;
     padding: 10px 0px;
     border: none;
     border-radius: 20px;
@@ -211,7 +211,7 @@ th{
 }
 
 .btn.btn-remove:hover {
-    width: 20%;
+    width: 30%;
     padding: 10px 0px;
     border: none;
     border-radius: 20px;
@@ -221,7 +221,7 @@ th{
 }
 
 .btn-approve{
-    width: 20%;
+    width: 30%;
     padding: 10px 0px;
     border: none;
     border-radius: 20px;
@@ -231,7 +231,7 @@ th{
 }
 
 .btn.btn-approve:hover {
-    width: 20%;
+    width: 30%;
     padding: 10px 0px;
     border: none;
     border-radius: 20px;

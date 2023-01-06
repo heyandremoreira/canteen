@@ -29,7 +29,25 @@ object termsofuse extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api
       {
 
 
-Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets/home.css"))/*1.68*/{_display_(Seq[Any](format.raw/*1.69*/("""
+Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets/home.css"))/*1.68*/ {_display_(Seq[Any](format.raw/*1.70*/("""
+
+    """),format.raw/*3.5*/("""<div class="row d-flex justify-content-center mt-5">
+        <div class="col-md-10">
+            <div class="card text-white shadow-0 border darkdarkbg mb-5">
+                <div class="d-flex justify-content-center mt-4 mb-2">
+                    <h1 style="color: #B87651">Terms of Use</h1>
+                </div>
+                <div class="ms-5 mb-3">
+                <p>Welcome to our website! By using our site, you agree to the following terms of use:</p>
+                <ul>
+                    <li>You must be at least 16 years old to use our site.</li>
+                    <li>You may not use our site for any illegal or inappropriate activities.</li>
+                    <li>We reserve the right to modify or terminate our site at any time without notice.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 
 """)))}))
       }
@@ -48,9 +66,9 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
               /*
                   -- GENERATED --
                   SOURCE: app/views/Settings/termsofuse.scala.html
-                  HASH: 0514a7b39b8b01e99f2320f19a1bcfffe0b89599
-                  MATRIX: 1003->1|1077->67|1115->68
-                  LINES: 32->1|32->1|32->1
+                  HASH: 4748b9dc9bf7b9524864e59297c154244f7685c4
+                  MATRIX: 1003->1|1077->67|1116->69|1150->77
+                  LINES: 32->1|32->1|32->1|34->3
                   -- GENERATED --
               */
           

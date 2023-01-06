@@ -1,16 +1,24 @@
-/*
-package controllers;
+/*package controllers;
 
-import models.User;
-import play.api.data.Form;
+import com.google.inject.Inject;
+import play.data.Form;
+import play.mvc.Result;
 import views.html.login;
-import javax.xml.transform.Result;
+
 import static play.mvc.Results.ok;
 
 public class Application {
+
     public static class Login {
         public String email;
         public String password;
+    }
+
+    private final Form form;
+
+    @Inject
+    public Application(Form form) {
+        this.form = form;
     }
 
     public static Result login(String username, String password) {
@@ -45,6 +53,5 @@ public class Application {
         }
         return null;
     }
-}*/
 
-/*verifyAuthUser();*/
+}*/

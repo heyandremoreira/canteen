@@ -48,4 +48,8 @@ public class Manager extends Controller {
         List<Canteen> canteens = Canteen.getCanteenList();
         return ok(views.html.Manager.managetickets.render(canteens));
     }
+
+    public Result managecanteens(Http.Request request) {
+        return ok(views.html.Manager.managecanteens.render());
+    }
 }

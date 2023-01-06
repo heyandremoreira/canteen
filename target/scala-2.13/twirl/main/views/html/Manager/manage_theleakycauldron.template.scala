@@ -94,7 +94,11 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
                             <div class="input-group pb-3">
                                 <textarea class="form-control" placeholder="Insert the description of the menu" aria-label="With textarea"></textarea>
                             </div>
-                            <button href="#" class="btn btn-small">Go</button>
+                            <div class="input-group pb-3">
+                                <textarea class="form-control" placeholder="Insert the price" aria-label="With textarea"></textarea>
+                            </div>
+                            <button href="#" class="btn btn-small">Create</button>
+                            <button href="#" class="btn btn-remove">Delete</button>
                         </div>
                     </div>
                 </div>
@@ -118,7 +122,7 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
               /*
                   -- GENERATED --
                   SOURCE: app/views/Manager/manage_theleakycauldron.scala.html
-                  HASH: dbaaf31b35e2457ad85aae2877e568392d6463ec
+                  HASH: 1e12032af660938ceddb68f1e73fa69ebafca228
                   MATRIX: 1015->1|1150->127|1189->128|1221->134|1261->148|1275->154|1316->175|1689->522|1703->528|1753->558
                   LINES: 32->1|32->1|32->1|33->2|33->2|33->2|33->2|40->9|40->9|40->9
                   -- GENERATED --

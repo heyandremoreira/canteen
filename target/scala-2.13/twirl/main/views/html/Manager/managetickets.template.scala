@@ -49,34 +49,6 @@ Seq[Any](format.raw/*1.37*/("""
                         <th scope="row">1</th>
                         """),format.raw/*22.95*/("""
                     """),format.raw/*23.21*/("""</tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Gonçalo Queiroz</td>
-                        <td>Southy</td>
-                        <td>24/02/2023</td>
-                        <td><a class="btn btn-remove" type="submit" href="#">Remove</a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Gonçalo Queiroz</td>
-                        <td>Southy</td>
-                        <td>24/02/2023</td>
-                        <td><a class="btn btn-remove" type="submit" href="#">Remove</a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Gonçalo Queiroz</td>
-                        <td>Southy</td>
-                        <td>24/02/2023</td>
-                        <td><a class="btn btn-remove" type="submit" href="#">Remove</a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Gonçalo Queiroz</td>
-                        <td>Southy</td>
-                        <td>24/02/2023</td>
-                        <td><a class="btn btn-remove" type="submit" href="#">Remove</a></td>
-                    </tr>
                 </tbody>
             </table>
         </div>
@@ -87,10 +59,10 @@ Seq[Any](format.raw/*1.37*/("""
             <div class="card shadow-0 border darkdarkbg">
                 <select name="canteen">
                     <option value="" disabled selected>Choose the category</option>
-                    """),_display_(/*62.22*/for(canteen <- canteens) yield /*62.46*/{_display_(Seq[Any](format.raw/*62.47*/("""
-                        """),format.raw/*63.25*/("""<option value=""""),_display_(/*63.41*/canteen/*63.48*/.getName),format.raw/*63.56*/("""">"""),_display_(/*63.59*/canteen/*63.66*/.getName),format.raw/*63.74*/("""</option>
-                    """)))}),format.raw/*64.22*/("""
-                """),format.raw/*65.17*/("""</select>
+                    """),_display_(/*34.22*/for(canteen <- canteens) yield /*34.46*/{_display_(Seq[Any](format.raw/*34.47*/("""
+                        """),format.raw/*35.25*/("""<option value=""""),_display_(/*35.41*/canteen/*35.48*/.getName),format.raw/*35.56*/("""">"""),_display_(/*35.59*/canteen/*35.66*/.getName),format.raw/*35.74*/("""</option>
+                    """)))}),format.raw/*36.22*/("""
+                """),format.raw/*37.17*/("""</select>
                 <div class="card-body p-4">
                     <h3 class="form-label mb-5 d-flex justify-content-center">Feedback</h3>
                     <div class="form-outline d-flex mb-4">
@@ -164,9 +136,9 @@ Seq[Any](format.raw/*1.37*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/Manager/managetickets.scala.html
-                  HASH: f02c1670e4e0b77821ed2a442374ae0021019859
-                  MATRIX: 940->1|1070->36|1098->39|1172->105|1211->107|1243->113|2085->1160|2135->1182|3898->2918|3938->2942|3977->2943|4031->2969|4074->2985|4090->2992|4119->3000|4149->3003|4165->3010|4194->3018|4257->3050|4303->3068
-                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|50->22|51->23|90->62|90->62|90->62|91->63|91->63|91->63|91->63|91->63|91->63|91->63|92->64|93->65
+                  HASH: 17568f0fd1343f65276885d6abaadbb220f134aa
+                  MATRIX: 940->1|1070->36|1098->39|1172->105|1211->107|1243->113|2085->1160|2135->1182|2574->1594|2614->1618|2653->1619|2707->1645|2750->1661|2766->1668|2795->1676|2825->1679|2841->1686|2870->1694|2933->1726|2979->1744
+                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|50->22|51->23|62->34|62->34|62->34|63->35|63->35|63->35|63->35|63->35|63->35|63->35|64->36|65->37
                   -- GENERATED --
               */
           

@@ -1,0 +1,55 @@
+@template(Array("stylesheets/landing.css", "stylesheets/home.css")){
+
+    <main class="container-menu">
+        <section class="canteens mb-5 pb-5" id="canteens">
+            <div class="row w-75 d-flex mx-auto mt-2">
+                <div class="col-xl-3 cards pb-4">
+                    <div style="background-color: #131313" class="card">
+                        <img src="@routes.Assets.at("images/h.arc.jpg")" class="card-img-top" alt="arc">
+                        <div class="card-body">
+                            <h5 class="card-title">Arconia</h5>
+                            <a href="/manage_arconia" class="btn btn-brown d-flex ms-auto">
+                                <img src="@routes.Assets.at("images/next2.png")" class="card-img-top" alt="arrow">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 cards pb-4">
+                    <div style="background-color: #131313" class="card">
+                        <img src="@routes.Assets.at("images/h.tld.jpg")" class="card-img-top" alt="tld">
+                        <div class="card-body">
+                            <h5 class="card-title">The Last Drop</h5>
+                            @*<div style="padding: 10px" class="d-flex flex-column justify-content-end flex-grow-1">*@
+                            <a href="/manage_thelastdrop" class="btn btn-brown d-flex ms-auto">
+                                <img src="@routes.Assets.at("images/next2.png")" class="card-img-top" alt="arrow">
+                            </a>
+                            @*</div>*@
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 cards pb-4">
+                    <div style="background-color: #131313" class="card">
+                        <img src="@routes.Assets.at("images/h.tlc.jpg")" class="card-img-top" alt="tlc">
+                        <div class="card-body">
+                            <h5 class="card-title">The Leaky Cauldron</h5>
+                            <a href="/manage_theleakycauldron" class="btn btn-brown d-flex ms-auto">
+                                <img src="@routes.Assets.at("images/next2.png")" class="card-img-top" alt="arrow">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 cards pb-4">
+                    <div style="background-color: #131313" class="card">
+                        <img src="@routes.Assets.at("images/h.wss.jpg")" class="card-img-top" alt="wss">
+                        <div class="card-body">
+                            <h5 class="card-title">Waverly <br> Sub Station</h5>
+                            <a href="/manage_waverlysubstation" class="btn btn-brown d-flex ms-auto">
+                                <img src="@routes.Assets.at("images/next2.png")" class="card-img-top" alt="arrow">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+}

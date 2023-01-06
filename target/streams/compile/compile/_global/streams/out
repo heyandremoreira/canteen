@@ -1,7 +1,0 @@
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\views\Administrator\authapproval.scala.html:18:30: not found: value role
-[error]                     <td>@if(!role.isEmpty) {
-[error]                              ^
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\views\Administrator\authapproval.scala.html:19:39: not found: value role
-[error]                         @for(roles <- role) {</td>
-[error]                                       ^
-[error] two errors found

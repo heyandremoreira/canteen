@@ -1,4 +1,4 @@
-@(users: java.util.List[models.User])
+@(users: java.util.List[models.User], r: play.mvc.Http.Request)
 @template(Array("stylesheets/landing.css")) {
     <table class="table table-responsive table-hover darkbg">
         <thead class="text-center">
@@ -22,10 +22,10 @@
                     }
                     </td>
                     <td>
-                        <a type="submit" class="btn btn-remove px-4">Remove</a>
                         <form action="@controllers.routes.Administrator.removeUser(user.getId())" method="post">
-                            <div class="d-flex justify-content-center flex-grow-1 mt-3">
-                                <button name="userId" type="submit" class="btn btn-sm btn-dark">Deny</button>
+                            @helper.CSRF.formField(r.asScala)
+                            <div class="d-flex justify-content-center">
+                                <button name="rembtn" type="submit" class="btn btn-remove px-4">Deny</button>
                             </div>
                         </form>
                     </td>

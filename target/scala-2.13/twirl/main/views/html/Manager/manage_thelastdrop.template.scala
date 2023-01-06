@@ -94,7 +94,11 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
                             <div class="input-group pb-3">
                                 <textarea class="form-control" placeholder="Insert the description of the menu" aria-label="With textarea"></textarea>
                             </div>
-                            <button href="#" class="btn btn-small">Go</button>
+                            <div class="input-group pb-3">
+                                <textarea class="form-control" placeholder="Insert the price" aria-label="With textarea"></textarea>
+                            </div>
+                            <button href="#" class="btn btn-small">Create</button>
+                            <button href="#" class="btn btn-remove">Delete</button>
                         </div>
                     </div>
                 </div>
@@ -118,7 +122,7 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
               /*
                   -- GENERATED --
                   SOURCE: app/views/Manager/manage_thelastdrop.scala.html
-                  HASH: b2138a4ce682e3f2bc6baa0e58ad54cc4156aa90
+                  HASH: 88569cc1aa72e0c14364c6344df974b5ed86c090
                   MATRIX: 1010->1|1145->127|1184->128|1216->134|1256->148|1270->154|1311->175|1684->522|1698->528|1748->558
                   LINES: 32->1|32->1|32->1|33->2|33->2|33->2|33->2|40->9|40->9|40->9
                   -- GENERATED --

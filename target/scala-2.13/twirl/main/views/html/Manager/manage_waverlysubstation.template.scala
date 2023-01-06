@@ -94,7 +94,11 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
                             <div class="input-group pb-3">
                                 <textarea class="form-control" placeholder="Insert the description of the menu" aria-label="With textarea"></textarea>
                             </div>
-                            <button href="#" class="btn btn-small">Go</button>
+                            <div class="input-group pb-3">
+                                <textarea class="form-control" placeholder="Insert the price" aria-label="With textarea"></textarea>
+                            </div>
+                            <button href="#" class="btn btn-small">Create</button>
+                            <button href="#" class="btn btn-remove">Delete</button>
                         </div>
                     </div>
                 </div>
@@ -118,7 +122,7 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
               /*
                   -- GENERATED --
                   SOURCE: app/views/Manager/manage_waverlysubstation.scala.html
-                  HASH: 988a524014951e400d67833c9f55aa0b9f985d92
+                  HASH: 79db9917df22c830a34a01ed650b71649b453b6d
                   MATRIX: 1016->1|1151->127|1190->128|1222->134|1262->148|1276->154|1317->175|1690->522|1704->528|1754->558
                   LINES: 32->1|32->1|32->1|33->2|33->2|33->2|33->2|40->9|40->9|40->9
                   -- GENERATED --

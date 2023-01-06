@@ -26,12 +26,12 @@ public class Administrator extends Controller {
 
     public Result userslist(Http.Request request) {
         List<User> users = User.getUserList();
-        return ok(views.html.Administrator.userslist.render(users));
+        return ok(views.html.Administrator.userslist.render(users, request));
     }
 
     public Result authapproval(Http.Request request) {
         List<User> users = User.getUserList();
-        return ok(views.html.Administrator.authapproval.render(users));
+        return ok(views.html.Administrator.authapproval.render(users, request));
     }
 
     public Result addUser(Http.Request request){
@@ -47,6 +47,13 @@ public class Administrator extends Controller {
         user.delete();
         user.save();
         return redirect(routes.Administrator.userslist());
+    }
+
+    public Result denyUser(Http.Request request, Long id){
+        User user = User.getUserById(id);
+        user.delete();
+        user.save();
+        return redirect(routes.Administrator.authapproval());
     }
 
 }

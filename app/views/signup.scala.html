@@ -1,38 +1,46 @@
-@template(Array("stylesheets/landing.css")){
+@(r: play.mvc.Http.Request)
+@template(Array("stylesheets/landing.css")) {
 
-        <form method="post" action="signupProcess">
-            <div class="row principal-container">
-                <div class="col-7 d-none d-md-block text-center">
-                    <img src="@routes.Assets.at("images/signup.png")" class="img-fluid" alt="login" width="500px">
-                </div>
-                <div class="col-sm-12 col-md-4 justify-content-center">
-                    <div class="card-container text-white justify-content-start">
-                        <h2 class="pb-3">Sign up</h2>
-                        <div class="form-control-sm textfield pb-3">
-                            <input type="text" name="username" placeholder="Username">
-                        </div>
-                        <div class="form-control-sm textfield pb-3">
-                            <input type="email" name="email" placeholder="E-mail">
-                        </div>
-                        <div class="form-control-sm textfield pb-5">
-                            <input type="password" name="password" placeholder="Password">
-                        </div>
-                        <div class="form-control-sm textfield pb-4">
-                            <button class="btn-form">Register</button>
-                        </div>
-
-                        <p style="font-size: 12px" class="text-center text-muted pb-4">By signing up, you agree to our
-                            <a class="text-white" style="text-decoration: none;
-                                font-size: 12px" href="#termsofuse">Terms Of Use</a>
-                            <br> and
-                            <a class="text-white" style="text-decoration: none;
-                                font-size: 12px" href="#privacypolicy">Privacy Policy</a>
-                        </p>
-
-                        <p style="font-size: 15px" class="text-center text-muted mt-0 mb-0">Already have an account?
-                            <a href="/login" class="fw-bold text-white">Login</a> </p>
+    <form method="post" action="signupProcess">
+        @helper.CSRF.formField(r.asScala)
+        <div class="row principal-container">
+            <div class="col-7 d-none d-md-block text-center">
+                <img src="@routes.Assets.at("images/signup.png")" class="img-fluid" alt="login" width="500px">
+            </div>
+            <div class="col-sm-12 col-md-4 justify-content-center">
+                <div class="card-container text-white justify-content-start">
+                    <h2 class="pb-3">Sign up</h2>
+                    <select>
+                        <option value="" disabled selected>Choose the category</option>
+                        <option value="">Administrator</option>
+                        <option value="">Manager</option>
+                        <option value="">Student</option>
+                    </select>
+                    <div class="form-control-sm textfield pb-3">
+                        <input type="text" name="username" placeholder="Username">
                     </div>
+                    <div class="form-control-sm textfield pb-3">
+                        <input type="email" name="email" placeholder="E-mail">
+                    </div>
+                    <div class="form-control-sm textfield pb-5">
+                        <input type="password" name="password" placeholder="Password">
+                    </div>
+                    <div class="form-control-sm textfield pb-4">
+                        <button class="btn-form" href="/home">Register</button>
+                    </div>
+
+                    <p style="font-size: 12px" class="text-center text-muted pb-4">By signing up, you agree to our
+                        <a class="text-white" style="text-decoration: none;
+                            font-size: 12px" href="#termsofuse">Terms Of Use</a>
+                        <br> and
+                        <a class="text-white" style="text-decoration: none;
+                            font-size: 12px" href="#privacypolicy">Privacy Policy</a>
+                    </p>
+
+                    <p style="font-size: 15px" class="text-center text-muted mt-0 mb-0">Already have an account?
+                        <a href="/login" class="fw-bold text-white">Sign In</a> </p>
                 </div>
             </div>
-        </form>
+        </div>
+    </form>
 }
