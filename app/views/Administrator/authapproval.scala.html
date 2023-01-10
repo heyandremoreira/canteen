@@ -16,10 +16,10 @@
                     <th>@user.getId</th>
                     <td>@user.getUsername</td>
                     <td>
-                    @if(!user.getRoles.isEmpty) {
+                    @* @if(!user.getRoles.isEmpty) {
                         @for(roles <- user.getRoles) {
                         }
-                    }
+                    } *@
                     </td>
                     <td>
                         <form action="@controllers.routes.Administrator.addUser()" method="post">

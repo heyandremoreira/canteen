@@ -8,7 +8,7 @@
 GET     /                           controllers.HomeController.landing(request: Request)
 GET     /home                       controllers.HomeController.home(request: Request)
 GET     /login                      controllers.HomeController.login(request: Request)
-GET     /loginProcess               controllers.HomeController.login(request: Request)
+POST    /signinProcess              controllers.HomeController.login(request: Request)
 #POST    /login                      controllers.Application.authenticate(username, password)
 #GET     /logout                     controllers.Application.logout()
 GET     /profile                    controllers.HomeController.profile(request: Request)
@@ -51,6 +51,12 @@ GET     /waverlysubstation          controllers.CanteenController.waverlysubstat
 # STUDENT
 GET     /tickets                    controllers.Student.tickets(request: Request)
 GET     /wallet                     controllers.Student.wallet(request: Request)
+
+##METHODS
+#POST    /create                     controllers.HomeController.create(request: Request)
+#POST    /save                       controllers.HomeController.save(request: Request)
+#POST    /edit                       controllers.HomeController.edit(request: Request)
+#POST    /update                     controllers.HomeController.update(request: Request)
 
 
 # Map static resources from the /public folder to the /assets URL path

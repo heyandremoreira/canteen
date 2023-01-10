@@ -23,7 +23,7 @@ class Routes(
   CanteenController_0: controllers.CanteenController,
   // @LINE:52
   Student_3: controllers.Student,
-  // @LINE:57
+  // @LINE:63
   Assets_4: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -40,7 +40,7 @@ class Routes(
     CanteenController_0: controllers.CanteenController,
     // @LINE:52
     Student_3: controllers.Student,
-    // @LINE:57
+    // @LINE:63
     Assets_4: controllers.Assets
   ) = this(errorHandler, HomeController_5, Administrator_1, Manager_2, CanteenController_0, Student_3, Assets_4, "/")
 
@@ -58,7 +58,7 @@ class Routes(
     ("""GET""", this.prefix, """controllers.HomeController.landing(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """home""", """controllers.HomeController.home(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.HomeController.login(request:Request)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """loginProcess""", """controllers.HomeController.login(request:Request)"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """signinProcess""", """controllers.HomeController.login(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """profile""", """controllers.HomeController.profile(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recoverpassword""", """controllers.HomeController.recoverpassword(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """signup""", """controllers.HomeController.signup(request:Request)"""),
@@ -157,8 +157,8 @@ class Routes(
   )
 
   // @LINE:11
-  private[this] lazy val controllers_HomeController_login3_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("loginProcess")))
+  private[this] lazy val controllers_HomeController_login3_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("signinProcess")))
   )
   private[this] lazy val controllers_HomeController_login3_invoker = createInvoker(
     
@@ -169,8 +169,8 @@ class Routes(
       "controllers.HomeController",
       "login",
       Seq(classOf[play.mvc.Http.Request]),
-      "GET",
-      this.prefix + """loginProcess""",
+      "POST",
+      this.prefix + """signinProcess""",
       """""",
       Seq()
     )
@@ -757,7 +757,7 @@ GET     /logout                     controllers.Application.logout()""",
     )
   )
 
-  // @LINE:57
+  // @LINE:63
   private[this] lazy val controllers_Assets_at33_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
@@ -1009,7 +1009,7 @@ GET     /logout                     controllers.Application.logout()""",
           req => Student_3.wallet(req))
       }
   
-    // @LINE:57
+    // @LINE:63
     case controllers_Assets_at33_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         controllers_Assets_at33_invoker.call(Assets_4.at(path, file))

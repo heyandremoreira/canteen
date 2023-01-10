@@ -1,8 +1,10 @@
+/*
 package models;
 
 import io.ebean.Model;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -14,6 +16,8 @@ public class Profile extends Model{
     private String email;
     private String nif;
 
+    @OneToOne (mappedBy = "user")
+    private User user;
 
     public Profile(String name, String nationality, String adress, String email, String nif) {
         this.name = name;
@@ -63,3 +67,4 @@ public class Profile extends Model{
         this.nif = nif;
     }
 }
+*/

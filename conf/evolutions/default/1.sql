@@ -80,6 +80,7 @@ create table user (
   password                      varchar(255),
   token                         varchar(255),
   email                         varchar(255),
+  status                        varchar(255),
   constraint uq_user_username unique (username),
   constraint uq_user_email unique (email),
   constraint pk_user primary key (id)

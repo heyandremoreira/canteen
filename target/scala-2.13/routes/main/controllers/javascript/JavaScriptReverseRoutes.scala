@@ -10,7 +10,7 @@ import _root_.play.libs.F
 // @LINE:8
 package controllers.javascript {
 
-  // @LINE:57
+  // @LINE:63
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -18,7 +18,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:57
+    // @LINE:63
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """

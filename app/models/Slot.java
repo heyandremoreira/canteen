@@ -1,3 +1,4 @@
+/*
 package models;
 
 import controllers.Student;
@@ -24,7 +25,7 @@ public class Slot extends Model{
     @ManyToOne
     private Student student;
 
-    @OneToOne
+    @ManyToOne
     private Menu menu;
 
     public Slot(){}
@@ -69,3 +70,4 @@ public class Slot extends Model{
         this.menu = menu;
     }
 }
+*/

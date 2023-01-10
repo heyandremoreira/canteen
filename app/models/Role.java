@@ -2,9 +2,8 @@ package models;
 
 import io.ebean.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Role extends Model{
@@ -12,6 +11,11 @@ public class Role extends Model{
     @GeneratedValue
     private long id;
     private String username;
+
+    @OneToMany (mappedBy = "role")
+    private List<UserRole> userRoles;
+
+    /*private List<User> users;*/
 
     public Role(String username) {
         this.username = username;

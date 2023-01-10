@@ -1,3 +1,6 @@
+@* @(bookForm : Form[Book])
+@import helper. *@
+
 @template(Array("stylesheets/landing.css", "stylesheets/profile.css")){
 
         <div class="container img-box pb-5">
@@ -20,6 +23,7 @@
 
 
         <form method="post" action="profileProcess">
+            @* @helper.form(action = routes.HomeController.save()){ *@
             <div class="row principal-container justify-content-center pt-5">
                 <div class="col-sm-12 col-md-4">
                     <div class="card-container text-white justify-content-start">
