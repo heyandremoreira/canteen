@@ -1,0 +1,2 @@
+[error] C:\Users\André ISCTE\Documents\canteen_management\app\models\Image.java:36:1: incompatible types: java.lang.String cannot be converted to models.Image
+[error] image

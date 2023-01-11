@@ -3,10 +3,7 @@ package models;
 import io.ebean.Finder;
 import io.ebean.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -19,11 +16,11 @@ public class Image extends Model {
     private String image;
     private String description;
 
-    @OneToOne (mappedBy = "image")
-    private User user;
+    /*@ManyToOne
+    private User user; LISTAS?
 
-    @OneToOne (mappedBy = "image")
-    private Canteen canteen;
+    @ManyToOne
+    private Canteen canteen;*/
 
     private static final Finder<String, Image> finder = new Finder<>(Image.class);
 

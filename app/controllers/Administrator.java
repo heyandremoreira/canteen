@@ -1,6 +1,6 @@
 package controllers;
 
-import models.Role;
+import io.ebean.Finder;
 import models.User;
 import play.data.DynamicForm;
 import play.data.FormFactory;
@@ -29,12 +29,16 @@ public class Administrator extends Controller {
         return ok(views.html.Administrator.userslist.render(users, request));
     }
 
+    private static final Finder<Long, User> finder = new Finder<>(User.class);
     public Result authapproval(Http.Request request) {
-        List<User> users = User.getUserList();
-        return ok(views.html.Administrator.authapproval.render(users, request));
+        List<User> approvedUserList = finder.query().where().eq("status","approved").findList();
+        return ok(views.html.Administrator.authapproval.render(approvedUserList, request));
+
+        /*List<User> users = User.getUserList();
+        return ok(views.html.Administrator.authapproval.render(users, request));*/
     }
 
-    public Result addUser(Http.Request request){
+    public Result approveUser(Http.Request request, Long id){
         DynamicForm dynamicForm = this.formFactory.form().bindFromRequest(request);
         User user = new User();
         user.setUsername(dynamicForm.get("user"));

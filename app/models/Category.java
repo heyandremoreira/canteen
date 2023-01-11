@@ -1,3 +1,4 @@
+/*
 package models;
 
 import io.ebean.Finder;
@@ -35,3 +36,4 @@ public class Category extends Model{
 
 
 }
+*/

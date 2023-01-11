@@ -4,26 +4,21 @@ import io.ebean.Finder;
 import io.ebean.Model;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.List;
 
 @Entity
 @Table(name = "canteen")
 public class Canteen extends Model {
-
     @Id
     private Long id;
     private String name;
     private String description;
     private String address;
 
-    @OneToMany
-    private List<CanteenMenu> canteenMenus;
+    @OneToMany(mappedBy = "canteen")
+    private List<Menu> menus;
 
-    /*@ManyToOne
-    private User user;*/
-
-    @OneToOne (mappedBy = "canteen")
+    @OneToOne
     private Image image;
 
     private static final Finder<String, Canteen> finder = new Finder<>(Canteen.class);
@@ -38,6 +33,7 @@ public class Canteen extends Model {
         this.description=description;
         this.address = address;
     }
+
 
     public String getName() {
         return name;

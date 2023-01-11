@@ -9,7 +9,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "ticket")
-public class Ticket extends Model {
+public class Ticket extends Model{
 
     @Id
     private Long id;

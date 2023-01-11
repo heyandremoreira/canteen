@@ -10,7 +10,7 @@ GET     /home                       controllers.HomeController.home(request: Req
 GET     /login                      controllers.HomeController.login(request: Request)
 POST    /signinProcess              controllers.HomeController.login(request: Request)
 #POST    /login                      controllers.Application.authenticate(username, password)
-#GET     /logout                     controllers.Application.logout()
+#POST    /logout                     controllers.Application.logout()
 GET     /profile                    controllers.HomeController.profile(request: Request)
 GET     /recoverpassword            controllers.HomeController.recoverpassword(request: Request)
 GET     /signup                     controllers.HomeController.signup(request: Request)
@@ -27,7 +27,7 @@ GET     /calendar                   controllers.HomeController.calendar(request:
 GET     /administrator              controllers.Administrator.administrator(request: Request)
 GET     /authapproval               controllers.Administrator.authapproval(request: Request)
 GET     /userslist                  controllers.Administrator.userslist(request: Request)
-POST    /addUser                    controllers.Administrator.addUser(request: Request)
+POST    /approveUser                controllers.Administrator.approveUser(request: Request, id: Long)
 POST    /removeUser                 controllers.Administrator.removeUser(request: Request, id: Long)
 POST    /denyUser                   controllers.Administrator.denyUser(request: Request, id: Long)
 

@@ -10,7 +10,7 @@ GET     /home                       controllers.HomeController.home(request: Req
 GET     /login                      controllers.HomeController.login(request: Request)
 POST    /signinProcess              controllers.HomeController.login(request: Request)
 #POST    /login                      controllers.Application.authenticate(username, password)
-#GET     /logout                     controllers.Application.logout()
+#POST    /logout                     controllers.Application.logout()
 GET     /profile                    controllers.HomeController.profile(request: Request)
 GET     /recoverpassword            controllers.HomeController.recoverpassword(request: Request)
 GET     /signup                     controllers.HomeController.signup(request: Request)

@@ -12,7 +12,7 @@ public class Role extends Model{
     private long id;
     private String username;
 
-    @OneToMany (mappedBy = "role")
+    @OneToMany(mappedBy = "role")
     private List<UserRole> userRoles;
 
     /*private List<User> users;*/

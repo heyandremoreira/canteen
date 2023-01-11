@@ -25,9 +25,11 @@ public class User extends Model {
     private String nif;
     private String token;
 
-    private String status;
+    @Enumerated(EnumType.STRING)
+    @Column(length = 50, columnDefinition = "VARCHAR(50) default 'pending'")
+    private Status status = Status.pending;
 
-    @OneToMany (mappedBy = "user")
+    @OneToMany(mappedBy = "user")
     private List<UserRole> userRoles;
 
     /*private List<Role> roles = new ArrayList<>(){
@@ -36,25 +38,20 @@ public class User extends Model {
         roles.add("STUDENT");
     };*/
 
-    @OneToMany (mappedBy = "user")
+    @OneToMany(mappedBy = "user")
     private List<Ticket> tickets;
 
-    @OneToOne (mappedBy = "user")
+    @OneToOne
     private Image image;
-
-    /*@OneToOne (mappedBy = "wallet")
-    private Wallet wallet;*/
-
-    /* @OneToMany (mappedBy = "canteen")
-    private Canteen canteen;*/
-
-    /*@ManyToMany
-    private Menu menu;*/
 
     private static final Finder<Long, User> finder = new Finder<>(User.class);
 
     public static List<User> getUserList() {
         return finder.all();
+    }
+    public static List<User> getApprovedUsersList(){
+        List<User> approvedUserList = finder.query().where().eq("status","approved").findList();
+        return approvedUserList;
     }
 
     public static User getUserById(Long id) {
@@ -114,5 +111,37 @@ public class User extends Model {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getNationality() {
+        return nationality;
+    }
+
+    public void setNationality(String nationality) {
+        this.nationality = nationality;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getNif() {
+        return nif;
+    }
+
+    public void setNif(String nif) {
+        this.nif = nif;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 }

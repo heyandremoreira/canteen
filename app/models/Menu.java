@@ -1,6 +1,5 @@
 package models;
 
-
 import io.ebean.Model;
 
 import javax.persistence.*;
@@ -16,17 +15,14 @@ public class Menu extends Model {
     private Date date;
     private double value;
 
-    @OneToMany (mappedBy = "menu")
+    @OneToMany(mappedBy = "menu")
+    private List<Dish> dishes;
+
+    @ManyToOne
     private List<Ticket> tickets;
 
-    @OneToMany
-    private List<CanteenMenu> canteenMenus;
-
-    /*@OneToOne (mappedBy = "user")
-    private User user;*/
-
-    /*@OneToMany
-    private Slot slot;*/
+    @ManyToOne
+    private Canteen canteen;
 
     public Menu(Long id, String description, Date date, double value){
         this.id=id;

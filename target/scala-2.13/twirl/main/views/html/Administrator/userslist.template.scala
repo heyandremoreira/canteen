@@ -36,31 +36,33 @@ Seq[Any](format.raw/*1.64*/("""
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Username</th>
+                <th scope="col">Email</th>
                 <th scope="col">Role</th>
-                <th scope="col">Status</th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody class="align-middle text-center">
-        """),_display_(/*13.10*/if(!users.isEmpty)/*13.28*/ {_display_(Seq[Any](format.raw/*13.30*/("""
-            """),_display_(/*14.14*/for(user <- users) yield /*14.32*/ {_display_(Seq[Any](format.raw/*14.34*/("""
-                """),format.raw/*15.17*/("""<tr>
-                    <th>"""),_display_(/*16.26*/user/*16.30*/.getId),format.raw/*16.36*/("""</th>
-                    <td>"""),_display_(/*17.26*/user/*17.30*/.getUsername),format.raw/*17.42*/("""</td>
+        """),_display_(/*14.10*/if(!users.isEmpty)/*14.28*/ {_display_(Seq[Any](format.raw/*14.30*/("""
+            """),_display_(/*15.14*/for(user <- users) yield /*15.32*/ {_display_(Seq[Any](format.raw/*15.34*/("""
+                """),format.raw/*16.17*/("""<tr>
+                    <th>"""),_display_(/*17.26*/user/*17.30*/.getId),format.raw/*17.36*/("""</th>
+                    <td>"""),_display_(/*18.26*/user/*18.30*/.getUsername),format.raw/*18.42*/("""</td>
+                    <td>"""),_display_(/*19.26*/user/*19.30*/.getEmail),format.raw/*19.39*/("""</td>
+                    <td>"""),_display_(/*20.26*/user/*20.30*/.getStatus),format.raw/*20.40*/("""
+                    """),format.raw/*24.25*/("""
+                    """),format.raw/*25.21*/("""</td>
                     <td>
-                    """),format.raw/*22.25*/("""
-                    """),format.raw/*23.21*/("""</td>
-                    <td>
-                        <form action=""""),_display_(/*25.40*/controllers/*25.51*/.routes.Administrator.removeUser(user.getId())),format.raw/*25.97*/("""" method="post">
-                            """),_display_(/*26.30*/helper/*26.36*/.CSRF.formField(r.asScala)),format.raw/*26.62*/("""
-                            """),format.raw/*27.29*/("""<div class="d-flex justify-content-center">
-                                <button name="rembtn" type="submit" class="btn btn-remove px-4">Deny</button>
+                        <form action=""""),_display_(/*27.40*/controllers/*27.51*/.routes.Administrator.removeUser(user.getId())),format.raw/*27.97*/("""" method="post">
+                            """),_display_(/*28.30*/helper/*28.36*/.CSRF.formField(r.asScala)),format.raw/*28.62*/("""
+                            """),format.raw/*29.29*/("""<div class="d-flex justify-content-center">
+                                <button name="rembtn" type="submit" class="btn btn-remove px-4">Remove</button>
                             </div>
                         </form>
                     </td>
                 </tr>
-            """)))}),format.raw/*33.14*/("""
-        """)))}),format.raw/*34.10*/("""
-        """),format.raw/*35.9*/("""</tbody>
+            """)))}),format.raw/*35.14*/("""
+        """)))}),format.raw/*36.10*/("""
+        """),format.raw/*37.9*/("""</tbody>
     </table>
 """)))}))
       }
@@ -79,9 +81,9 @@ Seq[Any](format.raw/*1.64*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/Administrator/userslist.scala.html
-                  HASH: 782635b344291f179e861396e844d105ccd641b4
-                  MATRIX: 968->1|1125->63|1153->66|1203->108|1242->110|1274->116|1687->502|1714->520|1754->522|1796->537|1830->555|1870->557|1916->575|1974->606|1987->610|2014->616|2073->648|2086->652|2119->664|2200->858|2250->880|2349->952|2369->963|2436->1009|2510->1056|2525->1062|2572->1088|2630->1118|2949->1406|2991->1417|3028->1427
-                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|44->13|44->13|44->13|45->14|45->14|45->14|46->15|47->16|47->16|47->16|48->17|48->17|48->17|50->22|51->23|53->25|53->25|53->25|54->26|54->26|54->26|55->27|61->33|62->34|63->35
+                  HASH: 47b7a340e64e3900f9874ff6bcb39922fd951ee0
+                  MATRIX: 968->1|1125->63|1153->66|1203->108|1242->110|1274->116|1725->540|1752->558|1792->560|1834->575|1868->593|1908->595|1954->613|2012->644|2025->648|2052->654|2111->686|2124->690|2157->702|2216->734|2229->738|2259->747|2318->779|2331->783|2362->793|2412->956|2462->978|2561->1050|2581->1061|2648->1107|2722->1154|2737->1160|2784->1186|2842->1216|3163->1506|3205->1517|3242->1527
+                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|45->14|45->14|45->14|46->15|46->15|46->15|47->16|48->17|48->17|48->17|49->18|49->18|49->18|50->19|50->19|50->19|51->20|51->20|51->20|52->24|53->25|55->27|55->27|55->27|56->28|56->28|56->28|57->29|63->35|64->36|65->37
                   -- GENERATED --
               */
           

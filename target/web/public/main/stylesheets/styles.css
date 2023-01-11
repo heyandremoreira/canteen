@@ -24,6 +24,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 th{
     line-height: 35px;
+    width: 70px;
+}
+
+td{
+    margin: 0;
+    width: 70px;
 }
 
 .navfixed{
@@ -201,7 +207,7 @@ th{
 }
 
 .btn-remove{
-    width: 30%;
+    width: 50%;
     padding: 10px 0px;
     border: none;
     border-radius: 20px;
@@ -211,7 +217,7 @@ th{
 }
 
 .btn.btn-remove:hover {
-    width: 30%;
+    width: 50%;
     padding: 10px 0px;
     border: none;
     border-radius: 20px;
@@ -221,7 +227,7 @@ th{
 }
 
 .btn-approve{
-    width: 30%;
+    width: 50%;
     padding: 10px 0px;
     border: none;
     border-radius: 20px;
@@ -231,7 +237,7 @@ th{
 }
 
 .btn.btn-approve:hover {
-    width: 30%;
+    width: 50%;
     padding: 10px 0px;
     border: none;
     border-radius: 20px;

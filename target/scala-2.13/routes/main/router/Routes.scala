@@ -192,7 +192,7 @@ class Routes(
       "GET",
       this.prefix + """profile""",
       """POST    /login                      controllers.Application.authenticate(username, password)
-GET     /logout                     controllers.Application.logout()""",
+POST    /logout                     controllers.Application.logout()""",
       Seq()
     )
   )
