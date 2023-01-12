@@ -7,6 +7,7 @@
                 <th scope="col">Username</th>
                 <th scope="col">Email</th>
                 <th scope="col">Role</th>
+
                 <th scope="col"></th>
             </tr>
         </thead>
@@ -23,20 +24,18 @@
                         }
                         } *@
                     </td>
-                    <td>@user.getStatus</td>
+
                     <td>
-                        <form action="@controllers.routes.Administrator.approveUser(user.getId())" method="post">
-                            @helper.CSRF.formField(r.asScala)
-                        <div class="d-flex justify-content-center">
+                        <div class="d-inline justify-content-center">
+                            <form action="@controllers.routes.Administrator.approveUser(user.getId())" method="post">
+                                @helper.CSRF.formField(r.asScala)
                             <button name="appbtn" type="submit" class="btn btn-approve">Approve</button>
-                        </div>
-                        </form>
-                        <form action="@controllers.routes.Administrator.denyUser(user.getId())" method="post">
-                            @helper.CSRF.formField(r.asScala)
-                        <div class="d-flex justify-content-center">
+                            </form>
+                            <form action="@controllers.routes.Administrator.denyUser(user.getId())" method="post">
+                                @helper.CSRF.formField(r.asScala)
                             <button name="rembtn" type="submit" class="btn btn-remove">Deny</button>
+                            </form>
                         </div>
-                        </form>
                     </td>
                 </tr>
             }

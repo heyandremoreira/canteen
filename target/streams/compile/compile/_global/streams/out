@@ -1,2 +1,4 @@
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\models\Image.java:36:1: incompatible types: java.lang.String cannot be converted to models.Image
-[error] image
+[error] C:\Users\André ISCTE\Documents\canteen_management\app\views\Canteens\canteenCard.scala.html:8:48: value canteen is not a member of controllers.ReverseCanteenController
+[error]             <a href="@routes.CanteenController.canteen()" class="btn btn-brown d-flex ms-auto">
+[error]                                                ^
+[error] one error found

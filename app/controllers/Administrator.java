@@ -1,6 +1,7 @@
 package controllers;
 
 import io.ebean.Finder;
+import models.Status;
 import models.User;
 import play.data.DynamicForm;
 import play.data.FormFactory;
@@ -12,7 +13,6 @@ import javax.inject.Inject;
 import java.util.List;
 
 public class Administrator extends Controller {
-
     private final FormFactory formFactory;
 
     @Inject
@@ -25,25 +25,22 @@ public class Administrator extends Controller {
     }
 
     public Result userslist(Http.Request request) {
-        List<User> users = User.getUserList();
-        return ok(views.html.Administrator.userslist.render(users, request));
+        List<User> approvedUsersList = finder.query().where().eq("status","approved").findList();
+        return ok(views.html.Administrator.userslist.render(approvedUsersList, request));
     }
 
     private static final Finder<Long, User> finder = new Finder<>(User.class);
     public Result authapproval(Http.Request request) {
-        List<User> approvedUserList = finder.query().where().eq("status","approved").findList();
-        return ok(views.html.Administrator.authapproval.render(approvedUserList, request));
-
-        /*List<User> users = User.getUserList();
-        return ok(views.html.Administrator.authapproval.render(users, request));*/
+        List<User> pendingUsersList = finder.query().where().eq("status","pending").findList();
+        return ok(views.html.Administrator.authapproval.render(pendingUsersList, request));
     }
 
     public Result approveUser(Http.Request request, Long id){
         DynamicForm dynamicForm = this.formFactory.form().bindFromRequest(request);
-        User user = new User();
-        user.setUsername(dynamicForm.get("user"));
-        user.save();
-        return redirect(routes.Administrator.userslist());
+        User user = User.getUserById(id);
+        user.setStatus(Status.approved);
+        user.update();
+        return redirect(routes.Administrator.authapproval());
     }
 
     public Result removeUser(Http.Request request, Long id){
@@ -59,5 +56,4 @@ public class Administrator extends Controller {
         user.save();
         return redirect(routes.Administrator.authapproval());
     }
-
 }

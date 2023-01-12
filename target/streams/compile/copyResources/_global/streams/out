@@ -1,7 +1,0 @@
-[debug] Copy resource mappings: 
-[debug] 	(C:\Users\André ISCTE\Documents\canteen_management\conf\application.conf,C:\Users\André ISCTE\Documents\canteen_management\target\scala-2.13\classes\application.conf)
-[debug] 	(C:\Users\André ISCTE\Documents\canteen_management\conf\ebean.properties,C:\Users\André ISCTE\Documents\canteen_management\target\scala-2.13\classes\ebean.properties)
-[debug] 	(C:\Users\André ISCTE\Documents\canteen_management\conf\logback.xml,C:\Users\André ISCTE\Documents\canteen_management\target\scala-2.13\classes\logback.xml)
-[debug] 	(C:\Users\André ISCTE\Documents\canteen_management\conf\messages,C:\Users\André ISCTE\Documents\canteen_management\target\scala-2.13\classes\messages)
-[debug] 	(C:\Users\André ISCTE\Documents\canteen_management\conf\routes,C:\Users\André ISCTE\Documents\canteen_management\target\scala-2.13\classes\routes)
-[debug] 	(C:\Users\André ISCTE\Documents\canteen_management\conf\evolutions\default\1.sql,C:\Users\André ISCTE\Documents\canteen_management\target\scala-2.13\classes\evolutions\default\1.sql)

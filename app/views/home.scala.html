@@ -1,3 +1,4 @@
+@(canteens : java.util.List[Canteen])
 @template(Array("stylesheets/landing.css", "stylesheets/home.css")){
 
         <main class="container-menu">
@@ -7,29 +8,21 @@
                     <p style="color: #B87651" class="text-left">Check out our canteens near you:</p>
                 </div>
                 <div class="row w-75 d-flex mx-auto mt-2">
-                    <div class="col-xl-3 cards pb-4">
-                        <div style="background-color: #131313" class="card">
-                            <img src="@routes.Assets.at("images/h.arc.jpg")" class="card-img-top" alt="arc">
-                            <div class="card-body">
-                                <h5 class="card-title">Arconia</h5>
-                                <p style="font-size: 12px" class="card-text text-white">Vegan canteen with greeny environment.</p>
-                                <a href="/arconia" class="btn btn-brown d-flex ms-auto">
-                                    <img src="@routes.Assets.at("images/next2.png")" class="card-img-top" alt="arrow">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 cards pb-4">
+                    @for(canteen <- canteens){
+                        @Canteens.canteenCard(canteen)
+                    }
+
+                    @*<div class="col-xl-3 cards pb-4">
                         <div style="background-color: #131313" class="card">
                             <img src="@routes.Assets.at("images/h.tld.jpg")" class="card-img-top" alt="tld">
                             <div class="card-body">
                                 <h5 class="card-title">The Last Drop</h5>
                                 <p style="font-size: 12px" class="card-text text-white">Grilly canteen with fresh and juicy meat.</p>
-                                @*<div style="padding: 10px" class="d-flex flex-column justify-content-end flex-grow-1">*@
+                                *@@*<div style="padding: 10px" class="d-flex flex-column justify-content-end flex-grow-1">*@@*
                                     <a href="/thelastdrop" class="btn btn-brown d-flex ms-auto">
                                         <img src="@routes.Assets.at("images/next2.png")" class="card-img-top" alt="arrow">
                                     </a>
-                                @*</div>*@
+                                *@@*</div>*@@*
                             </div>
                         </div>
                     </div>
@@ -56,7 +49,7 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div>*@
                 </div>
             </section>
         </main>

@@ -32,7 +32,7 @@ object login extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 Seq[Any](format.raw/*1.28*/("""
 """),_display_(/*2.2*/template(Array("stylesheets/landing.css"))/*2.44*/ {_display_(Seq[Any](format.raw/*2.46*/("""
 
-    """),format.raw/*4.5*/("""<form method="post" action="signinProcess">
+    """),format.raw/*4.89*/("""
         """),_display_(/*5.10*/helper/*5.16*/.CSRF.formField(r.asScala)),format.raw/*5.42*/("""
         """),format.raw/*6.9*/("""<div class="row principal-container">
             <div class="col-7 d-none d-md-block text-center">
@@ -57,11 +57,11 @@ Seq[Any](format.raw/*1.28*/("""
                         Forgot your password?</a>
 
                     <p style="font-size: 15px" class="text-center text-muted mt-0 mb-0">Don't have an account?
-                        <a href="/signup" class="fw-bold text-white">Sign up</a> </p>
+                        <a href="/signup" class="fw-bold text-white">Sign up</a>
+                    </p>
                 </div>
             </div>
         </div>
-    </form>
 """)))}))
       }
     }
@@ -79,8 +79,8 @@ Seq[Any](format.raw/*1.28*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/login.scala.html
-                  HASH: fdfec418efb9f91b10eaf59494722753200856d2
-                  MATRIX: 922->1|1043->27|1071->30|1121->72|1160->74|1194->82|1274->136|1288->142|1334->168|1370->178|1525->307|1539->313|1590->344|1854->631|1904->653|1981->1059|2031->1081
+                  HASH: c5961757ccf30e9f4ed325745ae55ba235148918
+                  MATRIX: 922->1|1043->27|1071->30|1121->72|1160->74|1195->166|1232->177|1246->183|1292->209|1328->219|1483->348|1497->354|1548->385|1812->672|1862->694|1939->1100|1989->1122
                   LINES: 27->1|32->1|33->2|33->2|33->2|35->4|36->5|36->5|36->5|37->6|39->8|39->8|39->8|43->12|44->13|45->24|46->25
                   -- GENERATED --
               */

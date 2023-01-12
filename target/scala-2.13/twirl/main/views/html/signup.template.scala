@@ -32,7 +32,7 @@ object signup extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Htm
 Seq[Any](format.raw/*1.28*/("""
 """),_display_(/*2.2*/template(Array("stylesheets/landing.css"))/*2.44*/ {_display_(Seq[Any](format.raw/*2.46*/("""
 
-    """),format.raw/*4.5*/("""<form method="post" action="signupProcess">
+    """),format.raw/*4.89*/("""
         """),_display_(/*5.10*/helper/*5.16*/.CSRF.formField(r.asScala)),format.raw/*5.42*/("""
         """),format.raw/*6.9*/("""<div class="row principal-container">
             <div class="col-7 d-none d-md-block text-center">
@@ -59,7 +59,6 @@ Seq[Any](format.raw/*1.28*/("""
                     <div class="form-control-sm textfield pb-4">
                         <button class="btn-form" href="/home">Register</button>
                     </div>
-
                     <p style="font-size: 12px" class="text-center text-muted pb-4">By signing up, you agree to our
                         <a class="text-white" style="text-decoration: none;
                             font-size: 12px" href="#termsofuse">Terms Of Use</a>
@@ -67,13 +66,13 @@ Seq[Any](format.raw/*1.28*/("""
                         <a class="text-white" style="text-decoration: none;
                             font-size: 12px" href="#privacypolicy">Privacy Policy</a>
                     </p>
-
                     <p style="font-size: 15px" class="text-center text-muted mt-0 mb-0">Already have an account?
-                        <a href="/login" class="fw-bold text-white">Sign In</a> </p>
+                        <a href="/login" class="fw-bold text-white">Sign In</a>
+                    </p>
                 </div>
             </div>
         </div>
-    </form>
+
 """)))}))
       }
     }
@@ -91,8 +90,8 @@ Seq[Any](format.raw/*1.28*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/signup.scala.html
-                  HASH: a2c07101f064a41ffe342225ee2641541276c772
-                  MATRIX: 923->1|1044->27|1072->30|1122->72|1161->74|1195->82|1275->136|1289->142|1335->168|1371->178|1526->307|1540->313|1591->344
+                  HASH: 44daa8f0bfd20a97ad5bce10d8c94f905a593c0f
+                  MATRIX: 923->1|1044->27|1072->30|1122->72|1161->74|1196->166|1233->177|1247->183|1293->209|1329->219|1484->348|1498->354|1549->385
                   LINES: 27->1|32->1|33->2|33->2|33->2|35->4|36->5|36->5|36->5|37->6|39->8|39->8|39->8
                   -- GENERATED --
               */

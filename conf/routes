@@ -7,14 +7,13 @@
 # GERAL
 GET     /                           controllers.HomeController.landing(request: Request)
 GET     /home                       controllers.HomeController.home(request: Request)
+GET     /signup                     controllers.HomeController.signup(request: Request)
+#POST    /signupProcess              controllers.HomeController.signupProcess(request: Request)
 GET     /login                      controllers.HomeController.login(request: Request)
-POST    /signinProcess              controllers.HomeController.login(request: Request)
-#POST    /login                      controllers.Application.authenticate(username, password)
+#POST    /signinProcess              controllers.HomeController.signinProcess(request: Request)
 #POST    /logout                     controllers.Application.logout()
 GET     /profile                    controllers.HomeController.profile(request: Request)
 GET     /recoverpassword            controllers.HomeController.recoverpassword(request: Request)
-GET     /signup                     controllers.HomeController.signup(request: Request)
-POST    /signupProcess              controllers.HomeController.signup(request: Request)
 
 # SETTINGS
 GET     /termsofuse                 controllers.HomeController.termsofuse(request: Request)
@@ -47,6 +46,7 @@ GET     /theleakycauldron           controllers.CanteenController.theleakycauldr
 GET     /thelastdrop                controllers.CanteenController.thelastdrop(request: Request)
 GET     /arconia                    controllers.CanteenController.arconia(request: Request)
 GET     /waverlysubstation          controllers.CanteenController.waverlysubstation(request: Request)
+#GET     /canteen                    controllers.CanteenController.canteen(request: Request, canteen: Canteen)
 
 # STUDENT
 GET     /tickets                    controllers.Student.tickets(request: Request)

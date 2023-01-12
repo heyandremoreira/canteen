@@ -1,5 +1,7 @@
 package controllers;
 
+import models.Canteen;
+import models.User;
 import play.data.Form;
 import play.data.FormFactory;
 import play.mvc.Controller;
@@ -7,10 +9,83 @@ import play.mvc.Http;
 import play.mvc.Result;
 
 import javax.inject.Inject;
-import java.util.Set;
+import java.util.List;
 
 public class HomeController extends Controller {
     private final FormFactory formFactory;
+
+    @Inject
+    public HomeController(FormFactory formFactory) {
+        this.formFactory = formFactory;
+    }
+
+    /*public Result signupProcess(Http.Request request) {
+        Form<User> form = formFactory.form(User.class).bindFromRequest();
+        if (form.hasErrors()) {
+            return badRequest(form.errorsAsJson());
+        }
+        User newUser = form.get();
+        String role = form.rawData().get("role");
+        newUser.setRole(role);
+        newUser.save();
+        return ok("User created successfully");
+    }*/
+
+    /*public Result signupProcess(Http.Request request, Long id) {
+        User user = User.getUserById(id);
+        return redirect(routes.HomeController.login());
+    }*/
+
+        /*if (selecao == "administrator"){
+            User user = new User(username, email, password, administrator);
+        } else if (selecao = "manager"){
+            User user = new User(username, email, password, manager);
+        } else if (selecao == "student"){
+            User user = new User(username, email, password, student);
+        }
+        return redirect(routes.HomeController.landing());
+        }*/
+
+    public Result landing(Http.Request request) {
+        return ok(views.html.landing.render());
+    }
+
+    public Result home(Http.Request request) {
+        List<Canteen> canteens = Canteen.getCanteenList();
+        return ok(views.html.home.render(canteens));
+    }
+
+    public Result login(Http.Request request) {
+        return ok(views.html.login.render(request));
+    }
+
+    public Result profile(Http.Request request) {
+        return ok(views.html.profile.render());
+    }
+
+    public Result recoverpassword(Http.Request request) {
+        return ok(views.html.recoverpassword.render());
+    }
+
+    public Result signup(Http.Request request) {
+        return ok(views.html.signup.render(request));
+    }
+
+    public Result termsofuse(Http.Request request) {
+        return ok(views.html.Settings.termsofuse.render());
+    }
+
+    public Result privacypolicy(Http.Request request) {
+        return ok(views.html.Settings.privacypolicy.render());
+    }
+
+    public Result help(Http.Request request) {
+        return ok(views.html.Settings.help.render());
+    }
+
+    public Result calendar(Http.Request request) {
+        return ok(views.html.calendar.render());
+    }
 
     /*public Result index(){
         Set<Profile> profiles = Profile.allProfiles();
@@ -52,50 +127,5 @@ public class HomeController extends Controller {
 
         return redirect(routes.HomeController.home());
     }*/
-
-    @Inject
-    public HomeController(FormFactory formFactory) {
-        this.formFactory = formFactory;
-    }
-
-    public Result landing(Http.Request request) {
-        return ok(views.html.landing.render());
-    }
-
-    public Result home(Http.Request request) {
-        return ok(views.html.home.render());
-    }
-
-    public Result login(Http.Request request) {
-        return ok(views.html.login.render(request));
-    }
-
-    public Result profile(Http.Request request) {
-        return ok(views.html.profile.render());
-    }
-
-    public Result recoverpassword(Http.Request request) {
-        return ok(views.html.recoverpassword.render());
-    }
-
-    public Result signup(Http.Request request) {
-        return ok(views.html.signup.render(request));
-    }
-
-    public Result termsofuse(Http.Request request) {
-        return ok(views.html.Settings.termsofuse.render());
-    }
-
-    public Result privacypolicy(Http.Request request) {
-        return ok(views.html.Settings.privacypolicy.render());
-    }
-
-    public Result help(Http.Request request) {
-        return ok(views.html.Settings.help.render());
-    }
-
-    public Result calendar(Http.Request request) {
-        return ok(views.html.calendar.render());
-    }
 
 }

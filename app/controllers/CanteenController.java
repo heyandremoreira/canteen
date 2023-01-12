@@ -1,5 +1,6 @@
 package controllers;
 
+import models.Canteen;
 import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Http;
@@ -13,6 +14,21 @@ public class CanteenController extends Controller {
     @Inject
     public CanteenController(FormFactory formFactory) {
         this.formFactory = formFactory;
+    }
+
+    public Result canteen(Http.Request request, Canteen canteen){
+        String canteenName = canteen.getName().trim().toLowerCase();
+        if(canteenName.equals("arconia")){
+            return arconia(request);
+        }
+        else if(canteenName.equals("thelastdrop")) {
+            return thelastdrop(request);
+        }
+        else if (canteenName.equals("theleakycauldron")) {
+            return theleakycauldron(request);
+        } else {
+            return waverlysubstation(request);
+        }
     }
 
     public Result arconia(Http.Request request) {

@@ -25,32 +25,32 @@ package controllers {
   
   }
 
-  // @LINE:46
+  // @LINE:45
   class ReverseCanteenController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:46
+    // @LINE:45
     def theleakycauldron(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "theleakycauldron")
     }
   
-    // @LINE:47
+    // @LINE:46
     def thelastdrop(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "thelastdrop")
     }
   
-    // @LINE:48
+    // @LINE:47
     def arconia(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "arconia")
     }
   
-    // @LINE:49
+    // @LINE:48
     def waverlysubstation(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "waverlysubstation")
@@ -65,39 +65,31 @@ package controllers {
     }
 
   
-    // @LINE:15
+    // @LINE:16
     def recoverpassword(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "recoverpassword")
     }
   
-    // @LINE:22
+    // @LINE:21
     def help(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "help")
     }
   
-    // @LINE:16
+    // @LINE:10
     def signup(): Call = {
-    
-      () match {
       
-        // @LINE:16
-        case ()  =>
-          
-          Call("GET", _prefix + { _defaultPrefix } + "signup")
-      
-      }
-    
+      Call("GET", _prefix + { _defaultPrefix } + "signup")
     }
   
-    // @LINE:14
+    // @LINE:15
     def profile(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "profile")
     }
   
-    // @LINE:20
+    // @LINE:19
     def termsofuse(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "termsofuse")
@@ -109,7 +101,7 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "home")
     }
   
-    // @LINE:24
+    // @LINE:23
     def calendar(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "calendar")
@@ -121,66 +113,58 @@ package controllers {
       Call("GET", _prefix)
     }
   
-    // @LINE:21
+    // @LINE:20
     def privacypolicy(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "privacypolicy")
     }
   
-    // @LINE:10
+    // @LINE:12
     def login(): Call = {
-    
-      () match {
       
-        // @LINE:10
-        case ()  =>
-          
-          Call("GET", _prefix + { _defaultPrefix } + "login")
-      
-      }
-    
+      Call("GET", _prefix + { _defaultPrefix } + "login")
     }
   
   }
 
-  // @LINE:27
+  // @LINE:26
   class ReverseAdministrator(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:30
-    def addUser(): Call = {
+    // @LINE:29
+    def approveUser(id:Long): Call = {
       
-      Call("POST", _prefix + { _defaultPrefix } + "addUser")
+      Call("POST", _prefix + { _defaultPrefix } + "approveUser" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("id", id)))))
     }
   
-    // @LINE:32
+    // @LINE:31
     def denyUser(id:Long): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "denyUser" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("id", id)))))
     }
   
-    // @LINE:31
+    // @LINE:30
     def removeUser(id:Long): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "removeUser" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("id", id)))))
     }
   
-    // @LINE:27
+    // @LINE:26
     def administrator(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "administrator")
     }
   
-    // @LINE:28
+    // @LINE:27
     def authapproval(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "authapproval")
     }
   
-    // @LINE:29
+    // @LINE:28
     def userslist(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "userslist")
@@ -188,25 +172,25 @@ package controllers {
   
   }
 
-  // @LINE:35
+  // @LINE:34
   class ReverseManager(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:43
+    // @LINE:42
     def manage_waverlysubstation(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "manage_waverly")
     }
   
-    // @LINE:38
+    // @LINE:37
     def managetickets(): Call = {
     
       () match {
       
-        // @LINE:38
+        // @LINE:37
         case ()  =>
           
           Call("GET", _prefix + { _defaultPrefix } + "managetickets")
@@ -215,37 +199,37 @@ package controllers {
     
     }
   
-    // @LINE:40
+    // @LINE:39
     def manage_thelastdrop(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "manage_thelastdrop")
     }
   
-    // @LINE:42
+    // @LINE:41
     def manage_theleakycauldron(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "manage_theleakycauldron")
     }
   
-    // @LINE:37
+    // @LINE:36
     def managemenus(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "managemenus")
     }
   
-    // @LINE:41
+    // @LINE:40
     def manage_arconia(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "manage_arconia")
     }
   
-    // @LINE:36
+    // @LINE:35
     def createcanteen(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "createcanteen")
     }
   
-    // @LINE:35
+    // @LINE:34
     def manager(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "manager")

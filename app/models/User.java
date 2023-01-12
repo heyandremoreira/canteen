@@ -4,8 +4,7 @@ import io.ebean.Finder;
 import io.ebean.Model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Entity
 @Table(name = "user")
@@ -15,16 +14,12 @@ public class User extends Model {
     @Column(unique = true)
     private String username;
     private String password;
-
     private String nationality;
-
     private String address;
     @Column(unique = true)
     private String email;
-
     private String nif;
     private String token;
-
     @Enumerated(EnumType.STRING)
     @Column(length = 50, columnDefinition = "VARCHAR(50) default 'pending'")
     private Status status = Status.pending;
@@ -32,28 +27,24 @@ public class User extends Model {
     @OneToMany(mappedBy = "user")
     private List<UserRole> userRoles;
 
-    /*private List<Role> roles = new ArrayList<>(){
-        roles.add("ADMIN");
-        roles.add("MANAGER");
-        roles.add("STUDENT");
-    };*/
-
     @OneToMany(mappedBy = "user")
     private List<Ticket> tickets;
 
     @OneToOne
     private Image image;
-
     private static final Finder<Long, User> finder = new Finder<>(User.class);
 
     public static List<User> getUserList() {
         return finder.all();
     }
     public static List<User> getApprovedUsersList(){
-        List<User> approvedUserList = finder.query().where().eq("status","approved").findList();
-        return approvedUserList;
+        List<User> approvedUsersList = finder.query().where().eq("status","approved").findList();
+        return approvedUsersList;
     }
-
+    public static List<User> getPendingUsersList(){
+        List<User> pendingUsersList = finder.query().where().eq("status","pending").findList();
+        return pendingUsersList;
+    }
     public static User getUserById(Long id) {
         return finder.byId(id);
     }

@@ -1,0 +1,13 @@
+@(canteen : Canteen)
+<div class="col-xl-3 cards pb-4">
+    <div style="background-color: #131313" class="card">
+        <img src="@routes.Assets.at("images/h.arc.jpg")" class="card-img-top" alt="arc">
+        <div class="card-body">
+            <h5 class="card-title">@canteen.getName</h5>
+            <p style="font-size: 12px" class="card-text text-white">@canteen.getDescription</p>
+            <a href="@routes.CanteenController.canteen()" class="btn btn-brown d-flex ms-auto">
+                <img src="@routes.Assets.at("images/next2.png")" class="card-img-top" alt="arrow">
+            </a>
+        </div>
+    </div>
+</div>

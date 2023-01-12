@@ -21,74 +21,30 @@ import play.data._
 import play.core.j.PlayFormsMagicForJava._
 import scala.jdk.CollectionConverters._
 
-object home extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object home extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[java.util.List[Canteen],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply():play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(canteens : java.util.List[Canteen]):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets/home.css"))/*1.68*/{_display_(Seq[Any](format.raw/*1.69*/("""
+Seq[Any](format.raw/*1.38*/("""
+"""),_display_(/*2.2*/template(Array("stylesheets/landing.css", "stylesheets/home.css"))/*2.68*/{_display_(Seq[Any](format.raw/*2.69*/("""
 
-        """),format.raw/*3.9*/("""<main class="container-menu">
+        """),format.raw/*4.9*/("""<main class="container-menu">
             <section class="canteens mb-5 pb-5" id="canteens">
                 <div class="container">
                     <h2 class="text-white text-left pt-5 pb-3">Hungry? <br> Get some food!</h2>
                     <p style="color: #B87651" class="text-left">Check out our canteens near you:</p>
                 </div>
                 <div class="row w-75 d-flex mx-auto mt-2">
-                    <div class="col-xl-3 cards pb-4">
-                        <div style="background-color: #131313" class="card">
-                            <img src=""""),_display_(/*12.40*/routes/*12.46*/.Assets.at("images/h.arc.jpg")),format.raw/*12.76*/("""" class="card-img-top" alt="arc">
-                            <div class="card-body">
-                                <h5 class="card-title">Arconia</h5>
-                                <p style="font-size: 12px" class="card-text text-white">Vegan canteen with greeny environment.</p>
-                                <a href="/arconia" class="btn btn-brown d-flex ms-auto">
-                                    <img src=""""),_display_(/*17.48*/routes/*17.54*/.Assets.at("images/next2.png")),format.raw/*17.84*/("""" class="card-img-top" alt="arrow">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 cards pb-4">
-                        <div style="background-color: #131313" class="card">
-                            <img src=""""),_display_(/*24.40*/routes/*24.46*/.Assets.at("images/h.tld.jpg")),format.raw/*24.76*/("""" class="card-img-top" alt="tld">
-                            <div class="card-body">
-                                <h5 class="card-title">The Last Drop</h5>
-                                <p style="font-size: 12px" class="card-text text-white">Grilly canteen with fresh and juicy meat.</p>
-                                """),format.raw/*28.123*/("""
-                                    """),format.raw/*29.37*/("""<a href="/thelastdrop" class="btn btn-brown d-flex ms-auto">
-                                        <img src=""""),_display_(/*30.52*/routes/*30.58*/.Assets.at("images/next2.png")),format.raw/*30.88*/("""" class="card-img-top" alt="arrow">
-                                    </a>
-                                """),format.raw/*32.43*/("""
-                            """),format.raw/*33.29*/("""</div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 cards pb-4">
-                        <div style="background-color: #131313" class="card">
-                            <img src=""""),_display_(/*38.40*/routes/*38.46*/.Assets.at("images/h.tlc.jpg")),format.raw/*38.76*/("""" class="card-img-top" alt="tlc">
-                            <div class="card-body">
-                                <h5 class="card-title">The Leaky Cauldron</h5>
-                                <p style="font-size: 12px" class="card-text text-white">Explore some of the best Asiatic cooking.</p>
-                                <a href="/theleakycauldron" class="btn btn-brown d-flex ms-auto">
-                                    <img src=""""),_display_(/*43.48*/routes/*43.54*/.Assets.at("images/next2.png")),format.raw/*43.84*/("""" class="card-img-top" alt="arrow">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 cards pb-4">
-                        <div style="background-color: #131313" class="card">
-                            <img src=""""),_display_(/*50.40*/routes/*50.46*/.Assets.at("images/h.wss.jpg")),format.raw/*50.76*/("""" class="card-img-top" alt="wss">
-                            <div class="card-body">
-                                <h5 class="card-title">Waverly <br> Sub Station</h5>
-                                <p style="font-size: 12px" class="card-text text-white">Mediterranic canteen. Taste a giant amount of flavours</p>
-                                <a href="/waverlysubstation" class="btn btn-brown d-flex ms-auto">
-                                    <img src=""""),_display_(/*55.48*/routes/*55.54*/.Assets.at("images/next2.png")),format.raw/*55.84*/("""" class="card-img-top" alt="arrow">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    """),_display_(/*11.22*/for(canteen <- canteens) yield /*11.46*/{_display_(Seq[Any](format.raw/*11.47*/("""
+                        """),_display_(/*12.26*/Canteens/*12.34*/.canteenCard(canteen)),format.raw/*12.55*/("""
+                    """)))}),format.raw/*13.22*/("""
+
+                    """),format.raw/*52.29*/("""
+                """),format.raw/*53.17*/("""</div>
             </section>
         </main>
 """)))}))
@@ -96,9 +52,9 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
     }
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(canteens:java.util.List[Canteen]): play.twirl.api.HtmlFormat.Appendable = apply(canteens)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((java.util.List[Canteen]) => play.twirl.api.HtmlFormat.Appendable) = (canteens) => apply(canteens)
 
   def ref: this.type = this
 
@@ -108,9 +64,9 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css", "stylesheets
               /*
                   -- GENERATED --
                   SOURCE: app/views/home.scala.html
-                  HASH: 4b2dae0bcaaa5fe76ae4295bdad33d909cc7a333
-                  MATRIX: 988->1|1062->67|1100->68|1138->80|1756->671|1771->677|1822->707|2275->1133|2290->1139|2341->1169|2711->1512|2726->1518|2777->1548|3136->1968|3202->2006|3342->2119|3357->2125|3408->2155|3547->2276|3605->2306|3872->2546|3887->2552|3938->2582|4414->3031|4429->3037|4480->3067|4850->3410|4865->3416|4916->3446|5412->3915|5427->3921|5478->3951
-                  LINES: 32->1|32->1|32->1|34->3|43->12|43->12|43->12|48->17|48->17|48->17|55->24|55->24|55->24|59->28|60->29|61->30|61->30|61->30|63->32|64->33|69->38|69->38|69->38|74->43|74->43|74->43|81->50|81->50|81->50|86->55|86->55|86->55
+                  HASH: a1bbd9bb033faef01f7306d80a168afeb503f80b
+                  MATRIX: 923->1|1054->37|1082->40|1156->106|1194->107|1232->119|1699->559|1739->583|1778->584|1832->611|1849->619|1891->640|1945->663|1997->3459|2043->3477
+                  LINES: 27->1|32->1|33->2|33->2|33->2|35->4|42->11|42->11|42->11|43->12|43->12|43->12|44->13|46->52|47->53
                   -- GENERATED --
               */
           

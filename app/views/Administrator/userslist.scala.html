@@ -7,28 +7,30 @@
                 <th scope="col">Username</th>
                 <th scope="col">Email</th>
                 <th scope="col">Role</th>
+                <th scope="col">Status</th>
                 <th scope="col"></th>
             </tr>
         </thead>
         <tbody class="align-middle text-center">
         @if(!users.isEmpty) {
-            @for(user <- approvedUserList) {
+            @for(user <- users) {
                 <tr>
                     <th>@user.getId</th>
                     <td>@user.getUsername</td>
                     <td>@user.getEmail</td>
-                    <td>@user.getStatus
-                    @* @if(!user.getRoles.isEmpty) {
+                    <td>
+                        @* @if(!user.getRoles.isEmpty) {
                         @for(roles <- user.getRoles) {
                         }
-                    } *@
+                        } *@
                     </td>
+                    <td>@user.getStatus</td>
                     <td>
                         <form action="@controllers.routes.Administrator.removeUser(user.getId())" method="post">
                             @helper.CSRF.formField(r.asScala)
-                            <div class="d-flex justify-content-center">
-                                <button name="rembtn" type="submit" class="btn btn-remove px-4">Remove</button>
-                            </div>
+                        <div class="d-flex justify-content-center">
+                            <button name="rembtn" type="submit" class="btn btn-remove px-4">Remove</button>
+                        </div>
                         </form>
                     </td>
                 </tr>

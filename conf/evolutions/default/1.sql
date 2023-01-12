@@ -83,7 +83,7 @@ create table user (
   email                         varchar(255),
   nif                           varchar(255),
   token                         varchar(255),
-  status                        varchar(50),
+  status                        varchar(50) default 'pending',
   image_id                      bigint,
   constraint uq_user_username unique (username),
   constraint uq_user_email unique (email),

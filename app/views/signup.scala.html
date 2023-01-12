@@ -1,7 +1,7 @@
 @(r: play.mvc.Http.Request)
 @template(Array("stylesheets/landing.css")) {
 
-    <form method="post" action="signupProcess">
+    @*<form method="post" action="@controllers.routes.HomeController.signupProcess()">*@
         @helper.CSRF.formField(r.asScala)
         <div class="row principal-container">
             <div class="col-7 d-none d-md-block text-center">
@@ -28,7 +28,6 @@
                     <div class="form-control-sm textfield pb-4">
                         <button class="btn-form" href="/home">Register</button>
                     </div>
-
                     <p style="font-size: 12px" class="text-center text-muted pb-4">By signing up, you agree to our
                         <a class="text-white" style="text-decoration: none;
                             font-size: 12px" href="#termsofuse">Terms Of Use</a>
@@ -36,11 +35,11 @@
                         <a class="text-white" style="text-decoration: none;
                             font-size: 12px" href="#privacypolicy">Privacy Policy</a>
                     </p>
-
                     <p style="font-size: 15px" class="text-center text-muted mt-0 mb-0">Already have an account?
-                        <a href="/login" class="fw-bold text-white">Sign In</a> </p>
+                        <a href="/login" class="fw-bold text-white">Sign In</a>
+                    </p>
                 </div>
             </div>
         </div>
-    </form>
+
 }
