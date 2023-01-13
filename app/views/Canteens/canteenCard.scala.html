@@ -5,8 +5,8 @@
         <div class="card-body">
             <h5 class="card-title">@canteen.getName</h5>
             <p style="font-size: 12px" class="card-text text-white">@canteen.getDescription</p>
-            <a href="@routes.CanteenController.canteen()" class="btn btn-brown d-flex ms-auto">
-                <img src="@routes.Assets.at("images/next2.png")" class="card-img-top" alt="arrow">
+            <a href="@controllers.routes.CanteenController.canteen(canteen.getId)" class="btn btn-brown d-flex ms-auto">
+                <img src="@routes.Assets.at("images/next2.png")" class="card-img-top" alt="nextarrow">
             </a>
         </div>
     </div>

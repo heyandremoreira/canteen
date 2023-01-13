@@ -1,4 +1,5 @@
-/*package controllers;
+/*
+package controllers;
 
 import com.google.inject.Inject;
 import play.api.mvc.ControllerComponents;
@@ -81,4 +82,5 @@ public class Login extends Controller {
         .map(_.username)
         .flatMap(UserDAO.getUser)
     }
-  }*/
+  }
+*/

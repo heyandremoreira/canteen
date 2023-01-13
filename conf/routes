@@ -42,11 +42,7 @@ GET     /manage_theleakycauldron    controllers.Manager.manage_theleakycauldron(
 GET     /manage_waverly             controllers.Manager.manage_waverlysubstation(request: Request)
 
 # CANTEENS
-GET     /theleakycauldron           controllers.CanteenController.theleakycauldron(request: Request)
-GET     /thelastdrop                controllers.CanteenController.thelastdrop(request: Request)
-GET     /arconia                    controllers.CanteenController.arconia(request: Request)
-GET     /waverlysubstation          controllers.CanteenController.waverlysubstation(request: Request)
-#GET     /canteen                    controllers.CanteenController.canteen(request: Request, canteen: Canteen)
+GET     /canteen/:id                    controllers.CanteenController.canteen(request: Request, id: Long)
 
 # STUDENT
 GET     /tickets                    controllers.Student.tickets(request: Request)

@@ -10,7 +10,7 @@ import _root_.play.libs.F
 // @LINE:8
 package controllers.javascript {
 
-  // @LINE:63
+  // @LINE:59
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -18,7 +18,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:63
+    // @LINE:59
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -39,41 +39,11 @@ package controllers.javascript {
 
   
     // @LINE:45
-    def theleakycauldron: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.CanteenController.theleakycauldron",
+    def canteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.CanteenController.canteen",
       """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "theleakycauldron"})
-        }
-      """
-    )
-  
-    // @LINE:46
-    def thelastdrop: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.CanteenController.thelastdrop",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "thelastdrop"})
-        }
-      """
-    )
-  
-    // @LINE:47
-    def arconia: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.CanteenController.arconia",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "arconia"})
-        }
-      """
-    )
-  
-    // @LINE:48
-    def waverlysubstation: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.CanteenController.waverlysubstation",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "waverlysubstation"})
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "canteen/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
         }
       """
     )
@@ -354,7 +324,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:52
+  // @LINE:48
   class ReverseStudent(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -362,7 +332,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:52
+    // @LINE:48
     def tickets: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Student.tickets",
       """
@@ -372,7 +342,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:53
+    // @LINE:49
     def wallet: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Student.wallet",
       """

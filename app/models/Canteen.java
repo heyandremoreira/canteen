@@ -21,10 +21,13 @@ public class Canteen extends Model {
     @OneToOne
     private Image image;
 
-    private static final Finder<String, Canteen> finder = new Finder<>(Canteen.class);
+    private static final Finder<Long, Canteen> finder = new Finder<>(Canteen.class);
 
     public static List<Canteen> getCanteenList(){
         return finder.all();
+    }
+    public static Canteen getCanteenById(Long id){
+        return finder.byId(id);
     }
 
     public Canteen(Long id, String name, String description, String address){

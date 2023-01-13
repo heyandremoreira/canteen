@@ -10,14 +10,14 @@ import _root_.play.libs.F
 // @LINE:8
 package controllers {
 
-  // @LINE:63
+  // @LINE:59
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:63
+    // @LINE:59
     def at(file:String): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[String]].unbind("file", file))
@@ -33,27 +33,9 @@ package controllers {
 
   
     // @LINE:45
-    def theleakycauldron(): Call = {
+    def canteen(id:Long): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "theleakycauldron")
-    }
-  
-    // @LINE:46
-    def thelastdrop(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "thelastdrop")
-    }
-  
-    // @LINE:47
-    def arconia(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "arconia")
-    }
-  
-    // @LINE:48
-    def waverlysubstation(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "waverlysubstation")
+      Call("GET", _prefix + { _defaultPrefix } + "canteen/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
   }
@@ -237,20 +219,20 @@ package controllers {
   
   }
 
-  // @LINE:52
+  // @LINE:48
   class ReverseStudent(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:52
+    // @LINE:48
     def tickets(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "tickets")
     }
   
-    // @LINE:53
+    // @LINE:49
     def wallet(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "wallet")
