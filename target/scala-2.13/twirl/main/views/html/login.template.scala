@@ -21,18 +21,18 @@ import play.data._
 import play.core.j.PlayFormsMagicForJava._
 import scala.jdk.CollectionConverters._
 
-object login extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[play.mvc.Http.Request,play.twirl.api.HtmlFormat.Appendable] {
+object login extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[play.mvc.Http.Request,String,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(r: play.mvc.Http.Request):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(r: play.mvc.Http.Request)(error: String = "Invalid login request"):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.28*/("""
+Seq[Any](format.raw/*1.69*/(""")
 """),_display_(/*2.2*/template(Array("stylesheets/landing.css"))/*2.44*/ {_display_(Seq[Any](format.raw/*2.46*/("""
 
-    """),format.raw/*4.89*/("""
+   """),format.raw/*4.88*/("""
         """),_display_(/*5.10*/helper/*5.16*/.CSRF.formField(r.asScala)),format.raw/*5.42*/("""
         """),format.raw/*6.9*/("""<div class="row principal-container">
             <div class="col-7 d-none d-md-block text-center">
@@ -59,6 +59,7 @@ Seq[Any](format.raw/*1.28*/("""
                     <p style="font-size: 15px" class="text-center text-muted mt-0 mb-0">Don't have an account?
                         <a href="/signup" class="fw-bold text-white">Sign up</a>
                     </p>
+                    <p>"""),_display_(/*41.25*/error),format.raw/*41.30*/("""</p>
                 </div>
             </div>
         </div>
@@ -67,9 +68,9 @@ Seq[Any](format.raw/*1.28*/("""
     }
   }
 
-  def render(r:play.mvc.Http.Request): play.twirl.api.HtmlFormat.Appendable = apply(r)
+  def render(r:play.mvc.Http.Request,error:String): play.twirl.api.HtmlFormat.Appendable = apply(r)(error)
 
-  def f:((play.mvc.Http.Request) => play.twirl.api.HtmlFormat.Appendable) = (r) => apply(r)
+  def f:((play.mvc.Http.Request) => (String) => play.twirl.api.HtmlFormat.Appendable) = (r) => (error) => apply(r)(error)
 
   def ref: this.type = this
 
@@ -79,9 +80,9 @@ Seq[Any](format.raw/*1.28*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/login.scala.html
-                  HASH: c5961757ccf30e9f4ed325745ae55ba235148918
-                  MATRIX: 922->1|1043->27|1071->30|1121->72|1160->74|1195->166|1232->177|1246->183|1292->209|1328->219|1483->348|1497->354|1548->385|1812->672|1862->694|1939->1100|1989->1122
-                  LINES: 27->1|32->1|33->2|33->2|33->2|35->4|36->5|36->5|36->5|37->6|39->8|39->8|39->8|43->12|44->13|45->24|46->25
+                  HASH: 4bf7bc944a418de7452a023ab3e6e6360c98e600
+                  MATRIX: 929->1|1091->68|1120->72|1170->114|1209->116|1243->207|1280->218|1294->224|1340->250|1376->260|1531->389|1545->395|1596->426|1860->713|1910->735|1987->1141|2037->1163|3028->2127|3054->2132
+                  LINES: 27->1|32->1|33->2|33->2|33->2|35->4|36->5|36->5|36->5|37->6|39->8|39->8|39->8|43->12|44->13|45->24|46->25|62->41|62->41
                   -- GENERATED --
               */
           

@@ -1,7 +1,4 @@
-[error] C:\Users\André ISCTE\Documents\canteen_management\conf\routes:45:1: value theleakycauldron is not a member of controllers.CanteenController
-[error] GET     /theleakycauldron           controllers.CanteenController.theleakycauldron(request: Request)
-[error] C:\Users\André ISCTE\Documents\canteen_management\conf\routes:46:1: value thelastdrop is not a member of controllers.CanteenController
-[error] GET     /thelastdrop                controllers.CanteenController.thelastdrop(request: Request)
-[error] C:\Users\André ISCTE\Documents\canteen_management\conf\routes:48:1: value waverlysubstation is not a member of controllers.CanteenController
-[error] GET     /waverlysubstation          controllers.CanteenController.waverlysubstation(request: Request)
-[error] three errors found
+[error] C:\Users\André ISCTE\Documents\canteen_management\conf\routes:41:1: value manage_tickets_arc is not a member of controllers.Manager
+[error] did you mean manage_tickets_tlc?
+[error] GET     /manage_tickets_arc                     controllers.Manager.manage_tickets_arc(request: Request)
+[error] one error found

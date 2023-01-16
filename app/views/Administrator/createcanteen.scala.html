@@ -1,0 +1,32 @@
+@template(Array("../../../public/stylesheets/landing.css")) {
+
+    <div class="row h-75 align-items-center">
+        <div class="col-5 d-flex justify-content-end">
+            <img src="@routes.Assets.at("../../../public/images/user.png")" class="rounded-circle img-fluid" alt="user" width="150px">
+            <input type="file" id="file" accept="file/*" style="display: none" onchange="loadFile(event)">
+            <label for="file">
+                <img src="@routes.Assets.at("../../../public/images/upload.png")" class="upload-icon" alt="user" width="40px">
+            </label>
+            <script>
+                    var imgBox = document.getElementById("imgBox");
+                    var loadFile = function (event) {
+                        imgBox.style.backgroundImage = "url(" + URL.createObjectURL(event.target.files[0]) + ")";
+                    }
+            </script>
+        </div>
+
+        <div class="col-md-4 mx-md-4">
+            <div class="card-container text-white">
+                <div class="form-control-sm text-white textfield pb-3">
+                    <input type="text" name="canteensname" placeholder="Canteen's name">
+                </div>
+                <div class="form-control-sm text-white textfield pb-3">
+                    <input type="text" name="adress" placeholder="Adress">
+                </div>
+                <div class="col-12 text-center form-control-sm">
+                    <button class="btn btn-form">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}

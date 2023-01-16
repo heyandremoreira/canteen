@@ -21,8 +21,11 @@ public class Canteen extends Model {
     @OneToOne
     private Image image;
 
-    private static final Finder<Long, Canteen> finder = new Finder<>(Canteen.class);
+    public List<Menu> getMenus() {
+        return menus;
+    }
 
+    private static final Finder<Long, Canteen> finder = new Finder<>(Canteen.class);
     public static List<Canteen> getCanteenList(){
         return finder.all();
     }
@@ -67,10 +70,6 @@ public class Canteen extends Model {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public List<Menu> getMenus() {
-        return menus;
     }
 
     public void setMenus(List<Menu> menus) {

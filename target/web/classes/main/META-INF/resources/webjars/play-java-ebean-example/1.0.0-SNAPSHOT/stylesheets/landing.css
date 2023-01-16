@@ -1,0 +1,55 @@
+/*HEADER*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700;800&display=swap');
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h5, .h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: white;
+}
+
+.font-base {
+    font-family: Poppins;
+}
+
+.font-color {
+    color: white;
+    text-align: justify;
+}
+
+.header-menu {
+    background-color: black;
+}
+
+.header-menu a {
+    color: white;
+}
+
+.navbar .navbar-brand:hover {
+    color: white;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    border-bottom: 2px solid transparent;
+    transition: 0.5s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.navbar-nav .nav-item {
+    padding-right: 1.5em;
+}
+
+@media only screen and (max-width: 950px){
+    .landing-img{
+        display: none;
+    }
+}

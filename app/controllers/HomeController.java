@@ -38,8 +38,8 @@ public class HomeController extends Controller {
 
         /*if (selecao == "administrator"){
             User user = new User(username, email, password, administrator);
-        } else if (selecao = "manager"){
-            User user = new User(username, email, password, manager);
+        } else if (selecao = "manager_arc"){
+            User user = new User(username, email, password, manager_arc);
         } else if (selecao == "student"){
             User user = new User(username, email, password, student);
         }
@@ -55,9 +55,9 @@ public class HomeController extends Controller {
         return ok(views.html.home.render(canteens));
     }
 
-    public Result login(Http.Request request) {
+    /*public Result login(Http.Request request) {
         return ok(views.html.login.render(request));
-    }
+    }*/
 
     public Result profile(Http.Request request) {
         return ok(views.html.profile.render());

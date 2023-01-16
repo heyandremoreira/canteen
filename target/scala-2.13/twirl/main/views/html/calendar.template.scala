@@ -23,19 +23,14 @@ import scala.jdk.CollectionConverters._
 
 object calendar extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
 
-  /**/
-  def apply():play.twirl.api.HtmlFormat.Appendable = {
-    _display_ {
-      {
-
-
-Seq[Any](format.raw/*1.1*/("""<html>
+  /*
+<html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Calendar</title>
-        <link rel="stylesheet" href=""""),_display_(/*6.39*/routes/*6.45*/.Assets.at("stylesheets/calendar.css")),format.raw/*6.83*/(""""/>
-        <script src=""""),_display_(/*7.23*/routes/*7.29*/.Assets.at("main.js")),format.raw/*7.50*/("""" defer></script>
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/calendar.css")"/>
+        <script src="@routes.Assets.at("main.js")" defer></script>
     </head>
 
 
@@ -70,7 +65,13 @@ Seq[Any](format.raw/*1.1*/("""<html>
 
         </div>
     </body>
-</html>"""))
+</html>*/
+  def apply():play.twirl.api.HtmlFormat.Appendable = {
+    _display_ {
+      {
+
+
+Seq[Any]()
       }
     }
   }
@@ -87,9 +88,9 @@ Seq[Any](format.raw/*1.1*/("""<html>
               /*
                   -- GENERATED --
                   SOURCE: app/views/calendar.scala.html
-                  HASH: 666301615dabdefbf9dc97771b6ca5381b0684e9
-                  MATRIX: 992->0|1237->219|1251->225|1309->263|1362->290|1376->296|1417->317
-                  LINES: 32->1|37->6|37->6|37->6|38->7|38->7|38->7
+                  HASH: dcd8dd09cc00506e1d2c7cd5a6d9f511376fe932
+                  MATRIX: 
+                  LINES: 
                   -- GENERATED --
               */
           

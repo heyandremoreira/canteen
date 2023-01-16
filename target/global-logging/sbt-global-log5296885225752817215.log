@@ -1,0 +1,233 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.7.2 (Microsoft Java 11.0.17)
+[debug]       Load.loadUnit: plugins took 178.9731ms
+[debug]       Load.loadUnit: defsScala took 0.7432ms
+[debug] [Loading] Scanning directory C:\Users\André ISCTE\.sbt\1.0\plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\André ISCTE\.sbt\1.0\plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 37.0485 ms
+[debug]           Load.resolveProject(global-plugins) took 120.0528ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: C:\Users\André ISCTE\.sbt\1.0\plugins, plugins: List(<none>))) took 207.2681ms
+[debug] [Loading] Done in C:\Users\André ISCTE\.sbt\1.0\plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 250.4915ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.5726ms
+[debug]     Load.loadUnit(file:/C:/Users/André%20ISCTE/.sbt/1.0/plugins/, ...) took 450.2432ms
+[debug]   Load.apply: load took 769.9912ms
+[debug]   Load.apply: resolveProjects took 12.8119ms
+[debug]   Load.apply: finalTransforms took 116.378ms
+[debug]   Load.apply: config.delegates took 13.185ms
+[debug]   Load.apply: Def.make(settings)... took 612.248ms
+[debug]   Load.apply: structureIndex took 143.0349ms
+[debug]   Load.apply: mkStreams took 3.2765ms
+[info] loading global plugins from C:\Users\André ISCTE\.sbt\1.0\plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 3396.1075ms
+[debug]           Load.loadUnit: plugins took 37.5533ms
+[debug]           Load.loadUnit: defsScala took 0.0104ms
+[debug] [Loading] Scanning directory C:\Users\André ISCTE\Documents\canteen_management\project
+[debug]             Load.loadUnit: mkEval took 9.6568ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\André ISCTE\Documents\canteen_management\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 2.7848 ms
+[info] loading settings for project canteen_management-build from plugins.sbt ...
+[debug]               Load.resolveProject(canteen_management-build) took 4.1532ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id canteen_management-build, base: C:\Users\André ISCTE\Documents\canteen_management\project, plugins: List(<none>))) took 7.8578ms
+[debug] [Loading] Done in C:\Users\André ISCTE\Documents\canteen_management\project, returning: (canteen_management-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 220.444ms
+[debug]           Load.loadUnit: cleanEvalClasses took 5.9471ms
+[debug]         Load.loadUnit(file:/C:/Users/André%20ISCTE/Documents/canteen_management/project/, ...) took 265.655ms
+[debug]       Load.apply: load took 268.0486ms
+[debug]       Load.apply: resolveProjects took 0.2157ms
+[debug]       Load.apply: finalTransforms took 25.7675ms
+[debug]       Load.apply: config.delegates took 0.4857ms
+[debug]       Load.apply: Def.make(settings)... took 110.0423ms
+[debug]       Load.apply: structureIndex took 39.7104ms
+[debug]       Load.apply: mkStreams took 0.0032ms
+[info] loading project definition from C:\Users\André ISCTE\Documents\canteen_management\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 1685.1003ms
+[debug]     Load.loadUnit: defsScala took 0.0056ms
+[debug] [Loading] Scanning directory C:\Users\André ISCTE\Documents\canteen_management
+[debug]       Load.loadUnit: mkEval took 0.5041ms
+[debug] [Loading] Found root project root w/ remaining 
+[debug] deducing auto plugins based on known facts Set(Atom(play.sbt.PlayJava), Atom(play.ebean.sbt.PlayEbean), Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(play.sbt.Play),Set(Atom(play.sbt.routes.RoutesCompiler)))
+[debug] Clause(Atom(play.sbt.Play),Set(Atom(com.typesafe.sbt.jse.SbtJsTask)))
+[debug] Clause(Atom(play.sbt.Play),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging)))
+[debug] Clause(Atom(play.sbt.Play),Set(Atom(play.twirl.sbt.SbtTwirl)))
+[debug] Clause(Atom(play.sbt.PlayAkkaHttp2Support),Set(Atom(play.sbt.PlayAkkaHttpServer)))
+[debug] Clause(Atom(play.sbt.PlayAkkaHttp2Support),Set(Atom(com.lightbend.sbt.javaagent.JavaAgent)))
+[debug] Clause(Atom(play.sbt.PlayAkkaHttpServer),Set(Atom(play.sbt.PlayService)))
+[debug] Clause(Atom(play.sbt.PlayFilters),Set(Atom(play.sbt.PlayWeb)))
+[debug] Clause(Atom(play.sbt.PlayJava),Set(Atom(play.sbt.PlayWeb)))
+[debug] Clause(Atom(play.sbt.PlayLayoutPlugin),Set(Atom(play.sbt.PlayWeb)))
+[debug] Clause(Atom(play.sbt.PlayLogback),Set(Atom(play.sbt.PlayService)))
+[debug] Clause(Atom(play.sbt.PlayMinimalJava),Set(Atom(play.sbt.PlayWeb)))
+[debug] Clause(Atom(play.sbt.PlayNettyServer),Set(Atom(play.sbt.PlayService)))
+[debug] Clause(Atom(play.sbt.PlayScala),Set(Atom(play.sbt.PlayWeb)))
+[debug] Clause(Atom(play.sbt.PlayService),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging)))
+[debug] Clause(Atom(play.sbt.PlayWeb),Set(Atom(play.sbt.routes.RoutesCompiler)))
+[debug] Clause(Atom(play.sbt.PlayWeb),Set(Atom(com.typesafe.sbt.jse.SbtJsTask)))
+[debug] Clause(Atom(play.sbt.PlayWeb),Set(Atom(play.sbt.PlayService)))
+[debug] Clause(Atom(play.sbt.PlayWeb),Set(Atom(play.twirl.sbt.SbtTwirl)))
+[debug] Clause(Atom(play.sbt.routes.RoutesCompiler),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(play.sbt.test.MediatorWorkaroundPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(play.ebean.sbt.PlayEbean),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(play.twirl.sbt.SbtTwirl),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.SbtNativePackager),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.docker.DockerPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.jar.ClasspathJarPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.jar.LauncherJarPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.jlink.JlinkPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.scripts.AshScriptPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.scripts.AshScriptPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.scripts.BashStartScriptPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.scripts.BashStartScriptPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.scripts.BatStartScriptPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.systemloader.SystemVPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.systemloader.SystemloaderPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.systemloader.SystemdPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.systemloader.SystemloaderPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.systemloader.SystemloaderPlugin),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.systemloader.SystemloaderPlugin),Set(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.systemloader.UpstartPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.systemloader.SystemloaderPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.debian.DebianDeployPlugin),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.debian.DebianPlugin),Set(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.debian.JDebPackaging),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.docker.DockerPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.docker.DockerSpotifyClientPlugin),Set(Atom(com.typesafe.sbt.packager.docker.DockerPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.graalvmnativeimage.GraalVMNativeImagePlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerDeployPlugin),Set(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.jar.LauncherJarPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.rpm.RpmDeployPlugin),Set(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin),Set(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.universal.UniversalDeployPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin),Set(Atom(com.typesafe.sbt.SbtNativePackager)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.windows.WindowsDeployPlugin),Set(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin)))
+[debug] Clause(Atom(com.lightbend.sbt.javaagent.JavaAgent),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(com.lightbend.sbt.javaagent.JavaAgentPackaging),Set(Atom(com.lightbend.sbt.javaagent.JavaAgent)))
+[debug] Clause(Atom(com.lightbend.sbt.javaagent.JavaAgentPackaging),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging)))
+[debug] Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.web.SbtWeb)))
+[debug] Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))
+[debug] Clause(Atom(play.sbt.PlayService),Set(Atom(play.sbt.PlayAkkaHttpServer)))
+[debug] Clause(Atom(play.sbt.PlayWeb),Set(Atom(play.sbt.PlayFilters)))
+[debug] Clause(Atom(play.sbt.PlayWeb),Set(Atom(play.sbt.PlayLayoutPlugin)))
+[debug] Clause(Atom(play.sbt.PlayService),Set(Atom(play.sbt.PlayLogback)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.archetypes.scripts.BashStartScriptPlugin)))
+[debug] Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.archetypes.scripts.BatStartScriptPlugin)))
+[debug] Clause(And(Set(Atom(com.lightbend.sbt.javaagent.JavaAgent), Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))),Set(Atom(com.lightbend.sbt.javaagent.JavaAgentPackaging)))
+[debug] Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine)))
+[debug] Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,play.ebean.sbt.PlayEbean,play.sbt.PlayJava,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,play.sbt.PlayWeb,play.twirl.sbt.SbtTwirl,play.sbt.PlayService,sbt.plugins.SemanticdbPlugin,sbt.plugins.JUnitXmlReportPlugin,play.sbt.PlayFilters,play.sbt.PlayLayoutPlugin,play.sbt.routes.RoutesCompiler,com.typesafe.sbt.jse.SbtJsTask,sbt.plugins.MiniDependencyTreePlugin,play.sbt.PlayLogback,play.sbt.PlayAkkaHttpServer,com.typesafe.sbt.jse.SbtJsEngine,com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging,com.typesafe.sbt.web.SbtWeb,com.typesafe.sbt.packager.archetypes.JavaAppPackaging,com.typesafe.sbt.packager.rpm.RpmPlugin,com.typesafe.sbt.packager.archetypes.scripts.BashStartScriptPlugin,com.typesafe.sbt.packager.windows.WindowsPlugin,com.typesafe.sbt.packager.archetypes.scripts.BatStartScriptPlugin,com.typesafe.sbt.packager.docker.DockerPlugin,com.typesafe.sbt.packager.debian.DebianPlugin,com.typesafe.sbt.packager.universal.UniversalPlugin,com.typesafe.sbt.packager.linux.LinuxPlugin,com.typesafe.sbt.SbtNativePackager)
+[debug] Plugins.deducer#function took 17.8239 ms
+[info] loading settings for project root from build.sbt ...
+[debug]         Load.resolveProject(root) took 165.1128ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id root, base: C:\Users\André ISCTE\Documents\canteen_management, plugins: List(play.sbt.PlayJava && play.ebean.sbt.PlayEbean))) took 186.6945ms
+[debug] [Loading] Done in C:\Users\André ISCTE\Documents\canteen_management, returning: (root)
+[debug]     Load.loadUnit: loadedProjectsRaw took 277.9189ms
+[debug]     Load.loadUnit: cleanEvalClasses took 1.452ms
+[debug]   Load.loadUnit(file:/C:/Users/André%20ISCTE/Documents/canteen_management/, ...) took 1965.3555ms
+[debug] Load.apply: load took 1968.5974ms
+[debug] Load.apply: resolveProjects took 0.1593ms
+[debug] Load.apply: finalTransforms took 35.4317ms
+[debug] Load.apply: config.delegates took 1.0377ms
+[debug] Load.apply: Def.make(settings)... took 139.7666ms
+[debug] Load.apply: structureIndex took 46.3418ms
+[debug] Load.apply: mkStreams took 0.0037ms
+[info]   __              __
+[info]   \ \     ____   / /____ _ __  __
+[info]    \ \   / __ \ / // __ `// / / /
+[info]    / /  / /_/ // // /_/ // /_/ /
+[info]   /_/  / .___//_/ \__,_/ \__, /
+[info]       /_/               /____/
+[info] 
+[info] Version 2.8.18 running Java 11.0.17
+[info] 
+[info] Play is run entirely by the community. Please consider contributing and/or donating:
+[info] https://www.playframework.com/sponsors
+[info] 
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(run, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 35 Scala sources and 29 Java sources to C:\Users\André ISCTE\Documents\canteen_management\target\scala-2.13\classes ...
+[error] C:\Users\André ISCTE\Documents\canteen_management\conf\routes:49:1: not found: type Canteen
+[error] GET     /canteen                    controllers.CanteenController.canteen(request: Request, canteen : Canteen)
+[error] C:\Users\André ISCTE\Documents\canteen_management\conf\routes:49:1: not found: type Canteen
+[error] GET     /canteen                    controllers.CanteenController.canteen(request: Request, canteen : Canteen)
+[error] C:\Users\André ISCTE\Documents\canteen_management\conf\routes:49:1: not found: type Canteen
+[error] GET     /canteen                    controllers.CanteenController.canteen(request: Request, canteen : Canteen)
+[error] C:\Users\André ISCTE\Documents\canteen_management\conf\routes:49:1: not found: type Canteen
+[error] GET     /canteen                    controllers.CanteenController.canteen(request: Request, canteen : Canteen)
+[error] C:\Users\André ISCTE\Documents\canteen_management\conf\routes:49:1: not found: type Canteen
+[error] GET     /canteen                    controllers.CanteenController.canteen(request: Request, canteen : Canteen)
+[error] C:\Users\André ISCTE\Documents\canteen_management\conf\routes:49:1: not found: type Canteen
+[error] GET     /canteen                    controllers.CanteenController.canteen(request: Request, canteen : Canteen)
+[error] 6 errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 35 Scala sources and 29 Java sources to C:\Users\André ISCTE\Documents\canteen_management\target\scala-2.13\classes ...
+[error] C:\Users\André ISCTE\Documents\canteen_management\app\views\Canteens\canteenCard.scala.html:8:48: value canteen is not a member of controllers.ReverseCanteenController
+[error]             <a href="@routes.CanteenController.canteen()" class="btn btn-brown d-flex ms-auto">
+[error]                                                ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true

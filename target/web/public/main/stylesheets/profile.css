@@ -1,0 +1,15 @@
+.rectangle{
+    background:#B87651;
+    margin: 0;
+    height: 20vh;
+    position: relative;
+    padding-top: 70px;
+}
+
+.upload-icon{
+    position: absolute;
+    width: 60px;
+    left: 55%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}

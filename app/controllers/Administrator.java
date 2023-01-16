@@ -12,6 +12,7 @@ import play.mvc.Result;
 import javax.inject.Inject;
 import java.util.List;
 
+/*@Security.Authenticated(UserAuth.class)*/
 public class Administrator extends Controller {
     private final FormFactory formFactory;
 
@@ -22,6 +23,13 @@ public class Administrator extends Controller {
 
     public Result administrator(Http.Request request) {
         return ok(views.html.Administrator.administrator.render());
+    }
+
+    public Result createcanteen(Http.Request request) {
+        return ok(views.html.Administrator.createcanteen.render());
+    }
+    public Result managecanteens(Http.Request request) {
+        return ok(views.html.Administrator.managecanteens.render());
     }
 
     public Result userslist(Http.Request request) {

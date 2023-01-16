@@ -61,10 +61,10 @@ Seq[Any](format.raw/*1.28*/("""
                     </div>
                     <p style="font-size: 12px" class="text-center text-muted pb-4">By signing up, you agree to our
                         <a class="text-white" style="text-decoration: none;
-                            font-size: 12px" href="#termsofuse">Terms Of Use</a>
+                            font-size: 12px" href="/termsofuse">Terms Of Use</a>
                         <br> and
                         <a class="text-white" style="text-decoration: none;
-                            font-size: 12px" href="#privacypolicy">Privacy Policy</a>
+                            font-size: 12px" href="/privacypolicy">Privacy Policy</a>
                     </p>
                     <p style="font-size: 15px" class="text-center text-muted mt-0 mb-0">Already have an account?
                         <a href="/login" class="fw-bold text-white">Sign In</a>
@@ -90,7 +90,7 @@ Seq[Any](format.raw/*1.28*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/signup.scala.html
-                  HASH: 44daa8f0bfd20a97ad5bce10d8c94f905a593c0f
+                  HASH: 4eef3bd9d93bed5d7a471c071e1f16a085faf3d4
                   MATRIX: 923->1|1044->27|1072->30|1122->72|1161->74|1196->166|1233->177|1247->183|1293->209|1329->219|1484->348|1498->354|1549->385
                   LINES: 27->1|32->1|33->2|33->2|33->2|35->4|36->5|36->5|36->5|37->6|39->8|39->8|39->8
                   -- GENERATED --
