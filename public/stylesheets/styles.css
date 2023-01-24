@@ -116,21 +116,6 @@ td{
     border-radius: 20px;
 }
 
-/*.left-container{
-    width: 50vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction:column;
-}
-
-.right-container{
-    width: 50vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}*/
-
 .errorbox{
     width: 100%;
     display: flex;

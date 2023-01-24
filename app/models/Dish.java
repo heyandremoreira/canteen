@@ -22,6 +22,9 @@ public class Dish extends Model {
 
     private int dishQuantity;
 
+    @OneToMany(mappedBy = "dish")
+    private List<Ticket> tickets;
+
     private static final Finder<Long, Dish> finder = new Finder<>(Dish.class);
     public static List<Dish> getDishList(){
         return finder.all();
@@ -30,8 +33,7 @@ public class Dish extends Model {
         return finder.byId(id);
     }
 
-    public Dish(Long id, String name, String description, Type type, double value, int dishQuantity){
-        this.id=id;
+    public Dish(String name, String description, double value, int dishQuantity){
         this.name=name;
         this.description=description;
         this.type=type;
@@ -98,9 +100,5 @@ public class Dish extends Model {
 
     public void setDishQuantity(int dishQuantity) {
         this.dishQuantity = dishQuantity;
-    }
-
-    public void removeQuantity(int dishQuantity){
-        this.dishQuantity=dishQuantity-1;
     }
 }

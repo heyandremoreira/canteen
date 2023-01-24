@@ -15,5 +15,3 @@ lazy val root = (project in file("."))
     (Test / testOptions) += Tests.Argument(TestFrameworks.JUnit, "-a", "-v"),
     javacOptions ++= Seq("-Xlint:unchecked", "-Xlint:deprecation", "-Werror")
   )
-
-

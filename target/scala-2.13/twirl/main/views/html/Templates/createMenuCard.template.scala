@@ -21,138 +21,136 @@ import play.data._
 import play.core.j.PlayFormsMagicForJava._
 import scala.jdk.CollectionConverters._
 
-object createMenuCard extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object createMenuCard extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[play.mvc.Http.Request,play.twirl.api.HtmlFormat.Appendable] {
 
-  /* @(menu: java.util.List[Menu], r: play.mvc.Http.Request)*/
-  def apply():play.twirl.api.HtmlFormat.Appendable = {
+  /**/
+  def apply/*1.2*/(r: play.mvc.Http.Request):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*2.1*/("""<div class="row d-flex justify-content-center pt-5 pb-2" style="margin-left: 125px">
-    <div class="col-md-12">
-        """),format.raw/*11.20*/("""
-    """),format.raw/*12.5*/("""</div>
-</div>
-<div class="row d-flex mx-auto justify-content-center">
+Seq[Any](format.raw/*1.28*/("""
+"""),format.raw/*2.1*/("""<form action=""""),_display_(/*2.16*/controllers/*2.27*/.routes.Manager.createMenu()),format.raw/*2.55*/("""" method="post">
+    """),_display_(/*3.6*/helper/*3.12*/.CSRF.formField(r.asScala)),format.raw/*3.38*/("""
+"""),format.raw/*4.1*/("""<div class="row d-flex mx-auto justify-content-center">
     <div class="col-md-10 pb-4">
+        <div class="row d-flex align-items-center">
+            <div class="col-sm-5 col-md-2 justify-content-center mt-5 mb-3">
+                <div class="form-control-sm searchfield">
+                    <input type="date" id="calendar" name="date">
+                </div>
+            </div>
+        </div>
         <table class="table table-responsive darkbg">
             <thead class="text-center">
                 <tr>
                     <th scope="col">Type</th>
-                    <th scope="col">Menu</th>
+                    <th scope="col">Dish</th>
                     <th scope="col">Description</th>
-                    <th scope="col">Date</th>
                     <th scope="col">Value</th>
-                    <th scope="col"></th>
+                    <th scope="col">Quantity</th>
                 </tr>
             </thead>
             <tbody class="align-middle text-center">
                 <tr>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" value="Meat" name="type">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="dish">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="description">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="value">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="quantity">
                         </div>
-                    </td>
-                    <td>
-                        """),format.raw/*58.34*/("""
-                        """),format.raw/*59.25*/("""<a class="btn btn-remove" type="submit" href="#">Delete</a>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" value="Fish" name="type">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="dish">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="description">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="value">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="quantity">
                         </div>
-                    </td>
-                    <td>
-                        <a class="btn btn-brown" type="submit" href="#">Save</a>
-                        <a class="btn btn-remove" type="submit" href="#">Delete</a>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" value="Vegetarian" name="type">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="dish">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="description">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="value">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="quantity">
                         </div>
-                    </td>
-                    <td>
-                        <a class="btn btn-brown" type="submit" href="#">Save</a>
-                        <a class="btn btn-remove" type="submit" href="#">Delete</a>
                     </td>
                 </tr>
             </tbody>
         </table>
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-sm-5 col-md-5 justify-content-center mt-3 mb-3">
+                <button class="btn btn-form" type="submit">Create Menu</button>
+            </div>
+        </div>
     </div>
 </div>
+</form>
 """))
       }
     }
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(r:play.mvc.Http.Request): play.twirl.api.HtmlFormat.Appendable = apply(r)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((play.mvc.Http.Request) => play.twirl.api.HtmlFormat.Appendable) = (r) => apply(r)
 
   def ref: this.type = this
 
@@ -162,9 +160,9 @@ Seq[Any](format.raw/*2.1*/("""<div class="row d-flex justify-content-center pt-5
               /*
                   -- GENERATED --
                   SOURCE: app/views/Templates/createMenuCard.scala.html
-                  HASH: 22b18936b7ff3d95a4c6565f328cd3cb1573e0f7
-                  MATRIX: 1064->62|1215->580|1248->586|3178->2769|3232->2795
-                  LINES: 32->2|34->11|35->12|78->58|79->59
+                  HASH: 8190c9d1b53d9ee5137663757e6163cd9577bb28
+                  MATRIX: 941->1|1062->27|1090->29|1131->44|1150->55|1198->83|1246->106|1260->112|1306->138|1334->140
+                  LINES: 27->1|32->1|33->2|33->2|33->2|33->2|34->3|34->3|34->3|35->4
                   -- GENERATED --
               */
           

@@ -1,5 +1,5 @@
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\controllers\MainController.java:60:1: method render in class views.html.profile cannot be applied to given types;
-[error]   required: models.User
+[error] C:\Users\André ISCTE\Documents\canteen_management\app\controllers\Manager.java:48:1: method render in class views.html.Management.Arconia.manage_menus_arc cannot be applied to given types;
+[error]   required: play.mvc.Http.Request
 [error]   found: no arguments
 [error]   reason: actual and formal argument lists differ in length
-[error] views.html.profile.render
+[error] views.html.Management.Arconia.manage_menus_arc.render

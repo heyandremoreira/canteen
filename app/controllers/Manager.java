@@ -1,12 +1,17 @@
 package controllers;
 
 import models.Canteen;
+import models.Dish;
+import models.Menu;
+import models.Type;
+import play.data.DynamicForm;
 import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Http;
 import play.mvc.Result;
 
 import javax.inject.Inject;
+import java.time.LocalDate;
 import java.util.List;
 
 public class Manager extends Controller {
@@ -27,7 +32,20 @@ public class Manager extends Controller {
     }
 
     public Result manage_menus_arc(Http.Request request) {
-        return ok(views.html.Management.Arconia.manage_menus_arc.render());
+        return ok(views.html.Management.Arconia.manage_menus_arc.render(request));
+    }
+
+    public Result createMenu(Http.Request request){
+        DynamicForm dynamicForm = this.formFactory.form().bindFromRequest(request);
+        String name = dynamicForm.get("name");
+        String description = dynamicForm.get("description");
+        String valueString = dynamicForm.get("value");
+        Double value = Double.parseDouble(valueString);
+        Integer quantity = Integer.parseInt(dynamicForm.get("quantity"));
+        Dish dish = new Dish(name, description, value, quantity);
+        dish.save();
+        dish.refresh();
+        return ok(views.html.Management.Arconia.manage_menus_arc.render(request));
     }
 
 
@@ -41,7 +59,7 @@ public class Manager extends Controller {
     }
 
     public Result manage_menus_tld(Http.Request request) {
-        return ok(views.html.Management.TheLastDrop.manage_menus_tld.render());
+        return ok(views.html.Management.TheLastDrop.manage_menus_tld.render(request));
     }
 
 
@@ -55,7 +73,7 @@ public class Manager extends Controller {
     }
 
     public Result manage_menus_tlc(Http.Request request) {
-        return ok(views.html.Management.TheLeakyCauldron.manage_menus_tlc.render());
+        return ok(views.html.Management.TheLeakyCauldron.manage_menus_tlc.render(request));
     }
 
 
@@ -69,6 +87,6 @@ public class Manager extends Controller {
     }
 
     public Result manage_menus_wss(Http.Request request) {
-        return ok(views.html.Management.WaverlySubStation.manage_menus_wss.render());
+        return ok(views.html.Management.WaverlySubStation.manage_menus_wss.render(request));
     }
 }

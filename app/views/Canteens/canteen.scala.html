@@ -41,46 +41,45 @@
                 </form>
             </div>
         </div>
-        @* @if(!dishes.isEmpty) {
-        @for(dish <- dishes) { *@
-        @*<form action="@controllers.routes.CanteenController.buy(Dish.getId())" method="post">
-            @helper.CSRF.formField(r.asScala)*@
-            <div class="row d-flex mx-auto justify-content-center">
-                <div class="col-md-10 pb-4">
-                @if(!dishes.isEmpty) {
-                    <table class="table table-responsive darkbg">
-                        <thead class="text-center">
-                            <tr>
-                                <th scope="col">Type</th>
-                                <th scope="col">Dish</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Value</th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead>
-                        <tbody class="align-middle text-center">
-                        @for(dish <- dishes) {
-                            <tr>
-                                <td>@dish.getType</td>
-                                <td>@dish.getName</td>
-                                <td>@dish.getDescription</td>
-                                <td>€ @dish.getValue</td>
-                                <td><a class="btn btn-brown" type="submit" href="#">Buy</a></td>
-                            </tr>
-                        }
-                        </tbody>
-                    </table>
-                } else {
-                    <div class="row principal-container justify-content-center pt-4 pb-4">
-                        <div class="col-sm-12 col-md-6">
-                            <div class="card-container text-white justify-content-start">
-                                <p style="color: white" class="text-left d-flex justify-content-center m-4">
-                                    There is no menu available for the chosen day</p>
-                            </div>
+
+        <div class="row d-flex mx-auto justify-content-center">
+            <div class="col-md-10 pb-4">
+            @if(!dishes.isEmpty) {
+                <table class="table table-responsive darkbg">
+                    <thead class="text-center">
+                        <tr>
+                            <th scope="col">Type</th>
+                            <th scope="col">Dish</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Value</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="align-middle text-center">
+                    @for(dish <- dishes) {
+                        <tr>
+                            <td>@dish.getType</td>
+                            <td>@dish.getName</td>
+                            <td>@dish.getDescription</td>
+                            <td>€ @dish.getValue</td>
+                            <form action="@controllers.routes.CanteenController.buy(dish.getId())" method="post">
+                                @helper.CSRF.formField(r.asScala)
+                            <td><button class="btn btn-brown" type="submit">Buy</button></td>
+                            </form>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            } else {
+                <div class="row principal-container justify-content-center pt-4 pb-4">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="card-container text-white justify-content-start">
+                            <p style="color: white" class="text-left d-flex justify-content-center m-4">
+                                There is no menu available for the chosen day</p>
                         </div>
                     </div>
-                }
                 </div>
+            }
             </div>
-        </form>
+        </div>
     }

@@ -1,127 +1,114 @@
-@* @(menu: java.util.List[Menu], r: play.mvc.Http.Request)*@
-<div class="row d-flex justify-content-center pt-5 pb-2" style="margin-left: 125px">
-    <div class="col-md-12">
-        @*<select class="marronbg text-white p-2 mb-2" name="weekdays">
-            <option value="" disabled selected>Choose a week day</option>
-            <option value="">Monday</option>
-            <option value="">Tuesday</option>
-            <option value="">Wednesday</option>
-            <option value="">Thursday</option>
-            <option value="">Friday</option>
-        </select>*@
-    </div>
-</div>
+@(r: play.mvc.Http.Request)
+<form action="@controllers.routes.Manager.createMenu()" method="post">
+    @helper.CSRF.formField(r.asScala)
 <div class="row d-flex mx-auto justify-content-center">
     <div class="col-md-10 pb-4">
+        <div class="row d-flex align-items-center">
+            <div class="col-sm-5 col-md-2 justify-content-center mt-5 mb-3">
+                <div class="form-control-sm searchfield">
+                    <input type="date" id="calendar" name="date">
+                </div>
+            </div>
+        </div>
         <table class="table table-responsive darkbg">
             <thead class="text-center">
                 <tr>
                     <th scope="col">Type</th>
-                    <th scope="col">Menu</th>
+                    <th scope="col">Dish</th>
                     <th scope="col">Description</th>
-                    <th scope="col">Date</th>
                     <th scope="col">Value</th>
-                    <th scope="col"></th>
+                    <th scope="col">Quantity</th>
                 </tr>
             </thead>
             <tbody class="align-middle text-center">
                 <tr>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" value="Meat" name="type">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="dish">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="description">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="value">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="quantity">
                         </div>
-                    </td>
-                    <td>
-                        @*<form action="@controllers.routes.Administrator.SaveMenu(menu.getId())" method="post">
-                        @helper.CSRF.formField(r.asScala)
-                        <button name="appbtn" type="submit" class="btn btn-approve">Save</button>
-                        </form>*@
-                        <a class="btn btn-remove" type="submit" href="#">Delete</a>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" value="Fish" name="type">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="dish">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="description">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="value">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="quantity">
                         </div>
-                    </td>
-                    <td>
-                        <a class="btn btn-brown" type="submit" href="#">Save</a>
-                        <a class="btn btn-remove" type="submit" href="#">Delete</a>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" value="Vegetarian" name="type">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="dish">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="description">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="value">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                            <input class="form-control" placeholder="" name="quantity">
                         </div>
-                    </td>
-                    <td>
-                        <a class="btn btn-brown" type="submit" href="#">Save</a>
-                        <a class="btn btn-remove" type="submit" href="#">Delete</a>
                     </td>
                 </tr>
             </tbody>
         </table>
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-sm-5 col-md-5 justify-content-center mt-3 mb-3">
+                <button class="btn btn-form" type="submit">Create Menu</button>
+            </div>
+        </div>
     </div>
 </div>
+</form>

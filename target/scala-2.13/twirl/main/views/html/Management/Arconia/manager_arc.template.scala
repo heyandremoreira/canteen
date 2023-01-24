@@ -29,7 +29,7 @@ object manager_arc extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.ap
       {
 
 
-Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css"))/*1.44*/{_display_(Seq[Any](format.raw/*1.45*/("""
+Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css"))/*1.44*/ {_display_(Seq[Any](format.raw/*1.46*/("""
 
     """),format.raw/*3.5*/("""<main>
         <div class="row principal-container">
@@ -65,8 +65,8 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css"))/*1.44*/{_di
               /*
                   -- GENERATED --
                   SOURCE: app/views/Management/Arconia/manager_arc.scala.html
-                  HASH: 0aae6348a70f376e006bba28de15145f452541b9
-                  MATRIX: 1014->1|1064->43|1102->44|1136->52|1310->200|1324->206|1376->238
+                  HASH: a8b1f805d52e4557211d32432a57c2b2d09a1c64
+                  MATRIX: 1014->1|1064->43|1103->45|1137->53|1311->201|1325->207|1377->239
                   LINES: 32->1|32->1|32->1|34->3|37->6|37->6|37->6
                   -- GENERATED --
               */

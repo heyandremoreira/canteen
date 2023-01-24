@@ -18,9 +18,14 @@ public class Ticket extends Model{
     private User user;
 
     @ManyToOne
-    private Menu menu;
+    private Dish dish;
 
-/*  @OneToMany
+    public Ticket(Dish dish, User user) {
+        this.user = user;
+        this.dish = dish;
+    }
+
+    /*  @OneToMany
     private Feedback feedback;*/
 
     private static final Finder<String, Ticket> finder = new Finder<>(Ticket.class);

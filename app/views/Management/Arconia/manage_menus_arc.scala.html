@@ -1,3 +1,4 @@
+@(r: play.mvc.Http.Request)
 @template(Array("../../../public/stylesheets/landing.css", "../../../public/stylesheets/home.css")) {
-    @Templates.createMenuCard()
+    @Templates.createMenuCard(r)
 }

@@ -10,14 +10,14 @@ import _root_.play.libs.F
 // @LINE:8
 package controllers {
 
-  // @LINE:68
+  // @LINE:69
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:68
+    // @LINE:69
     def at(file:String): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[String]].unbind("file", file))
@@ -25,19 +25,19 @@ package controllers {
   
   }
 
-  // @LINE:52
+  // @LINE:53
   class ReverseCanteenController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:52
+    // @LINE:53
     def canteen(id:Long): Call = {
     
       (id: @unchecked) match {
       
-        // @LINE:52
+        // @LINE:53
         case (id)  =>
           
           Call("GET", _prefix + { _defaultPrefix } + "canteen/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
@@ -46,7 +46,7 @@ package controllers {
     
     }
   
-    // @LINE:54
+    // @LINE:55
     def buy(id:Long): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "canteen" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("id", id)))))
@@ -202,13 +202,13 @@ package controllers {
     }
 
   
-    // @LINE:37
+    // @LINE:38
     def manage_tickets_arc(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "manage_tickets_arc")
     }
   
-    // @LINE:48
+    // @LINE:49
     def manage_menus_wss(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "manage_menus_wss")
@@ -220,43 +220,49 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "manage_menus_arc")
     }
   
-    // @LINE:41
+    // @LINE:42
     def manage_tickets_tld(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "manage_tickets_tld")
     }
   
-    // @LINE:39
+    // @LINE:40
     def manager_tld(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "manager_tld")
     }
   
-    // @LINE:45
+    // @LINE:46
     def manage_tickets_tlc(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "manage_tickets_tlc")
     }
   
-    // @LINE:47
+    // @LINE:48
     def manager_wss(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "manager_wss")
     }
   
-    // @LINE:49
+    // @LINE:37
+    def createMenu(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "manage_menus_arc")
+    }
+  
+    // @LINE:50
     def manage_tickets_wss(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "manage_tickets_wss")
     }
   
-    // @LINE:43
+    // @LINE:44
     def manager_tlc(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "manager_tlc")
     }
   
-    // @LINE:40
+    // @LINE:41
     def manage_menus_tld(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "manage_menus_tld")
@@ -268,7 +274,7 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "manager_arc")
     }
   
-    // @LINE:44
+    // @LINE:45
     def manage_menus_tlc(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "manage_menus_tlc")
@@ -276,20 +282,20 @@ package controllers {
   
   }
 
-  // @LINE:57
+  // @LINE:58
   class ReverseStudent(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:57
+    // @LINE:58
     def tickets(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "tickets")
     }
   
-    // @LINE:58
+    // @LINE:59
     def wallet(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "wallet")

@@ -21,11 +21,11 @@ class Routes(
   Administrator_2: controllers.Administrator,
   // @LINE:35
   Manager_3: controllers.Manager,
-  // @LINE:52
+  // @LINE:53
   CanteenController_1: controllers.CanteenController,
-  // @LINE:57
+  // @LINE:58
   Student_4: controllers.Student,
-  // @LINE:68
+  // @LINE:69
   Assets_6: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -40,11 +40,11 @@ class Routes(
     Administrator_2: controllers.Administrator,
     // @LINE:35
     Manager_3: controllers.Manager,
-    // @LINE:52
+    // @LINE:53
     CanteenController_1: controllers.CanteenController,
-    // @LINE:57
+    // @LINE:58
     Student_4: controllers.Student,
-    // @LINE:68
+    // @LINE:69
     Assets_6: controllers.Assets
   ) = this(errorHandler, MainController_0, AuthController_5, Administrator_2, Manager_3, CanteenController_1, Student_4, Assets_6, "/")
 
@@ -80,6 +80,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """managecanteens""", """controllers.Administrator.managecanteens(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """manager_arc""", """controllers.Manager.manager_arc(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """manage_menus_arc""", """controllers.Manager.manage_menus_arc(request:Request)"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """manage_menus_arc""", """controllers.Manager.createMenu(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """manage_tickets_arc""", """controllers.Manager.manage_tickets_arc(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """manager_tld""", """controllers.Manager.manager_tld(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """manage_menus_tld""", """controllers.Manager.manage_menus_tld(request:Request)"""),
@@ -525,10 +526,30 @@ class Routes(
   )
 
   // @LINE:37
-  private[this] lazy val controllers_Manager_manage_tickets_arc21_route = Route("GET",
+  private[this] lazy val controllers_Manager_createMenu21_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("manage_menus_arc")))
+  )
+  private[this] lazy val controllers_Manager_createMenu21_invoker = createInvoker(
+    
+    (req:play.mvc.Http.Request) =>
+      Manager_3.createMenu(fakeValue[play.mvc.Http.Request]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Manager",
+      "createMenu",
+      Seq(classOf[play.mvc.Http.Request]),
+      "POST",
+      this.prefix + """manage_menus_arc""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:38
+  private[this] lazy val controllers_Manager_manage_tickets_arc22_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("manage_tickets_arc")))
   )
-  private[this] lazy val controllers_Manager_manage_tickets_arc21_invoker = createInvoker(
+  private[this] lazy val controllers_Manager_manage_tickets_arc22_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       Manager_3.manage_tickets_arc(fakeValue[play.mvc.Http.Request]),
@@ -544,11 +565,11 @@ class Routes(
     )
   )
 
-  // @LINE:39
-  private[this] lazy val controllers_Manager_manager_tld22_route = Route("GET",
+  // @LINE:40
+  private[this] lazy val controllers_Manager_manager_tld23_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("manager_tld")))
   )
-  private[this] lazy val controllers_Manager_manager_tld22_invoker = createInvoker(
+  private[this] lazy val controllers_Manager_manager_tld23_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       Manager_3.manager_tld(fakeValue[play.mvc.Http.Request]),
@@ -564,11 +585,11 @@ class Routes(
     )
   )
 
-  // @LINE:40
-  private[this] lazy val controllers_Manager_manage_menus_tld23_route = Route("GET",
+  // @LINE:41
+  private[this] lazy val controllers_Manager_manage_menus_tld24_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("manage_menus_tld")))
   )
-  private[this] lazy val controllers_Manager_manage_menus_tld23_invoker = createInvoker(
+  private[this] lazy val controllers_Manager_manage_menus_tld24_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       Manager_3.manage_menus_tld(fakeValue[play.mvc.Http.Request]),
@@ -584,11 +605,11 @@ class Routes(
     )
   )
 
-  // @LINE:41
-  private[this] lazy val controllers_Manager_manage_tickets_tld24_route = Route("GET",
+  // @LINE:42
+  private[this] lazy val controllers_Manager_manage_tickets_tld25_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("manage_tickets_tld")))
   )
-  private[this] lazy val controllers_Manager_manage_tickets_tld24_invoker = createInvoker(
+  private[this] lazy val controllers_Manager_manage_tickets_tld25_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       Manager_3.manage_tickets_tld(fakeValue[play.mvc.Http.Request]),
@@ -604,11 +625,11 @@ class Routes(
     )
   )
 
-  // @LINE:43
-  private[this] lazy val controllers_Manager_manager_tlc25_route = Route("GET",
+  // @LINE:44
+  private[this] lazy val controllers_Manager_manager_tlc26_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("manager_tlc")))
   )
-  private[this] lazy val controllers_Manager_manager_tlc25_invoker = createInvoker(
+  private[this] lazy val controllers_Manager_manager_tlc26_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       Manager_3.manager_tlc(fakeValue[play.mvc.Http.Request]),
@@ -624,11 +645,11 @@ class Routes(
     )
   )
 
-  // @LINE:44
-  private[this] lazy val controllers_Manager_manage_menus_tlc26_route = Route("GET",
+  // @LINE:45
+  private[this] lazy val controllers_Manager_manage_menus_tlc27_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("manage_menus_tlc")))
   )
-  private[this] lazy val controllers_Manager_manage_menus_tlc26_invoker = createInvoker(
+  private[this] lazy val controllers_Manager_manage_menus_tlc27_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       Manager_3.manage_menus_tlc(fakeValue[play.mvc.Http.Request]),
@@ -644,11 +665,11 @@ class Routes(
     )
   )
 
-  // @LINE:45
-  private[this] lazy val controllers_Manager_manage_tickets_tlc27_route = Route("GET",
+  // @LINE:46
+  private[this] lazy val controllers_Manager_manage_tickets_tlc28_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("manage_tickets_tlc")))
   )
-  private[this] lazy val controllers_Manager_manage_tickets_tlc27_invoker = createInvoker(
+  private[this] lazy val controllers_Manager_manage_tickets_tlc28_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       Manager_3.manage_tickets_tlc(fakeValue[play.mvc.Http.Request]),
@@ -664,11 +685,11 @@ class Routes(
     )
   )
 
-  // @LINE:47
-  private[this] lazy val controllers_Manager_manager_wss28_route = Route("GET",
+  // @LINE:48
+  private[this] lazy val controllers_Manager_manager_wss29_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("manager_wss")))
   )
-  private[this] lazy val controllers_Manager_manager_wss28_invoker = createInvoker(
+  private[this] lazy val controllers_Manager_manager_wss29_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       Manager_3.manager_wss(fakeValue[play.mvc.Http.Request]),
@@ -684,11 +705,11 @@ class Routes(
     )
   )
 
-  // @LINE:48
-  private[this] lazy val controllers_Manager_manage_menus_wss29_route = Route("GET",
+  // @LINE:49
+  private[this] lazy val controllers_Manager_manage_menus_wss30_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("manage_menus_wss")))
   )
-  private[this] lazy val controllers_Manager_manage_menus_wss29_invoker = createInvoker(
+  private[this] lazy val controllers_Manager_manage_menus_wss30_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       Manager_3.manage_menus_wss(fakeValue[play.mvc.Http.Request]),
@@ -704,11 +725,11 @@ class Routes(
     )
   )
 
-  // @LINE:49
-  private[this] lazy val controllers_Manager_manage_tickets_wss30_route = Route("GET",
+  // @LINE:50
+  private[this] lazy val controllers_Manager_manage_tickets_wss31_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("manage_tickets_wss")))
   )
-  private[this] lazy val controllers_Manager_manage_tickets_wss30_invoker = createInvoker(
+  private[this] lazy val controllers_Manager_manage_tickets_wss31_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       Manager_3.manage_tickets_wss(fakeValue[play.mvc.Http.Request]),
@@ -724,11 +745,11 @@ class Routes(
     )
   )
 
-  // @LINE:52
-  private[this] lazy val controllers_CanteenController_canteen31_route = Route("GET",
+  // @LINE:53
+  private[this] lazy val controllers_CanteenController_canteen32_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("canteen/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_CanteenController_canteen31_invoker = createInvoker(
+  private[this] lazy val controllers_CanteenController_canteen32_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       CanteenController_1.canteen(fakeValue[play.mvc.Http.Request], fakeValue[Long]),
@@ -744,11 +765,11 @@ class Routes(
     )
   )
 
-  // @LINE:53
-  private[this] lazy val controllers_CanteenController_canteen32_route = Route("POST",
+  // @LINE:54
+  private[this] lazy val controllers_CanteenController_canteen33_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("canteen/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_CanteenController_canteen32_invoker = createInvoker(
+  private[this] lazy val controllers_CanteenController_canteen33_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       CanteenController_1.canteen(fakeValue[play.mvc.Http.Request], fakeValue[Long]),
@@ -764,11 +785,11 @@ class Routes(
     )
   )
 
-  // @LINE:54
-  private[this] lazy val controllers_CanteenController_buy33_route = Route("POST",
+  // @LINE:55
+  private[this] lazy val controllers_CanteenController_buy34_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("canteen")))
   )
-  private[this] lazy val controllers_CanteenController_buy33_invoker = createInvoker(
+  private[this] lazy val controllers_CanteenController_buy34_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       CanteenController_1.buy(fakeValue[play.mvc.Http.Request], fakeValue[Long]),
@@ -784,11 +805,11 @@ class Routes(
     )
   )
 
-  // @LINE:57
-  private[this] lazy val controllers_Student_tickets34_route = Route("GET",
+  // @LINE:58
+  private[this] lazy val controllers_Student_tickets35_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tickets")))
   )
-  private[this] lazy val controllers_Student_tickets34_invoker = createInvoker(
+  private[this] lazy val controllers_Student_tickets35_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       Student_4.tickets(fakeValue[play.mvc.Http.Request]),
@@ -804,11 +825,11 @@ class Routes(
     )
   )
 
-  // @LINE:58
-  private[this] lazy val controllers_Student_wallet35_route = Route("GET",
+  // @LINE:59
+  private[this] lazy val controllers_Student_wallet36_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("wallet")))
   )
-  private[this] lazy val controllers_Student_wallet35_invoker = createInvoker(
+  private[this] lazy val controllers_Student_wallet36_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
       Student_4.wallet(fakeValue[play.mvc.Http.Request]),
@@ -824,11 +845,11 @@ class Routes(
     )
   )
 
-  // @LINE:68
-  private[this] lazy val controllers_Assets_at36_route = Route("GET",
+  // @LINE:69
+  private[this] lazy val controllers_Assets_at37_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_at36_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_at37_invoker = createInvoker(
     Assets_6.at(fakeValue[String], fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -993,80 +1014,80 @@ class Routes(
       }
   
     // @LINE:37
-    case controllers_Manager_manage_tickets_arc21_route(params@_) =>
+    case controllers_Manager_createMenu21_route(params@_) =>
       call { 
-        controllers_Manager_manage_tickets_arc21_invoker.call(
+        controllers_Manager_createMenu21_invoker.call(
+          req => Manager_3.createMenu(req))
+      }
+  
+    // @LINE:38
+    case controllers_Manager_manage_tickets_arc22_route(params@_) =>
+      call { 
+        controllers_Manager_manage_tickets_arc22_invoker.call(
           req => Manager_3.manage_tickets_arc(req))
       }
   
-    // @LINE:39
-    case controllers_Manager_manager_tld22_route(params@_) =>
+    // @LINE:40
+    case controllers_Manager_manager_tld23_route(params@_) =>
       call { 
-        controllers_Manager_manager_tld22_invoker.call(
+        controllers_Manager_manager_tld23_invoker.call(
           req => Manager_3.manager_tld(req))
       }
   
-    // @LINE:40
-    case controllers_Manager_manage_menus_tld23_route(params@_) =>
+    // @LINE:41
+    case controllers_Manager_manage_menus_tld24_route(params@_) =>
       call { 
-        controllers_Manager_manage_menus_tld23_invoker.call(
+        controllers_Manager_manage_menus_tld24_invoker.call(
           req => Manager_3.manage_menus_tld(req))
       }
   
-    // @LINE:41
-    case controllers_Manager_manage_tickets_tld24_route(params@_) =>
+    // @LINE:42
+    case controllers_Manager_manage_tickets_tld25_route(params@_) =>
       call { 
-        controllers_Manager_manage_tickets_tld24_invoker.call(
+        controllers_Manager_manage_tickets_tld25_invoker.call(
           req => Manager_3.manage_tickets_tld(req))
       }
   
-    // @LINE:43
-    case controllers_Manager_manager_tlc25_route(params@_) =>
+    // @LINE:44
+    case controllers_Manager_manager_tlc26_route(params@_) =>
       call { 
-        controllers_Manager_manager_tlc25_invoker.call(
+        controllers_Manager_manager_tlc26_invoker.call(
           req => Manager_3.manager_tlc(req))
       }
   
-    // @LINE:44
-    case controllers_Manager_manage_menus_tlc26_route(params@_) =>
+    // @LINE:45
+    case controllers_Manager_manage_menus_tlc27_route(params@_) =>
       call { 
-        controllers_Manager_manage_menus_tlc26_invoker.call(
+        controllers_Manager_manage_menus_tlc27_invoker.call(
           req => Manager_3.manage_menus_tlc(req))
       }
   
-    // @LINE:45
-    case controllers_Manager_manage_tickets_tlc27_route(params@_) =>
+    // @LINE:46
+    case controllers_Manager_manage_tickets_tlc28_route(params@_) =>
       call { 
-        controllers_Manager_manage_tickets_tlc27_invoker.call(
+        controllers_Manager_manage_tickets_tlc28_invoker.call(
           req => Manager_3.manage_tickets_tlc(req))
       }
   
-    // @LINE:47
-    case controllers_Manager_manager_wss28_route(params@_) =>
+    // @LINE:48
+    case controllers_Manager_manager_wss29_route(params@_) =>
       call { 
-        controllers_Manager_manager_wss28_invoker.call(
+        controllers_Manager_manager_wss29_invoker.call(
           req => Manager_3.manager_wss(req))
       }
   
-    // @LINE:48
-    case controllers_Manager_manage_menus_wss29_route(params@_) =>
+    // @LINE:49
+    case controllers_Manager_manage_menus_wss30_route(params@_) =>
       call { 
-        controllers_Manager_manage_menus_wss29_invoker.call(
+        controllers_Manager_manage_menus_wss30_invoker.call(
           req => Manager_3.manage_menus_wss(req))
       }
   
-    // @LINE:49
-    case controllers_Manager_manage_tickets_wss30_route(params@_) =>
+    // @LINE:50
+    case controllers_Manager_manage_tickets_wss31_route(params@_) =>
       call { 
-        controllers_Manager_manage_tickets_wss30_invoker.call(
+        controllers_Manager_manage_tickets_wss31_invoker.call(
           req => Manager_3.manage_tickets_wss(req))
-      }
-  
-    // @LINE:52
-    case controllers_CanteenController_canteen31_route(params@_) =>
-      call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_CanteenController_canteen31_invoker.call(
-          req => CanteenController_1.canteen(req, id))
       }
   
     // @LINE:53
@@ -1077,30 +1098,37 @@ class Routes(
       }
   
     // @LINE:54
-    case controllers_CanteenController_buy33_route(params@_) =>
+    case controllers_CanteenController_canteen33_route(params@_) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_CanteenController_canteen33_invoker.call(
+          req => CanteenController_1.canteen(req, id))
+      }
+  
+    // @LINE:55
+    case controllers_CanteenController_buy34_route(params@_) =>
       call(params.fromQuery[Long]("id", None)) { (id) =>
-        controllers_CanteenController_buy33_invoker.call(
+        controllers_CanteenController_buy34_invoker.call(
           req => CanteenController_1.buy(req, id))
       }
   
-    // @LINE:57
-    case controllers_Student_tickets34_route(params@_) =>
+    // @LINE:58
+    case controllers_Student_tickets35_route(params@_) =>
       call { 
-        controllers_Student_tickets34_invoker.call(
+        controllers_Student_tickets35_invoker.call(
           req => Student_4.tickets(req))
       }
   
-    // @LINE:58
-    case controllers_Student_wallet35_route(params@_) =>
+    // @LINE:59
+    case controllers_Student_wallet36_route(params@_) =>
       call { 
-        controllers_Student_wallet35_invoker.call(
+        controllers_Student_wallet36_invoker.call(
           req => Student_4.wallet(req))
       }
   
-    // @LINE:68
-    case controllers_Assets_at36_route(params@_) =>
+    // @LINE:69
+    case controllers_Assets_at37_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at36_invoker.call(Assets_6.at(path, file))
+        controllers_Assets_at37_invoker.call(Assets_6.at(path, file))
       }
   }
 }

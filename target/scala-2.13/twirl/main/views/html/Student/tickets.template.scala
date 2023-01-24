@@ -33,42 +33,15 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
     """),format.raw/*2.5*/("""<table class="table table-responsive table-hover darkbg">
         <thead class="text-center">
             <tr>
-                <th scope="col">ID</th>
                 <th scope="col">Username</th>
                 <th scope="col">Canteen</th>
+                <th scope="col">Dish</th>
                 <th scope="col">Date</th>
             </tr>
         </thead>
         <tbody class="align-middle text-center">
-            <tr>
-                <th scope="row">1</th>
-                """),format.raw/*16.41*/("""
-            """),format.raw/*17.13*/("""</tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Gonçalo Queiroz</td>
-                <td>Southy</td>
-                <td>24/02/2023</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Gonçalo Queiroz</td>
-                <td>Southy</td>
-                <td>24/02/2023</td>
-            </tr>
-            <tr>
-                <th scope="row">4</th>
-                <td>Gonçalo Queiroz</td>
-                <td>Southy</td>
-                <td>24/02/2023</td>
-            </tr>
-            <tr>
-                <th scope="row">5</th>
-                <td>Gonçalo Queiroz</td>
-                <td>Southy</td>
-                <td>24/02/2023</td>
-            </tr>
-        </tbody>
+            """),format.raw/*18.20*/("""
+        """),format.raw/*19.9*/("""</tbody>
     </table>
 """)))}))
       }
@@ -87,9 +60,9 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
               /*
                   -- GENERATED --
                   SOURCE: app/views/Student/tickets.scala.html
-                  HASH: a9d4e8b6e7cebaaa78c3370fb99edfda9680f72c
-                  MATRIX: 999->1|1065->59|1103->60|1135->66|1615->641|1657->655
-                  LINES: 32->1|32->1|32->1|33->2|45->16|46->17
+                  HASH: 78b024dcb87d23e89cc6d453e4b34bbcd94552b2
+                  MATRIX: 999->1|1065->59|1103->60|1135->66|1555->692|1592->702
+                  LINES: 32->1|32->1|32->1|33->2|43->18|44->19
                   -- GENERATED --
               */
           

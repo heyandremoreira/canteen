@@ -39,10 +39,14 @@ public class CanteenController extends Controller {
     public Result buy(Http.Request request, Long id) {
         DynamicForm dynamicForm = this.formFactory.form().bindFromRequest(request);
         Dish dish = Dish.getDishById(id);
+        User user =  User.getUserById(1L);
         if (dish.getDishQuantity() > 0) {
             dish.setDishQuantity(dish.getDishQuantity()-1);
+            Ticket ticket = new Ticket(dish, user);
             dish.update();
             dish.refresh();
+            ticket.save();
+            ticket.refresh();
         }
         return redirect(routes.Student.tickets());
     }

@@ -20,6 +20,9 @@ public class User extends Model {
     private String email;
     private String nif;
     private String token;
+
+    private double balance;
+
     @Enumerated(EnumType.STRING)
     @Column(length = 50, columnDefinition = "VARCHAR(50) default 'pending'")
     private Status status = Status.pending;
@@ -63,12 +66,13 @@ public class User extends Model {
         return finder.query().where().eq("Username", username).setMaxRows(1).findOne();
     }
 
-    public User(Long id, String username, String password, String token, String email) {
+    public User(Long id, String username, String password, String token, String email, double balance) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.token = token;
         this.email = email;
+        this.balance=balance;
     }
 
     public User() {

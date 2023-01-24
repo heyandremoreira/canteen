@@ -10,7 +10,7 @@ import _root_.play.libs.F
 // @LINE:8
 package controllers.javascript {
 
-  // @LINE:68
+  // @LINE:69
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -18,7 +18,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:68
+    // @LINE:69
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -30,7 +30,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:52
+  // @LINE:53
   class ReverseCanteenController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -38,7 +38,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:52
+    // @LINE:53
     def canteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.CanteenController.canteen",
       """
@@ -52,7 +52,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:54
+    // @LINE:55
     def buy: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.CanteenController.buy",
       """
@@ -292,7 +292,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:37
+    // @LINE:38
     def manage_tickets_arc: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manage_tickets_arc",
       """
@@ -302,7 +302,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:48
+    // @LINE:49
     def manage_menus_wss: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manage_menus_wss",
       """
@@ -322,7 +322,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:41
+    // @LINE:42
     def manage_tickets_tld: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manage_tickets_tld",
       """
@@ -332,7 +332,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:39
+    // @LINE:40
     def manager_tld: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manager_tld",
       """
@@ -342,7 +342,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:45
+    // @LINE:46
     def manage_tickets_tlc: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manage_tickets_tlc",
       """
@@ -352,7 +352,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:47
+    // @LINE:48
     def manager_wss: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manager_wss",
       """
@@ -362,7 +362,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:49
+    // @LINE:37
+    def createMenu: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Manager.createMenu",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "manage_menus_arc"})
+        }
+      """
+    )
+  
+    // @LINE:50
     def manage_tickets_wss: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manage_tickets_wss",
       """
@@ -372,7 +382,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:43
+    // @LINE:44
     def manager_tlc: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manager_tlc",
       """
@@ -382,7 +392,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:40
+    // @LINE:41
     def manage_menus_tld: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manage_menus_tld",
       """
@@ -402,7 +412,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:44
+    // @LINE:45
     def manage_menus_tlc: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manage_menus_tlc",
       """
@@ -414,7 +424,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:57
+  // @LINE:58
   class ReverseStudent(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -422,7 +432,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:57
+    // @LINE:58
     def tickets: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Student.tickets",
       """
@@ -432,7 +442,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:58
+    // @LINE:59
     def wallet: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Student.wallet",
       """

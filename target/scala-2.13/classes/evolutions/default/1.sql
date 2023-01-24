@@ -59,7 +59,7 @@ create table role (
 create table ticket (
   id                            bigint auto_increment not null,
   user_id                       bigint,
-  menu_id                       bigint,
+  dish_id                       bigint,
   constraint pk_ticket primary key (id)
 );
 
@@ -72,6 +72,7 @@ create table user (
   email                         varchar(255),
   nif                           varchar(255),
   token                         varchar(255),
+  balance                       double not null,
   status                        varchar(50) default 'pending',
   image_id                      bigint,
   constraint uq_user_username unique (username),
@@ -102,8 +103,8 @@ alter table menu add constraint fk_menu_canteen_id foreign key (canteen_id) refe
 create index ix_ticket_user_id on ticket (user_id);
 alter table ticket add constraint fk_ticket_user_id foreign key (user_id) references user (id) on delete restrict on update restrict;
 
-create index ix_ticket_menu_id on ticket (menu_id);
-alter table ticket add constraint fk_ticket_menu_id foreign key (menu_id) references menu (id) on delete restrict on update restrict;
+create index ix_ticket_dish_id on ticket (dish_id);
+alter table ticket add constraint fk_ticket_dish_id foreign key (dish_id) references dish (id) on delete restrict on update restrict;
 
 alter table user add constraint fk_user_image_id foreign key (image_id) references image (id) on delete restrict on update restrict;
 
@@ -130,8 +131,8 @@ drop index ix_menu_canteen_id on menu;
 alter table ticket drop foreign key fk_ticket_user_id;
 drop index ix_ticket_user_id on ticket;
 
-alter table ticket drop foreign key fk_ticket_menu_id;
-drop index ix_ticket_menu_id on ticket;
+alter table ticket drop foreign key fk_ticket_dish_id;
+drop index ix_ticket_dish_id on ticket;
 
 alter table user drop foreign key fk_user_image_id;
 

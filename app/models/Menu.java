@@ -17,9 +17,6 @@ public class Menu extends Model {
     @OneToMany(mappedBy = "menu")
     private List<Dish> dishes;
 
-    @OneToMany(mappedBy = "menu")
-    private List<Ticket> tickets;
-
     @ManyToOne
     private Canteen canteen;
 
@@ -32,6 +29,8 @@ public class Menu extends Model {
         this.id=id;
         this.date=date;
     }
+
+
 
     public static Menu getMenuByDate(LocalDate date, Long canteenId) {
         return finder.query().where().eq("date", date).and().eq("canteen_id", canteenId).setMaxRows(1).findOne();
@@ -59,14 +58,6 @@ public class Menu extends Model {
 
     public void setDishes(List<Dish> dishes) {
         this.dishes = dishes;
-    }
-
-    public List<Ticket> getTickets() {
-        return tickets;
-    }
-
-    public void setTickets(List<Ticket> tickets) {
-        this.tickets = tickets;
     }
 
     public Canteen getCanteen() {
