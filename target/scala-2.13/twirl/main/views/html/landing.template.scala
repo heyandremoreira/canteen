@@ -44,8 +44,8 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css"))/*1.44*/{_di
                             <br> Explore our canteens and check out their menus.
                         </p>
                         <div style="padding-left: 40px">
-                            <a class="btn btn-small" href="/login">Login</a>
-                            <a class="btn btn-small ms-lg-4" href="/signup">Sign Up</a>
+                            <a class="btn btn-brown" href="/login">Login</a>
+                            <a class="btn btn-brown ms-4" href="/signup">Sign Up</a>
                         </div>
                     </div>
                     <div class="landing-img col-xl-8 d-flex justify-content-end">
@@ -73,8 +73,8 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css"))/*1.44*/{_di
               /*
                   -- GENERATED --
                   SOURCE: app/views/landing.scala.html
-                  HASH: 8b70cd9666237cb352d77202054c4ec2c3a6ab52
-                  MATRIX: 991->1|1041->43|1079->44|1117->56|1164->113|1205->170|1241->180|2235->1147|2250->1153|2303->1185
+                  HASH: 9c4bf368cebbee45fce0810b0e1b7a7d97b66d10
+                  MATRIX: 991->1|1041->43|1079->44|1117->56|1164->113|1205->170|1241->180|2232->1144|2247->1150|2300->1182
                   LINES: 32->1|32->1|32->1|34->3|35->4|36->5|37->6|52->21|52->21|52->21
                   -- GENERATED --
               */

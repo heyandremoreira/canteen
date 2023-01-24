@@ -5,23 +5,20 @@
 # Default path will just redirect to the computer list
 
 # GERAL
-GET     /                                       controllers.HomeController.landing(request: Request)
-GET     /home                                   controllers.HomeController.home(request: Request)
-GET     /signup                                 controllers.HomeController.signup(request: Request)
-#POST    /signupProcess                          controllers.HomeController.signupProcess(request: Request)
-#GET     /login                                  controllers.LoginController.login(request: Request)
-#POST    /login                                  controllers.LoginController.handleLogin()
-#POST    /signinProcess                          controllers.HomeController.signinProcess(request: Request)
-#POST    /logout                                 controllers.Application.logout()
-GET     /profile                                controllers.HomeController.profile(request: Request)
-GET     /recoverpassword                        controllers.HomeController.recoverpassword(request: Request)
+GET     /                                       controllers.MainController.landing(request: Request)
+GET     /home                                   controllers.MainController.home(request: Request)
+GET     /signup                                 controllers.AuthController.signup(request: Request)
+POST    /signup                                 controllers.AuthController.signupProcess(request: Request)
+GET     /login                                  controllers.AuthController.login(request: Request)
+POST    /login                                  controllers.AuthController.loginProcess(request: Request)
+#POST    /logout                                 controllers.AuthController.logout(request: Request)
+GET     /profile                                controllers.MainController.profile(request: Request)
+GET     /recoverpassword                        controllers.MainController.recoverpassword(request: Request)
 
 # SETTINGS
-GET     /termsofuse                             controllers.HomeController.termsofuse(request: Request)
-GET     /privacypolicy                          controllers.HomeController.privacypolicy(request: Request)
-GET     /help                                   controllers.HomeController.help(request: Request)
-
-GET     /calendar                               controllers.HomeController.calendar(request: Request)
+GET     /termsofuse                             controllers.MainController.termsofuse(request: Request)
+GET     /privacypolicy                          controllers.MainController.privacypolicy(request: Request)
+GET     /help                                   controllers.MainController.help(request: Request)
 
 # ADMINISTRATION
 GET     /administrator                          controllers.Administrator.administrator(request: Request)
@@ -36,38 +33,35 @@ GET     /managecanteens                         controllers.Administrator.manage
 # MANAGEMENT
     # ARCONIA
 GET     /manager_arc                            controllers.Manager.manager_arc(request: Request)
-GET     /manage_arc                             controllers.Manager.manage_arc(request: Request)
 GET     /manage_menus_arc                       controllers.Manager.manage_menus_arc(request: Request)
-#GET     /manage_tickets_arc                     controllers.Manager.manage_tickets_arc(request: Request)
+GET     /manage_tickets_arc                     controllers.Manager.manage_tickets_arc(request: Request)
     # THE LAST DROP
 GET     /manager_tld                            controllers.Manager.manager_tld(request: Request)
-GET     /manage_tld                             controllers.Manager.manage_tld(request: Request)
 GET     /manage_menus_tld                       controllers.Manager.manage_menus_tld(request: Request)
 GET     /manage_tickets_tld                     controllers.Manager.manage_tickets_tld(request: Request)
     # THE LEAKY CAULDRON
 GET     /manager_tlc                            controllers.Manager.manager_tlc(request: Request)
-GET     /manage_tlc                             controllers.Manager.manage_tlc(request: Request)
 GET     /manage_menus_tlc                       controllers.Manager.manage_menus_tlc(request: Request)
 GET     /manage_tickets_tlc                     controllers.Manager.manage_tickets_tlc(request: Request)
     # WAVERLY SUB STATION
 GET     /manager_wss                            controllers.Manager.manager_wss(request: Request)
-GET     /manage_wss                             controllers.Manager.manage_wss(request: Request)
 GET     /manage_menus_wss                       controllers.Manager.manage_menus_wss(request: Request)
 GET     /manage_tickets_wss                     controllers.Manager.manage_tickets_wss(request: Request)
 
 # CANTEENS
 GET     /canteen/:id                            controllers.CanteenController.canteen(request: Request, id: Long)
-#GET     /menu                                   controllers.CanteenController.menu()
+POST    /canteen/:id                            controllers.CanteenController.canteen(request: Request, id: Long)
+POST    /canteen                                controllers.CanteenController.buy(request: Request, id: Long)
 
 # STUDENT
 GET     /tickets                                controllers.Student.tickets(request: Request)
 GET     /wallet                                 controllers.Student.wallet(request: Request)
 
 #METHODS
-#POST    /create                                 controllers.HomeController.create(request: Request)
-#POST    /save                                   controllers.HomeController.save(request: Request)
-#POST    /edit                                   controllers.HomeController.edit(request: Request)
-#POST    /update                                 controllers.HomeController.update(request: Request)
+#POST    /create                                 controllers.MainController.create(request: Request)
+#POST    /save                                   controllers.MainController.save(request: Request)
+#POST    /edit                                   controllers.MainController.edit(request: Request)
+#POST    /update                                 controllers.MainController.update(request: Request)
 
 
 # Map static resources from the /public folder to the /assets URL path

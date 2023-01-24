@@ -1,93 +1,86 @@
-@(canteen: Canteen)
-@template(Array("stylesheets/calendar.css")) {
+@(canteen: Canteen, dishes: java.util.List[models.Dish], r: play.mvc.Http.Request)
+    @template(Array("stylesheets/calendar.css")) {
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="@routes.Assets.at("main.js")" defer></script>
 
-    <script src="@routes.Assets.at("main.js")" defer></script>
-
-    <main class="container-menu">
-        <section class="container mb-5">
-            <div class="row w-100 d-flex mx-auto justify-content-center pt-2">
-                <div class="col-xl-12 cards pb-4">
-                    <div style="background-color: #131313" class="card textimg">
-                        <img src="@routes.Assets.at("images/b.arc.jpg")" class="img-fluid" alt="arc">
-                        <div class="text-block">
-                            <h5>@canteen.getName</h5>
-                            <p style="font-size: 12px">@canteen.getAddress</p>
+        <main class="container-menu">
+            <section class="container mb-5">
+                <div class="row w-100 d-flex mx-auto justify-content-center pt-2">
+                    <div class="col-xl-12 cards pb-4">
+                        <div style="background-color: #131313" class="card textimg">
+                            <img src="@routes.Assets.at("images/b.arc.jpg")" class="img-fluid" alt="arc">
+                            <div class="text-block">
+                                <h5>@canteen.getName</h5>
+                                <p style="font-size: 12px">@canteen.getAddress</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <main class="container-menu">
-        <section class="container mb-5" id="manage_menus_arc">
-            <div class="row w-100 d-flex mx-auto justify-content-center">
-
-                <div class="col-md-6 d-flex justify-content-center">
-                    <div class="calendar-colors">
-                        <div class="calendar">
-                            <div class="calendar-header">
-                                <span class="month-picker" id="month-picker">April</span>
-                                <div class="year-picker">
-                                    <span class="year-change" id="prev-year">
-                                        <pre><</pre>
-                                    </span>
-                                    <span id="year">2022</span>
-                                    <span class="year-change" id="next-year">
-                                        <pre>></pre>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="calendar-body">
-                                <div class="calendar-week-day">
-                                    <div>Sun</div>
-                                    <div>Mon</div>
-                                    <div>Tue</div>
-                                    <div>Wed</div>
-                                    <div>Thu</div>
-                                    <div>Fri</div>
-                                    <div>Sat</div>
-                                </div>
-                                <div class="calendar-days"></div>
-                            </div>
-                            <div class="month-list"></div>
-                        </div>
-                    </div>
-                </div>
-
-                @* @for(dish <- dishes) {
-                @Canteens.menuCard(canteen)
-                } *@
-
-                @*<div class="col-md-5 my-auto cards">
+        <div class="row d-flex justify-content-center pt-5 pb-2" style="margin-left: 125px">
+            <div class="col-md-12">
+                <form method="post" action="@controllers.routes.CanteenController.canteen(canteen.getId)">
+                    @helper.CSRF.formField(r.asScala)
                     <div class="row">
-                        <div style="background-color: white" class="card">
-                            <div class="card-body">
-                                <div class="row d-flex align-items-center">
-                                    <div class="col-md-3 ms-4">
-                                        <h1 class="txtred">*@@* @Dish.getType(1) *@@*</h1>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <h4 class="txtblack" style="margin: 10px 0px 20px 0px">*@@* @Dish.getDishById(1) *@@* </h4>
-*@@*                                        <p>@Dish.getDescription(1) </p>*@@*
-                                    </div>
+                        <p style="color: white" class="text-left">Pick a day and check the menu available</p>
+                        <div class="row d-flex align-items-center">
+                            <div class="col-sm-12 col-md-2 justify-content-center">
+                                <div class="form-control-sm searchfield">
+                                    <input type="date" id="calendar" name="date">
                                 </div>
                             </div>
-                        </div>
-                    </div>*@
-
-                    <div class="row">
-                        <div class="col-md-2 d-flex align-items-start flex-column mt-5 ps-0">
-                            <p class="text-white text-center m-0">Price</p>
-                            <h4 class="text-white text-center">€4.20</h4>
-                        </div>
-                        <div class="col-md-4 d-flex justify-content-end mt-5 p-0">
-                            <button href="#" class="btn btn-form">Buy</button>
+                            <div class="col-md-4">
+                                <button class="btn btn-search text-white p-3" type="submit">
+                                    <img src="@routes.Assets.at("images/search.png")" class="img-fluid" alt="settings" width="20px">
+                                </button>
+                            </div>
                         </div>
                     </div>
+                </form>
+            </div>
+        </div>
+        @* @if(!dishes.isEmpty) {
+        @for(dish <- dishes) { *@
+        @*<form action="@controllers.routes.CanteenController.buy(Dish.getId())" method="post">
+            @helper.CSRF.formField(r.asScala)*@
+            <div class="row d-flex mx-auto justify-content-center">
+                <div class="col-md-10 pb-4">
+                @if(!dishes.isEmpty) {
+                    <table class="table table-responsive darkbg">
+                        <thead class="text-center">
+                            <tr>
+                                <th scope="col">Type</th>
+                                <th scope="col">Dish</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Value</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="align-middle text-center">
+                        @for(dish <- dishes) {
+                            <tr>
+                                <td>@dish.getType</td>
+                                <td>@dish.getName</td>
+                                <td>@dish.getDescription</td>
+                                <td>€ @dish.getValue</td>
+                                <td><a class="btn btn-brown" type="submit" href="#">Buy</a></td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                } else {
+                    <div class="row principal-container justify-content-center pt-4 pb-4">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="card-container text-white justify-content-start">
+                                <p style="color: white" class="text-left d-flex justify-content-center m-4">
+                                    There is no menu available for the chosen day</p>
+                            </div>
+                        </div>
+                    </div>
+                }
                 </div>
             </div>
-            </div>
-        </section>
-    </main>
-}
+        </form>
+    }

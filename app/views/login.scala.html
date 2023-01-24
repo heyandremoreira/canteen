@@ -1,45 +1,33 @@
-@(r: play.mvc.Http.Request)(error: String = "Invalid login request"))
-@template(Array("stylesheets/landing.css")) {
+@(r: play.mvc.Http.Request)
+    @template(Array("stylesheets/landing.css")) {
 
-   @* <form action="@controllers.routes.LoginController.handleLogin()" method="post">*@
-        @helper.CSRF.formField(r.asScala)
-        <div class="row principal-container">
-            <div class="col-7 d-none d-md-block text-center">
-                <img src="@routes.Assets.at("images/login2.png")" class="img-fluid" alt="login" width="500px">
-            </div>
-            <div class="col-sm-12 col-md-4 justify-content-center">
-                <div class="card-container text-white justify-content-start">
-                    @* @helper.form(routes.Application.authenticate) *@
-                    <h2 class="pb-3">Login</h2>
-                    @* @if(form.hasGlobalErrors) {
-                    <p class="error">
-                    @form.globalError.message
-                    </p>
-                    }
+        <form action="@controllers.routes.AuthController.loginProcess()" method="post">
+            @helper.CSRF.formField(r.asScala)
+            <div class="row principal-container">
+                <div class="col-7 d-none d-md-block text-center">
+                    <img src="@routes.Assets.at("images/login2.png")" class="img-fluid" alt="login" width="500px">
+                </div>
+                <div class="col-sm-12 col-md-4 justify-content-center">
+                    <div class="card-container text-white justify-content-start">
+                        <h2 class="pb-3">Login</h2>
+                        <div class="form-control-sm textfield pb-3">
+                            <input type="text" id="username" name="username" placeholder="Username">
+                        </div>
+                        <div class="form-control-sm textfield pb-5">
+                            <input type="password" id="password" name="password" placeholder="Password">
+                        </div>
+                        <div class="form-control-sm textfield pb-3">
+                            <button class="btn-form" href="/home" type="submit">Sign In</button>
+                        </div>
 
-                    @if(flash.contains("success")) {
-                    <p class="success">
-                    @flash.get("success")
-                    </p>
-                    } *@
-                    <div class="form-control-sm textfield pb-3">
-                        <input type="text" id="username" name="username" placeholder="Username">
+                        <a style="font-size: 12px" class="text-center text-muted pb-5" href="/recoverpassword">
+                            Forgot your password?</a>
+
+                        <p style="font-size: 15px" class="text-center text-muted mt-0 mb-0">Don't have an account?
+                            <a href="/signup" class="fw-bold text-white">Sign up</a>
+                        </p>
                     </div>
-                    <div class="form-control-sm textfield pb-5">
-                        <input type="password" id="password" name="password" placeholder="Password">
-                    </div>
-                    <div class="form-control-sm textfield pb-3">
-                        <button class="btn-form" href="/home" type="submit">Sign In</button>
-                    </div>
-
-                    <a style="font-size: 12px" class="text-center text-muted pb-5" href="/recoverpassword">
-                        Forgot your password?</a>
-
-                    <p style="font-size: 15px" class="text-center text-muted mt-0 mb-0">Don't have an account?
-                        <a href="/signup" class="fw-bold text-white">Sign up</a>
-                    </p>
-                    <p>@error</p>
                 </div>
             </div>
-        </div>
-}
+        </form>
+    }

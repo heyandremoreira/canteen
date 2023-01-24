@@ -1,0 +1,127 @@
+@* @(menu: java.util.List[Menu], r: play.mvc.Http.Request)*@
+<div class="row d-flex justify-content-center pt-5 pb-2" style="margin-left: 125px">
+    <div class="col-md-12">
+        @*<select class="marronbg text-white p-2 mb-2" name="weekdays">
+            <option value="" disabled selected>Choose a week day</option>
+            <option value="">Monday</option>
+            <option value="">Tuesday</option>
+            <option value="">Wednesday</option>
+            <option value="">Thursday</option>
+            <option value="">Friday</option>
+        </select>*@
+    </div>
+</div>
+<div class="row d-flex mx-auto justify-content-center">
+    <div class="col-md-10 pb-4">
+        <table class="table table-responsive darkbg">
+            <thead class="text-center">
+                <tr>
+                    <th scope="col">Type</th>
+                    <th scope="col">Menu</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Value</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody class="align-middle text-center">
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                        </div>
+                    </td>
+                    <td>
+                        @*<form action="@controllers.routes.Administrator.SaveMenu(menu.getId())" method="post">
+                        @helper.CSRF.formField(r.asScala)
+                        <button name="appbtn" type="submit" class="btn btn-approve">Save</button>
+                        </form>*@
+                        <a class="btn btn-remove" type="submit" href="#">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                        </div>
+                    </td>
+                    <td>
+                        <a class="btn btn-brown" type="submit" href="#">Save</a>
+                        <a class="btn btn-remove" type="submit" href="#">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" aria-label="With textarea"></input>
+                        </div>
+                    </td>
+                    <td>
+                        <a class="btn btn-brown" type="submit" href="#">Save</a>
+                        <a class="btn btn-remove" type="submit" href="#">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -24,13 +24,13 @@ public class Administrator extends Controller {
     public Result administrator(Http.Request request) {
         return ok(views.html.Administrator.administrator.render());
     }
-
     public Result createcanteen(Http.Request request) {
         return ok(views.html.Administrator.createcanteen.render());
     }
     public Result managecanteens(Http.Request request) {
         return ok(views.html.Administrator.managecanteens.render());
     }
+
 
     public Result userslist(Http.Request request) {
         List<User> approvedUsersList = finder.query().where().eq("status","approved").findList();

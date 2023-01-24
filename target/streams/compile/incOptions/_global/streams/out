@@ -1,2 +1,23 @@
 [debug] Created transactional ClassFileManager with tempDir = C:\Users\André ISCTE\Documents\canteen_management\target\scala-2.13\classes.bak
+[debug] About to delete class files:
+[debug] 	profile$.class
+[debug] 	profile.class
+[debug] We backup class files:
+[debug] 	profile$.class
+[debug] 	profile.class
+[debug] Registering generated classes:
+[debug] 	profile$.class
+[debug] 	profile.class
+[debug] About to delete class files:
+[debug] 	MainController.class
+[debug] We backup class files:
+[debug] 	MainController.class
+[debug] Rolling back changes to class files.
+[debug] Removing generated classes:
+[debug] 	profile$.class
+[debug] 	profile.class
+[debug] Restoring class files: 
+[debug] 	profile.class
+[debug] 	profile$.class
+[debug] 	MainController.class
 [debug] Removing the temporary directory used for backing up class files: C:\Users\André ISCTE\Documents\canteen_management\target\scala-2.13\classes.bak

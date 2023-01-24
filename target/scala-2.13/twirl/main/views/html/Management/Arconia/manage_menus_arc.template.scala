@@ -30,48 +30,7 @@ object manage_menus_arc extends _root_.play.twirl.api.BaseScalaTemplate[play.twi
 
 
 Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.css", "../../../public/stylesheets/home.css"))/*1.100*/ {_display_(Seq[Any](format.raw/*1.102*/("""
-    """),format.raw/*2.5*/("""<table class="table table-responsive table-hover darkbg">
-        <thead class="text-center">
-            <tr>
-                <th scope="col">Canteen</th>
-                <th scope="col">Menu</th>
-                <th scope="col">Date</th>
-                <th scope="col">Status</th>
-            </tr>
-        </thead>
-        <tbody class="align-middle text-center">
-            <tr>
-                <td>Arconia</td>
-                <td>Carbonara</td>
-                <td>23/02/2023</td>
-                <td><a class="btn btn-remove px-4" type="submit" href="#">Remove</a></td>
-            </tr>
-            <tr>
-                <td>Arconia</td>
-                <td>Carbonara</td>
-                <td>23/02/2023</td>
-                <td><a class="btn btn-remove px-4" type="submit" href="#">Remove</a></td>
-            </tr>
-            <tr>
-                <td>Arconia</td>
-                <td>Carbonara</td>
-                <td>23/02/2023</td>
-                <td><a class="btn btn-remove px-4" type="submit" href="#">Remove</a></td>
-            </tr>
-            <tr>
-                <td>Arconia</td>
-                <td>Carbonara</td>
-                <td>23/02/2023</td>
-                <td><a class="btn btn-remove px-4" type="submit" href="#">Remove</a></td>
-            </tr>
-            <tr>
-                <td>Arconia</td>
-                <td>Carbonara</td>
-                <td>23/02/2023</td>
-                <td><a class="btn btn-remove px-4" type="submit" href="#">Remove</a></td>
-            </tr>
-        </tbody>
-    </table>
+    """),_display_(/*2.6*/Templates/*2.15*/.createMenuCard()),format.raw/*2.32*/("""
 """)))}))
       }
     }
@@ -89,9 +48,9 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
               /*
                   -- GENERATED --
                   SOURCE: app/views/Management/Arconia/manage_menus_arc.scala.html
-                  HASH: 7b451a301e536c7c43f7f8a835dfa89abf4c57d6
-                  MATRIX: 1019->1|1126->99|1166->101|1198->107
-                  LINES: 32->1|32->1|32->1|33->2
+                  HASH: 594688cc13df3492352378a6cc50b74538d15825
+                  MATRIX: 1019->1|1126->99|1166->101|1198->108|1215->117|1252->134
+                  LINES: 32->1|32->1|32->1|33->2|33->2|33->2
                   -- GENERATED --
               */
           

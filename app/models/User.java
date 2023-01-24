@@ -34,6 +34,12 @@ public class User extends Model {
     private Image image;
     private static final Finder<Long, User> finder = new Finder<>(User.class);
 
+    public User(String username, String email, String password) {
+        this.username=username;
+        this.email=email;
+        this.password=password;
+    }
+
     public static List<User> getUserList() {
         return finder.all();
     }
@@ -53,6 +59,10 @@ public class User extends Model {
         return finder.query().where().eq("Email", email).setMaxRows(1).findOne();
     }
 
+    public static User getUserByUsername(String username){
+        return finder.query().where().eq("Username", username).setMaxRows(1).findOne();
+    }
+
     public User(Long id, String username, String password, String token, String email) {
         this.id = id;
         this.username = username;
@@ -64,11 +74,11 @@ public class User extends Model {
     public User() {
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

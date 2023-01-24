@@ -1,7 +1,7 @@
 @(r: play.mvc.Http.Request)
 @template(Array("stylesheets/landing.css")) {
 
-    @*<form method="post" action="@controllers.routes.HomeController.signupProcess()">*@
+    <form action="@controllers.routes.AuthController.signupProcess()" method="post">
         @helper.CSRF.formField(r.asScala)
         <div class="row principal-container">
             <div class="col-7 d-none d-md-block text-center">
@@ -10,12 +10,26 @@
             <div class="col-sm-12 col-md-4 justify-content-center">
                 <div class="card-container text-white justify-content-start">
                     <h2 class="pb-3">Sign up</h2>
-                    <select>
-                        <option value="" disabled selected>Choose the category</option>
-                        <option value="">Administrator</option>
-                        <option value="">Manager</option>
-                        <option value="">Student</option>
-                    </select>
+                    <div class="row pb-3">
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">Administrator</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">Manager</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox3">Student</label>
+                            </div>
+                        </div>
+                    </div>
                     <div class="form-control-sm textfield pb-3">
                         <input type="text" name="username" placeholder="Username">
                     </div>
@@ -26,20 +40,22 @@
                         <input type="password" name="password" placeholder="Password">
                     </div>
                     <div class="form-control-sm textfield pb-4">
-                        <button class="btn-form" href="/home">Register</button>
+                        <button class="btn-form" href="/" type="submit">Register</button>
                     </div>
-                    <p style="font-size: 12px" class="text-center text-muted pb-4">By signing up, you agree to our
+                    <p style="font-size: 12px" class="text-center text-muted pb-4">
+                        By signing up, you agree to our
                         <a class="text-white" style="text-decoration: none;
                             font-size: 12px" href="/termsofuse">Terms Of Use</a>
                         <br> and
                         <a class="text-white" style="text-decoration: none;
                             font-size: 12px" href="/privacypolicy">Privacy Policy</a>
                     </p>
-                    <p style="font-size: 15px" class="text-center text-muted mt-0 mb-0">Already have an account?
+                    <p style="font-size: 15px" class="text-center text-muted mt-0 mb-0">
+                        Already have an account?
                         <a href="/login" class="fw-bold text-white">Sign In</a>
                     </p>
                 </div>
             </div>
         </div>
-
+    </form>
 }

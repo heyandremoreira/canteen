@@ -29,7 +29,26 @@ object manager_tld extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.ap
       {
 
 
-Seq[Any]()
+Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css"))/*1.44*/{_display_(Seq[Any](format.raw/*1.45*/("""
+
+    """),format.raw/*3.5*/("""<main>
+        <div class="row principal-container">
+            <div class="col-md-7 d-flex justify-content-center">
+                <img src=""""),_display_(/*6.28*/routes/*6.34*/.Assets.at("images/manager.png")),format.raw/*6.66*/("""" class="img-fluid" alt="landing" width="600px">
+            </div>
+            <div class="col-md-4 justify-content-center">
+                <div class="text-white justify-content-start">
+                    <div class="col-12 text-center form-control-sm pb-3">
+                        <a class="btn btn-form" href="/manage_menus_tld">Manage Menus</a>
+                    </div>
+                    <div class="col-12 text-center form-control-sm">
+                        <a class="btn btn-form" href="manage_tickets_tld">Manage Tickets</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+""")))}))
       }
     }
   }
@@ -46,9 +65,9 @@ Seq[Any]()
               /*
                   -- GENERATED --
                   SOURCE: app/views/Management/TheLastDrop/manager_tld.scala.html
-                  HASH: b2da9e89dd70a064e8e985a9d466e95834696428
-                  MATRIX: 
-                  LINES: 
+                  HASH: dc6235ac46179672d19886e148457ed25c504c18
+                  MATRIX: 1018->1|1068->43|1106->44|1140->52|1314->200|1328->206|1380->238
+                  LINES: 32->1|32->1|32->1|34->3|37->6|37->6|37->6
                   -- GENERATED --
               */
           

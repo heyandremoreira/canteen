@@ -17,8 +17,10 @@ create table dish (
   id                            bigint auto_increment not null,
   name                          varchar(255),
   description                   varchar(255),
-  type                          varchar(255),
+  type                          varchar(10),
+  value                         double not null,
   menu_id                       bigint,
+  dish_quantity                 integer not null,
   constraint pk_dish primary key (id)
 );
 
@@ -35,16 +37,9 @@ create table image (
   constraint pk_image primary key (id)
 );
 
-create table login (
-  username                      varchar(255),
-  password                      varchar(255)
-);
-
 create table menu (
   id                            bigint auto_increment not null,
-  description                   varchar(255),
-  date                          datetime(6),
-  value                         double not null,
+  date                          date,
   canteen_id                    bigint,
   constraint pk_menu primary key (id)
 );
@@ -59,13 +54,6 @@ create table role (
   id                            bigint auto_increment not null,
   username                      varchar(255),
   constraint pk_role primary key (id)
-);
-
-create table signup (
-  username                      varchar(255),
-  email                         varchar(255),
-  password                      varchar(255),
-  confirm_password              varchar(255)
 );
 
 create table ticket (
@@ -161,15 +149,11 @@ drop table if exists feedback;
 
 drop table if exists image;
 
-drop table if exists login;
-
 drop table if exists menu;
 
 drop table if exists reset_password;
 
 drop table if exists role;
-
-drop table if exists signup;
 
 drop table if exists ticket;
 

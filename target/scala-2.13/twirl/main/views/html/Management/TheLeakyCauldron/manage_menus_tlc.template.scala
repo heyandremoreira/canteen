@@ -29,7 +29,15 @@ object manage_menus_tlc extends _root_.play.twirl.api.BaseScalaTemplate[play.twi
       {
 
 
-Seq[Any]()
+Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.css", "../../../public/stylesheets/home.css"))/*1.100*/ {_display_(Seq[Any](format.raw/*1.102*/("""
+    """),_display_(/*2.6*/Templates/*2.15*/.createMenuCard()),format.raw/*2.32*/("""
+    """),_display_(/*3.6*/Templates/*3.15*/.createMenuCard()),format.raw/*3.32*/("""
+    """),_display_(/*4.6*/Templates/*4.15*/.createMenuCard()),format.raw/*4.32*/("""
+    """),_display_(/*5.6*/Templates/*5.15*/.createMenuCard()),format.raw/*5.32*/("""
+    """),_display_(/*6.6*/Templates/*6.15*/.createMenuCard()),format.raw/*6.32*/("""
+    """),_display_(/*7.6*/Templates/*7.15*/.createMenuCard()),format.raw/*7.32*/("""
+    """),_display_(/*8.6*/Templates/*8.15*/.createMenuCard()),format.raw/*8.32*/("""
+""")))}))
       }
     }
   }
@@ -46,9 +54,9 @@ Seq[Any]()
               /*
                   -- GENERATED --
                   SOURCE: app/views/Management/TheLeakyCauldron/manage_menus_tlc.scala.html
-                  HASH: b2da9e89dd70a064e8e985a9d466e95834696428
-                  MATRIX: 
-                  LINES: 
+                  HASH: 443a3cec1f70c2c68f5deb5fb63d070cb072e55d
+                  MATRIX: 1028->1|1135->99|1175->101|1207->108|1224->117|1261->134|1293->141|1310->150|1347->167|1379->174|1396->183|1433->200|1465->207|1482->216|1519->233|1551->240|1568->249|1605->266|1637->273|1654->282|1691->299|1723->306|1740->315|1777->332
+                  LINES: 32->1|32->1|32->1|33->2|33->2|33->2|34->3|34->3|34->3|35->4|35->4|35->4|36->5|36->5|36->5|37->6|37->6|37->6|38->7|38->7|38->7|39->8|39->8|39->8
                   -- GENERATED --
               */
           

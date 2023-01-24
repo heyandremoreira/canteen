@@ -4,7 +4,7 @@ import io.ebean.Finder;
 import io.ebean.Model;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -12,14 +12,12 @@ import java.util.List;
 public class Menu extends Model {
     @Id
     private Long id;
-    private String description;
-    private Date date;
-    private double value;
+    private LocalDate date;
 
     @OneToMany(mappedBy = "menu")
     private List<Dish> dishes;
 
-    @ManyToOne
+    @OneToMany(mappedBy = "menu")
     private List<Ticket> tickets;
 
     @ManyToOne
@@ -30,11 +28,13 @@ public class Menu extends Model {
         return finder.byId(id);
     }
 
-    public Menu(Long id, String description, Date date, double value){
+    public Menu(Long id, Type type, LocalDate date){
         this.id=id;
-        this.description=description;
         this.date=date;
-        this.value=value;
+    }
+
+    public static Menu getMenuByDate(LocalDate date, Long canteenId) {
+        return finder.query().where().eq("date", date).and().eq("canteen_id", canteenId).setMaxRows(1).findOne();
     }
 
     public Long getId() {
@@ -45,28 +45,12 @@ public class Menu extends Model {
         this.id = id;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
-    }
-
-    public double getValue() {
-        return value;
-    }
-
-    public void setValue(double value) {
-        this.value = value;
     }
 
     public List<Dish> getDishes() {

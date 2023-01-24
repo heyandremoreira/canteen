@@ -2,7 +2,6 @@ package models;
 
 import io.ebean.Finder;
 import io.ebean.Model;
-import play.mvc.Result;
 
 import javax.persistence.*;
 import java.util.List;
@@ -14,10 +13,14 @@ public class Dish extends Model {
     private Long id;
     private String name;
     private String description;
-    private String type;
+    @Enumerated(EnumType.STRING)
+    private Type type;
+    private double value;
 
     @ManyToOne
     private Menu menu;
+
+    private int dishQuantity;
 
     private static final Finder<Long, Dish> finder = new Finder<>(Dish.class);
     public static List<Dish> getDishList(){
@@ -27,12 +30,18 @@ public class Dish extends Model {
         return finder.byId(id);
     }
 
-    public Dish(Long id, String name, String description, String type){
+    public Dish(Long id, String name, String description, Type type, double value, int dishQuantity){
         this.id=id;
         this.name=name;
         this.description=description;
         this.type=type;
+        this.value=value;
         this.menu=menu;
+        this.dishQuantity=dishQuantity;
+    }
+
+    public static List<Dish> getDishesFromMenu(Menu menu) {
+        return finder.query().where().eq("menu_id", menu.getId()).findList();
     }
 
     public Long getId() {
@@ -59,12 +68,20 @@ public class Dish extends Model {
         this.description = description;
     }
 
-    public String getType() {
+    public Type getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(Type type) {
         this.type = type;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public void setValue(double value) {
+        this.value = value;
     }
 
     public Menu getMenu() {
@@ -73,5 +90,17 @@ public class Dish extends Model {
 
     public void setMenu(Menu menu) {
         this.menu = menu;
+    }
+
+    public int getDishQuantity() {
+        return dishQuantity;
+    }
+
+    public void setDishQuantity(int dishQuantity) {
+        this.dishQuantity = dishQuantity;
+    }
+
+    public void removeQuantity(int dishQuantity){
+        this.dishQuantity=dishQuantity-1;
     }
 }

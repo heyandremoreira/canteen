@@ -21,39 +21,40 @@ import play.data._
 import play.core.j.PlayFormsMagicForJava._
 import scala.jdk.CollectionConverters._
 
-object profile extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object profile extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[User,play.twirl.api.HtmlFormat.Appendable] {
 
-  /* @(bookForm : Form[Book])
-@import helper. */
-  def apply():play.twirl.api.HtmlFormat.Appendable = {
+  /**/
+  def apply/*1.2*/(user: User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](_display_(/*4.2*/template(Array("stylesheets/landing.css", "stylesheets/profile.css"))/*4.71*/{_display_(Seq[Any](format.raw/*4.72*/("""
+Seq[Any](format.raw/*1.14*/("""
 
-        """),format.raw/*6.9*/("""<div class="container img-box pb-5">
+"""),_display_(/*3.2*/template(Array("stylesheets/landing.css", "stylesheets/profile.css"))/*3.71*/{_display_(Seq[Any](format.raw/*3.72*/("""
+
+        """),format.raw/*5.9*/("""<div class="container img-box pb-5">
             <div class="row align-items-center rectangle">
                 <div class="d-flex justify-content-center">
-                    <img src=""""),_display_(/*9.32*/routes/*9.38*/.Assets.at("images/user.png")),format.raw/*9.67*/("""" class="rounded-circle img-fluid" alt="user" width="150px">
+                    <img src=""""),_display_(/*8.32*/routes/*8.38*/.Assets.at("images/user.png")),format.raw/*8.67*/("""" class="rounded-circle img-fluid" alt="user" width="150px">
                 </div>
                 <input type="file" id="file" accept="file/*" style="display: none" onchange="loadFile(event)">
                 <label for="file">
-                    <img src=""""),_display_(/*13.32*/routes/*13.38*/.Assets.at("images/upload.png")),format.raw/*13.69*/("""" class="upload-icon" alt="user" width="40px">
+                    <img src=""""),_display_(/*12.32*/routes/*12.38*/.Assets.at("images/upload.png")),format.raw/*12.69*/("""" class="upload-icon" alt="user" width="40px">
                 </label>
                 <script>
                     var imgBox = document.getElementById("imgBox");
-                    var loadFile = function (event) """),format.raw/*17.53*/("""{"""),format.raw/*17.54*/("""
-                        """),format.raw/*18.25*/("""imgBox.style.backgroundImage = "url(" + URL.createObjectURL(event.target.files[0]) + ")";
-                    """),format.raw/*19.21*/("""}"""),format.raw/*19.22*/("""
-                """),format.raw/*20.17*/("""</script>
+                    var loadFile = function (event) """),format.raw/*16.53*/("""{"""),format.raw/*16.54*/("""
+                        """),format.raw/*17.25*/("""imgBox.style.backgroundImage = "url(" + URL.createObjectURL(event.target.files[0]) + ")";
+                    """),format.raw/*18.21*/("""}"""),format.raw/*18.22*/("""
+                """),format.raw/*19.17*/("""</script>
             </div>
         </div>
 
 
         <form method="post" action="profileProcess">
-            """),format.raw/*26.71*/("""
-            """),format.raw/*27.13*/("""<div class="row principal-container justify-content-center pt-5">
+            """),format.raw/*25.71*/("""
+            """),format.raw/*26.13*/("""<div class="row principal-container justify-content-center pt-5">
                 <div class="col-sm-12 col-md-4">
                     <div class="card-container text-white justify-content-start">
                         <div class="form-control-sm text-white textfield pb-3">
@@ -80,9 +81,9 @@ Seq[Any](_display_(/*4.2*/template(Array("stylesheets/landing.css", "stylesheets
     }
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(user:User): play.twirl.api.HtmlFormat.Appendable = apply(user)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((User) => play.twirl.api.HtmlFormat.Appendable) = (user) => apply(user)
 
   def ref: this.type = this
 
@@ -92,9 +93,9 @@ Seq[Any](_display_(/*4.2*/template(Array("stylesheets/landing.css", "stylesheets
               /*
                   -- GENERATED --
                   SOURCE: app/views/profile.scala.html
-                  HASH: d75ae96efb30d1bc4f04c2093fb9c74831dfd8ae
-                  MATRIX: 1034->52|1111->121|1149->122|1187->134|1403->324|1417->330|1466->359|1758->624|1773->630|1825->661|2074->882|2103->883|2157->909|2296->1020|2325->1021|2371->1039|2516->1214|2558->1228
-                  LINES: 33->4|33->4|33->4|35->6|38->9|38->9|38->9|42->13|42->13|42->13|46->17|46->17|47->18|48->19|48->19|49->20|55->26|56->27
+                  HASH: c214d18109e7639314b9db50885bf375c46523d3
+                  MATRIX: 907->1|1014->13|1044->18|1121->87|1159->88|1197->100|1413->290|1427->296|1476->325|1768->590|1783->596|1835->627|2084->848|2113->849|2167->875|2306->986|2335->987|2381->1005|2526->1180|2568->1194
+                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|39->8|39->8|39->8|43->12|43->12|43->12|47->16|47->16|48->17|49->18|49->18|50->19|56->25|57->26
                   -- GENERATED --
               */
           

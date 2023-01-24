@@ -75,6 +75,21 @@ td{
     border-radius: 20px;
 }
 
+.marronbg{
+    background-color: #B87651;
+    border-color: #B87651;
+    border-radius: 20px;
+}
+
+.marronbg:hover{
+    --bs-table-bg: #B87651;
+    --bs-table-striped-bg: #B87651;
+    --bs-table-active-bg: white;
+    --bs-table-hover-bg: white;
+    --bs-table-hover-color: #B87651;
+    border-radius: 20px;
+}
+
 .principal-container{
     background: black;
     display: flex;
@@ -116,6 +131,23 @@ td{
     align-items: center;
 }*/
 
+.errorbox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.errorbox > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #B87651;
+    outline: none;
+    box-sizing: border-box;
+}
 
 .textfield{
     width: 100%;
@@ -137,6 +169,25 @@ td{
 
 .textfield > input::placeholder{
     color: #A2A2A2;
+}
+
+.searchfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: white;
+}
+
+.searchfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    background: white;
+    outline: none;
+    box-sizing: border-box;
 }
 
 .textimg{
@@ -173,9 +224,25 @@ td{
     background: #c79375;
 }
 
+.btn-search{
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    color: #FFFEFE;
+    background: #B87651;
+}
+
+.btn-search:hover{
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    color: #FFFEFE;
+    background: #c79375;
+}
+
 .btn-small{
-    width: 30%;
-    padding: 10px 0px;
+    width: 50px;
+    padding: 10px;
     border: none;
     border-radius: 20px;
     outline: none;
@@ -184,7 +251,27 @@ td{
 }
 
 .btn.btn-small:hover {
-    width: 30%;
+    width: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    color: #FFFEFE;
+    background: #c79375;
+}
+
+.btn-brown{
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    color: #FFFEFE;
+    background: #B87651;
+}
+
+.btn-brown:hover{
+    width: 100px;
     padding: 10px 0px;
     border: none;
     border-radius: 20px;
@@ -193,21 +280,8 @@ td{
     background: #c79375;
 }
 
-.btn.btn-brown {
-    width: 25%;
-    color: #FFFEFE;
-    background-color: #B87651;
-    border-color: #B87651;
-}
-.btn.btn-brown:hover {
-    width: 25%;
-    color: #FFFEFE;
-    background-color: #c79375;
-    border-color: #c79375;
-}
-
 .btn-remove{
-    width: 50%;
+    width: 100px;
     padding: 10px 0px;
     border: none;
     border-radius: 20px;
@@ -217,7 +291,7 @@ td{
 }
 
 .btn.btn-remove:hover {
-    width: 50%;
+    width: 100px;
     padding: 10px 0px;
     border: none;
     border-radius: 20px;
@@ -227,7 +301,7 @@ td{
 }
 
 .btn-approve{
-    width: 50%;
+    width: 100px;
     padding: 10px 0px;
     border: none;
     border-radius: 20px;
@@ -237,7 +311,7 @@ td{
 }
 
 .btn.btn-approve:hover {
-    width: 50%;
+    width: 100px;
     padding: 10px 0px;
     border: none;
     border-radius: 20px;

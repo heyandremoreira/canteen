@@ -29,7 +29,15 @@ object manage_menus_wss extends _root_.play.twirl.api.BaseScalaTemplate[play.twi
       {
 
 
-Seq[Any]()
+Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.css", "../../../public/stylesheets/home.css"))/*1.100*/ {_display_(Seq[Any](format.raw/*1.102*/("""
+    """),_display_(/*2.6*/Templates/*2.15*/.createMenuCard()),format.raw/*2.32*/("""
+    """),_display_(/*3.6*/Templates/*3.15*/.createMenuCard()),format.raw/*3.32*/("""
+    """),_display_(/*4.6*/Templates/*4.15*/.createMenuCard()),format.raw/*4.32*/("""
+    """),_display_(/*5.6*/Templates/*5.15*/.createMenuCard()),format.raw/*5.32*/("""
+    """),_display_(/*6.6*/Templates/*6.15*/.createMenuCard()),format.raw/*6.32*/("""
+    """),_display_(/*7.6*/Templates/*7.15*/.createMenuCard()),format.raw/*7.32*/("""
+    """),_display_(/*8.6*/Templates/*8.15*/.createMenuCard()),format.raw/*8.32*/("""
+""")))}))
       }
     }
   }
@@ -46,9 +54,9 @@ Seq[Any]()
               /*
                   -- GENERATED --
                   SOURCE: app/views/Management/WaverlySubStation/manage_menus_wss.scala.html
-                  HASH: b2da9e89dd70a064e8e985a9d466e95834696428
-                  MATRIX: 
-                  LINES: 
+                  HASH: 443a3cec1f70c2c68f5deb5fb63d070cb072e55d
+                  MATRIX: 1029->1|1136->99|1176->101|1208->108|1225->117|1262->134|1294->141|1311->150|1348->167|1380->174|1397->183|1434->200|1466->207|1483->216|1520->233|1552->240|1569->249|1606->266|1638->273|1655->282|1692->299|1724->306|1741->315|1778->332
+                  LINES: 32->1|32->1|32->1|33->2|33->2|33->2|34->3|34->3|34->3|35->4|35->4|35->4|36->5|36->5|36->5|37->6|37->6|37->6|38->7|38->7|38->7|39->8|39->8|39->8
                   -- GENERATED --
               */
           

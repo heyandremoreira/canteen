@@ -39,10 +39,16 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
             <div class="col-md-4 justify-content-center">
                 <div class="text-white justify-content-start">
                     <div class="col-12 text-center form-control-sm pb-3">
-                        <button class="btn btn-form">Users List</button>
+                        <a class="btn btn-form" href="/userslist">Users List</a>
+                    </div>
+                    <div class="col-12 text-center form-control-sm pb-3">
+                        <a class="btn btn-form" href="/authapproval">Authentication Approval</a>
+                    </div>
+                    <div class="col-12 text-center form-control-sm pb-3">
+                        <a class="btn btn-form" href="/createcanteen">Create Canteen</a>
                     </div>
                     <div class="col-12 text-center form-control-sm">
-                        <button class="btn btn-form">Authentication Approval</button>
+                        <a class="btn btn-form" href="/managecanteen">Manage Canteens</a>
                     </div>
                 </div>
             </div>
@@ -66,7 +72,7 @@ Seq[Any](_display_(/*1.2*/template(Array("../../../public/stylesheets/landing.cs
               /*
                   -- GENERATED --
                   SOURCE: app/views/Administrator/administrator.scala.html
-                  HASH: f1f67fb5a34bd35854a96ede4266d4c809eebed6
+                  HASH: 868f5382d2cac62689e85b48682daff47f1f1239
                   MATRIX: 1011->1|1077->59|1116->61|1150->69|1324->217|1338->223|1386->251
                   LINES: 32->1|32->1|32->1|34->3|37->6|37->6|37->6
                   -- GENERATED --

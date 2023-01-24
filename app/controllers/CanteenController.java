@@ -1,12 +1,15 @@
 package controllers;
 
-import models.Canteen;
+import models.*;
+import play.data.DynamicForm;
 import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Http;
 import play.mvc.Result;
 
 import javax.inject.Inject;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CanteenController extends Controller {
@@ -18,7 +21,29 @@ public class CanteenController extends Controller {
     }
 
     public Result canteen(Http.Request request, Long id){
+        DynamicForm dynamicForm = this.formFactory.form().bindFromRequest(request);
+        LocalDate date = LocalDate.now();
+        String formDate =  dynamicForm.get("date");
+        if (formDate != null){
+            date = LocalDate.parse(formDate);
+        }
         Canteen canteen = Canteen.getCanteenById(id);
-        return ok(views.html.Canteens.canteen.render(canteen));
+        Menu menu = Menu.getMenuByDate(date, canteen.getId());
+        List<Dish> dishes = new ArrayList<>();
+        if (menu != null){
+            dishes = Dish.getDishesFromMenu(menu);
+        }
+        return ok(views.html.Canteens.canteen.render(canteen, dishes, request));
+    }
+
+    public Result buy(Http.Request request, Long id) {
+        DynamicForm dynamicForm = this.formFactory.form().bindFromRequest(request);
+        Dish dish = Dish.getDishById(id);
+        if (dish.getDishQuantity() > 0) {
+            dish.setDishQuantity(dish.getDishQuantity()-1);
+            dish.update();
+            dish.refresh();
+        }
+        return redirect(routes.Student.tickets());
     }
 }
