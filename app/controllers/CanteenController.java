@@ -38,11 +38,13 @@ public class CanteenController extends Controller {
 
     public Result buy(Http.Request request, Long id) {
         DynamicForm dynamicForm = this.formFactory.form().bindFromRequest(request);
+        LocalDate date = LocalDate.parse(dynamicForm.get("date"));
+        Canteen canteen = Canteen.getCanteenById(id);
         Dish dish = Dish.getDishById(id);
-        User user =  User.getUserById(1L);
+        User user = User.getUserById(id);
         if (dish.getDishQuantity() > 0) {
             dish.setDishQuantity(dish.getDishQuantity()-1);
-            Ticket ticket = new Ticket(dish, user);
+            Ticket ticket = new Ticket(user, dish, date, canteen);
             dish.update();
             dish.refresh();
             ticket.save();

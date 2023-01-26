@@ -21,16 +21,16 @@ import play.data._
 import play.core.j.PlayFormsMagicForJava._
 import scala.jdk.CollectionConverters._
 
-object createMenuCard extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[play.mvc.Http.Request,play.twirl.api.HtmlFormat.Appendable] {
+object createMenuCard extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[Canteen,play.mvc.Http.Request,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(r: play.mvc.Http.Request):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(canteen: Canteen, r: play.mvc.Http.Request):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.28*/("""
-"""),format.raw/*2.1*/("""<form action=""""),_display_(/*2.16*/controllers/*2.27*/.routes.Manager.createMenu()),format.raw/*2.55*/("""" method="post">
+Seq[Any](format.raw/*1.46*/("""
+"""),format.raw/*2.1*/("""<form action=""""),_display_(/*2.16*/controllers/*2.27*/.routes.Manager.createMenu(canteen.getId())),format.raw/*2.70*/("""" method="post">
     """),_display_(/*3.6*/helper/*3.12*/.CSRF.formField(r.asScala)),format.raw/*3.38*/("""
 """),format.raw/*4.1*/("""<div class="row d-flex mx-auto justify-content-center">
     <div class="col-md-10 pb-4">
@@ -47,7 +47,7 @@ Seq[Any](format.raw/*1.28*/("""
                     <th scope="col">Type</th>
                     <th scope="col">Dish</th>
                     <th scope="col">Description</th>
-                    <th scope="col">Value</th>
+                    <th scope="col">Value(€)</th>
                     <th scope="col">Quantity</th>
                 </tr>
             </thead>
@@ -55,81 +55,81 @@ Seq[Any](format.raw/*1.28*/("""
                 <tr>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" value="Meat" name="type">
+                            <input class="form-control" value="Meat" name="meattype">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" name="dish">
+                            <input class="form-control" placeholder="" name="meatname">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" name="description">
+                            <input class="form-control" placeholder="" name="meatdescription">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" name="value">
+                            <input class="form-control" placeholder="" name="meatvalue">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" name="quantity">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="input-group">
-                            <input class="form-control" value="Fish" name="type">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="input-group">
-                            <input class="form-control" placeholder="" name="dish">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="input-group">
-                            <input class="form-control" placeholder="" name="description">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="input-group">
-                            <input class="form-control" placeholder="" name="value">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="input-group">
-                            <input class="form-control" placeholder="" name="quantity">
+                            <input class="form-control" placeholder="" name="meatquantity">
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" value="Vegetarian" name="type">
+                            <input class="form-control" value="Fish" name="fishtype">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" name="dish">
+                            <input class="form-control" placeholder="" name="fishname">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" name="description">
+                            <input class="form-control" placeholder="" name="fishdescription">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" name="value">
+                            <input class="form-control" placeholder="" name="fishvalue">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" name="quantity">
+                            <input class="form-control" placeholder="" name="fishquantity">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" value="Vegetarian" name="vegtype">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" name="vegname">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" name="vegdescription">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" name="vegvalue">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" name="vegquantity">
                         </div>
                     </td>
                 </tr>
@@ -148,9 +148,9 @@ Seq[Any](format.raw/*1.28*/("""
     }
   }
 
-  def render(r:play.mvc.Http.Request): play.twirl.api.HtmlFormat.Appendable = apply(r)
+  def render(canteen:Canteen,r:play.mvc.Http.Request): play.twirl.api.HtmlFormat.Appendable = apply(canteen,r)
 
-  def f:((play.mvc.Http.Request) => play.twirl.api.HtmlFormat.Appendable) = (r) => apply(r)
+  def f:((Canteen,play.mvc.Http.Request) => play.twirl.api.HtmlFormat.Appendable) = (canteen,r) => apply(canteen,r)
 
   def ref: this.type = this
 
@@ -160,8 +160,8 @@ Seq[Any](format.raw/*1.28*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/Templates/createMenuCard.scala.html
-                  HASH: 8190c9d1b53d9ee5137663757e6163cd9577bb28
-                  MATRIX: 941->1|1062->27|1090->29|1131->44|1150->55|1198->83|1246->106|1260->112|1306->138|1334->140
+                  HASH: e9fb1ea836e51bfd093934f6f26fbdf5cfddefa5
+                  MATRIX: 949->1|1088->45|1116->47|1157->62|1176->73|1239->116|1287->139|1301->145|1347->171|1375->173
                   LINES: 27->1|32->1|33->2|33->2|33->2|33->2|34->3|34->3|34->3|35->4
                   -- GENERATED --
               */

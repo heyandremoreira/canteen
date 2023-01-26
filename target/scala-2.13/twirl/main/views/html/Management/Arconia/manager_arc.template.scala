@@ -39,7 +39,7 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css"))/*1.44*/ {_d
             <div class="col-md-4 justify-content-center">
                 <div class="text-white justify-content-start">
                     <div class="col-12 text-center form-control-sm pb-3">
-                        <a class="btn btn-form" href="/manage_menus_arc">Manage Menus</a>
+                        <a class="btn btn-form" href="/manage_menus">Manage Menus</a>
                     </div>
                     <div class="col-12 text-center form-control-sm">
                         <a class="btn btn-form" href="manage_tickets_arc">Manage Tickets</a>
@@ -65,7 +65,7 @@ Seq[Any](_display_(/*1.2*/template(Array("stylesheets/landing.css"))/*1.44*/ {_d
               /*
                   -- GENERATED --
                   SOURCE: app/views/Management/Arconia/manager_arc.scala.html
-                  HASH: a8b1f805d52e4557211d32432a57c2b2d09a1c64
+                  HASH: 67f43b5123216911b3c5b015120c8c3cbef9629d
                   MATRIX: 1014->1|1064->43|1103->45|1137->53|1311->201|1325->207|1377->239
                   LINES: 32->1|32->1|32->1|34->3|37->6|37->6|37->6
                   -- GENERATED --

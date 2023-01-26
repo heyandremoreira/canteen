@@ -45,7 +45,7 @@
         <div class="row d-flex mx-auto justify-content-center">
             <div class="col-md-10 pb-4">
             @if(!dishes.isEmpty) {
-                <table class="table table-responsive darkbg">
+                <table class="table table-responsive table-hover darkbg">
                     <thead class="text-center">
                         <tr>
                             <th scope="col">Type</th>
@@ -61,10 +61,10 @@
                             <td>@dish.getType</td>
                             <td>@dish.getName</td>
                             <td>@dish.getDescription</td>
-                            <td>€ @dish.getValue</td>
+                            <td>@dish.getValue</td>
                             <form action="@controllers.routes.CanteenController.buy(dish.getId())" method="post">
                                 @helper.CSRF.formField(r.asScala)
-                            <td><button class="btn btn-brown" type="submit">Buy</button></td>
+                            <td><button class="btn btn-buy" type="submit">Buy</button></td>
                             </form>
                         </tr>
                     }

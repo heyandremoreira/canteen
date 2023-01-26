@@ -33,10 +33,10 @@ public class Dish extends Model {
         return finder.byId(id);
     }
 
-    public Dish(String name, String description, double value, int dishQuantity){
+    public Dish(Type type, String name, String description, double value, Menu menu, int dishQuantity){
+        this.type=type;
         this.name=name;
         this.description=description;
-        this.type=type;
         this.value=value;
         this.menu=menu;
         this.dishQuantity=dishQuantity;

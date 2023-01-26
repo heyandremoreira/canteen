@@ -1,3 +1,0 @@
-[error] [Error] C:\Users\André ISCTE\Documents\canteen_management\app\views\Student\tickets.scala.html:16
-[error]                 <td>@slot.getDate</td>*@: Expected '}' but found '@'
-[error] (Compile / twirlCompileTemplates) Twirl compilation failed

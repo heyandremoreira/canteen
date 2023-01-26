@@ -30,7 +30,7 @@ object calendar extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.H
 
 
 Seq[Any](format.raw/*1.1*/("""<main class="container-menu">
-    <section class="container mb-5" id="manage_menus_arc">
+    <section class="container mb-5" id="manage_menus">
         <div class="row w-100 d-flex mx-auto justify-content-center">
 
             <div class="col-md-6 d-flex justify-content-center">
@@ -84,7 +84,7 @@ Seq[Any](format.raw/*1.1*/("""<main class="container-menu">
               /*
                   -- GENERATED --
                   SOURCE: app/views/Templates/calendar.scala.html
-                  HASH: 489e79bc846d8447581f62f4f73f937a462423f5
+                  HASH: 42ba49899943b10f34b452240310c4fc479cdc92
                   MATRIX: 1002->0
                   LINES: 32->1
                   -- GENERATED --

@@ -4,6 +4,7 @@ import io.ebean.Finder;
 import io.ebean.Model;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -20,9 +21,15 @@ public class Ticket extends Model{
     @ManyToOne
     private Dish dish;
 
-    public Ticket(Dish dish, User user) {
+    private LocalDate localDate;
+
+    private Canteen canteen;
+
+    public Ticket(User user, Dish dish, LocalDate localDate, Canteen canteen) {
         this.user = user;
         this.dish = dish;
+        this.localDate=localDate;
+        this.canteen=canteen;
     }
 
     /*  @OneToMany

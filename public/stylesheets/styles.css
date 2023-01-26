@@ -305,18 +305,39 @@ td{
     background: #5cd65c;
 }
 
+.btn-buy{
+    width: 100px;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    color: #FFFEFE;
+    background: #31b5b3;
+}
+
+.btn.btn-buy:hover {
+    width: 100px;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    color: #FFFEFE;
+    background: #2bccc9;
+}
+
 btn-logout{
     color:#fff;
     background-color:#455a64;
     border-color:#455a64;
 }
+
 .btn-logout:hover{
     color:#fff;
     background-color:#455a64;
     border-color:#455a64;
 }
 
-/*.btn-logout.focus,.btn-logout:focus{
+.btn-logout.focus,.btn-logout:focus{
     box-shadow:0 0 0 .2rem rgba(58,176,195,.5)
 }
 .btn-logout.disabled,.btn-logout:disabled{
@@ -327,7 +348,7 @@ btn-logout{
 }
 .btn-logout:not(:disabled):not(.disabled).active:focus,.btn-logout:not(:disabled):not(.disabled):active:focus,.show>.btn-logout.dropdown-toggle:focus{
     box-shadow:0 0 0 .2rem rgba(69, 90, 100)
-}*/
+}
 
 
 @media only screen and (min-width: 768px) {

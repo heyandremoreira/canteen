@@ -10,7 +10,7 @@ import _root_.play.libs.F
 // @LINE:8
 package controllers.javascript {
 
-  // @LINE:69
+  // @LINE:66
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -18,7 +18,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:69
+    // @LINE:66
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -30,7 +30,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:53
+  // @LINE:48
   class ReverseCanteenController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -38,7 +38,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:53
+    // @LINE:48
     def canteen: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.CanteenController.canteen",
       """
@@ -52,7 +52,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:55
+    // @LINE:50
     def buy: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.CanteenController.buy",
       """
@@ -292,7 +292,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:38
+    // @LINE:36
     def manage_tickets_arc: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manage_tickets_arc",
       """
@@ -302,27 +302,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:49
-    def manage_menus_wss: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Manager.manage_menus_wss",
+    // @LINE:51
+    def manage_menus: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Manager.manage_menus",
       """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "manage_menus_wss"})
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "manage_menus/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
         }
       """
     )
   
-    // @LINE:36
-    def manage_menus_arc: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Manager.manage_menus_arc",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "manage_menus_arc"})
-        }
-      """
-    )
-  
-    // @LINE:42
+    // @LINE:39
     def manage_tickets_tld: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manage_tickets_tld",
       """
@@ -332,7 +322,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:40
+    // @LINE:38
     def manager_tld: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manager_tld",
       """
@@ -342,7 +332,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:46
+    // @LINE:42
     def manage_tickets_tlc: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manage_tickets_tlc",
       """
@@ -352,7 +342,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:48
+    // @LINE:44
     def manager_wss: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manager_wss",
       """
@@ -362,17 +352,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:37
+    // @LINE:52
     def createMenu: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.createMenu",
       """
-        function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "manage_menus_arc"})
+        function(id0) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "manage_menus/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
         }
       """
     )
   
-    // @LINE:50
+    // @LINE:45
     def manage_tickets_wss: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manage_tickets_wss",
       """
@@ -382,22 +372,12 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:44
+    // @LINE:41
     def manager_tlc: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.manager_tlc",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "manager_tlc"})
-        }
-      """
-    )
-  
-    // @LINE:41
-    def manage_menus_tld: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Manager.manage_menus_tld",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "manage_menus_tld"})
         }
       """
     )
@@ -412,19 +392,9 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:45
-    def manage_menus_tlc: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Manager.manage_menus_tlc",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "manage_menus_tlc"})
-        }
-      """
-    )
-  
   }
 
-  // @LINE:58
+  // @LINE:55
   class ReverseStudent(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -432,7 +402,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:58
+    // @LINE:55
     def tickets: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Student.tickets",
       """
@@ -442,7 +412,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:59
+    // @LINE:56
     def wallet: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Student.wallet",
       """

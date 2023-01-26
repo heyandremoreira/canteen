@@ -1,0 +1,117 @@
+@(canteen: Canteen, r: play.mvc.Http.Request)
+@template(Array("../../../public/stylesheets/landing.css", "../../../public/stylesheets/home.css")) {
+    <form action="@controllers.routes.Manager.createMenu(canteen.getId())" method="post">
+        @helper.CSRF.formField(r.asScala)
+        <div class="row d-flex mx-auto justify-content-center">
+            <div class="col-md-10 pb-4">
+                <div class="row d-flex align-items-center">
+                    <div class="col-sm-5 col-md-2 justify-content-center mt-5 mb-3">
+                        <div class="form-control-sm searchfield">
+                            <input type="date" id="calendar" name="date" required>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-responsive darkbg">
+                    <thead class="text-center">
+                        <tr>
+                            <th scope="col">Type</th>
+                            <th scope="col">Dish</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Value(€)</th>
+                            <th scope="col">Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody class="align-middle text-center">
+                        <tr>
+                            <td>
+                                <div class="input-group">
+                                    <input class="form-control" value="Meat" name="meattype" required>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="" name="meatname" required>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="" name="meatdescription" required>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="" name="meatvalue" required>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="" name="meatquantity" required>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="input-group">
+                                    <input class="form-control" value="Fish" name="fishtype" required>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="" name="fishname" required>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="" name="fishdescription" required>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="" name="fishvalue" required>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="" name="fishquantity" required>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="input-group">
+                                    <input class="form-control" value="Vegetarian" name="vegtype" required>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="" name="vegname" required>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="" name="vegdescription" required>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="" name="vegvalue" required>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="" name="vegquantity" required>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="col-sm-5 col-md-5 justify-content-center mt-3 mb-3">
+                        <button class="btn btn-form" type="submit">Create Menu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+}

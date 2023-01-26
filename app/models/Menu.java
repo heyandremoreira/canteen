@@ -25,9 +25,9 @@ public class Menu extends Model {
         return finder.byId(id);
     }
 
-    public Menu(Long id, Type type, LocalDate date){
-        this.id=id;
+    public Menu(LocalDate date, Canteen canteen){
         this.date=date;
+        this.canteen = canteen;
     }
 
 

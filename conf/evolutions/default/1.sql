@@ -60,6 +60,7 @@ create table ticket (
   id                            bigint auto_increment not null,
   user_id                       bigint,
   dish_id                       bigint,
+  local_date                    date,
   constraint pk_ticket primary key (id)
 );
 

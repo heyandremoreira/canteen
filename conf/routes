@@ -33,26 +33,23 @@ GET     /managecanteens                         controllers.Administrator.manage
 # MANAGEMENT
     # ARCONIA
 GET     /manager_arc                            controllers.Manager.manager_arc(request: Request)
-GET     /manage_menus_arc                       controllers.Manager.manage_menus_arc(request: Request)
-POST    /manage_menus_arc                       controllers.Manager.createMenu(request: Request)
 GET     /manage_tickets_arc                     controllers.Manager.manage_tickets_arc(request: Request)
     # THE LAST DROP
 GET     /manager_tld                            controllers.Manager.manager_tld(request: Request)
-GET     /manage_menus_tld                       controllers.Manager.manage_menus_tld(request: Request)
 GET     /manage_tickets_tld                     controllers.Manager.manage_tickets_tld(request: Request)
     # THE LEAKY CAULDRON
 GET     /manager_tlc                            controllers.Manager.manager_tlc(request: Request)
-GET     /manage_menus_tlc                       controllers.Manager.manage_menus_tlc(request: Request)
 GET     /manage_tickets_tlc                     controllers.Manager.manage_tickets_tlc(request: Request)
     # WAVERLY SUB STATION
 GET     /manager_wss                            controllers.Manager.manager_wss(request: Request)
-GET     /manage_menus_wss                       controllers.Manager.manage_menus_wss(request: Request)
 GET     /manage_tickets_wss                     controllers.Manager.manage_tickets_wss(request: Request)
 
 # CANTEENS
 GET     /canteen/:id                            controllers.CanteenController.canteen(request: Request, id: Long)
 POST    /canteen/:id                            controllers.CanteenController.canteen(request: Request, id: Long)
 POST    /canteen                                controllers.CanteenController.buy(request: Request, id: Long)
+GET     /manage_menus/:id                       controllers.Manager.manage_menus(request: Request, id: Long)
+POST    /manage_menus/:id                       controllers.Manager.createMenu(request: Request, id: Long)
 
 # STUDENT
 GET     /tickets                                controllers.Student.tickets(request: Request)

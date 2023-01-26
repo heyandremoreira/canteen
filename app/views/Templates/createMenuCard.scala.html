@@ -1,5 +1,5 @@
-@(r: play.mvc.Http.Request)
-<form action="@controllers.routes.Manager.createMenu()" method="post">
+@(canteen: Canteen, r: play.mvc.Http.Request)
+<form action="@controllers.routes.Manager.createMenu(canteen.getId())" method="post">
     @helper.CSRF.formField(r.asScala)
 <div class="row d-flex mx-auto justify-content-center">
     <div class="col-md-10 pb-4">
@@ -16,7 +16,7 @@
                     <th scope="col">Type</th>
                     <th scope="col">Dish</th>
                     <th scope="col">Description</th>
-                    <th scope="col">Value</th>
+                    <th scope="col">Value(€)</th>
                     <th scope="col">Quantity</th>
                 </tr>
             </thead>
@@ -24,81 +24,81 @@
                 <tr>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" value="Meat" name="type">
+                            <input class="form-control" value="Meat" name="meattype">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" name="dish">
+                            <input class="form-control" placeholder="" name="meatname">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" name="description">
+                            <input class="form-control" placeholder="" name="meatdescription">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" name="value">
+                            <input class="form-control" placeholder="" name="meatvalue">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" name="quantity">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="input-group">
-                            <input class="form-control" value="Fish" name="type">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="input-group">
-                            <input class="form-control" placeholder="" name="dish">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="input-group">
-                            <input class="form-control" placeholder="" name="description">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="input-group">
-                            <input class="form-control" placeholder="" name="value">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="input-group">
-                            <input class="form-control" placeholder="" name="quantity">
+                            <input class="form-control" placeholder="" name="meatquantity">
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" value="Vegetarian" name="type">
+                            <input class="form-control" value="Fish" name="fishtype">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" name="dish">
+                            <input class="form-control" placeholder="" name="fishname">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" name="description">
+                            <input class="form-control" placeholder="" name="fishdescription">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" name="value">
+                            <input class="form-control" placeholder="" name="fishvalue">
                         </div>
                     </td>
                     <td>
                         <div class="input-group">
-                            <input class="form-control" placeholder="" name="quantity">
+                            <input class="form-control" placeholder="" name="fishquantity">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" value="Vegetarian" name="vegtype">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" name="vegname">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" name="vegdescription">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" name="vegvalue">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="" name="vegquantity">
                         </div>
                     </td>
                 </tr>

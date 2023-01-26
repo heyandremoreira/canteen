@@ -1,3 +1,5 @@
+# --- !Ups
+
 #CANTEEN_TABLE
 INSERT INTO `canteen_app`.`canteen` (`name`, `description`, `address`) VALUES ('Arconia', 'Travel the world sitting on a chair. Taste food from every country', '225 W 86th St, New York, NY 10024, United States');
 INSERT INTO `canteen_app`.`canteen` (`name`, `description`, `address`) VALUES ('The Last Drop', 'Eat your favorite barbecue in a warm and peaceful environment', 'The Lame, Zaun, Piltover');

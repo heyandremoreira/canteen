@@ -1,5 +1,9 @@
-[error] C:\Users\André ISCTE\Documents\canteen_management\app\controllers\Manager.java:48:1: method render in class views.html.Management.Arconia.manage_menus_arc cannot be applied to given types;
-[error]   required: play.mvc.Http.Request
-[error]   found: no arguments
-[error]   reason: actual and formal argument lists differ in length
-[error] views.html.Management.Arconia.manage_menus_arc.render
+[error] C:\Users\André ISCTE\Documents\canteen_management\app\views\Management\TheLeakyCauldron\manage_menus_tlc.scala.html:3:30: not enough arguments for method apply: (canteen: models.Canteen, r: play.mvc.Http.Request): play.twirl.api.HtmlFormat.Appendable in object createMenuCard.
+[error] Unspecified value parameter r.
+[error]     @Templates.createMenuCard(r)
+[error]                              ^
+[error] C:\Users\André ISCTE\Documents\canteen_management\app\views\Management\WaverlySubStation\manage_menus_wss.scala.html:3:30: not enough arguments for method apply: (canteen: models.Canteen, r: play.mvc.Http.Request): play.twirl.api.HtmlFormat.Appendable in object createMenuCard.
+[error] Unspecified value parameter r.
+[error]     @Templates.createMenuCard(r)
+[error]                              ^
+[error] two errors found

@@ -5,3 +5,4 @@
 [debug] 	(C:\Users\André ISCTE\Documents\canteen_management\conf\messages,C:\Users\André ISCTE\Documents\canteen_management\target\scala-2.13\classes\messages)
 [debug] 	(C:\Users\André ISCTE\Documents\canteen_management\conf\routes,C:\Users\André ISCTE\Documents\canteen_management\target\scala-2.13\classes\routes)
 [debug] 	(C:\Users\André ISCTE\Documents\canteen_management\conf\evolutions\default\1.sql,C:\Users\André ISCTE\Documents\canteen_management\target\scala-2.13\classes\evolutions\default\1.sql)
+[debug] 	(C:\Users\André ISCTE\Documents\canteen_management\conf\evolutions\default\2.sql,C:\Users\André ISCTE\Documents\canteen_management\target\scala-2.13\classes\evolutions\default\2.sql)
